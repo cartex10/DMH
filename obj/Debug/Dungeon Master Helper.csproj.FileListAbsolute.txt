@@ -1,0 +1,10 @@
+C:\ProgramProjects\personal\c#\Dungeon Master Helper\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.exe.config
+C:\ProgramProjects\personal\c#\Dungeon Master Helper\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.exe
+C:\ProgramProjects\personal\c#\Dungeon Master Helper\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.pdb
+C:\ProgramProjects\personal\c#\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.AssemblyReference.cache
+C:\ProgramProjects\personal\c#\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.Form1.resources
+C:\ProgramProjects\personal\c#\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.Properties.Resources.resources
+C:\ProgramProjects\personal\c#\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.GenerateResource.cache
+C:\ProgramProjects\personal\c#\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.CoreCompileInputs.cache
+C:\ProgramProjects\personal\c#\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.exe
+C:\ProgramProjects\personal\c#\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.pdb
