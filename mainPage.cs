@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Dungeon_Master_Helper
 {
-    public partial class Form1 : Form
+    public partial class mainPage : Form
     {
-        public Form1()
+        public mainPage()
         {
             InitializeComponent();
         }
@@ -27,5 +27,10 @@ namespace Dungeon_Master_Helper
 
         }
 
+        private void newCreatureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            createCreatureForm createCreature = new createCreatureForm();
+            createCreature.Show();
+        }
     }
 }

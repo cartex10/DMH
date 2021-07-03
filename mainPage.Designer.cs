@@ -1,7 +1,7 @@
 ﻿
 namespace Dungeon_Master_Helper
 {
-    partial class Form1
+    partial class mainPage
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace Dungeon_Master_Helper
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainPage));
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newEncounterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,12 +56,12 @@ namespace Dungeon_Master_Helper
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -140,6 +141,7 @@ namespace Dungeon_Master_Helper
             this.newCreatureToolStripMenuItem.Name = "newCreatureToolStripMenuItem";
             this.newCreatureToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.newCreatureToolStripMenuItem.Text = "New Creature";
+            this.newCreatureToolStripMenuItem.Click += new System.EventHandler(this.newCreatureToolStripMenuItem_Click);
             // 
             // loadCreatureToolStripMenuItem
             // 
@@ -289,6 +291,15 @@ namespace Dungeon_Master_Helper
             this.label1.Text = "INITIATIVE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(210, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(21, 15);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "Continue Initiative";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -351,15 +362,6 @@ namespace Dungeon_Master_Helper
             this.button4.Text = "Open Stats";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(210, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(21, 15);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Continue Initiative";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -371,14 +373,15 @@ namespace Dungeon_Master_Helper
             this.button5.Text = "DC Check";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip2);
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "mainPage";
             this.Text = "Dungeon Master Helper";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
