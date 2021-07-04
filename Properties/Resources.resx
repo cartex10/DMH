@@ -118,10 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="silhouette" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\silhouette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="psychic_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\psychic\psychic_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lightning_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\lightning\lightning_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="piercing_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\piercing\piercing_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="poison_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\poison\poison_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="force_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\force\force_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="radiant_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\radiant\radiant_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bludgeoning_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\bludgeoning\bludgeoning_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cold_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\cold\cold_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plusminus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\plusminus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silhouette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\silhouette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="acid_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\acid\acid_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="necrotic_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\necrotic\necrotic_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thunder_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\thunder\thunder_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fire_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\fire\fire_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slashing_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dmg_ico\slashing\slashing_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

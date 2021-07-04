@@ -84,5 +84,12 @@ namespace Dungeon_Master_Helper
             }
             
         }
+
+        private void DamageHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.PictureBox item = (System.Windows.Forms.PictureBox)sender;
+            string tag = (string)item.Tag;
+            damageTooltip.SetToolTip(item, tag + " damage");
+        }
     }
 }

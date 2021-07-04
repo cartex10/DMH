@@ -68,18 +68,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -94,6 +94,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\plusminus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\acid_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\cold\cold_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\acid\acid_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\fire\fire_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\force\force_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\lightning\lightning_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\necrotic\necrotic_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\poison\poison_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\psychic\psychic_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\radiant\radiant_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\thunder\thunder_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\bludgeoning\bludgeoning_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\piercing\piercing_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\slashing\slashing_imm.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
