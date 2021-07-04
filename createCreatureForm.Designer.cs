@@ -168,6 +168,16 @@ namespace Dungeon_Master_Helper
             this.firePicBox = new System.Windows.Forms.PictureBox();
             this.coldPicBox = new System.Windows.Forms.PictureBox();
             this.acidPicBox = new System.Windows.Forms.PictureBox();
+            this.extraInfoTable = new System.Windows.Forms.TableLayoutPanel();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.npcPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pcButt = new System.Windows.Forms.RadioButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.npcButt = new System.Windows.Forms.RadioButton();
+            this.evasionPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.evasionCheckBox = new System.Windows.Forms.CheckBox();
             this.mainTable.SuspendLayout();
             this.infoTable.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -231,6 +241,9 @@ namespace Dungeon_Master_Helper
             ((System.ComponentModel.ISupportInitialize)(this.firePicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coldPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.acidPicBox)).BeginInit();
+            this.extraInfoTable.SuspendLayout();
+            this.npcPanel.SuspendLayout();
+            this.evasionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainTable
@@ -245,6 +258,7 @@ namespace Dungeon_Master_Helper
             this.mainTable.Controls.Add(this.pictureBox1, 0, 0);
             this.mainTable.Controls.Add(this.infoTable, 1, 0);
             this.mainTable.Controls.Add(this.gameInfoTable, 1, 1);
+            this.mainTable.Controls.Add(this.extraInfoTable, 0, 1);
             this.mainTable.Location = new System.Drawing.Point(0, 0);
             this.mainTable.Name = "mainTable";
             this.mainTable.RowCount = 2;
@@ -940,7 +954,7 @@ namespace Dungeon_Master_Helper
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 6);
+            this.label10.Location = new System.Drawing.Point(4, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(27, 20);
             this.label10.TabIndex = 1;
@@ -951,7 +965,7 @@ namespace Dungeon_Master_Helper
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(38, 9);
+            this.label11.Location = new System.Drawing.Point(39, 12);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(26, 13);
             this.label11.TabIndex = 2;
@@ -962,7 +976,7 @@ namespace Dungeon_Master_Helper
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(105, 6);
+            this.label12.Location = new System.Drawing.Point(109, 9);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(27, 20);
             this.label12.TabIndex = 3;
@@ -973,7 +987,7 @@ namespace Dungeon_Master_Helper
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(140, 6);
+            this.label13.Location = new System.Drawing.Point(145, 9);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(27, 20);
             this.label13.TabIndex = 4;
@@ -1050,11 +1064,12 @@ namespace Dungeon_Master_Helper
             this.tableLayoutPanel2.Controls.Add(this.label12, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label11, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(171, 32);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(177, 38);
             this.tableLayoutPanel2.TabIndex = 11;
             // 
             // coldPanel
@@ -2151,6 +2166,132 @@ namespace Dungeon_Master_Helper
             this.acidPicBox.Tag = "Acid";
             this.acidPicBox.MouseHover += new System.EventHandler(this.DamageHover);
             // 
+            // extraInfoTable
+            // 
+            this.extraInfoTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.extraInfoTable.ColumnCount = 1;
+            this.extraInfoTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.extraInfoTable.Controls.Add(this.saveButton, 0, 3);
+            this.extraInfoTable.Controls.Add(this.npcPanel, 0, 0);
+            this.extraInfoTable.Controls.Add(this.evasionPanel, 0, 1);
+            this.extraInfoTable.Location = new System.Drawing.Point(3, 113);
+            this.extraInfoTable.Name = "extraInfoTable";
+            this.extraInfoTable.RowCount = 4;
+            this.extraInfoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.38028F));
+            this.extraInfoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.61972F));
+            this.extraInfoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 198F));
+            this.extraInfoTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.extraInfoTable.Size = new System.Drawing.Size(110, 436);
+            this.extraInfoTable.TabIndex = 3;
+            // 
+            // saveButton
+            // 
+            this.saveButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.saveButton.Location = new System.Drawing.Point(17, 390);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 0;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            // 
+            // npcPanel
+            // 
+            this.npcPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.npcPanel.Controls.Add(this.label14);
+            this.npcPanel.Controls.Add(this.pcButt);
+            this.npcPanel.Controls.Add(this.label15);
+            this.npcPanel.Controls.Add(this.npcButt);
+            this.npcPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.npcPanel.Location = new System.Drawing.Point(3, 3);
+            this.npcPanel.Name = "npcPanel";
+            this.npcPanel.Size = new System.Drawing.Size(104, 102);
+            this.npcPanel.TabIndex = 1;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(41, 0);
+            this.label14.Margin = new System.Windows.Forms.Padding(41, 0, 41, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(21, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "PC";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pcButt
+            // 
+            this.pcButt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pcButt.AutoSize = true;
+            this.pcButt.Checked = true;
+            this.pcButt.Location = new System.Drawing.Point(44, 16);
+            this.pcButt.Name = "pcButt";
+            this.pcButt.Size = new System.Drawing.Size(14, 13);
+            this.pcButt.TabIndex = 1;
+            this.pcButt.TabStop = true;
+            this.pcButt.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(37, 42);
+            this.label15.Margin = new System.Windows.Forms.Padding(37, 10, 37, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(29, 13);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "NPC";
+            // 
+            // npcButt
+            // 
+            this.npcButt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.npcButt.AutoSize = true;
+            this.npcButt.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.npcButt.Location = new System.Drawing.Point(3, 58);
+            this.npcButt.Name = "npcButt";
+            this.npcButt.Size = new System.Drawing.Size(97, 13);
+            this.npcButt.TabIndex = 3;
+            this.npcButt.UseVisualStyleBackColor = true;
+            // 
+            // evasionPanel
+            // 
+            this.evasionPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.evasionPanel.Controls.Add(this.label16);
+            this.evasionPanel.Controls.Add(this.evasionCheckBox);
+            this.evasionPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.evasionPanel.Location = new System.Drawing.Point(3, 111);
+            this.evasionPanel.Name = "evasionPanel";
+            this.evasionPanel.Size = new System.Drawing.Size(104, 56);
+            this.evasionPanel.TabIndex = 2;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(29, 0);
+            this.label16.Margin = new System.Windows.Forms.Padding(29, 0, 29, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(45, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Evasion";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // evasionCheckBox
+            // 
+            this.evasionCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.evasionCheckBox.AutoSize = true;
+            this.evasionCheckBox.Location = new System.Drawing.Point(44, 16);
+            this.evasionCheckBox.Name = "evasionCheckBox";
+            this.evasionCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.evasionCheckBox.TabIndex = 4;
+            this.evasionCheckBox.UseVisualStyleBackColor = true;
+            // 
             // createCreatureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2251,6 +2392,11 @@ namespace Dungeon_Master_Helper
             ((System.ComponentModel.ISupportInitialize)(this.firePicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coldPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.acidPicBox)).EndInit();
+            this.extraInfoTable.ResumeLayout(false);
+            this.npcPanel.ResumeLayout(false);
+            this.npcPanel.PerformLayout();
+            this.evasionPanel.ResumeLayout(false);
+            this.evasionPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2395,5 +2541,15 @@ namespace Dungeon_Master_Helper
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.TableLayoutPanel extraInfoTable;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.FlowLayoutPanel npcPanel;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.RadioButton pcButt;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.RadioButton npcButt;
+        private System.Windows.Forms.FlowLayoutPanel evasionPanel;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.CheckBox evasionCheckBox;
     }
 }

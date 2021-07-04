@@ -293,6 +293,7 @@ namespace Dungeon_Master_Helper
             // 
             // button7
             // 
+            this.button7.AutoSize = true;
             this.button7.Location = new System.Drawing.Point(210, 3);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(21, 15);
