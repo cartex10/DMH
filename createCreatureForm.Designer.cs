@@ -32,6 +32,7 @@ namespace Dungeon_Master_Helper
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(createCreatureForm));
             this.mainTable = new System.Windows.Forms.TableLayoutPanel();
+            this.charPicBox = new System.Windows.Forms.PictureBox();
             this.infoTable = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.nameTextBox = new System.Windows.Forms.TextBox();
@@ -40,134 +41,132 @@ namespace Dungeon_Master_Helper
             this.acNumBox = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.ppNumBox = new System.Windows.Forms.Label();
+            this.ppNumBox = new System.Windows.Forms.NumericUpDown();
+            this.ppLabel = new System.Windows.Forms.Label();
             this.gameInfoTable = new System.Windows.Forms.TableLayoutPanel();
             this.statTable = new System.Windows.Forms.TableLayoutPanel();
             this.chaPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.chaStatBox = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.chaMiscBox = new System.Windows.Forms.NumericUpDown();
             this.chaModBox = new System.Windows.Forms.TextBox();
             this.wisPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.wisStatBox = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.wisMiscBox = new System.Windows.Forms.NumericUpDown();
             this.wisModBox = new System.Windows.Forms.TextBox();
             this.intPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.intStatBox = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.intMiscBox = new System.Windows.Forms.NumericUpDown();
             this.intModBox = new System.Windows.Forms.TextBox();
             this.conPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.conStatBox = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.conMiscBox = new System.Windows.Forms.NumericUpDown();
             this.conModBox = new System.Windows.Forms.TextBox();
             this.dexPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.dexStatBox = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dexMiscBox = new System.Windows.Forms.NumericUpDown();
             this.dexModBox = new System.Windows.Forms.TextBox();
             this.strPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.strStatBox = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.strMiscBox = new System.Windows.Forms.NumericUpDown();
             this.strModBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.damageTable = new System.Windows.Forms.TableLayoutPanel();
-            this.acidButt1 = new System.Windows.Forms.RadioButton();
+            this.slashingPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.slashingPicBox = new System.Windows.Forms.PictureBox();
+            this.slashingButt2 = new System.Windows.Forms.RadioButton();
+            this.slashingButt1 = new System.Windows.Forms.RadioButton();
+            this.slashingButt0 = new System.Windows.Forms.RadioButton();
+            this.slashingButt3 = new System.Windows.Forms.RadioButton();
+            this.piercingPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.piercingPicBox = new System.Windows.Forms.PictureBox();
+            this.piercingButt2 = new System.Windows.Forms.RadioButton();
+            this.piercingButt1 = new System.Windows.Forms.RadioButton();
+            this.piercingButt0 = new System.Windows.Forms.RadioButton();
+            this.piercingButt3 = new System.Windows.Forms.RadioButton();
+            this.bludgeoningPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.bludgeoningPicBox = new System.Windows.Forms.PictureBox();
+            this.bludgeoningButt2 = new System.Windows.Forms.RadioButton();
+            this.bludgeoningButt1 = new System.Windows.Forms.RadioButton();
+            this.bludgeoningButt0 = new System.Windows.Forms.RadioButton();
+            this.bludgeoningButt3 = new System.Windows.Forms.RadioButton();
+            this.thunderPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.thunderPicBox = new System.Windows.Forms.PictureBox();
+            this.thunderButt2 = new System.Windows.Forms.RadioButton();
+            this.thunderButt1 = new System.Windows.Forms.RadioButton();
+            this.thunderButt0 = new System.Windows.Forms.RadioButton();
+            this.thunderButt3 = new System.Windows.Forms.RadioButton();
+            this.radiantPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.radiantPicBox = new System.Windows.Forms.PictureBox();
+            this.radiantButt2 = new System.Windows.Forms.RadioButton();
+            this.radiantButt1 = new System.Windows.Forms.RadioButton();
+            this.radiantButt0 = new System.Windows.Forms.RadioButton();
+            this.radiantButt3 = new System.Windows.Forms.RadioButton();
+            this.psychicPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.psychicPicBox = new System.Windows.Forms.PictureBox();
+            this.psychicButt2 = new System.Windows.Forms.RadioButton();
+            this.psychicButt1 = new System.Windows.Forms.RadioButton();
+            this.psychicButt0 = new System.Windows.Forms.RadioButton();
+            this.psychicButt3 = new System.Windows.Forms.RadioButton();
+            this.poisonPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.poisonPicBox = new System.Windows.Forms.PictureBox();
+            this.poisonButt2 = new System.Windows.Forms.RadioButton();
+            this.poisonButt1 = new System.Windows.Forms.RadioButton();
+            this.poisonButt0 = new System.Windows.Forms.RadioButton();
+            this.poisonButt3 = new System.Windows.Forms.RadioButton();
+            this.necroticPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.necroticPicBox = new System.Windows.Forms.PictureBox();
+            this.necroticButt2 = new System.Windows.Forms.RadioButton();
+            this.necroticButt1 = new System.Windows.Forms.RadioButton();
+            this.necroticButt0 = new System.Windows.Forms.RadioButton();
+            this.necroticButt3 = new System.Windows.Forms.RadioButton();
+            this.lightningPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.lightningPicBox = new System.Windows.Forms.PictureBox();
+            this.lightningButt2 = new System.Windows.Forms.RadioButton();
+            this.lightningButt1 = new System.Windows.Forms.RadioButton();
+            this.lightningButt0 = new System.Windows.Forms.RadioButton();
+            this.lightningButt3 = new System.Windows.Forms.RadioButton();
+            this.forcePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.forcePicBox = new System.Windows.Forms.PictureBox();
+            this.forceButt2 = new System.Windows.Forms.RadioButton();
+            this.forceButt1 = new System.Windows.Forms.RadioButton();
+            this.forceButt0 = new System.Windows.Forms.RadioButton();
+            this.forceButt3 = new System.Windows.Forms.RadioButton();
+            this.firePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.firePicBox = new System.Windows.Forms.PictureBox();
+            this.fireButt2 = new System.Windows.Forms.RadioButton();
+            this.fireButt1 = new System.Windows.Forms.RadioButton();
+            this.fireButt0 = new System.Windows.Forms.RadioButton();
+            this.fireButt3 = new System.Windows.Forms.RadioButton();
+            this.coldPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.coldPicBox = new System.Windows.Forms.PictureBox();
+            this.coldButt2 = new System.Windows.Forms.RadioButton();
+            this.coldButt1 = new System.Windows.Forms.RadioButton();
+            this.coldButt0 = new System.Windows.Forms.RadioButton();
+            this.coldButt3 = new System.Windows.Forms.RadioButton();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.acidPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.acidPicBox = new System.Windows.Forms.PictureBox();
             this.acidButt2 = new System.Windows.Forms.RadioButton();
+            this.acidButt1 = new System.Windows.Forms.RadioButton();
             this.acidButt0 = new System.Windows.Forms.RadioButton();
             this.acidButt3 = new System.Windows.Forms.RadioButton();
-            this.damageTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.acidPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.coldPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.firePanel = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.forcePanel = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.lightningPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
-            this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.radioButton16 = new System.Windows.Forms.RadioButton();
-            this.necroticPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton17 = new System.Windows.Forms.RadioButton();
-            this.radioButton18 = new System.Windows.Forms.RadioButton();
-            this.radioButton19 = new System.Windows.Forms.RadioButton();
-            this.radioButton20 = new System.Windows.Forms.RadioButton();
-            this.poisonPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton21 = new System.Windows.Forms.RadioButton();
-            this.radioButton22 = new System.Windows.Forms.RadioButton();
-            this.radioButton23 = new System.Windows.Forms.RadioButton();
-            this.radioButton24 = new System.Windows.Forms.RadioButton();
-            this.psychicPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton25 = new System.Windows.Forms.RadioButton();
-            this.radioButton26 = new System.Windows.Forms.RadioButton();
-            this.radioButton27 = new System.Windows.Forms.RadioButton();
-            this.radioButton28 = new System.Windows.Forms.RadioButton();
-            this.radiantPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton29 = new System.Windows.Forms.RadioButton();
-            this.radioButton30 = new System.Windows.Forms.RadioButton();
-            this.radioButton31 = new System.Windows.Forms.RadioButton();
-            this.radioButton32 = new System.Windows.Forms.RadioButton();
-            this.thunderPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton33 = new System.Windows.Forms.RadioButton();
-            this.radioButton34 = new System.Windows.Forms.RadioButton();
-            this.radioButton35 = new System.Windows.Forms.RadioButton();
-            this.radioButton36 = new System.Windows.Forms.RadioButton();
-            this.bludgeoningPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton37 = new System.Windows.Forms.RadioButton();
-            this.radioButton38 = new System.Windows.Forms.RadioButton();
-            this.radioButton39 = new System.Windows.Forms.RadioButton();
-            this.radioButton40 = new System.Windows.Forms.RadioButton();
-            this.piercingPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton41 = new System.Windows.Forms.RadioButton();
-            this.radioButton42 = new System.Windows.Forms.RadioButton();
-            this.radioButton43 = new System.Windows.Forms.RadioButton();
-            this.radioButton44 = new System.Windows.Forms.RadioButton();
-            this.slashingPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton45 = new System.Windows.Forms.RadioButton();
-            this.radioButton46 = new System.Windows.Forms.RadioButton();
-            this.radioButton47 = new System.Windows.Forms.RadioButton();
-            this.radioButton48 = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.slashingPicBox = new System.Windows.Forms.PictureBox();
-            this.piercingPicBox = new System.Windows.Forms.PictureBox();
-            this.bludgeoningPicBox = new System.Windows.Forms.PictureBox();
-            this.thunderPicBox = new System.Windows.Forms.PictureBox();
-            this.radiantPicBox = new System.Windows.Forms.PictureBox();
-            this.psychicPicBox = new System.Windows.Forms.PictureBox();
-            this.poisonPicBox = new System.Windows.Forms.PictureBox();
-            this.necroticPicBox = new System.Windows.Forms.PictureBox();
-            this.lightningPicBox = new System.Windows.Forms.PictureBox();
-            this.forcePicBox = new System.Windows.Forms.PictureBox();
-            this.firePicBox = new System.Windows.Forms.PictureBox();
-            this.coldPicBox = new System.Windows.Forms.PictureBox();
-            this.acidPicBox = new System.Windows.Forms.PictureBox();
             this.extraInfoTable = new System.Windows.Forms.TableLayoutPanel();
             this.saveButton = new System.Windows.Forms.Button();
             this.npcPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -178,68 +177,69 @@ namespace Dungeon_Master_Helper
             this.evasionPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label16 = new System.Windows.Forms.Label();
             this.evasionCheckBox = new System.Windows.Forms.CheckBox();
+            this.damageTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.mainTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.charPicBox)).BeginInit();
             this.infoTable.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.acNumBox)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ppNumBox)).BeginInit();
             this.gameInfoTable.SuspendLayout();
             this.statTable.SuspendLayout();
             this.chaPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chaStatBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chaMiscBox)).BeginInit();
             this.wisPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wisStatBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wisMiscBox)).BeginInit();
             this.intPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intStatBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.intMiscBox)).BeginInit();
             this.conPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conStatBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conMiscBox)).BeginInit();
             this.dexPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dexStatBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dexMiscBox)).BeginInit();
             this.strPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.strStatBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.strMiscBox)).BeginInit();
             this.flowLayoutPanel5.SuspendLayout();
             this.damageTable.SuspendLayout();
-            this.acidPanel.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.coldPanel.SuspendLayout();
-            this.firePanel.SuspendLayout();
-            this.forcePanel.SuspendLayout();
-            this.lightningPanel.SuspendLayout();
-            this.necroticPanel.SuspendLayout();
-            this.poisonPanel.SuspendLayout();
-            this.psychicPanel.SuspendLayout();
-            this.radiantPanel.SuspendLayout();
-            this.thunderPanel.SuspendLayout();
-            this.bludgeoningPanel.SuspendLayout();
-            this.piercingPanel.SuspendLayout();
             this.slashingPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slashingPicBox)).BeginInit();
+            this.piercingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piercingPicBox)).BeginInit();
+            this.bludgeoningPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bludgeoningPicBox)).BeginInit();
+            this.thunderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.thunderPicBox)).BeginInit();
+            this.radiantPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radiantPicBox)).BeginInit();
+            this.psychicPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.psychicPicBox)).BeginInit();
+            this.poisonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poisonPicBox)).BeginInit();
+            this.necroticPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.necroticPicBox)).BeginInit();
+            this.lightningPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lightningPicBox)).BeginInit();
+            this.forcePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.forcePicBox)).BeginInit();
+            this.firePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firePicBox)).BeginInit();
+            this.coldPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coldPicBox)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.acidPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.acidPicBox)).BeginInit();
             this.extraInfoTable.SuspendLayout();
             this.npcPanel.SuspendLayout();
@@ -255,7 +255,7 @@ namespace Dungeon_Master_Helper
             this.mainTable.ColumnCount = 2;
             this.mainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.mainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.mainTable.Controls.Add(this.pictureBox1, 0, 0);
+            this.mainTable.Controls.Add(this.charPicBox, 0, 0);
             this.mainTable.Controls.Add(this.infoTable, 1, 0);
             this.mainTable.Controls.Add(this.gameInfoTable, 1, 1);
             this.mainTable.Controls.Add(this.extraInfoTable, 0, 1);
@@ -266,6 +266,20 @@ namespace Dungeon_Master_Helper
             this.mainTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.mainTable.Size = new System.Drawing.Size(580, 552);
             this.mainTable.TabIndex = 0;
+            // 
+            // charPicBox
+            // 
+            this.charPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.charPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette;
+            this.charPicBox.InitialImage = null;
+            this.charPicBox.Location = new System.Drawing.Point(3, 3);
+            this.charPicBox.Name = "charPicBox";
+            this.charPicBox.Size = new System.Drawing.Size(110, 104);
+            this.charPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.charPicBox.TabIndex = 0;
+            this.charPicBox.TabStop = false;
             // 
             // infoTable
             // 
@@ -359,36 +373,36 @@ namespace Dungeon_Master_Helper
             this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel3.Controls.Add(this.numericUpDown2);
             this.flowLayoutPanel3.Controls.Add(this.ppNumBox);
+            this.flowLayoutPanel3.Controls.Add(this.ppLabel);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(378, 3);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(77, 98);
             this.flowLayoutPanel3.TabIndex = 2;
             // 
-            // numericUpDown2
+            // ppNumBox
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.numericUpDown2.Location = new System.Drawing.Point(3, 65);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(74, 30);
-            this.numericUpDown2.TabIndex = 0;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.ppNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.ppNumBox.Location = new System.Drawing.Point(3, 65);
+            this.ppNumBox.Name = "ppNumBox";
+            this.ppNumBox.Size = new System.Drawing.Size(74, 30);
+            this.ppNumBox.TabIndex = 0;
+            this.ppNumBox.Value = new decimal(new int[] {
             10,
             0,
             0,
             0});
             // 
-            // ppNumBox
+            // ppLabel
             // 
-            this.ppNumBox.AutoSize = true;
-            this.ppNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ppNumBox.Location = new System.Drawing.Point(3, 42);
-            this.ppNumBox.Name = "ppNumBox";
-            this.ppNumBox.Size = new System.Drawing.Size(29, 20);
-            this.ppNumBox.TabIndex = 1;
-            this.ppNumBox.Text = "PP";
+            this.ppLabel.AutoSize = true;
+            this.ppLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ppLabel.Location = new System.Drawing.Point(3, 42);
+            this.ppLabel.Name = "ppLabel";
+            this.ppLabel.Size = new System.Drawing.Size(29, 20);
+            this.ppLabel.TabIndex = 1;
+            this.ppLabel.Text = "PP";
             // 
             // gameInfoTable
             // 
@@ -479,6 +493,17 @@ namespace Dungeon_Master_Helper
             0});
             this.chaStatBox.ValueChanged += new System.EventHandler(this.CalculateStats);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(105, 14);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 1;
+            this.pictureBox7.TabStop = false;
+            // 
             // chaMiscBox
             // 
             this.chaMiscBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -551,6 +576,17 @@ namespace Dungeon_Master_Helper
             0,
             0});
             this.wisStatBox.ValueChanged += new System.EventHandler(this.CalculateStats);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(105, 14);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 1;
+            this.pictureBox6.TabStop = false;
             // 
             // wisMiscBox
             // 
@@ -625,6 +661,17 @@ namespace Dungeon_Master_Helper
             0});
             this.intStatBox.ValueChanged += new System.EventHandler(this.CalculateStats);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(105, 14);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
             // intMiscBox
             // 
             this.intMiscBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -697,6 +744,17 @@ namespace Dungeon_Master_Helper
             0,
             0});
             this.conStatBox.ValueChanged += new System.EventHandler(this.CalculateStats);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(106, 14);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
             // 
             // conMiscBox
             // 
@@ -771,6 +829,17 @@ namespace Dungeon_Master_Helper
             0});
             this.dexStatBox.ValueChanged += new System.EventHandler(this.CalculateStats);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(105, 14);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
             // dexMiscBox
             // 
             this.dexMiscBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -843,6 +912,17 @@ namespace Dungeon_Master_Helper
             0,
             0});
             this.strStatBox.ValueChanged += new System.EventHandler(this.CalculateStats);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(105, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // strMiscBox
             // 
@@ -939,15 +1019,1143 @@ namespace Dungeon_Master_Helper
             this.damageTable.Size = new System.Drawing.Size(177, 428);
             this.damageTable.TabIndex = 1;
             // 
-            // acidButt1
+            // slashingPanel
             // 
-            this.acidButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.acidButt1.AutoSize = true;
-            this.acidButt1.Location = new System.Drawing.Point(10, 8);
-            this.acidButt1.Name = "acidButt1";
-            this.acidButt1.Size = new System.Drawing.Size(14, 13);
-            this.acidButt1.TabIndex = 0;
-            this.acidButt1.UseVisualStyleBackColor = true;
+            this.slashingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.slashingPanel.ColumnCount = 5;
+            this.slashingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.slashingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.slashingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.slashingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.slashingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.slashingPanel.Controls.Add(this.slashingPicBox, 2, 0);
+            this.slashingPanel.Controls.Add(this.slashingButt2, 1, 0);
+            this.slashingPanel.Controls.Add(this.slashingButt1, 0, 0);
+            this.slashingPanel.Controls.Add(this.slashingButt0, 3, 0);
+            this.slashingPanel.Controls.Add(this.slashingButt3, 4, 0);
+            this.slashingPanel.Location = new System.Drawing.Point(0, 398);
+            this.slashingPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.slashingPanel.Name = "slashingPanel";
+            this.slashingPanel.RowCount = 1;
+            this.slashingPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.slashingPanel.Size = new System.Drawing.Size(177, 30);
+            this.slashingPanel.TabIndex = 23;
+            // 
+            // slashingPicBox
+            // 
+            this.slashingPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.slashingPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.slashingPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.slashing_imm;
+            this.slashingPicBox.Location = new System.Drawing.Point(70, 0);
+            this.slashingPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.slashingPicBox.Name = "slashingPicBox";
+            this.slashingPicBox.Size = new System.Drawing.Size(35, 30);
+            this.slashingPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.slashingPicBox.TabIndex = 8;
+            this.slashingPicBox.TabStop = false;
+            this.slashingPicBox.Tag = "Slashing";
+            this.slashingPicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // slashingButt2
+            // 
+            this.slashingButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.slashingButt2.AutoSize = true;
+            this.slashingButt2.Location = new System.Drawing.Point(45, 8);
+            this.slashingButt2.Name = "slashingButt2";
+            this.slashingButt2.Size = new System.Drawing.Size(14, 13);
+            this.slashingButt2.TabIndex = 5;
+            this.slashingButt2.Tag = "slashing 2";
+            this.slashingButt2.UseVisualStyleBackColor = true;
+            this.slashingButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // slashingButt1
+            // 
+            this.slashingButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.slashingButt1.AutoSize = true;
+            this.slashingButt1.Location = new System.Drawing.Point(10, 8);
+            this.slashingButt1.Name = "slashingButt1";
+            this.slashingButt1.Size = new System.Drawing.Size(14, 13);
+            this.slashingButt1.TabIndex = 0;
+            this.slashingButt1.Tag = "slashing 1";
+            this.slashingButt1.UseVisualStyleBackColor = true;
+            this.slashingButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // slashingButt0
+            // 
+            this.slashingButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.slashingButt0.AutoSize = true;
+            this.slashingButt0.Checked = true;
+            this.slashingButt0.Location = new System.Drawing.Point(115, 8);
+            this.slashingButt0.Name = "slashingButt0";
+            this.slashingButt0.Size = new System.Drawing.Size(14, 13);
+            this.slashingButt0.TabIndex = 6;
+            this.slashingButt0.TabStop = true;
+            this.slashingButt0.Tag = "slashing 0";
+            this.slashingButt0.UseVisualStyleBackColor = true;
+            this.slashingButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // slashingButt3
+            // 
+            this.slashingButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.slashingButt3.AutoSize = true;
+            this.slashingButt3.Location = new System.Drawing.Point(151, 8);
+            this.slashingButt3.Name = "slashingButt3";
+            this.slashingButt3.Size = new System.Drawing.Size(14, 13);
+            this.slashingButt3.TabIndex = 7;
+            this.slashingButt3.Tag = "slashing 3";
+            this.slashingButt3.UseVisualStyleBackColor = true;
+            this.slashingButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // piercingPanel
+            // 
+            this.piercingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.piercingPanel.ColumnCount = 5;
+            this.piercingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.piercingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.piercingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.piercingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.piercingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.piercingPanel.Controls.Add(this.piercingPicBox, 2, 0);
+            this.piercingPanel.Controls.Add(this.piercingButt2, 1, 0);
+            this.piercingPanel.Controls.Add(this.piercingButt1, 0, 0);
+            this.piercingPanel.Controls.Add(this.piercingButt0, 3, 0);
+            this.piercingPanel.Controls.Add(this.piercingButt3, 4, 0);
+            this.piercingPanel.Location = new System.Drawing.Point(0, 368);
+            this.piercingPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.piercingPanel.Name = "piercingPanel";
+            this.piercingPanel.RowCount = 1;
+            this.piercingPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.piercingPanel.Size = new System.Drawing.Size(177, 30);
+            this.piercingPanel.TabIndex = 22;
+            // 
+            // piercingPicBox
+            // 
+            this.piercingPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.piercingPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.piercingPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.piercing_imm;
+            this.piercingPicBox.Location = new System.Drawing.Point(70, 0);
+            this.piercingPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.piercingPicBox.Name = "piercingPicBox";
+            this.piercingPicBox.Size = new System.Drawing.Size(35, 30);
+            this.piercingPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.piercingPicBox.TabIndex = 8;
+            this.piercingPicBox.TabStop = false;
+            this.piercingPicBox.Tag = "Piercing";
+            this.piercingPicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // piercingButt2
+            // 
+            this.piercingButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.piercingButt2.AutoSize = true;
+            this.piercingButt2.Location = new System.Drawing.Point(45, 8);
+            this.piercingButt2.Name = "piercingButt2";
+            this.piercingButt2.Size = new System.Drawing.Size(14, 13);
+            this.piercingButt2.TabIndex = 5;
+            this.piercingButt2.Tag = "piercing 2";
+            this.piercingButt2.UseVisualStyleBackColor = true;
+            this.piercingButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // piercingButt1
+            // 
+            this.piercingButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.piercingButt1.AutoSize = true;
+            this.piercingButt1.Location = new System.Drawing.Point(10, 8);
+            this.piercingButt1.Name = "piercingButt1";
+            this.piercingButt1.Size = new System.Drawing.Size(14, 13);
+            this.piercingButt1.TabIndex = 0;
+            this.piercingButt1.Tag = "piercing 1";
+            this.piercingButt1.UseVisualStyleBackColor = true;
+            this.piercingButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // piercingButt0
+            // 
+            this.piercingButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.piercingButt0.AutoSize = true;
+            this.piercingButt0.Checked = true;
+            this.piercingButt0.Location = new System.Drawing.Point(115, 8);
+            this.piercingButt0.Name = "piercingButt0";
+            this.piercingButt0.Size = new System.Drawing.Size(14, 13);
+            this.piercingButt0.TabIndex = 6;
+            this.piercingButt0.TabStop = true;
+            this.piercingButt0.Tag = "piercing 0";
+            this.piercingButt0.UseVisualStyleBackColor = true;
+            this.piercingButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // piercingButt3
+            // 
+            this.piercingButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.piercingButt3.AutoSize = true;
+            this.piercingButt3.Location = new System.Drawing.Point(151, 8);
+            this.piercingButt3.Name = "piercingButt3";
+            this.piercingButt3.Size = new System.Drawing.Size(14, 13);
+            this.piercingButt3.TabIndex = 7;
+            this.piercingButt3.Tag = "piercing 3";
+            this.piercingButt3.UseVisualStyleBackColor = true;
+            this.piercingButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // bludgeoningPanel
+            // 
+            this.bludgeoningPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bludgeoningPanel.ColumnCount = 5;
+            this.bludgeoningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.bludgeoningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.bludgeoningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.bludgeoningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.bludgeoningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.bludgeoningPanel.Controls.Add(this.bludgeoningPicBox, 2, 0);
+            this.bludgeoningPanel.Controls.Add(this.bludgeoningButt2, 1, 0);
+            this.bludgeoningPanel.Controls.Add(this.bludgeoningButt1, 0, 0);
+            this.bludgeoningPanel.Controls.Add(this.bludgeoningButt0, 3, 0);
+            this.bludgeoningPanel.Controls.Add(this.bludgeoningButt3, 4, 0);
+            this.bludgeoningPanel.Location = new System.Drawing.Point(0, 338);
+            this.bludgeoningPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.bludgeoningPanel.Name = "bludgeoningPanel";
+            this.bludgeoningPanel.RowCount = 1;
+            this.bludgeoningPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.bludgeoningPanel.Size = new System.Drawing.Size(177, 30);
+            this.bludgeoningPanel.TabIndex = 21;
+            // 
+            // bludgeoningPicBox
+            // 
+            this.bludgeoningPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bludgeoningPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bludgeoningPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.bludgeoning_imm;
+            this.bludgeoningPicBox.Location = new System.Drawing.Point(70, 0);
+            this.bludgeoningPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.bludgeoningPicBox.Name = "bludgeoningPicBox";
+            this.bludgeoningPicBox.Size = new System.Drawing.Size(35, 30);
+            this.bludgeoningPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bludgeoningPicBox.TabIndex = 8;
+            this.bludgeoningPicBox.TabStop = false;
+            this.bludgeoningPicBox.Tag = "Bludgeoning";
+            this.bludgeoningPicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // bludgeoningButt2
+            // 
+            this.bludgeoningButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bludgeoningButt2.AutoSize = true;
+            this.bludgeoningButt2.Location = new System.Drawing.Point(45, 8);
+            this.bludgeoningButt2.Name = "bludgeoningButt2";
+            this.bludgeoningButt2.Size = new System.Drawing.Size(14, 13);
+            this.bludgeoningButt2.TabIndex = 5;
+            this.bludgeoningButt2.Tag = "bludgeoning 2";
+            this.bludgeoningButt2.UseVisualStyleBackColor = true;
+            this.bludgeoningButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // bludgeoningButt1
+            // 
+            this.bludgeoningButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bludgeoningButt1.AutoSize = true;
+            this.bludgeoningButt1.Location = new System.Drawing.Point(10, 8);
+            this.bludgeoningButt1.Name = "bludgeoningButt1";
+            this.bludgeoningButt1.Size = new System.Drawing.Size(14, 13);
+            this.bludgeoningButt1.TabIndex = 0;
+            this.bludgeoningButt1.Tag = "bludgeoning 1";
+            this.bludgeoningButt1.UseVisualStyleBackColor = true;
+            this.bludgeoningButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // bludgeoningButt0
+            // 
+            this.bludgeoningButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bludgeoningButt0.AutoSize = true;
+            this.bludgeoningButt0.Checked = true;
+            this.bludgeoningButt0.Location = new System.Drawing.Point(115, 8);
+            this.bludgeoningButt0.Name = "bludgeoningButt0";
+            this.bludgeoningButt0.Size = new System.Drawing.Size(14, 13);
+            this.bludgeoningButt0.TabIndex = 6;
+            this.bludgeoningButt0.TabStop = true;
+            this.bludgeoningButt0.Tag = "bludgeoning 0";
+            this.bludgeoningButt0.UseVisualStyleBackColor = true;
+            this.bludgeoningButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // bludgeoningButt3
+            // 
+            this.bludgeoningButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bludgeoningButt3.AutoSize = true;
+            this.bludgeoningButt3.Location = new System.Drawing.Point(151, 8);
+            this.bludgeoningButt3.Name = "bludgeoningButt3";
+            this.bludgeoningButt3.Size = new System.Drawing.Size(14, 13);
+            this.bludgeoningButt3.TabIndex = 7;
+            this.bludgeoningButt3.Tag = "bludgeoning 3";
+            this.bludgeoningButt3.UseVisualStyleBackColor = true;
+            this.bludgeoningButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // thunderPanel
+            // 
+            this.thunderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.thunderPanel.ColumnCount = 5;
+            this.thunderPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.thunderPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.thunderPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.thunderPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.thunderPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.thunderPanel.Controls.Add(this.thunderPicBox, 2, 0);
+            this.thunderPanel.Controls.Add(this.thunderButt2, 1, 0);
+            this.thunderPanel.Controls.Add(this.thunderButt1, 0, 0);
+            this.thunderPanel.Controls.Add(this.thunderButt0, 3, 0);
+            this.thunderPanel.Controls.Add(this.thunderButt3, 4, 0);
+            this.thunderPanel.Location = new System.Drawing.Point(0, 308);
+            this.thunderPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.thunderPanel.Name = "thunderPanel";
+            this.thunderPanel.RowCount = 1;
+            this.thunderPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.thunderPanel.Size = new System.Drawing.Size(177, 30);
+            this.thunderPanel.TabIndex = 20;
+            // 
+            // thunderPicBox
+            // 
+            this.thunderPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.thunderPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.thunderPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.thunder_imm;
+            this.thunderPicBox.Location = new System.Drawing.Point(70, 0);
+            this.thunderPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.thunderPicBox.Name = "thunderPicBox";
+            this.thunderPicBox.Size = new System.Drawing.Size(35, 30);
+            this.thunderPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.thunderPicBox.TabIndex = 8;
+            this.thunderPicBox.TabStop = false;
+            this.thunderPicBox.Tag = "Thunder";
+            this.thunderPicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // thunderButt2
+            // 
+            this.thunderButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.thunderButt2.AutoSize = true;
+            this.thunderButt2.Location = new System.Drawing.Point(45, 8);
+            this.thunderButt2.Name = "thunderButt2";
+            this.thunderButt2.Size = new System.Drawing.Size(14, 13);
+            this.thunderButt2.TabIndex = 5;
+            this.thunderButt2.Tag = "thunder 2";
+            this.thunderButt2.UseVisualStyleBackColor = true;
+            this.thunderButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // thunderButt1
+            // 
+            this.thunderButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.thunderButt1.AutoSize = true;
+            this.thunderButt1.Location = new System.Drawing.Point(10, 8);
+            this.thunderButt1.Name = "thunderButt1";
+            this.thunderButt1.Size = new System.Drawing.Size(14, 13);
+            this.thunderButt1.TabIndex = 0;
+            this.thunderButt1.Tag = "thunder 1";
+            this.thunderButt1.UseVisualStyleBackColor = true;
+            this.thunderButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // thunderButt0
+            // 
+            this.thunderButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.thunderButt0.AutoSize = true;
+            this.thunderButt0.Checked = true;
+            this.thunderButt0.Location = new System.Drawing.Point(115, 8);
+            this.thunderButt0.Name = "thunderButt0";
+            this.thunderButt0.Size = new System.Drawing.Size(14, 13);
+            this.thunderButt0.TabIndex = 6;
+            this.thunderButt0.TabStop = true;
+            this.thunderButt0.Tag = "thunder 0";
+            this.thunderButt0.UseVisualStyleBackColor = true;
+            this.thunderButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // thunderButt3
+            // 
+            this.thunderButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.thunderButt3.AutoSize = true;
+            this.thunderButt3.Location = new System.Drawing.Point(151, 8);
+            this.thunderButt3.Name = "thunderButt3";
+            this.thunderButt3.Size = new System.Drawing.Size(14, 13);
+            this.thunderButt3.TabIndex = 7;
+            this.thunderButt3.Tag = "thunder 3";
+            this.thunderButt3.UseVisualStyleBackColor = true;
+            this.thunderButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // radiantPanel
+            // 
+            this.radiantPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radiantPanel.ColumnCount = 5;
+            this.radiantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.radiantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.radiantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.radiantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.radiantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.radiantPanel.Controls.Add(this.radiantPicBox, 2, 0);
+            this.radiantPanel.Controls.Add(this.radiantButt2, 1, 0);
+            this.radiantPanel.Controls.Add(this.radiantButt1, 0, 0);
+            this.radiantPanel.Controls.Add(this.radiantButt0, 3, 0);
+            this.radiantPanel.Controls.Add(this.radiantButt3, 4, 0);
+            this.radiantPanel.Location = new System.Drawing.Point(0, 278);
+            this.radiantPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.radiantPanel.Name = "radiantPanel";
+            this.radiantPanel.RowCount = 1;
+            this.radiantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.radiantPanel.Size = new System.Drawing.Size(177, 30);
+            this.radiantPanel.TabIndex = 19;
+            // 
+            // radiantPicBox
+            // 
+            this.radiantPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radiantPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.radiantPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.radiant_imm;
+            this.radiantPicBox.Location = new System.Drawing.Point(70, 0);
+            this.radiantPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.radiantPicBox.Name = "radiantPicBox";
+            this.radiantPicBox.Size = new System.Drawing.Size(35, 30);
+            this.radiantPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.radiantPicBox.TabIndex = 8;
+            this.radiantPicBox.TabStop = false;
+            this.radiantPicBox.Tag = "Radiant";
+            this.radiantPicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // radiantButt2
+            // 
+            this.radiantButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radiantButt2.AutoSize = true;
+            this.radiantButt2.Location = new System.Drawing.Point(45, 8);
+            this.radiantButt2.Name = "radiantButt2";
+            this.radiantButt2.Size = new System.Drawing.Size(14, 13);
+            this.radiantButt2.TabIndex = 5;
+            this.radiantButt2.Tag = "radiant 2";
+            this.radiantButt2.UseVisualStyleBackColor = true;
+            this.radiantButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // radiantButt1
+            // 
+            this.radiantButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radiantButt1.AutoSize = true;
+            this.radiantButt1.Location = new System.Drawing.Point(10, 8);
+            this.radiantButt1.Name = "radiantButt1";
+            this.radiantButt1.Size = new System.Drawing.Size(14, 13);
+            this.radiantButt1.TabIndex = 0;
+            this.radiantButt1.Tag = "radiant 1";
+            this.radiantButt1.UseVisualStyleBackColor = true;
+            this.radiantButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // radiantButt0
+            // 
+            this.radiantButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radiantButt0.AutoSize = true;
+            this.radiantButt0.Checked = true;
+            this.radiantButt0.Location = new System.Drawing.Point(115, 8);
+            this.radiantButt0.Name = "radiantButt0";
+            this.radiantButt0.Size = new System.Drawing.Size(14, 13);
+            this.radiantButt0.TabIndex = 6;
+            this.radiantButt0.TabStop = true;
+            this.radiantButt0.Tag = "radiant 0";
+            this.radiantButt0.UseVisualStyleBackColor = true;
+            this.radiantButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // radiantButt3
+            // 
+            this.radiantButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radiantButt3.AutoSize = true;
+            this.radiantButt3.Location = new System.Drawing.Point(151, 8);
+            this.radiantButt3.Name = "radiantButt3";
+            this.radiantButt3.Size = new System.Drawing.Size(14, 13);
+            this.radiantButt3.TabIndex = 7;
+            this.radiantButt3.Tag = "radiant 3";
+            this.radiantButt3.UseVisualStyleBackColor = true;
+            this.radiantButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // psychicPanel
+            // 
+            this.psychicPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.psychicPanel.ColumnCount = 5;
+            this.psychicPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.psychicPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.psychicPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.psychicPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.psychicPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.psychicPanel.Controls.Add(this.psychicPicBox, 2, 0);
+            this.psychicPanel.Controls.Add(this.psychicButt2, 1, 0);
+            this.psychicPanel.Controls.Add(this.psychicButt1, 0, 0);
+            this.psychicPanel.Controls.Add(this.psychicButt0, 3, 0);
+            this.psychicPanel.Controls.Add(this.psychicButt3, 4, 0);
+            this.psychicPanel.Location = new System.Drawing.Point(0, 248);
+            this.psychicPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.psychicPanel.Name = "psychicPanel";
+            this.psychicPanel.RowCount = 1;
+            this.psychicPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.psychicPanel.Size = new System.Drawing.Size(177, 30);
+            this.psychicPanel.TabIndex = 18;
+            // 
+            // psychicPicBox
+            // 
+            this.psychicPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.psychicPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.psychicPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.psychic_imm;
+            this.psychicPicBox.Location = new System.Drawing.Point(70, 0);
+            this.psychicPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.psychicPicBox.Name = "psychicPicBox";
+            this.psychicPicBox.Size = new System.Drawing.Size(35, 30);
+            this.psychicPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.psychicPicBox.TabIndex = 8;
+            this.psychicPicBox.TabStop = false;
+            this.psychicPicBox.Tag = "Psychic";
+            this.psychicPicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // psychicButt2
+            // 
+            this.psychicButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.psychicButt2.AutoSize = true;
+            this.psychicButt2.Location = new System.Drawing.Point(45, 8);
+            this.psychicButt2.Name = "psychicButt2";
+            this.psychicButt2.Size = new System.Drawing.Size(14, 13);
+            this.psychicButt2.TabIndex = 5;
+            this.psychicButt2.Tag = "psychic 2";
+            this.psychicButt2.UseVisualStyleBackColor = true;
+            this.psychicButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // psychicButt1
+            // 
+            this.psychicButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.psychicButt1.AutoSize = true;
+            this.psychicButt1.Location = new System.Drawing.Point(10, 8);
+            this.psychicButt1.Name = "psychicButt1";
+            this.psychicButt1.Size = new System.Drawing.Size(14, 13);
+            this.psychicButt1.TabIndex = 0;
+            this.psychicButt1.Tag = "psychic 1";
+            this.psychicButt1.UseVisualStyleBackColor = true;
+            this.psychicButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // psychicButt0
+            // 
+            this.psychicButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.psychicButt0.AutoSize = true;
+            this.psychicButt0.Checked = true;
+            this.psychicButt0.Location = new System.Drawing.Point(115, 8);
+            this.psychicButt0.Name = "psychicButt0";
+            this.psychicButt0.Size = new System.Drawing.Size(14, 13);
+            this.psychicButt0.TabIndex = 6;
+            this.psychicButt0.TabStop = true;
+            this.psychicButt0.Tag = "psychic 0";
+            this.psychicButt0.UseVisualStyleBackColor = true;
+            this.psychicButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // psychicButt3
+            // 
+            this.psychicButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.psychicButt3.AutoSize = true;
+            this.psychicButt3.Location = new System.Drawing.Point(151, 8);
+            this.psychicButt3.Name = "psychicButt3";
+            this.psychicButt3.Size = new System.Drawing.Size(14, 13);
+            this.psychicButt3.TabIndex = 7;
+            this.psychicButt3.Tag = "psychic 3";
+            this.psychicButt3.UseVisualStyleBackColor = true;
+            this.psychicButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // poisonPanel
+            // 
+            this.poisonPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.poisonPanel.ColumnCount = 5;
+            this.poisonPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.poisonPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.poisonPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.poisonPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.poisonPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.poisonPanel.Controls.Add(this.poisonPicBox, 2, 0);
+            this.poisonPanel.Controls.Add(this.poisonButt2, 1, 0);
+            this.poisonPanel.Controls.Add(this.poisonButt1, 0, 0);
+            this.poisonPanel.Controls.Add(this.poisonButt0, 3, 0);
+            this.poisonPanel.Controls.Add(this.poisonButt3, 4, 0);
+            this.poisonPanel.Location = new System.Drawing.Point(0, 218);
+            this.poisonPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.poisonPanel.Name = "poisonPanel";
+            this.poisonPanel.RowCount = 1;
+            this.poisonPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.poisonPanel.Size = new System.Drawing.Size(177, 30);
+            this.poisonPanel.TabIndex = 17;
+            // 
+            // poisonPicBox
+            // 
+            this.poisonPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.poisonPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.poisonPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.poison_imm;
+            this.poisonPicBox.Location = new System.Drawing.Point(70, 0);
+            this.poisonPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.poisonPicBox.Name = "poisonPicBox";
+            this.poisonPicBox.Size = new System.Drawing.Size(35, 30);
+            this.poisonPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.poisonPicBox.TabIndex = 8;
+            this.poisonPicBox.TabStop = false;
+            this.poisonPicBox.Tag = "Poison";
+            this.poisonPicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // poisonButt2
+            // 
+            this.poisonButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.poisonButt2.AutoSize = true;
+            this.poisonButt2.Location = new System.Drawing.Point(45, 8);
+            this.poisonButt2.Name = "poisonButt2";
+            this.poisonButt2.Size = new System.Drawing.Size(14, 13);
+            this.poisonButt2.TabIndex = 5;
+            this.poisonButt2.Tag = "poison 2";
+            this.poisonButt2.UseVisualStyleBackColor = true;
+            this.poisonButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // poisonButt1
+            // 
+            this.poisonButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.poisonButt1.AutoSize = true;
+            this.poisonButt1.Location = new System.Drawing.Point(10, 8);
+            this.poisonButt1.Name = "poisonButt1";
+            this.poisonButt1.Size = new System.Drawing.Size(14, 13);
+            this.poisonButt1.TabIndex = 0;
+            this.poisonButt1.Tag = "poison 1";
+            this.poisonButt1.UseVisualStyleBackColor = true;
+            this.poisonButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // poisonButt0
+            // 
+            this.poisonButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.poisonButt0.AutoSize = true;
+            this.poisonButt0.Checked = true;
+            this.poisonButt0.Location = new System.Drawing.Point(115, 8);
+            this.poisonButt0.Name = "poisonButt0";
+            this.poisonButt0.Size = new System.Drawing.Size(14, 13);
+            this.poisonButt0.TabIndex = 6;
+            this.poisonButt0.TabStop = true;
+            this.poisonButt0.Tag = "poison 0";
+            this.poisonButt0.UseVisualStyleBackColor = true;
+            this.poisonButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // poisonButt3
+            // 
+            this.poisonButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.poisonButt3.AutoSize = true;
+            this.poisonButt3.Location = new System.Drawing.Point(151, 8);
+            this.poisonButt3.Name = "poisonButt3";
+            this.poisonButt3.Size = new System.Drawing.Size(14, 13);
+            this.poisonButt3.TabIndex = 7;
+            this.poisonButt3.Tag = "poison 3";
+            this.poisonButt3.UseVisualStyleBackColor = true;
+            this.poisonButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // necroticPanel
+            // 
+            this.necroticPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.necroticPanel.ColumnCount = 5;
+            this.necroticPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.necroticPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.necroticPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.necroticPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.necroticPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.necroticPanel.Controls.Add(this.necroticPicBox, 2, 0);
+            this.necroticPanel.Controls.Add(this.necroticButt2, 1, 0);
+            this.necroticPanel.Controls.Add(this.necroticButt1, 0, 0);
+            this.necroticPanel.Controls.Add(this.necroticButt0, 3, 0);
+            this.necroticPanel.Controls.Add(this.necroticButt3, 4, 0);
+            this.necroticPanel.Location = new System.Drawing.Point(0, 188);
+            this.necroticPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.necroticPanel.Name = "necroticPanel";
+            this.necroticPanel.RowCount = 1;
+            this.necroticPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.necroticPanel.Size = new System.Drawing.Size(177, 30);
+            this.necroticPanel.TabIndex = 16;
+            // 
+            // necroticPicBox
+            // 
+            this.necroticPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.necroticPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.necroticPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.necrotic_imm;
+            this.necroticPicBox.Location = new System.Drawing.Point(70, 0);
+            this.necroticPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.necroticPicBox.Name = "necroticPicBox";
+            this.necroticPicBox.Size = new System.Drawing.Size(35, 30);
+            this.necroticPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.necroticPicBox.TabIndex = 8;
+            this.necroticPicBox.TabStop = false;
+            this.necroticPicBox.Tag = "Necrotic";
+            this.necroticPicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // necroticButt2
+            // 
+            this.necroticButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.necroticButt2.AutoSize = true;
+            this.necroticButt2.Location = new System.Drawing.Point(45, 8);
+            this.necroticButt2.Name = "necroticButt2";
+            this.necroticButt2.Size = new System.Drawing.Size(14, 13);
+            this.necroticButt2.TabIndex = 5;
+            this.necroticButt2.Tag = "necrotic 2";
+            this.necroticButt2.UseVisualStyleBackColor = true;
+            this.necroticButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // necroticButt1
+            // 
+            this.necroticButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.necroticButt1.AutoSize = true;
+            this.necroticButt1.Location = new System.Drawing.Point(10, 8);
+            this.necroticButt1.Name = "necroticButt1";
+            this.necroticButt1.Size = new System.Drawing.Size(14, 13);
+            this.necroticButt1.TabIndex = 0;
+            this.necroticButt1.Tag = "necrotic 1";
+            this.necroticButt1.UseVisualStyleBackColor = true;
+            this.necroticButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // necroticButt0
+            // 
+            this.necroticButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.necroticButt0.AutoSize = true;
+            this.necroticButt0.Checked = true;
+            this.necroticButt0.Location = new System.Drawing.Point(115, 8);
+            this.necroticButt0.Name = "necroticButt0";
+            this.necroticButt0.Size = new System.Drawing.Size(14, 13);
+            this.necroticButt0.TabIndex = 6;
+            this.necroticButt0.TabStop = true;
+            this.necroticButt0.Tag = "necrotic 0";
+            this.necroticButt0.UseVisualStyleBackColor = true;
+            this.necroticButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // necroticButt3
+            // 
+            this.necroticButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.necroticButt3.AutoSize = true;
+            this.necroticButt3.Location = new System.Drawing.Point(151, 8);
+            this.necroticButt3.Name = "necroticButt3";
+            this.necroticButt3.Size = new System.Drawing.Size(14, 13);
+            this.necroticButt3.TabIndex = 7;
+            this.necroticButt3.Tag = "necrotic 3";
+            this.necroticButt3.UseVisualStyleBackColor = true;
+            this.necroticButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // lightningPanel
+            // 
+            this.lightningPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lightningPanel.ColumnCount = 5;
+            this.lightningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.lightningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.lightningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.lightningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.lightningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.lightningPanel.Controls.Add(this.lightningPicBox, 2, 0);
+            this.lightningPanel.Controls.Add(this.lightningButt2, 1, 0);
+            this.lightningPanel.Controls.Add(this.lightningButt1, 0, 0);
+            this.lightningPanel.Controls.Add(this.lightningButt0, 3, 0);
+            this.lightningPanel.Controls.Add(this.lightningButt3, 4, 0);
+            this.lightningPanel.Location = new System.Drawing.Point(0, 158);
+            this.lightningPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.lightningPanel.Name = "lightningPanel";
+            this.lightningPanel.RowCount = 1;
+            this.lightningPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.lightningPanel.Size = new System.Drawing.Size(177, 30);
+            this.lightningPanel.TabIndex = 15;
+            // 
+            // lightningPicBox
+            // 
+            this.lightningPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lightningPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.lightningPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.lightning_imm;
+            this.lightningPicBox.Location = new System.Drawing.Point(70, 0);
+            this.lightningPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.lightningPicBox.Name = "lightningPicBox";
+            this.lightningPicBox.Size = new System.Drawing.Size(35, 30);
+            this.lightningPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.lightningPicBox.TabIndex = 8;
+            this.lightningPicBox.TabStop = false;
+            this.lightningPicBox.Tag = "Lightning";
+            this.lightningPicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // lightningButt2
+            // 
+            this.lightningButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lightningButt2.AutoSize = true;
+            this.lightningButt2.Location = new System.Drawing.Point(45, 8);
+            this.lightningButt2.Name = "lightningButt2";
+            this.lightningButt2.Size = new System.Drawing.Size(14, 13);
+            this.lightningButt2.TabIndex = 5;
+            this.lightningButt2.Tag = "lightning 2";
+            this.lightningButt2.UseVisualStyleBackColor = true;
+            this.lightningButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // lightningButt1
+            // 
+            this.lightningButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lightningButt1.AutoSize = true;
+            this.lightningButt1.Location = new System.Drawing.Point(10, 8);
+            this.lightningButt1.Name = "lightningButt1";
+            this.lightningButt1.Size = new System.Drawing.Size(14, 13);
+            this.lightningButt1.TabIndex = 0;
+            this.lightningButt1.Tag = "lightning 1";
+            this.lightningButt1.UseVisualStyleBackColor = true;
+            this.lightningButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // lightningButt0
+            // 
+            this.lightningButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lightningButt0.AutoSize = true;
+            this.lightningButt0.Checked = true;
+            this.lightningButt0.Location = new System.Drawing.Point(115, 8);
+            this.lightningButt0.Name = "lightningButt0";
+            this.lightningButt0.Size = new System.Drawing.Size(14, 13);
+            this.lightningButt0.TabIndex = 6;
+            this.lightningButt0.TabStop = true;
+            this.lightningButt0.Tag = "lightning 0";
+            this.lightningButt0.UseVisualStyleBackColor = true;
+            this.lightningButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // lightningButt3
+            // 
+            this.lightningButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lightningButt3.AutoSize = true;
+            this.lightningButt3.Location = new System.Drawing.Point(151, 8);
+            this.lightningButt3.Name = "lightningButt3";
+            this.lightningButt3.Size = new System.Drawing.Size(14, 13);
+            this.lightningButt3.TabIndex = 7;
+            this.lightningButt3.Tag = "lightning 3";
+            this.lightningButt3.UseVisualStyleBackColor = true;
+            this.lightningButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // forcePanel
+            // 
+            this.forcePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forcePanel.ColumnCount = 5;
+            this.forcePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.forcePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.forcePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.forcePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.forcePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.forcePanel.Controls.Add(this.forcePicBox, 2, 0);
+            this.forcePanel.Controls.Add(this.forceButt2, 1, 0);
+            this.forcePanel.Controls.Add(this.forceButt1, 0, 0);
+            this.forcePanel.Controls.Add(this.forceButt0, 3, 0);
+            this.forcePanel.Controls.Add(this.forceButt3, 4, 0);
+            this.forcePanel.Location = new System.Drawing.Point(0, 128);
+            this.forcePanel.Margin = new System.Windows.Forms.Padding(0);
+            this.forcePanel.Name = "forcePanel";
+            this.forcePanel.RowCount = 1;
+            this.forcePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.forcePanel.Size = new System.Drawing.Size(177, 30);
+            this.forcePanel.TabIndex = 14;
+            // 
+            // forcePicBox
+            // 
+            this.forcePicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forcePicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.forcePicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.force_imm;
+            this.forcePicBox.Location = new System.Drawing.Point(70, 0);
+            this.forcePicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.forcePicBox.Name = "forcePicBox";
+            this.forcePicBox.Size = new System.Drawing.Size(35, 30);
+            this.forcePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.forcePicBox.TabIndex = 8;
+            this.forcePicBox.TabStop = false;
+            this.forcePicBox.Tag = "Force";
+            this.forcePicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // forceButt2
+            // 
+            this.forceButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.forceButt2.AutoSize = true;
+            this.forceButt2.Location = new System.Drawing.Point(45, 8);
+            this.forceButt2.Name = "forceButt2";
+            this.forceButt2.Size = new System.Drawing.Size(14, 13);
+            this.forceButt2.TabIndex = 5;
+            this.forceButt2.Tag = "force 2";
+            this.forceButt2.UseVisualStyleBackColor = true;
+            this.forceButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // forceButt1
+            // 
+            this.forceButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.forceButt1.AutoSize = true;
+            this.forceButt1.Location = new System.Drawing.Point(10, 8);
+            this.forceButt1.Name = "forceButt1";
+            this.forceButt1.Size = new System.Drawing.Size(14, 13);
+            this.forceButt1.TabIndex = 0;
+            this.forceButt1.Tag = "force 1";
+            this.forceButt1.UseVisualStyleBackColor = true;
+            this.forceButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // forceButt0
+            // 
+            this.forceButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.forceButt0.AutoSize = true;
+            this.forceButt0.Checked = true;
+            this.forceButt0.Location = new System.Drawing.Point(115, 8);
+            this.forceButt0.Name = "forceButt0";
+            this.forceButt0.Size = new System.Drawing.Size(14, 13);
+            this.forceButt0.TabIndex = 6;
+            this.forceButt0.TabStop = true;
+            this.forceButt0.Tag = "force 0";
+            this.forceButt0.UseVisualStyleBackColor = true;
+            this.forceButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // forceButt3
+            // 
+            this.forceButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.forceButt3.AutoSize = true;
+            this.forceButt3.Location = new System.Drawing.Point(151, 8);
+            this.forceButt3.Name = "forceButt3";
+            this.forceButt3.Size = new System.Drawing.Size(14, 13);
+            this.forceButt3.TabIndex = 7;
+            this.forceButt3.Tag = "force 3";
+            this.forceButt3.UseVisualStyleBackColor = true;
+            this.forceButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // firePanel
+            // 
+            this.firePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.firePanel.ColumnCount = 5;
+            this.firePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.firePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.firePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.firePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.firePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.firePanel.Controls.Add(this.firePicBox, 2, 0);
+            this.firePanel.Controls.Add(this.fireButt2, 1, 0);
+            this.firePanel.Controls.Add(this.fireButt1, 0, 0);
+            this.firePanel.Controls.Add(this.fireButt0, 3, 0);
+            this.firePanel.Controls.Add(this.fireButt3, 4, 0);
+            this.firePanel.Location = new System.Drawing.Point(0, 98);
+            this.firePanel.Margin = new System.Windows.Forms.Padding(0);
+            this.firePanel.Name = "firePanel";
+            this.firePanel.RowCount = 1;
+            this.firePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.firePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.firePanel.Size = new System.Drawing.Size(177, 30);
+            this.firePanel.TabIndex = 13;
+            // 
+            // firePicBox
+            // 
+            this.firePicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.firePicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.firePicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.fire_imm;
+            this.firePicBox.Location = new System.Drawing.Point(70, 0);
+            this.firePicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.firePicBox.Name = "firePicBox";
+            this.firePicBox.Size = new System.Drawing.Size(35, 30);
+            this.firePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.firePicBox.TabIndex = 8;
+            this.firePicBox.TabStop = false;
+            this.firePicBox.Tag = "Fire";
+            this.firePicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // fireButt2
+            // 
+            this.fireButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.fireButt2.AutoSize = true;
+            this.fireButt2.Location = new System.Drawing.Point(45, 8);
+            this.fireButt2.Name = "fireButt2";
+            this.fireButt2.Size = new System.Drawing.Size(14, 13);
+            this.fireButt2.TabIndex = 5;
+            this.fireButt2.Tag = "fire 2";
+            this.fireButt2.UseVisualStyleBackColor = true;
+            this.fireButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // fireButt1
+            // 
+            this.fireButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.fireButt1.AutoSize = true;
+            this.fireButt1.Location = new System.Drawing.Point(10, 8);
+            this.fireButt1.Name = "fireButt1";
+            this.fireButt1.Size = new System.Drawing.Size(14, 13);
+            this.fireButt1.TabIndex = 0;
+            this.fireButt1.Tag = "fire 1";
+            this.fireButt1.UseVisualStyleBackColor = true;
+            this.fireButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // fireButt0
+            // 
+            this.fireButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.fireButt0.AutoSize = true;
+            this.fireButt0.Checked = true;
+            this.fireButt0.Location = new System.Drawing.Point(115, 8);
+            this.fireButt0.Name = "fireButt0";
+            this.fireButt0.Size = new System.Drawing.Size(14, 13);
+            this.fireButt0.TabIndex = 6;
+            this.fireButt0.TabStop = true;
+            this.fireButt0.Tag = "fire 0";
+            this.fireButt0.UseVisualStyleBackColor = true;
+            this.fireButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // fireButt3
+            // 
+            this.fireButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.fireButt3.AutoSize = true;
+            this.fireButt3.Location = new System.Drawing.Point(151, 8);
+            this.fireButt3.Name = "fireButt3";
+            this.fireButt3.Size = new System.Drawing.Size(14, 13);
+            this.fireButt3.TabIndex = 7;
+            this.fireButt3.Tag = "fire 3";
+            this.fireButt3.UseVisualStyleBackColor = true;
+            this.fireButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // coldPanel
+            // 
+            this.coldPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.coldPanel.ColumnCount = 5;
+            this.coldPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.coldPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.coldPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.coldPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.coldPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.coldPanel.Controls.Add(this.coldPicBox, 2, 0);
+            this.coldPanel.Controls.Add(this.coldButt2, 1, 0);
+            this.coldPanel.Controls.Add(this.coldButt1, 0, 0);
+            this.coldPanel.Controls.Add(this.coldButt0, 3, 0);
+            this.coldPanel.Controls.Add(this.coldButt3, 4, 0);
+            this.coldPanel.Location = new System.Drawing.Point(0, 68);
+            this.coldPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.coldPanel.Name = "coldPanel";
+            this.coldPanel.RowCount = 1;
+            this.coldPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.coldPanel.Size = new System.Drawing.Size(177, 30);
+            this.coldPanel.TabIndex = 12;
+            // 
+            // coldPicBox
+            // 
+            this.coldPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.coldPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.coldPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.cold_imm;
+            this.coldPicBox.Location = new System.Drawing.Point(70, 0);
+            this.coldPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.coldPicBox.Name = "coldPicBox";
+            this.coldPicBox.Size = new System.Drawing.Size(35, 30);
+            this.coldPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.coldPicBox.TabIndex = 8;
+            this.coldPicBox.TabStop = false;
+            this.coldPicBox.Tag = "Cold";
+            this.coldPicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // coldButt2
+            // 
+            this.coldButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.coldButt2.AutoSize = true;
+            this.coldButt2.Location = new System.Drawing.Point(45, 8);
+            this.coldButt2.Name = "coldButt2";
+            this.coldButt2.Size = new System.Drawing.Size(14, 13);
+            this.coldButt2.TabIndex = 5;
+            this.coldButt2.Tag = "cold 2";
+            this.coldButt2.UseVisualStyleBackColor = true;
+            this.coldButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // coldButt1
+            // 
+            this.coldButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.coldButt1.AutoSize = true;
+            this.coldButt1.Location = new System.Drawing.Point(10, 8);
+            this.coldButt1.Name = "coldButt1";
+            this.coldButt1.Size = new System.Drawing.Size(14, 13);
+            this.coldButt1.TabIndex = 0;
+            this.coldButt1.Tag = "cold 1";
+            this.coldButt1.UseVisualStyleBackColor = true;
+            this.coldButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // coldButt0
+            // 
+            this.coldButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.coldButt0.AutoSize = true;
+            this.coldButt0.Checked = true;
+            this.coldButt0.Location = new System.Drawing.Point(115, 8);
+            this.coldButt0.Name = "coldButt0";
+            this.coldButt0.Size = new System.Drawing.Size(14, 13);
+            this.coldButt0.TabIndex = 6;
+            this.coldButt0.TabStop = true;
+            this.coldButt0.Tag = "cold 0";
+            this.coldButt0.UseVisualStyleBackColor = true;
+            this.coldButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // coldButt3
+            // 
+            this.coldButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.coldButt3.AutoSize = true;
+            this.coldButt3.Location = new System.Drawing.Point(151, 8);
+            this.coldButt3.Name = "coldButt3";
+            this.coldButt3.Size = new System.Drawing.Size(14, 13);
+            this.coldButt3.TabIndex = 7;
+            this.coldButt3.Tag = "cold 3";
+            this.coldButt3.UseVisualStyleBackColor = true;
+            this.coldButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.label13, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label12, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label11, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(177, 38);
+            this.tableLayoutPanel2.TabIndex = 11;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(145, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(27, 20);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "2x";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(109, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(27, 20);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "1x";
             // 
             // label10
             // 
@@ -970,60 +2178,6 @@ namespace Dungeon_Master_Helper
             this.label11.Size = new System.Drawing.Size(26, 13);
             this.label11.TabIndex = 2;
             this.label11.Text = "½ x";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(109, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(27, 20);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "1x";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(145, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(27, 20);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "2x";
-            // 
-            // acidButt2
-            // 
-            this.acidButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.acidButt2.AutoSize = true;
-            this.acidButt2.Location = new System.Drawing.Point(45, 8);
-            this.acidButt2.Name = "acidButt2";
-            this.acidButt2.Size = new System.Drawing.Size(14, 13);
-            this.acidButt2.TabIndex = 5;
-            this.acidButt2.UseVisualStyleBackColor = true;
-            // 
-            // acidButt0
-            // 
-            this.acidButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.acidButt0.AutoSize = true;
-            this.acidButt0.Checked = true;
-            this.acidButt0.Location = new System.Drawing.Point(115, 8);
-            this.acidButt0.Name = "acidButt0";
-            this.acidButt0.Size = new System.Drawing.Size(14, 13);
-            this.acidButt0.TabIndex = 6;
-            this.acidButt0.TabStop = true;
-            this.acidButt0.UseVisualStyleBackColor = true;
-            // 
-            // acidButt3
-            // 
-            this.acidButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.acidButt3.AutoSize = true;
-            this.acidButt3.Location = new System.Drawing.Point(151, 8);
-            this.acidButt3.Name = "acidButt3";
-            this.acidButt3.Size = new System.Drawing.Size(14, 13);
-            this.acidButt3.TabIndex = 7;
-            this.acidButt3.UseVisualStyleBackColor = true;
             // 
             // acidPanel
             // 
@@ -1049,1106 +2203,6 @@ namespace Dungeon_Master_Helper
             this.acidPanel.Size = new System.Drawing.Size(177, 30);
             this.acidPanel.TabIndex = 10;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 5;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.label13, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label12, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label11, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(177, 38);
-            this.tableLayoutPanel2.TabIndex = 11;
-            // 
-            // coldPanel
-            // 
-            this.coldPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.coldPanel.ColumnCount = 5;
-            this.coldPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.coldPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.coldPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.coldPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.coldPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.coldPanel.Controls.Add(this.coldPicBox, 2, 0);
-            this.coldPanel.Controls.Add(this.radioButton1, 1, 0);
-            this.coldPanel.Controls.Add(this.radioButton2, 0, 0);
-            this.coldPanel.Controls.Add(this.radioButton3, 3, 0);
-            this.coldPanel.Controls.Add(this.radioButton4, 4, 0);
-            this.coldPanel.Location = new System.Drawing.Point(0, 68);
-            this.coldPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.coldPanel.Name = "coldPanel";
-            this.coldPanel.RowCount = 1;
-            this.coldPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.coldPanel.Size = new System.Drawing.Size(177, 30);
-            this.coldPanel.TabIndex = 12;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(45, 8);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(14, 13);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(10, 8);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(14, 13);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Checked = true;
-            this.radioButton3.Location = new System.Drawing.Point(115, 8);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(14, 13);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(151, 8);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(14, 13);
-            this.radioButton4.TabIndex = 7;
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // firePanel
-            // 
-            this.firePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.firePanel.ColumnCount = 5;
-            this.firePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.firePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.firePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.firePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.firePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.firePanel.Controls.Add(this.firePicBox, 2, 0);
-            this.firePanel.Controls.Add(this.radioButton5, 1, 0);
-            this.firePanel.Controls.Add(this.radioButton6, 0, 0);
-            this.firePanel.Controls.Add(this.radioButton7, 3, 0);
-            this.firePanel.Controls.Add(this.radioButton8, 4, 0);
-            this.firePanel.Location = new System.Drawing.Point(0, 98);
-            this.firePanel.Margin = new System.Windows.Forms.Padding(0);
-            this.firePanel.Name = "firePanel";
-            this.firePanel.RowCount = 1;
-            this.firePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.firePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.firePanel.Size = new System.Drawing.Size(177, 30);
-            this.firePanel.TabIndex = 13;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(45, 8);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(14, 13);
-            this.radioButton5.TabIndex = 5;
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(10, 8);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(14, 13);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Checked = true;
-            this.radioButton7.Location = new System.Drawing.Point(115, 8);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(14, 13);
-            this.radioButton7.TabIndex = 6;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(151, 8);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(14, 13);
-            this.radioButton8.TabIndex = 7;
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // forcePanel
-            // 
-            this.forcePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.forcePanel.ColumnCount = 5;
-            this.forcePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.forcePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.forcePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.forcePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.forcePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.forcePanel.Controls.Add(this.forcePicBox, 2, 0);
-            this.forcePanel.Controls.Add(this.radioButton9, 1, 0);
-            this.forcePanel.Controls.Add(this.radioButton10, 0, 0);
-            this.forcePanel.Controls.Add(this.radioButton11, 3, 0);
-            this.forcePanel.Controls.Add(this.radioButton12, 4, 0);
-            this.forcePanel.Location = new System.Drawing.Point(0, 128);
-            this.forcePanel.Margin = new System.Windows.Forms.Padding(0);
-            this.forcePanel.Name = "forcePanel";
-            this.forcePanel.RowCount = 1;
-            this.forcePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.forcePanel.Size = new System.Drawing.Size(177, 30);
-            this.forcePanel.TabIndex = 14;
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(45, 8);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(14, 13);
-            this.radioButton9.TabIndex = 5;
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(10, 8);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(14, 13);
-            this.radioButton10.TabIndex = 0;
-            this.radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // radioButton11
-            // 
-            this.radioButton11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Checked = true;
-            this.radioButton11.Location = new System.Drawing.Point(115, 8);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(14, 13);
-            this.radioButton11.TabIndex = 6;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.UseVisualStyleBackColor = true;
-            // 
-            // radioButton12
-            // 
-            this.radioButton12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(151, 8);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(14, 13);
-            this.radioButton12.TabIndex = 7;
-            this.radioButton12.UseVisualStyleBackColor = true;
-            // 
-            // lightningPanel
-            // 
-            this.lightningPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lightningPanel.ColumnCount = 5;
-            this.lightningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.lightningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.lightningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.lightningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.lightningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.lightningPanel.Controls.Add(this.lightningPicBox, 2, 0);
-            this.lightningPanel.Controls.Add(this.radioButton13, 1, 0);
-            this.lightningPanel.Controls.Add(this.radioButton14, 0, 0);
-            this.lightningPanel.Controls.Add(this.radioButton15, 3, 0);
-            this.lightningPanel.Controls.Add(this.radioButton16, 4, 0);
-            this.lightningPanel.Location = new System.Drawing.Point(0, 158);
-            this.lightningPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.lightningPanel.Name = "lightningPanel";
-            this.lightningPanel.RowCount = 1;
-            this.lightningPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.lightningPanel.Size = new System.Drawing.Size(177, 30);
-            this.lightningPanel.TabIndex = 15;
-            // 
-            // radioButton13
-            // 
-            this.radioButton13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(45, 8);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(14, 13);
-            this.radioButton13.TabIndex = 5;
-            this.radioButton13.UseVisualStyleBackColor = true;
-            // 
-            // radioButton14
-            // 
-            this.radioButton14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(10, 8);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(14, 13);
-            this.radioButton14.TabIndex = 0;
-            this.radioButton14.UseVisualStyleBackColor = true;
-            // 
-            // radioButton15
-            // 
-            this.radioButton15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton15.AutoSize = true;
-            this.radioButton15.Checked = true;
-            this.radioButton15.Location = new System.Drawing.Point(115, 8);
-            this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(14, 13);
-            this.radioButton15.TabIndex = 6;
-            this.radioButton15.TabStop = true;
-            this.radioButton15.UseVisualStyleBackColor = true;
-            // 
-            // radioButton16
-            // 
-            this.radioButton16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton16.AutoSize = true;
-            this.radioButton16.Location = new System.Drawing.Point(151, 8);
-            this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(14, 13);
-            this.radioButton16.TabIndex = 7;
-            this.radioButton16.UseVisualStyleBackColor = true;
-            // 
-            // necroticPanel
-            // 
-            this.necroticPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.necroticPanel.ColumnCount = 5;
-            this.necroticPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.necroticPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.necroticPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.necroticPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.necroticPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.necroticPanel.Controls.Add(this.necroticPicBox, 2, 0);
-            this.necroticPanel.Controls.Add(this.radioButton17, 1, 0);
-            this.necroticPanel.Controls.Add(this.radioButton18, 0, 0);
-            this.necroticPanel.Controls.Add(this.radioButton19, 3, 0);
-            this.necroticPanel.Controls.Add(this.radioButton20, 4, 0);
-            this.necroticPanel.Location = new System.Drawing.Point(0, 188);
-            this.necroticPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.necroticPanel.Name = "necroticPanel";
-            this.necroticPanel.RowCount = 1;
-            this.necroticPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.necroticPanel.Size = new System.Drawing.Size(177, 30);
-            this.necroticPanel.TabIndex = 16;
-            // 
-            // radioButton17
-            // 
-            this.radioButton17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton17.AutoSize = true;
-            this.radioButton17.Location = new System.Drawing.Point(45, 8);
-            this.radioButton17.Name = "radioButton17";
-            this.radioButton17.Size = new System.Drawing.Size(14, 13);
-            this.radioButton17.TabIndex = 5;
-            this.radioButton17.UseVisualStyleBackColor = true;
-            // 
-            // radioButton18
-            // 
-            this.radioButton18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton18.AutoSize = true;
-            this.radioButton18.Location = new System.Drawing.Point(10, 8);
-            this.radioButton18.Name = "radioButton18";
-            this.radioButton18.Size = new System.Drawing.Size(14, 13);
-            this.radioButton18.TabIndex = 0;
-            this.radioButton18.UseVisualStyleBackColor = true;
-            // 
-            // radioButton19
-            // 
-            this.radioButton19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton19.AutoSize = true;
-            this.radioButton19.Checked = true;
-            this.radioButton19.Location = new System.Drawing.Point(115, 8);
-            this.radioButton19.Name = "radioButton19";
-            this.radioButton19.Size = new System.Drawing.Size(14, 13);
-            this.radioButton19.TabIndex = 6;
-            this.radioButton19.TabStop = true;
-            this.radioButton19.UseVisualStyleBackColor = true;
-            // 
-            // radioButton20
-            // 
-            this.radioButton20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton20.AutoSize = true;
-            this.radioButton20.Location = new System.Drawing.Point(151, 8);
-            this.radioButton20.Name = "radioButton20";
-            this.radioButton20.Size = new System.Drawing.Size(14, 13);
-            this.radioButton20.TabIndex = 7;
-            this.radioButton20.UseVisualStyleBackColor = true;
-            // 
-            // poisonPanel
-            // 
-            this.poisonPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.poisonPanel.ColumnCount = 5;
-            this.poisonPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.poisonPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.poisonPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.poisonPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.poisonPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.poisonPanel.Controls.Add(this.poisonPicBox, 2, 0);
-            this.poisonPanel.Controls.Add(this.radioButton21, 1, 0);
-            this.poisonPanel.Controls.Add(this.radioButton22, 0, 0);
-            this.poisonPanel.Controls.Add(this.radioButton23, 3, 0);
-            this.poisonPanel.Controls.Add(this.radioButton24, 4, 0);
-            this.poisonPanel.Location = new System.Drawing.Point(0, 218);
-            this.poisonPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.poisonPanel.Name = "poisonPanel";
-            this.poisonPanel.RowCount = 1;
-            this.poisonPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.poisonPanel.Size = new System.Drawing.Size(177, 30);
-            this.poisonPanel.TabIndex = 17;
-            // 
-            // radioButton21
-            // 
-            this.radioButton21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton21.AutoSize = true;
-            this.radioButton21.Location = new System.Drawing.Point(45, 8);
-            this.radioButton21.Name = "radioButton21";
-            this.radioButton21.Size = new System.Drawing.Size(14, 13);
-            this.radioButton21.TabIndex = 5;
-            this.radioButton21.UseVisualStyleBackColor = true;
-            // 
-            // radioButton22
-            // 
-            this.radioButton22.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton22.AutoSize = true;
-            this.radioButton22.Location = new System.Drawing.Point(10, 8);
-            this.radioButton22.Name = "radioButton22";
-            this.radioButton22.Size = new System.Drawing.Size(14, 13);
-            this.radioButton22.TabIndex = 0;
-            this.radioButton22.UseVisualStyleBackColor = true;
-            // 
-            // radioButton23
-            // 
-            this.radioButton23.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton23.AutoSize = true;
-            this.radioButton23.Checked = true;
-            this.radioButton23.Location = new System.Drawing.Point(115, 8);
-            this.radioButton23.Name = "radioButton23";
-            this.radioButton23.Size = new System.Drawing.Size(14, 13);
-            this.radioButton23.TabIndex = 6;
-            this.radioButton23.TabStop = true;
-            this.radioButton23.UseVisualStyleBackColor = true;
-            // 
-            // radioButton24
-            // 
-            this.radioButton24.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton24.AutoSize = true;
-            this.radioButton24.Location = new System.Drawing.Point(151, 8);
-            this.radioButton24.Name = "radioButton24";
-            this.radioButton24.Size = new System.Drawing.Size(14, 13);
-            this.radioButton24.TabIndex = 7;
-            this.radioButton24.UseVisualStyleBackColor = true;
-            // 
-            // psychicPanel
-            // 
-            this.psychicPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.psychicPanel.ColumnCount = 5;
-            this.psychicPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.psychicPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.psychicPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.psychicPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.psychicPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.psychicPanel.Controls.Add(this.psychicPicBox, 2, 0);
-            this.psychicPanel.Controls.Add(this.radioButton25, 1, 0);
-            this.psychicPanel.Controls.Add(this.radioButton26, 0, 0);
-            this.psychicPanel.Controls.Add(this.radioButton27, 3, 0);
-            this.psychicPanel.Controls.Add(this.radioButton28, 4, 0);
-            this.psychicPanel.Location = new System.Drawing.Point(0, 248);
-            this.psychicPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.psychicPanel.Name = "psychicPanel";
-            this.psychicPanel.RowCount = 1;
-            this.psychicPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.psychicPanel.Size = new System.Drawing.Size(177, 30);
-            this.psychicPanel.TabIndex = 18;
-            // 
-            // radioButton25
-            // 
-            this.radioButton25.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton25.AutoSize = true;
-            this.radioButton25.Location = new System.Drawing.Point(45, 8);
-            this.radioButton25.Name = "radioButton25";
-            this.radioButton25.Size = new System.Drawing.Size(14, 13);
-            this.radioButton25.TabIndex = 5;
-            this.radioButton25.UseVisualStyleBackColor = true;
-            // 
-            // radioButton26
-            // 
-            this.radioButton26.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton26.AutoSize = true;
-            this.radioButton26.Location = new System.Drawing.Point(10, 8);
-            this.radioButton26.Name = "radioButton26";
-            this.radioButton26.Size = new System.Drawing.Size(14, 13);
-            this.radioButton26.TabIndex = 0;
-            this.radioButton26.UseVisualStyleBackColor = true;
-            // 
-            // radioButton27
-            // 
-            this.radioButton27.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton27.AutoSize = true;
-            this.radioButton27.Checked = true;
-            this.radioButton27.Location = new System.Drawing.Point(115, 8);
-            this.radioButton27.Name = "radioButton27";
-            this.radioButton27.Size = new System.Drawing.Size(14, 13);
-            this.radioButton27.TabIndex = 6;
-            this.radioButton27.TabStop = true;
-            this.radioButton27.UseVisualStyleBackColor = true;
-            // 
-            // radioButton28
-            // 
-            this.radioButton28.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton28.AutoSize = true;
-            this.radioButton28.Location = new System.Drawing.Point(151, 8);
-            this.radioButton28.Name = "radioButton28";
-            this.radioButton28.Size = new System.Drawing.Size(14, 13);
-            this.radioButton28.TabIndex = 7;
-            this.radioButton28.UseVisualStyleBackColor = true;
-            // 
-            // radiantPanel
-            // 
-            this.radiantPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radiantPanel.ColumnCount = 5;
-            this.radiantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.radiantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.radiantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.radiantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.radiantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.radiantPanel.Controls.Add(this.radiantPicBox, 2, 0);
-            this.radiantPanel.Controls.Add(this.radioButton29, 1, 0);
-            this.radiantPanel.Controls.Add(this.radioButton30, 0, 0);
-            this.radiantPanel.Controls.Add(this.radioButton31, 3, 0);
-            this.radiantPanel.Controls.Add(this.radioButton32, 4, 0);
-            this.radiantPanel.Location = new System.Drawing.Point(0, 278);
-            this.radiantPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.radiantPanel.Name = "radiantPanel";
-            this.radiantPanel.RowCount = 1;
-            this.radiantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.radiantPanel.Size = new System.Drawing.Size(177, 30);
-            this.radiantPanel.TabIndex = 19;
-            // 
-            // radioButton29
-            // 
-            this.radioButton29.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton29.AutoSize = true;
-            this.radioButton29.Location = new System.Drawing.Point(45, 8);
-            this.radioButton29.Name = "radioButton29";
-            this.radioButton29.Size = new System.Drawing.Size(14, 13);
-            this.radioButton29.TabIndex = 5;
-            this.radioButton29.UseVisualStyleBackColor = true;
-            // 
-            // radioButton30
-            // 
-            this.radioButton30.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton30.AutoSize = true;
-            this.radioButton30.Location = new System.Drawing.Point(10, 8);
-            this.radioButton30.Name = "radioButton30";
-            this.radioButton30.Size = new System.Drawing.Size(14, 13);
-            this.radioButton30.TabIndex = 0;
-            this.radioButton30.UseVisualStyleBackColor = true;
-            // 
-            // radioButton31
-            // 
-            this.radioButton31.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton31.AutoSize = true;
-            this.radioButton31.Checked = true;
-            this.radioButton31.Location = new System.Drawing.Point(115, 8);
-            this.radioButton31.Name = "radioButton31";
-            this.radioButton31.Size = new System.Drawing.Size(14, 13);
-            this.radioButton31.TabIndex = 6;
-            this.radioButton31.TabStop = true;
-            this.radioButton31.UseVisualStyleBackColor = true;
-            // 
-            // radioButton32
-            // 
-            this.radioButton32.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton32.AutoSize = true;
-            this.radioButton32.Location = new System.Drawing.Point(151, 8);
-            this.radioButton32.Name = "radioButton32";
-            this.radioButton32.Size = new System.Drawing.Size(14, 13);
-            this.radioButton32.TabIndex = 7;
-            this.radioButton32.UseVisualStyleBackColor = true;
-            // 
-            // thunderPanel
-            // 
-            this.thunderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.thunderPanel.ColumnCount = 5;
-            this.thunderPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.thunderPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.thunderPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.thunderPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.thunderPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.thunderPanel.Controls.Add(this.thunderPicBox, 2, 0);
-            this.thunderPanel.Controls.Add(this.radioButton33, 1, 0);
-            this.thunderPanel.Controls.Add(this.radioButton34, 0, 0);
-            this.thunderPanel.Controls.Add(this.radioButton35, 3, 0);
-            this.thunderPanel.Controls.Add(this.radioButton36, 4, 0);
-            this.thunderPanel.Location = new System.Drawing.Point(0, 308);
-            this.thunderPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.thunderPanel.Name = "thunderPanel";
-            this.thunderPanel.RowCount = 1;
-            this.thunderPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.thunderPanel.Size = new System.Drawing.Size(177, 30);
-            this.thunderPanel.TabIndex = 20;
-            // 
-            // radioButton33
-            // 
-            this.radioButton33.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton33.AutoSize = true;
-            this.radioButton33.Location = new System.Drawing.Point(45, 8);
-            this.radioButton33.Name = "radioButton33";
-            this.radioButton33.Size = new System.Drawing.Size(14, 13);
-            this.radioButton33.TabIndex = 5;
-            this.radioButton33.UseVisualStyleBackColor = true;
-            // 
-            // radioButton34
-            // 
-            this.radioButton34.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton34.AutoSize = true;
-            this.radioButton34.Location = new System.Drawing.Point(10, 8);
-            this.radioButton34.Name = "radioButton34";
-            this.radioButton34.Size = new System.Drawing.Size(14, 13);
-            this.radioButton34.TabIndex = 0;
-            this.radioButton34.UseVisualStyleBackColor = true;
-            // 
-            // radioButton35
-            // 
-            this.radioButton35.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton35.AutoSize = true;
-            this.radioButton35.Checked = true;
-            this.radioButton35.Location = new System.Drawing.Point(115, 8);
-            this.radioButton35.Name = "radioButton35";
-            this.radioButton35.Size = new System.Drawing.Size(14, 13);
-            this.radioButton35.TabIndex = 6;
-            this.radioButton35.TabStop = true;
-            this.radioButton35.UseVisualStyleBackColor = true;
-            // 
-            // radioButton36
-            // 
-            this.radioButton36.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton36.AutoSize = true;
-            this.radioButton36.Location = new System.Drawing.Point(151, 8);
-            this.radioButton36.Name = "radioButton36";
-            this.radioButton36.Size = new System.Drawing.Size(14, 13);
-            this.radioButton36.TabIndex = 7;
-            this.radioButton36.UseVisualStyleBackColor = true;
-            // 
-            // bludgeoningPanel
-            // 
-            this.bludgeoningPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bludgeoningPanel.ColumnCount = 5;
-            this.bludgeoningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.bludgeoningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.bludgeoningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.bludgeoningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.bludgeoningPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.bludgeoningPanel.Controls.Add(this.bludgeoningPicBox, 2, 0);
-            this.bludgeoningPanel.Controls.Add(this.radioButton37, 1, 0);
-            this.bludgeoningPanel.Controls.Add(this.radioButton38, 0, 0);
-            this.bludgeoningPanel.Controls.Add(this.radioButton39, 3, 0);
-            this.bludgeoningPanel.Controls.Add(this.radioButton40, 4, 0);
-            this.bludgeoningPanel.Location = new System.Drawing.Point(0, 338);
-            this.bludgeoningPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.bludgeoningPanel.Name = "bludgeoningPanel";
-            this.bludgeoningPanel.RowCount = 1;
-            this.bludgeoningPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.bludgeoningPanel.Size = new System.Drawing.Size(177, 30);
-            this.bludgeoningPanel.TabIndex = 21;
-            // 
-            // radioButton37
-            // 
-            this.radioButton37.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton37.AutoSize = true;
-            this.radioButton37.Location = new System.Drawing.Point(45, 8);
-            this.radioButton37.Name = "radioButton37";
-            this.radioButton37.Size = new System.Drawing.Size(14, 13);
-            this.radioButton37.TabIndex = 5;
-            this.radioButton37.UseVisualStyleBackColor = true;
-            // 
-            // radioButton38
-            // 
-            this.radioButton38.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton38.AutoSize = true;
-            this.radioButton38.Location = new System.Drawing.Point(10, 8);
-            this.radioButton38.Name = "radioButton38";
-            this.radioButton38.Size = new System.Drawing.Size(14, 13);
-            this.radioButton38.TabIndex = 0;
-            this.radioButton38.UseVisualStyleBackColor = true;
-            // 
-            // radioButton39
-            // 
-            this.radioButton39.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton39.AutoSize = true;
-            this.radioButton39.Checked = true;
-            this.radioButton39.Location = new System.Drawing.Point(115, 8);
-            this.radioButton39.Name = "radioButton39";
-            this.radioButton39.Size = new System.Drawing.Size(14, 13);
-            this.radioButton39.TabIndex = 6;
-            this.radioButton39.TabStop = true;
-            this.radioButton39.UseVisualStyleBackColor = true;
-            // 
-            // radioButton40
-            // 
-            this.radioButton40.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton40.AutoSize = true;
-            this.radioButton40.Location = new System.Drawing.Point(151, 8);
-            this.radioButton40.Name = "radioButton40";
-            this.radioButton40.Size = new System.Drawing.Size(14, 13);
-            this.radioButton40.TabIndex = 7;
-            this.radioButton40.UseVisualStyleBackColor = true;
-            // 
-            // piercingPanel
-            // 
-            this.piercingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.piercingPanel.ColumnCount = 5;
-            this.piercingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.piercingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.piercingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.piercingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.piercingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.piercingPanel.Controls.Add(this.piercingPicBox, 2, 0);
-            this.piercingPanel.Controls.Add(this.radioButton41, 1, 0);
-            this.piercingPanel.Controls.Add(this.radioButton42, 0, 0);
-            this.piercingPanel.Controls.Add(this.radioButton43, 3, 0);
-            this.piercingPanel.Controls.Add(this.radioButton44, 4, 0);
-            this.piercingPanel.Location = new System.Drawing.Point(0, 368);
-            this.piercingPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.piercingPanel.Name = "piercingPanel";
-            this.piercingPanel.RowCount = 1;
-            this.piercingPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.piercingPanel.Size = new System.Drawing.Size(177, 30);
-            this.piercingPanel.TabIndex = 22;
-            // 
-            // radioButton41
-            // 
-            this.radioButton41.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton41.AutoSize = true;
-            this.radioButton41.Location = new System.Drawing.Point(45, 8);
-            this.radioButton41.Name = "radioButton41";
-            this.radioButton41.Size = new System.Drawing.Size(14, 13);
-            this.radioButton41.TabIndex = 5;
-            this.radioButton41.UseVisualStyleBackColor = true;
-            // 
-            // radioButton42
-            // 
-            this.radioButton42.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton42.AutoSize = true;
-            this.radioButton42.Location = new System.Drawing.Point(10, 8);
-            this.radioButton42.Name = "radioButton42";
-            this.radioButton42.Size = new System.Drawing.Size(14, 13);
-            this.radioButton42.TabIndex = 0;
-            this.radioButton42.UseVisualStyleBackColor = true;
-            // 
-            // radioButton43
-            // 
-            this.radioButton43.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton43.AutoSize = true;
-            this.radioButton43.Checked = true;
-            this.radioButton43.Location = new System.Drawing.Point(115, 8);
-            this.radioButton43.Name = "radioButton43";
-            this.radioButton43.Size = new System.Drawing.Size(14, 13);
-            this.radioButton43.TabIndex = 6;
-            this.radioButton43.TabStop = true;
-            this.radioButton43.UseVisualStyleBackColor = true;
-            // 
-            // radioButton44
-            // 
-            this.radioButton44.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton44.AutoSize = true;
-            this.radioButton44.Location = new System.Drawing.Point(151, 8);
-            this.radioButton44.Name = "radioButton44";
-            this.radioButton44.Size = new System.Drawing.Size(14, 13);
-            this.radioButton44.TabIndex = 7;
-            this.radioButton44.UseVisualStyleBackColor = true;
-            // 
-            // slashingPanel
-            // 
-            this.slashingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.slashingPanel.ColumnCount = 5;
-            this.slashingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.slashingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.slashingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.slashingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.slashingPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.slashingPanel.Controls.Add(this.slashingPicBox, 2, 0);
-            this.slashingPanel.Controls.Add(this.radioButton45, 1, 0);
-            this.slashingPanel.Controls.Add(this.radioButton46, 0, 0);
-            this.slashingPanel.Controls.Add(this.radioButton47, 3, 0);
-            this.slashingPanel.Controls.Add(this.radioButton48, 4, 0);
-            this.slashingPanel.Location = new System.Drawing.Point(0, 398);
-            this.slashingPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.slashingPanel.Name = "slashingPanel";
-            this.slashingPanel.RowCount = 1;
-            this.slashingPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.slashingPanel.Size = new System.Drawing.Size(177, 30);
-            this.slashingPanel.TabIndex = 23;
-            // 
-            // radioButton45
-            // 
-            this.radioButton45.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton45.AutoSize = true;
-            this.radioButton45.Location = new System.Drawing.Point(45, 8);
-            this.radioButton45.Name = "radioButton45";
-            this.radioButton45.Size = new System.Drawing.Size(14, 13);
-            this.radioButton45.TabIndex = 5;
-            this.radioButton45.UseVisualStyleBackColor = true;
-            // 
-            // radioButton46
-            // 
-            this.radioButton46.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton46.AutoSize = true;
-            this.radioButton46.Location = new System.Drawing.Point(10, 8);
-            this.radioButton46.Name = "radioButton46";
-            this.radioButton46.Size = new System.Drawing.Size(14, 13);
-            this.radioButton46.TabIndex = 0;
-            this.radioButton46.UseVisualStyleBackColor = true;
-            // 
-            // radioButton47
-            // 
-            this.radioButton47.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton47.AutoSize = true;
-            this.radioButton47.Checked = true;
-            this.radioButton47.Location = new System.Drawing.Point(115, 8);
-            this.radioButton47.Name = "radioButton47";
-            this.radioButton47.Size = new System.Drawing.Size(14, 13);
-            this.radioButton47.TabIndex = 6;
-            this.radioButton47.TabStop = true;
-            this.radioButton47.UseVisualStyleBackColor = true;
-            // 
-            // radioButton48
-            // 
-            this.radioButton48.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton48.AutoSize = true;
-            this.radioButton48.Location = new System.Drawing.Point(151, 8);
-            this.radioButton48.Name = "radioButton48";
-            this.radioButton48.Size = new System.Drawing.Size(14, 13);
-            this.radioButton48.TabIndex = 7;
-            this.radioButton48.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(110, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(105, 14);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 1;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(105, 14);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(105, 14);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(106, 14);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(105, 14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(105, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // slashingPicBox
-            // 
-            this.slashingPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.slashingPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.slashingPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.slashing_imm;
-            this.slashingPicBox.Location = new System.Drawing.Point(70, 0);
-            this.slashingPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.slashingPicBox.Name = "slashingPicBox";
-            this.slashingPicBox.Size = new System.Drawing.Size(35, 30);
-            this.slashingPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.slashingPicBox.TabIndex = 8;
-            this.slashingPicBox.TabStop = false;
-            this.slashingPicBox.Tag = "Slashing";
-            this.slashingPicBox.MouseHover += new System.EventHandler(this.DamageHover);
-            // 
-            // piercingPicBox
-            // 
-            this.piercingPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.piercingPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.piercingPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.piercing_imm;
-            this.piercingPicBox.Location = new System.Drawing.Point(70, 0);
-            this.piercingPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.piercingPicBox.Name = "piercingPicBox";
-            this.piercingPicBox.Size = new System.Drawing.Size(35, 30);
-            this.piercingPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.piercingPicBox.TabIndex = 8;
-            this.piercingPicBox.TabStop = false;
-            this.piercingPicBox.Tag = "Piercing";
-            this.piercingPicBox.MouseHover += new System.EventHandler(this.DamageHover);
-            // 
-            // bludgeoningPicBox
-            // 
-            this.bludgeoningPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bludgeoningPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bludgeoningPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.bludgeoning_imm;
-            this.bludgeoningPicBox.Location = new System.Drawing.Point(70, 0);
-            this.bludgeoningPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.bludgeoningPicBox.Name = "bludgeoningPicBox";
-            this.bludgeoningPicBox.Size = new System.Drawing.Size(35, 30);
-            this.bludgeoningPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bludgeoningPicBox.TabIndex = 8;
-            this.bludgeoningPicBox.TabStop = false;
-            this.bludgeoningPicBox.Tag = "Bludgeoning";
-            this.bludgeoningPicBox.MouseHover += new System.EventHandler(this.DamageHover);
-            // 
-            // thunderPicBox
-            // 
-            this.thunderPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.thunderPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.thunderPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.thunder_imm;
-            this.thunderPicBox.Location = new System.Drawing.Point(70, 0);
-            this.thunderPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.thunderPicBox.Name = "thunderPicBox";
-            this.thunderPicBox.Size = new System.Drawing.Size(35, 30);
-            this.thunderPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.thunderPicBox.TabIndex = 8;
-            this.thunderPicBox.TabStop = false;
-            this.thunderPicBox.Tag = "Thunder";
-            this.thunderPicBox.MouseHover += new System.EventHandler(this.DamageHover);
-            // 
-            // radiantPicBox
-            // 
-            this.radiantPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radiantPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.radiantPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.radiant_imm;
-            this.radiantPicBox.Location = new System.Drawing.Point(70, 0);
-            this.radiantPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.radiantPicBox.Name = "radiantPicBox";
-            this.radiantPicBox.Size = new System.Drawing.Size(35, 30);
-            this.radiantPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.radiantPicBox.TabIndex = 8;
-            this.radiantPicBox.TabStop = false;
-            this.radiantPicBox.Tag = "Radiant";
-            this.radiantPicBox.MouseHover += new System.EventHandler(this.DamageHover);
-            // 
-            // psychicPicBox
-            // 
-            this.psychicPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.psychicPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.psychicPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.psychic_imm;
-            this.psychicPicBox.Location = new System.Drawing.Point(70, 0);
-            this.psychicPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.psychicPicBox.Name = "psychicPicBox";
-            this.psychicPicBox.Size = new System.Drawing.Size(35, 30);
-            this.psychicPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.psychicPicBox.TabIndex = 8;
-            this.psychicPicBox.TabStop = false;
-            this.psychicPicBox.Tag = "Psychic";
-            this.psychicPicBox.MouseHover += new System.EventHandler(this.DamageHover);
-            // 
-            // poisonPicBox
-            // 
-            this.poisonPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.poisonPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.poisonPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.poison_imm;
-            this.poisonPicBox.Location = new System.Drawing.Point(70, 0);
-            this.poisonPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.poisonPicBox.Name = "poisonPicBox";
-            this.poisonPicBox.Size = new System.Drawing.Size(35, 30);
-            this.poisonPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.poisonPicBox.TabIndex = 8;
-            this.poisonPicBox.TabStop = false;
-            this.poisonPicBox.Tag = "Poison";
-            this.poisonPicBox.MouseHover += new System.EventHandler(this.DamageHover);
-            // 
-            // necroticPicBox
-            // 
-            this.necroticPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.necroticPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.necroticPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.necrotic_imm;
-            this.necroticPicBox.Location = new System.Drawing.Point(70, 0);
-            this.necroticPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.necroticPicBox.Name = "necroticPicBox";
-            this.necroticPicBox.Size = new System.Drawing.Size(35, 30);
-            this.necroticPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.necroticPicBox.TabIndex = 8;
-            this.necroticPicBox.TabStop = false;
-            this.necroticPicBox.Tag = "Necrotic";
-            this.necroticPicBox.MouseHover += new System.EventHandler(this.DamageHover);
-            // 
-            // lightningPicBox
-            // 
-            this.lightningPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lightningPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.lightningPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.lightning_imm;
-            this.lightningPicBox.Location = new System.Drawing.Point(70, 0);
-            this.lightningPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.lightningPicBox.Name = "lightningPicBox";
-            this.lightningPicBox.Size = new System.Drawing.Size(35, 30);
-            this.lightningPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.lightningPicBox.TabIndex = 8;
-            this.lightningPicBox.TabStop = false;
-            this.lightningPicBox.Tag = "Lightning";
-            this.lightningPicBox.MouseHover += new System.EventHandler(this.DamageHover);
-            // 
-            // forcePicBox
-            // 
-            this.forcePicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.forcePicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.forcePicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.force_imm;
-            this.forcePicBox.Location = new System.Drawing.Point(70, 0);
-            this.forcePicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.forcePicBox.Name = "forcePicBox";
-            this.forcePicBox.Size = new System.Drawing.Size(35, 30);
-            this.forcePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.forcePicBox.TabIndex = 8;
-            this.forcePicBox.TabStop = false;
-            this.forcePicBox.Tag = "Force";
-            this.forcePicBox.MouseHover += new System.EventHandler(this.DamageHover);
-            // 
-            // firePicBox
-            // 
-            this.firePicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.firePicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.firePicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.fire_imm;
-            this.firePicBox.Location = new System.Drawing.Point(70, 0);
-            this.firePicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.firePicBox.Name = "firePicBox";
-            this.firePicBox.Size = new System.Drawing.Size(35, 30);
-            this.firePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.firePicBox.TabIndex = 8;
-            this.firePicBox.TabStop = false;
-            this.firePicBox.Tag = "Fire";
-            this.firePicBox.MouseHover += new System.EventHandler(this.DamageHover);
-            // 
-            // coldPicBox
-            // 
-            this.coldPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.coldPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.coldPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.cold_imm;
-            this.coldPicBox.Location = new System.Drawing.Point(70, 0);
-            this.coldPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.coldPicBox.Name = "coldPicBox";
-            this.coldPicBox.Size = new System.Drawing.Size(35, 30);
-            this.coldPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.coldPicBox.TabIndex = 8;
-            this.coldPicBox.TabStop = false;
-            this.coldPicBox.Tag = "Cold";
-            this.coldPicBox.MouseHover += new System.EventHandler(this.DamageHover);
-            // 
             // acidPicBox
             // 
             this.acidPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2165,6 +2219,56 @@ namespace Dungeon_Master_Helper
             this.acidPicBox.TabStop = false;
             this.acidPicBox.Tag = "Acid";
             this.acidPicBox.MouseHover += new System.EventHandler(this.DamageHover);
+            // 
+            // acidButt2
+            // 
+            this.acidButt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.acidButt2.AutoSize = true;
+            this.acidButt2.Location = new System.Drawing.Point(45, 8);
+            this.acidButt2.Name = "acidButt2";
+            this.acidButt2.Size = new System.Drawing.Size(14, 13);
+            this.acidButt2.TabIndex = 5;
+            this.acidButt2.Tag = "acid 2";
+            this.acidButt2.UseVisualStyleBackColor = true;
+            this.acidButt2.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // acidButt1
+            // 
+            this.acidButt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.acidButt1.AutoSize = true;
+            this.acidButt1.Location = new System.Drawing.Point(10, 8);
+            this.acidButt1.Name = "acidButt1";
+            this.acidButt1.Size = new System.Drawing.Size(14, 13);
+            this.acidButt1.TabIndex = 0;
+            this.acidButt1.Tag = "acid 1";
+            this.acidButt1.UseVisualStyleBackColor = true;
+            this.acidButt1.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // acidButt0
+            // 
+            this.acidButt0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.acidButt0.AutoSize = true;
+            this.acidButt0.Checked = true;
+            this.acidButt0.Location = new System.Drawing.Point(115, 8);
+            this.acidButt0.Name = "acidButt0";
+            this.acidButt0.Size = new System.Drawing.Size(14, 13);
+            this.acidButt0.TabIndex = 6;
+            this.acidButt0.TabStop = true;
+            this.acidButt0.Tag = "acid 0";
+            this.acidButt0.UseVisualStyleBackColor = true;
+            this.acidButt0.CheckedChanged += new System.EventHandler(this.EditDamageString);
+            // 
+            // acidButt3
+            // 
+            this.acidButt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.acidButt3.AutoSize = true;
+            this.acidButt3.Location = new System.Drawing.Point(151, 8);
+            this.acidButt3.Name = "acidButt3";
+            this.acidButt3.Size = new System.Drawing.Size(14, 13);
+            this.acidButt3.TabIndex = 7;
+            this.acidButt3.Tag = "acid 3";
+            this.acidButt3.UseVisualStyleBackColor = true;
+            this.acidButt3.CheckedChanged += new System.EventHandler(this.EditDamageString);
             // 
             // extraInfoTable
             // 
@@ -2195,6 +2299,7 @@ namespace Dungeon_Master_Helper
             this.saveButton.TabIndex = 0;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.SaveCreature);
             // 
             // npcPanel
             // 
@@ -2234,6 +2339,7 @@ namespace Dungeon_Master_Helper
             this.pcButt.TabIndex = 1;
             this.pcButt.TabStop = true;
             this.pcButt.UseVisualStyleBackColor = true;
+            this.pcButt.CheckedChanged += new System.EventHandler(this.PcCheck);
             // 
             // label15
             // 
@@ -2255,6 +2361,7 @@ namespace Dungeon_Master_Helper
             this.npcButt.Size = new System.Drawing.Size(97, 13);
             this.npcButt.TabIndex = 3;
             this.npcButt.UseVisualStyleBackColor = true;
+            this.npcButt.CheckedChanged += new System.EventHandler(this.PcCheck);
             // 
             // evasionPanel
             // 
@@ -2306,6 +2413,7 @@ namespace Dungeon_Master_Helper
             this.ShowInTaskbar = false;
             this.Text = "Create Creature";
             this.mainTable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.charPicBox)).EndInit();
             this.infoTable.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -2314,83 +2422,82 @@ namespace Dungeon_Master_Helper
             ((System.ComponentModel.ISupportInitialize)(this.acNumBox)).EndInit();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ppNumBox)).EndInit();
             this.gameInfoTable.ResumeLayout(false);
             this.statTable.ResumeLayout(false);
             this.chaPanel.ResumeLayout(false);
             this.chaPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chaStatBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chaMiscBox)).EndInit();
             this.wisPanel.ResumeLayout(false);
             this.wisPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wisStatBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wisMiscBox)).EndInit();
             this.intPanel.ResumeLayout(false);
             this.intPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intStatBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.intMiscBox)).EndInit();
             this.conPanel.ResumeLayout(false);
             this.conPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conStatBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conMiscBox)).EndInit();
             this.dexPanel.ResumeLayout(false);
             this.dexPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dexStatBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dexMiscBox)).EndInit();
             this.strPanel.ResumeLayout(false);
             this.strPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.strStatBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.strMiscBox)).EndInit();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
             this.damageTable.ResumeLayout(false);
-            this.acidPanel.ResumeLayout(false);
-            this.acidPanel.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.coldPanel.ResumeLayout(false);
-            this.coldPanel.PerformLayout();
-            this.firePanel.ResumeLayout(false);
-            this.firePanel.PerformLayout();
-            this.forcePanel.ResumeLayout(false);
-            this.forcePanel.PerformLayout();
-            this.lightningPanel.ResumeLayout(false);
-            this.lightningPanel.PerformLayout();
-            this.necroticPanel.ResumeLayout(false);
-            this.necroticPanel.PerformLayout();
-            this.poisonPanel.ResumeLayout(false);
-            this.poisonPanel.PerformLayout();
-            this.psychicPanel.ResumeLayout(false);
-            this.psychicPanel.PerformLayout();
-            this.radiantPanel.ResumeLayout(false);
-            this.radiantPanel.PerformLayout();
-            this.thunderPanel.ResumeLayout(false);
-            this.thunderPanel.PerformLayout();
-            this.bludgeoningPanel.ResumeLayout(false);
-            this.bludgeoningPanel.PerformLayout();
-            this.piercingPanel.ResumeLayout(false);
-            this.piercingPanel.PerformLayout();
             this.slashingPanel.ResumeLayout(false);
             this.slashingPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.slashingPicBox)).EndInit();
+            this.piercingPanel.ResumeLayout(false);
+            this.piercingPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piercingPicBox)).EndInit();
+            this.bludgeoningPanel.ResumeLayout(false);
+            this.bludgeoningPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bludgeoningPicBox)).EndInit();
+            this.thunderPanel.ResumeLayout(false);
+            this.thunderPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.thunderPicBox)).EndInit();
+            this.radiantPanel.ResumeLayout(false);
+            this.radiantPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radiantPicBox)).EndInit();
+            this.psychicPanel.ResumeLayout(false);
+            this.psychicPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.psychicPicBox)).EndInit();
+            this.poisonPanel.ResumeLayout(false);
+            this.poisonPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.poisonPicBox)).EndInit();
+            this.necroticPanel.ResumeLayout(false);
+            this.necroticPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.necroticPicBox)).EndInit();
+            this.lightningPanel.ResumeLayout(false);
+            this.lightningPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lightningPicBox)).EndInit();
+            this.forcePanel.ResumeLayout(false);
+            this.forcePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.forcePicBox)).EndInit();
+            this.firePanel.ResumeLayout(false);
+            this.firePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firePicBox)).EndInit();
+            this.coldPanel.ResumeLayout(false);
+            this.coldPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coldPicBox)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.acidPanel.ResumeLayout(false);
+            this.acidPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.acidPicBox)).EndInit();
             this.extraInfoTable.ResumeLayout(false);
             this.npcPanel.ResumeLayout(false);
@@ -2405,7 +2512,7 @@ namespace Dungeon_Master_Helper
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel mainTable;
-        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox charPicBox;
         private System.Windows.Forms.TableLayoutPanel infoTable;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TextBox nameTextBox;
@@ -2414,8 +2521,8 @@ namespace Dungeon_Master_Helper
         private System.Windows.Forms.NumericUpDown acNumBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label ppNumBox;
+        private System.Windows.Forms.NumericUpDown ppNumBox;
+        private System.Windows.Forms.Label ppLabel;
         private System.Windows.Forms.TableLayoutPanel gameInfoTable;
         private System.Windows.Forms.TableLayoutPanel statTable;
         private System.Windows.Forms.TableLayoutPanel damageTable;
@@ -2471,76 +2578,76 @@ namespace Dungeon_Master_Helper
         private System.Windows.Forms.TableLayoutPanel acidPanel;
         private System.Windows.Forms.TableLayoutPanel coldPanel;
         private System.Windows.Forms.PictureBox coldPicBox;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton coldButt2;
+        private System.Windows.Forms.RadioButton coldButt1;
+        private System.Windows.Forms.RadioButton coldButt0;
+        private System.Windows.Forms.RadioButton coldButt3;
         private System.Windows.Forms.TableLayoutPanel slashingPanel;
         private System.Windows.Forms.PictureBox slashingPicBox;
-        private System.Windows.Forms.RadioButton radioButton45;
-        private System.Windows.Forms.RadioButton radioButton46;
-        private System.Windows.Forms.RadioButton radioButton47;
-        private System.Windows.Forms.RadioButton radioButton48;
+        private System.Windows.Forms.RadioButton slashingButt2;
+        private System.Windows.Forms.RadioButton slashingButt1;
+        private System.Windows.Forms.RadioButton slashingButt0;
+        private System.Windows.Forms.RadioButton slashingButt3;
         private System.Windows.Forms.TableLayoutPanel piercingPanel;
         private System.Windows.Forms.PictureBox piercingPicBox;
-        private System.Windows.Forms.RadioButton radioButton41;
-        private System.Windows.Forms.RadioButton radioButton42;
-        private System.Windows.Forms.RadioButton radioButton43;
-        private System.Windows.Forms.RadioButton radioButton44;
+        private System.Windows.Forms.RadioButton piercingButt2;
+        private System.Windows.Forms.RadioButton piercingButt1;
+        private System.Windows.Forms.RadioButton piercingButt0;
+        private System.Windows.Forms.RadioButton piercingButt3;
         private System.Windows.Forms.TableLayoutPanel bludgeoningPanel;
         private System.Windows.Forms.PictureBox bludgeoningPicBox;
-        private System.Windows.Forms.RadioButton radioButton37;
-        private System.Windows.Forms.RadioButton radioButton38;
-        private System.Windows.Forms.RadioButton radioButton39;
-        private System.Windows.Forms.RadioButton radioButton40;
+        private System.Windows.Forms.RadioButton bludgeoningButt2;
+        private System.Windows.Forms.RadioButton bludgeoningButt1;
+        private System.Windows.Forms.RadioButton bludgeoningButt0;
+        private System.Windows.Forms.RadioButton bludgeoningButt3;
         private System.Windows.Forms.TableLayoutPanel thunderPanel;
         private System.Windows.Forms.PictureBox thunderPicBox;
-        private System.Windows.Forms.RadioButton radioButton33;
-        private System.Windows.Forms.RadioButton radioButton34;
-        private System.Windows.Forms.RadioButton radioButton35;
-        private System.Windows.Forms.RadioButton radioButton36;
+        private System.Windows.Forms.RadioButton thunderButt2;
+        private System.Windows.Forms.RadioButton thunderButt1;
+        private System.Windows.Forms.RadioButton thunderButt0;
+        private System.Windows.Forms.RadioButton thunderButt3;
         private System.Windows.Forms.TableLayoutPanel radiantPanel;
         private System.Windows.Forms.PictureBox radiantPicBox;
-        private System.Windows.Forms.RadioButton radioButton29;
-        private System.Windows.Forms.RadioButton radioButton30;
-        private System.Windows.Forms.RadioButton radioButton31;
-        private System.Windows.Forms.RadioButton radioButton32;
+        private System.Windows.Forms.RadioButton radiantButt2;
+        private System.Windows.Forms.RadioButton radiantButt1;
+        private System.Windows.Forms.RadioButton radiantButt0;
+        private System.Windows.Forms.RadioButton radiantButt3;
         private System.Windows.Forms.TableLayoutPanel psychicPanel;
         private System.Windows.Forms.PictureBox psychicPicBox;
-        private System.Windows.Forms.RadioButton radioButton25;
-        private System.Windows.Forms.RadioButton radioButton26;
-        private System.Windows.Forms.RadioButton radioButton27;
-        private System.Windows.Forms.RadioButton radioButton28;
+        private System.Windows.Forms.RadioButton psychicButt2;
+        private System.Windows.Forms.RadioButton psychicButt1;
+        private System.Windows.Forms.RadioButton psychicButt0;
+        private System.Windows.Forms.RadioButton psychicButt3;
         private System.Windows.Forms.TableLayoutPanel poisonPanel;
         private System.Windows.Forms.PictureBox poisonPicBox;
-        private System.Windows.Forms.RadioButton radioButton21;
-        private System.Windows.Forms.RadioButton radioButton22;
-        private System.Windows.Forms.RadioButton radioButton23;
-        private System.Windows.Forms.RadioButton radioButton24;
+        private System.Windows.Forms.RadioButton poisonButt2;
+        private System.Windows.Forms.RadioButton poisonButt1;
+        private System.Windows.Forms.RadioButton poisonButt0;
+        private System.Windows.Forms.RadioButton poisonButt3;
         private System.Windows.Forms.TableLayoutPanel necroticPanel;
         private System.Windows.Forms.PictureBox necroticPicBox;
-        private System.Windows.Forms.RadioButton radioButton17;
-        private System.Windows.Forms.RadioButton radioButton18;
-        private System.Windows.Forms.RadioButton radioButton19;
-        private System.Windows.Forms.RadioButton radioButton20;
+        private System.Windows.Forms.RadioButton necroticButt2;
+        private System.Windows.Forms.RadioButton necroticButt1;
+        private System.Windows.Forms.RadioButton necroticButt0;
+        private System.Windows.Forms.RadioButton necroticButt3;
         private System.Windows.Forms.TableLayoutPanel lightningPanel;
         private System.Windows.Forms.PictureBox lightningPicBox;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.RadioButton radioButton14;
-        private System.Windows.Forms.RadioButton radioButton15;
-        private System.Windows.Forms.RadioButton radioButton16;
+        private System.Windows.Forms.RadioButton lightningButt2;
+        private System.Windows.Forms.RadioButton lightningButt1;
+        private System.Windows.Forms.RadioButton lightningButt0;
+        private System.Windows.Forms.RadioButton lightningButt3;
         private System.Windows.Forms.TableLayoutPanel forcePanel;
         private System.Windows.Forms.PictureBox forcePicBox;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton forceButt2;
+        private System.Windows.Forms.RadioButton forceButt1;
+        private System.Windows.Forms.RadioButton forceButt0;
+        private System.Windows.Forms.RadioButton forceButt3;
         private System.Windows.Forms.TableLayoutPanel firePanel;
         private System.Windows.Forms.PictureBox firePicBox;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton fireButt2;
+        private System.Windows.Forms.RadioButton fireButt1;
+        private System.Windows.Forms.RadioButton fireButt0;
+        private System.Windows.Forms.RadioButton fireButt3;
         private System.Windows.Forms.TableLayoutPanel extraInfoTable;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.FlowLayoutPanel npcPanel;

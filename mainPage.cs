@@ -17,6 +17,34 @@ namespace Dungeon_Master_Helper
             InitializeComponent();
         }
 
+        public class creature
+        {
+            public string name;
+            public int ac;
+            public int pp;
+            public Dictionary<string, List<int>> stats;
+            public string dmg;
+            public bool playable;
+            public bool evasion;
+        }
+
+        public enum damagetypes
+        {
+            acid,
+            cold,
+            fire,
+            force,
+            lightning,
+            necrotic,
+            poison,
+            psychic,
+            radiant,
+            thunder,
+            bludgeoning,
+            piercing,
+            slashing
+        }
+
         private void singleDToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
