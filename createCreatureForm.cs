@@ -184,14 +184,12 @@ namespace Dungeon_Master_Helper
                 AddExtension = true,
                 SupportMultiDottedExtensions = true
             };
-            while (saveFileDialog.ShowDialog() == DialogResult.OK) {
-                if (saveFileDialog.FileName != "")
-                {
-                    System.IO.FileStream file = System.IO.File.Create(saveFileDialog.FileName);
-                    writer.Serialize(file, toSave);
-                    file.Close();
-                    this.Close();
-                }
+            if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "")
+            {
+                System.IO.FileStream file = System.IO.File.Create(saveFileDialog.FileName);
+                writer.Serialize(file, toSave);
+                file.Close();
+                this.Close();
             }
         }
 
