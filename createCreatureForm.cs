@@ -21,7 +21,7 @@ namespace Dungeon_Master_Helper
             InitializeComponent();
         }
 
-        public string damageStr = "0000000000000";
+        public List<int> damageStr = new List<int> {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
         public bool playable = true;
 
@@ -101,11 +101,10 @@ namespace Dungeon_Master_Helper
 
         private void SaveCreature(object sender, EventArgs e)
         {
-            return;
+            // return;
             string name = this.nameTextBox.Text;
             int ac = ToInt32(this.acNumBox.Value);
             int pp = ToInt32(this.ppNumBox.Value);
-            var stats = new Dictionary<string, List<int>>();
 
             int strMod = ToInt32((Math.Floor((this.strStatBox.Value - 10) / 2)) + this.strMiscBox.Value);
             var strList = new List<int>
@@ -114,7 +113,6 @@ namespace Dungeon_Master_Helper
                 ToInt32(this.strMiscBox.Value),
                 ToInt32(strMod)
             };
-            stats.Add("str", strList);
 
             int dexMod = ToInt32((Math.Floor((this.dexStatBox.Value - 10) / 2)) + this.dexMiscBox.Value);
             var dexList = new List<int>
@@ -123,7 +121,6 @@ namespace Dungeon_Master_Helper
                 ToInt32(this.dexMiscBox.Value),
                 ToInt32(dexMod)
             };
-            stats.Add("dex", dexList);
 
             int conMod = ToInt32((Math.Floor((this.conStatBox.Value - 10) / 2)) + this.conMiscBox.Value);
             var conList = new List<int>
@@ -132,7 +129,6 @@ namespace Dungeon_Master_Helper
                 ToInt32(this.conMiscBox.Value),
                 ToInt32(conMod)
             };
-            stats.Add("con", conList);
 
             int intMod = ToInt32((Math.Floor((this.intStatBox.Value - 10) / 2)) + this.intMiscBox.Value);
             var intList = new List<int>
@@ -141,7 +137,6 @@ namespace Dungeon_Master_Helper
                 ToInt32(this.intMiscBox.Value),
                 ToInt32(intMod)
             };
-            stats.Add("int", intList);
 
             int wisMod = ToInt32((Math.Floor((this.wisStatBox.Value - 10) / 2)) + this.wisMiscBox.Value);
             var wisList = new List<int>
@@ -150,7 +145,6 @@ namespace Dungeon_Master_Helper
                 ToInt32(this.wisMiscBox.Value),
                 ToInt32(wisMod)
             };
-            stats.Add("wis", wisList);
 
             int chaMod = ToInt32((Math.Floor((this.chaStatBox.Value - 10) / 2)) + this.chaMiscBox.Value);
             var chaList = new List<int>
@@ -159,23 +153,46 @@ namespace Dungeon_Master_Helper
                 ToInt32(this.chaMiscBox.Value),
                 ToInt32(chaMod)
             };
-            stats.Add("cha", chaList);
 
-            string dmg = damageStr;
+            List<int> dmg = damageStr;
 
             bool pc = playable;
             bool evasion = this.evasionCheckBox.Checked;
 
-            var toSave = new mainPage.creature();
-            toSave.name = name;
-            toSave.ac = ac;
-            toSave.pp = pp;
-            toSave.stats = stats;
-            toSave.dmg = dmg;
-            toSave.playable = pc;
-            toSave.evasion = evasion;
-        
-            this.Close();
+            var toSave = new mainPage.creature
+            {
+                name = name,
+                ac = ac,
+                pp = pp,
+                str = strList,
+                dex = dexList,
+                con = conList,
+                wis = wisList,
+                int_stat = intList,
+                cha = chaList,
+                dmg = dmg,
+                playable = pc,
+                evasion = evasion
+            };
+
+            System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(mainPage.creature));
+            System.Windows.Forms.SaveFileDialog saveFileDialog = new System.Windows.Forms.SaveFileDialog
+            {
+                DefaultExt = "xml",
+                Filter = "XML files (*.xml)|*.creature.xml",
+                Title = "Save Creature",
+                AddExtension = true,
+                SupportMultiDottedExtensions = true
+            };
+            while (saveFileDialog.ShowDialog() == DialogResult.OK) {
+                if (saveFileDialog.FileName != "")
+                {
+                    System.IO.FileStream file = System.IO.File.Create(saveFileDialog.FileName);
+                    writer.Serialize(file, toSave);
+                    file.Close();
+                    this.Close();
+                }
+            }
         }
 
         private void EditDamageString(object sender, EventArgs e)
@@ -187,8 +204,8 @@ namespace Dungeon_Master_Helper
                 Enum.TryParse(thesplit[0], out mainPage.damagetypes type);
                 int num = ToInt32(thesplit[1]);
                 int index = (int)type;
-                string newdmg = "";
-                foreach(char i in damageStr)
+/*                string newdmg = "";
+                foreach(int i in damageStr)
                 {
                     if(i == index)
                     {
@@ -199,7 +216,7 @@ namespace Dungeon_Master_Helper
                         newdmg += damageStr[i];
                     }
                 }
-                damageStr = newdmg;
+*/                damageStr[index] = num;
             }
             
         }

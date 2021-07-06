@@ -22,8 +22,13 @@ namespace Dungeon_Master_Helper
             public string name;
             public int ac;
             public int pp;
-            public Dictionary<string, List<int>> stats;
-            public string dmg;
+            public List<int> str;
+            public List<int> dex;
+            public List<int> con;
+            public List<int> int_stat;
+            public List<int> wis;
+            public List<int> cha;
+            public List<int> dmg;
             public bool playable;
             public bool evasion;
         }
