@@ -19,9 +19,9 @@ namespace Dungeon_Master_Helper
 
         public class Creature
         {
-            public string name;
-            public int ac;
-            public int pp;
+            public string name = "NULL";
+            public int ac = 10;
+            public int pp = 10;
             public List<int> str;
             public List<int> dex;
             public List<int> con;
@@ -29,10 +29,10 @@ namespace Dungeon_Master_Helper
             public List<int> wis;
             public List<int> cha;
             public List<int> dmg;
-            public bool playable;
-            public bool evasion;
-            public int max_hp;
-            public int level;
+            public bool playable = true;
+            public bool evasion = false;
+            public int max_hp = 1;
+            public int level = 1;
         }
 
         public class Fighter : Creature
@@ -42,7 +42,7 @@ namespace Dungeon_Master_Helper
             public int init_roll;
         }
 
-        public enum damagetypes
+        public enum Damagetypes
         {
             acid,
             cold,
@@ -57,6 +57,12 @@ namespace Dungeon_Master_Helper
             bludgeoning,
             piercing,
             slashing
+        }
+
+        public void addToEncounter(Fighter toAdd)
+        {
+            //TO DO
+            return;
         }
 
         private void newCreatureToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,7 +83,10 @@ namespace Dungeon_Master_Helper
             Creature loaded = new Creature();
             loaded = (Creature)reader.Deserialize(file);
             file.Close();
-
+            Fighter toAdd = new Fighter();
+            toAdd = (Fighter)loaded;
+            toAdd.curr_hp = toAdd.max_hp;
+            addToEncounter(toAdd);
         }
     }
 }

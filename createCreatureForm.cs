@@ -193,7 +193,7 @@ namespace Dungeon_Master_Helper
             if (item.Checked)
             {
                 string[] thesplit = ((string)item.Tag).Split(' ');
-                Enum.TryParse(thesplit[0], out mainPage.damagetypes type);
+                Enum.TryParse(thesplit[0], out mainPage.Damagetypes type);
                 int num = ToInt32(thesplit[1]);
                 int index = (int)type;
 /*                string newdmg = "";
