@@ -17,7 +17,7 @@ namespace Dungeon_Master_Helper
             InitializeComponent();
         }
 
-        public class creature
+        public class Creature
         {
             public string name;
             public int ac;
@@ -31,6 +31,15 @@ namespace Dungeon_Master_Helper
             public List<int> dmg;
             public bool playable;
             public bool evasion;
+            public int max_hp;
+            public int level;
+        }
+
+        public class Fighter : Creature
+        {
+            public int curr_hp;
+            public List<int> conditions;
+            public int init_roll;
         }
 
         public enum damagetypes
@@ -63,10 +72,10 @@ namespace Dungeon_Master_Helper
                 Title = "Open Creature"
             };
             openFileDialog.ShowDialog();
-            System.Xml.Serialization.XmlSerializer reader = new System.Xml.Serialization.XmlSerializer(typeof(creature));
+            System.Xml.Serialization.XmlSerializer reader = new System.Xml.Serialization.XmlSerializer(typeof(Creature));
             System.IO.StreamReader file = new System.IO.StreamReader(openFileDialog.FileName);
-            creature loaded = new creature();
-            loaded = (creature)reader.Deserialize(file);
+            Creature loaded = new Creature();
+            loaded = (Creature)reader.Deserialize(file);
             file.Close();
 
         }

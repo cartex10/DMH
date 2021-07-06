@@ -178,6 +178,10 @@ namespace Dungeon_Master_Helper
             this.label16 = new System.Windows.Forms.Label();
             this.evasionCheckBox = new System.Windows.Forms.CheckBox();
             this.damageTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.hpNumBox = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.levelNumBox = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
             this.mainTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.charPicBox)).BeginInit();
             this.infoTable.SuspendLayout();
@@ -244,6 +248,8 @@ namespace Dungeon_Master_Helper
             this.extraInfoTable.SuspendLayout();
             this.npcPanel.SuspendLayout();
             this.evasionPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hpNumBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelNumBox)).BeginInit();
             this.SuspendLayout();
             // 
             // mainTable
@@ -337,8 +343,10 @@ namespace Dungeon_Master_Helper
             this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.Controls.Add(this.acNumBox);
-            this.flowLayoutPanel2.Controls.Add(this.label2);
+            this.flowLayoutPanel2.Controls.Add(this.hpNumBox);
+            this.flowLayoutPanel2.Controls.Add(this.label17);
+            this.flowLayoutPanel2.Controls.Add(this.levelNumBox);
+            this.flowLayoutPanel2.Controls.Add(this.label18);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(276, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -347,10 +355,10 @@ namespace Dungeon_Master_Helper
             // 
             // acNumBox
             // 
-            this.acNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.acNumBox.Location = new System.Drawing.Point(3, 65);
+            this.acNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.acNumBox.Location = new System.Drawing.Point(3, 26);
             this.acNumBox.Name = "acNumBox";
-            this.acNumBox.Size = new System.Drawing.Size(92, 30);
+            this.acNumBox.Size = new System.Drawing.Size(73, 23);
             this.acNumBox.TabIndex = 0;
             this.acNumBox.Value = new decimal(new int[] {
             10,
@@ -361,10 +369,10 @@ namespace Dungeon_Master_Helper
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(3, 42);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(3, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 20);
+            this.label2.Size = new System.Drawing.Size(26, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "AC";
             // 
@@ -375,6 +383,8 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel3.Controls.Add(this.ppNumBox);
             this.flowLayoutPanel3.Controls.Add(this.ppLabel);
+            this.flowLayoutPanel3.Controls.Add(this.acNumBox);
+            this.flowLayoutPanel3.Controls.Add(this.label2);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(378, 3);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
@@ -383,10 +393,10 @@ namespace Dungeon_Master_Helper
             // 
             // ppNumBox
             // 
-            this.ppNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.ppNumBox.Location = new System.Drawing.Point(3, 65);
+            this.ppNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ppNumBox.Location = new System.Drawing.Point(3, 72);
             this.ppNumBox.Name = "ppNumBox";
-            this.ppNumBox.Size = new System.Drawing.Size(74, 30);
+            this.ppNumBox.Size = new System.Drawing.Size(74, 23);
             this.ppNumBox.TabIndex = 0;
             this.ppNumBox.Value = new decimal(new int[] {
             10,
@@ -397,10 +407,10 @@ namespace Dungeon_Master_Helper
             // ppLabel
             // 
             this.ppLabel.AutoSize = true;
-            this.ppLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ppLabel.Location = new System.Drawing.Point(3, 42);
+            this.ppLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ppLabel.Location = new System.Drawing.Point(3, 52);
             this.ppLabel.Name = "ppLabel";
-            this.ppLabel.Size = new System.Drawing.Size(29, 20);
+            this.ppLabel.Size = new System.Drawing.Size(26, 17);
             this.ppLabel.TabIndex = 1;
             this.ppLabel.Text = "PP";
             // 
@@ -2399,6 +2409,67 @@ namespace Dungeon_Master_Helper
             this.evasionCheckBox.TabIndex = 4;
             this.evasionCheckBox.UseVisualStyleBackColor = true;
             // 
+            // hpNumBox
+            // 
+            this.hpNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.hpNumBox.Location = new System.Drawing.Point(3, 72);
+            this.hpNumBox.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.hpNumBox.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.hpNumBox.Name = "hpNumBox";
+            this.hpNumBox.Size = new System.Drawing.Size(93, 23);
+            this.hpNumBox.TabIndex = 0;
+            this.hpNumBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label17.Location = new System.Drawing.Point(3, 52);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(27, 17);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "HP";
+            // 
+            // levelNumBox
+            // 
+            this.levelNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.levelNumBox.Location = new System.Drawing.Point(3, 26);
+            this.levelNumBox.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.levelNumBox.Name = "levelNumBox";
+            this.levelNumBox.Size = new System.Drawing.Size(93, 23);
+            this.levelNumBox.TabIndex = 2;
+            this.levelNumBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label18.Location = new System.Drawing.Point(3, 6);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(42, 17);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Level";
+            // 
             // createCreatureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2504,6 +2575,8 @@ namespace Dungeon_Master_Helper
             this.npcPanel.PerformLayout();
             this.evasionPanel.ResumeLayout(false);
             this.evasionPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hpNumBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelNumBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2658,5 +2731,9 @@ namespace Dungeon_Master_Helper
         private System.Windows.Forms.FlowLayoutPanel evasionPanel;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox evasionCheckBox;
+        private System.Windows.Forms.NumericUpDown hpNumBox;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.NumericUpDown levelNumBox;
+        private System.Windows.Forms.Label label18;
     }
 }

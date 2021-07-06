@@ -101,11 +101,6 @@ namespace Dungeon_Master_Helper
 
         private void SaveCreature(object sender, EventArgs e)
         {
-            // return;
-            string name = this.nameTextBox.Text;
-            int ac = ToInt32(this.acNumBox.Value);
-            int pp = ToInt32(this.ppNumBox.Value);
-
             int strMod = ToInt32((Math.Floor((this.strStatBox.Value - 10) / 2)) + this.strMiscBox.Value);
             var strList = new List<int>
             {
@@ -156,14 +151,11 @@ namespace Dungeon_Master_Helper
 
             List<int> dmg = damageStr;
 
-            bool pc = playable;
-            bool evasion = this.evasionCheckBox.Checked;
-
-            var toSave = new mainPage.creature
+            var toSave = new mainPage.Creature
             {
-                name = name,
-                ac = ac,
-                pp = pp,
+                name = this.nameTextBox.Text,
+                ac = ToInt32(this.acNumBox.Value),
+                pp = ToInt32(this.ppNumBox.Value),
                 str = strList,
                 dex = dexList,
                 con = conList,
@@ -171,11 +163,13 @@ namespace Dungeon_Master_Helper
                 int_stat = intList,
                 cha = chaList,
                 dmg = dmg,
-                playable = pc,
-                evasion = evasion
+                playable = playable,
+                evasion = this.evasionCheckBox.Checked,
+                max_hp = ToInt32(this.hpNumBox.Value),
+                level = ToInt32(this.levelNumBox)
             };
 
-            System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(mainPage.creature));
+            System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(mainPage.Creature));
             System.Windows.Forms.SaveFileDialog saveFileDialog = new System.Windows.Forms.SaveFileDialog
             {
                 DefaultExt = "xml",
