@@ -139,20 +139,21 @@ namespace Dungeon_Master_Helper
             // newCreatureToolStripMenuItem
             // 
             this.newCreatureToolStripMenuItem.Name = "newCreatureToolStripMenuItem";
-            this.newCreatureToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.newCreatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newCreatureToolStripMenuItem.Text = "New Creature";
             this.newCreatureToolStripMenuItem.Click += new System.EventHandler(this.newCreatureToolStripMenuItem_Click);
             // 
             // loadCreatureToolStripMenuItem
             // 
             this.loadCreatureToolStripMenuItem.Name = "loadCreatureToolStripMenuItem";
-            this.loadCreatureToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.loadCreatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadCreatureToolStripMenuItem.Text = "Load Creature";
+            this.loadCreatureToolStripMenuItem.Click += new System.EventHandler(this.loadCreatureToolStripMenuItem_Click);
             // 
             // editCreatureToolStripMenuItem
             // 
             this.editCreatureToolStripMenuItem.Name = "editCreatureToolStripMenuItem";
-            this.editCreatureToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.editCreatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editCreatureToolStripMenuItem.Text = "Edit Creature";
             // 
             // combatToolStripMenuItem
@@ -169,26 +170,25 @@ namespace Dungeon_Master_Helper
             // singleDToolStripMenuItem
             // 
             this.singleDToolStripMenuItem.Name = "singleDToolStripMenuItem";
-            this.singleDToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.singleDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.singleDToolStripMenuItem.Text = "Single Damage";
-            this.singleDToolStripMenuItem.Click += new System.EventHandler(this.singleDToolStripMenuItem_Click);
             // 
             // massDamageToolStripMenuItem
             // 
             this.massDamageToolStripMenuItem.Name = "massDamageToolStripMenuItem";
-            this.massDamageToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.massDamageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.massDamageToolStripMenuItem.Text = "Mass Damage";
             // 
             // massDCCheckToolStripMenuItem
             // 
             this.massDCCheckToolStripMenuItem.Name = "massDCCheckToolStripMenuItem";
-            this.massDCCheckToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.massDCCheckToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.massDCCheckToolStripMenuItem.Text = "Mass DC Check";
             // 
             // editConditionsToolStripMenuItem
             // 
             this.editConditionsToolStripMenuItem.Name = "editConditionsToolStripMenuItem";
-            this.editConditionsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.editConditionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editConditionsToolStripMenuItem.Text = "Edit Conditions";
             // 
             // infoToolStripMenuItem

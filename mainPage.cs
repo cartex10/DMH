@@ -50,20 +50,25 @@ namespace Dungeon_Master_Helper
             slashing
         }
 
-        private void singleDToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void newCreatureToolStripMenuItem_Click(object sender, EventArgs e)
         {
             createCreatureForm createCreature = new createCreatureForm();
             createCreature.Show();
+        }
+
+        private void loadCreatureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.OpenFileDialog openFileDialog = new System.Windows.Forms.OpenFileDialog
+            {
+                Title = "Open Creature"
+            };
+            openFileDialog.ShowDialog();
+            System.Xml.Serialization.XmlSerializer reader = new System.Xml.Serialization.XmlSerializer(typeof(creature));
+            System.IO.StreamReader file = new System.IO.StreamReader(openFileDialog.FileName);
+            creature loaded = new creature();
+            loaded = (creature)reader.Deserialize(file);
+            file.Close();
+
         }
     }
 }
