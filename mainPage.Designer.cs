@@ -496,6 +496,7 @@ namespace Dungeon_Master_Helper
             this.baseFighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.baseFighterTable.Size = new System.Drawing.Size(573, 80);
             this.baseFighterTable.TabIndex = 0;
+            this.baseFighterTable.Click += new System.EventHandler(this.CharacterClick);
             // 
             // charLabel4
             // 
@@ -507,6 +508,7 @@ namespace Dungeon_Master_Helper
             this.charLabel4.Size = new System.Drawing.Size(44, 17);
             this.charLabel4.TabIndex = 10;
             this.charLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.charLabel4.Click += new System.EventHandler(this.CharacterClick);
             // 
             // charLabel3
             // 
@@ -518,6 +520,7 @@ namespace Dungeon_Master_Helper
             this.charLabel3.Size = new System.Drawing.Size(44, 17);
             this.charLabel3.TabIndex = 9;
             this.charLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.charLabel3.Click += new System.EventHandler(this.CharacterClick);
             // 
             // charLabel2
             // 
@@ -529,6 +532,7 @@ namespace Dungeon_Master_Helper
             this.charLabel2.Size = new System.Drawing.Size(44, 17);
             this.charLabel2.TabIndex = 8;
             this.charLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.charLabel2.Click += new System.EventHandler(this.CharacterClick);
             // 
             // charLabel1
             // 
@@ -540,6 +544,7 @@ namespace Dungeon_Master_Helper
             this.charLabel1.Size = new System.Drawing.Size(114, 20);
             this.charLabel1.TabIndex = 7;
             this.charLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.charLabel1.Click += new System.EventHandler(this.CharacterClick);
             // 
             // charDescLabel6
             // 
@@ -553,6 +558,7 @@ namespace Dungeon_Master_Helper
             this.charDescLabel6.TabIndex = 6;
             this.charDescLabel6.Text = "Conditions";
             this.charDescLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.charDescLabel6.Click += new System.EventHandler(this.CharacterClick);
             // 
             // charDescLabel5
             // 
@@ -566,6 +572,7 @@ namespace Dungeon_Master_Helper
             this.charDescLabel5.TabIndex = 5;
             this.charDescLabel5.Text = "Damage";
             this.charDescLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.charDescLabel5.Click += new System.EventHandler(this.CharacterClick);
             // 
             // charDescLabel4
             // 
@@ -579,6 +586,7 @@ namespace Dungeon_Master_Helper
             this.charDescLabel4.TabIndex = 4;
             this.charDescLabel4.Text = "PP";
             this.charDescLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.charDescLabel4.Click += new System.EventHandler(this.CharacterClick);
             // 
             // charDescLabel3
             // 
@@ -592,6 +600,7 @@ namespace Dungeon_Master_Helper
             this.charDescLabel3.TabIndex = 3;
             this.charDescLabel3.Text = "AC";
             this.charDescLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.charDescLabel3.Click += new System.EventHandler(this.CharacterClick);
             // 
             // charPicBox
             // 
@@ -604,6 +613,7 @@ namespace Dungeon_Master_Helper
             this.charPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.charPicBox.TabIndex = 0;
             this.charPicBox.TabStop = false;
+            this.charPicBox.Click += new System.EventHandler(this.CharacterClick);
             // 
             // charDescLabel1
             // 
@@ -615,6 +625,7 @@ namespace Dungeon_Master_Helper
             this.charDescLabel1.Size = new System.Drawing.Size(55, 20);
             this.charDescLabel1.TabIndex = 1;
             this.charDescLabel1.Text = "Name";
+            this.charDescLabel1.Click += new System.EventHandler(this.CharacterClick);
             // 
             // charDescLabel2
             // 
@@ -628,6 +639,7 @@ namespace Dungeon_Master_Helper
             this.charDescLabel2.TabIndex = 2;
             this.charDescLabel2.Text = "HP";
             this.charDescLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.charDescLabel2.Click += new System.EventHandler(this.CharacterClick);
             // 
             // initPanel
             // 

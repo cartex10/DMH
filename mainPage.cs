@@ -15,6 +15,7 @@ namespace Dungeon_Master_Helper
         public mainPage()
         {
             InitializeComponent();
+            selected = new List<System.Windows.Forms.TableLayoutPanel>();
         }
 
         public List<Fighter> fighterList;
@@ -33,6 +34,8 @@ namespace Dungeon_Master_Helper
         public List<System.Windows.Forms.Label> initLabelList;
         public List<System.Windows.Forms.Label> initNumLabelList;
         public int initChar = 0;
+
+        public List<System.Windows.Forms.TableLayoutPanel> selected;
 
         public class Creature
         {
@@ -211,7 +214,7 @@ namespace Dungeon_Master_Helper
                 RowCount = 2,
                 Size = new System.Drawing.Size(573, 80),
                 TabIndex = 0
-            });
+        });
             fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -221,6 +224,7 @@ namespace Dungeon_Master_Helper
             fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             fighterTableList[numChar].RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             fighterTableList[numChar].RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            fighterTableList[numChar].Click += new System.EventHandler(this.CharacterClick);
 
 
             string str = Convert.ToString(picIndex);
@@ -236,7 +240,8 @@ namespace Dungeon_Master_Helper
                 TabStop = false
             });
             fighterTableList[numChar].Controls.Add(fighterPictureList[picIndex], 0, 0);
-            fighterTableList[numChar].SetRowSpan(fighterPictureList[picIndex++], 2);
+            fighterTableList[numChar].SetRowSpan(fighterPictureList[picIndex], 2);
+            fighterPictureList[picIndex].Click += new System.EventHandler(this.CharacterClick);
 
             string descstr = Convert.ToString(descIndex++);
             var temp = new List<System.Windows.Forms.Label>
@@ -253,6 +258,7 @@ namespace Dungeon_Master_Helper
                     Text = "Name"
                 },
             };
+            temp[0].Click += new System.EventHandler(this.CharacterClick);
             fighterTableList[numChar].Controls.Add(temp[0], 1, 0);
             descstr = Convert.ToString(descIndex++);
             temp.Add(new System.Windows.Forms.Label
@@ -268,6 +274,7 @@ namespace Dungeon_Master_Helper
                 Text = "HP",
                 TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             });
+            temp[1].Click += new System.EventHandler(this.CharacterClick);
             fighterTableList[numChar].Controls.Add(temp[1], 2, 0);
             descstr = Convert.ToString(descIndex++);
             temp.Add(new System.Windows.Forms.Label
@@ -283,6 +290,7 @@ namespace Dungeon_Master_Helper
                 Text = "AC",
                 TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             });
+            temp[2].Click += new System.EventHandler(this.CharacterClick);
             fighterTableList[numChar].Controls.Add(temp[2], 3, 0);
             descstr = Convert.ToString(descIndex++);
             temp.Add(new System.Windows.Forms.Label
@@ -298,6 +306,7 @@ namespace Dungeon_Master_Helper
                 Text = "PP",
                 TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             });
+            temp[3].Click += new System.EventHandler(this.CharacterClick);
             fighterTableList[numChar].Controls.Add(temp[3], 4, 0);
             descstr = Convert.ToString(descIndex++);
             temp.Add(new System.Windows.Forms.Label
@@ -313,6 +322,7 @@ namespace Dungeon_Master_Helper
                 Text = "Damage",
                 TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             });
+            temp[4].Click += new System.EventHandler(this.CharacterClick);
             fighterTableList[numChar].Controls.Add(temp[4], 5, 0);
             descstr = Convert.ToString(descIndex++);
             temp.Add(new System.Windows.Forms.Label
@@ -328,6 +338,7 @@ namespace Dungeon_Master_Helper
                 Text = "Conditions",
                 TextAlign = System.Drawing.ContentAlignment.MiddleCenter
             });
+            temp[5].Click += new System.EventHandler(this.CharacterClick);
             fighterTableList[numChar].Controls.Add(temp[5], 6, 0);
             fighterDescLabelList.Add(temp);
 
@@ -347,6 +358,7 @@ namespace Dungeon_Master_Helper
                     Text = toAdd.name
                 }
             };
+            newtemp[0].Click += new System.EventHandler(this.CharacterClick);
             fighterTableList[numChar].Controls.Add(newtemp[0], 1, 1);
             changedstr = Convert.ToString(changedIndex++);
             newtemp.Add(new System.Windows.Forms.Label
@@ -361,6 +373,7 @@ namespace Dungeon_Master_Helper
                 TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
                 Text = Convert.ToString(toAdd.curr_hp)
             });
+            newtemp[1].Click += new System.EventHandler(this.CharacterClick);
             fighterTableList[numChar].Controls.Add(newtemp[1], 2, 1);
             changedstr = Convert.ToString(changedIndex++);
             newtemp.Add(new System.Windows.Forms.Label
@@ -375,6 +388,7 @@ namespace Dungeon_Master_Helper
                 TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
                 Text = Convert.ToString(toAdd.ac)
             });
+            newtemp[2].Click += new System.EventHandler(this.CharacterClick);
             fighterTableList[numChar].Controls.Add(newtemp[2], 3, 1);
             changedstr = Convert.ToString(changedIndex++);
             newtemp.Add(new System.Windows.Forms.Label
@@ -389,9 +403,13 @@ namespace Dungeon_Master_Helper
                 TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
                 Text = Convert.ToString(toAdd.pp)
             });
+            newtemp[3].Click += new System.EventHandler(this.CharacterClick);
             fighterTableList[numChar].Controls.Add(newtemp[3], 4, 1);
             fighterLabelList.Add(temp);
-            this.fighterTable.Controls.Add(fighterTableList[numChar++], 0, numChar-1);
+            this.fighterTable.Controls.Add(fighterTableList[numChar], 0, numChar);
+
+            numChar++;
+            picIndex++;
             return;
         }
 
@@ -460,6 +478,40 @@ namespace Dungeon_Master_Helper
             initTableList[initChar].Controls.Add(initNumLabelList[initChar], 2, 0);
             this.initTable.Controls.Add(initTableList[initChar++], 0, initChar);
             return;
+        }
+
+        private void CharacterClick(object sender, EventArgs e)
+        {
+            var type = sender.GetType();
+            System.Windows.Forms.TableLayoutPanel mainTable;
+            if(Convert.ToString(type) == "System.Windows.Forms.Label")
+            {
+                mainTable = (System.Windows.Forms.TableLayoutPanel)(((System.Windows.Forms.Label)sender).Parent);
+            }
+            else if (Convert.ToString(type) == "System.Windows.Forms.PictureBox")
+            {
+                mainTable = (System.Windows.Forms.TableLayoutPanel)(((System.Windows.Forms.PictureBox)sender).Parent);
+            }
+            else if (Convert.ToString(type) == "System.Windows.Forms.TableLayoutPanel")
+            {
+                mainTable = (System.Windows.Forms.TableLayoutPanel)sender;
+            }
+            else
+            {
+                Console.WriteLine(type);
+                return;
+            }
+
+            if (selected.Contains(mainTable))
+            {
+                mainTable.BackColor = System.Drawing.SystemColors.Control;
+                selected.Remove(mainTable);
+            }
+            else
+            {
+                mainTable.BackColor = System.Drawing.SystemColors.ControlDark;
+                selected.Add(mainTable);
+            }
         }
 
         private void ShowNotImplementedDialog(object sender, EventArgs e)
