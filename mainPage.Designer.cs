@@ -404,7 +404,7 @@ namespace Dungeon_Master_Helper
             this.initiativeButt.TabIndex = 2;
             this.initiativeButt.Text = "Initiative";
             this.initiativeButt.UseVisualStyleBackColor = true;
-            this.initiativeButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            this.initiativeButt.Click += new System.EventHandler(this.initiativeButt_Click);
             // 
             // openStatsButt
             // 

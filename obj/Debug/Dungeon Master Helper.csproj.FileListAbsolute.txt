@@ -20,3 +20,4 @@ C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon_Maste
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.mainPage.resources
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.notImplementedForm.resources
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.AssemblyReference.cache
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.initiativeForm.resources

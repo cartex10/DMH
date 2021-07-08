@@ -137,6 +137,7 @@ namespace Dungeon_Master_Helper
                 {
                     this.baseFighterTable
                 };
+                this.baseFighterTable.Tag = toAdd.id;
 
                 fighterList = new List<Fighter>
                 {
@@ -184,18 +185,11 @@ namespace Dungeon_Master_Helper
                 editting = this.baseFighterTable.Controls.Find("charLabel4", true);
                 editting[0].Text = Convert.ToString(toAdd.pp);
                 numChar = 1;
-
-                initTableList = new List<System.Windows.Forms.TableLayoutPanel>();
-                initPictureList = new List<System.Windows.Forms.Control>();
-                initLabelList = new List<System.Windows.Forms.Label >();
-                initNumLabelList = new List<System.Windows.Forms.Label>();
     }
             else
             {
                 CloneCreatureTable(toAdd);
             }
-            toAdd.init_roll = 20;
-            CloneInitiativeTable(toAdd);
             return;
         }
 
@@ -213,7 +207,8 @@ namespace Dungeon_Master_Helper
                 Name = "baseFighterTable" + charstr,
                 RowCount = 2,
                 Size = new System.Drawing.Size(573, 80),
-                TabIndex = 0
+                TabIndex = 0,
+                Tag = toAdd.id
         });
             fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
@@ -415,7 +410,32 @@ namespace Dungeon_Master_Helper
 
         private void AddToInitiative(Fighter toAdd)
         {
-            // TO DO
+            if (Convert.ToBoolean(initChar))
+            {
+                initTableList = new List<System.Windows.Forms.TableLayoutPanel>
+                {
+                    this.baseInitTable
+                };
+                initPictureList = new List<System.Windows.Forms.Control> 
+                { 
+                    baseInitTable.Controls.Find("initPicBox", true)[0]
+                };
+                initLabelList = new List<System.Windows.Forms.Label>
+                {
+                    (System.Windows.Forms.Label)baseInitTable.Controls.Find("initLabel", true)[0]
+                };
+                initNumLabelList = new List<System.Windows.Forms.Label>
+                {
+                    (System.Windows.Forms.Label)baseInitTable.Controls.Find("initNumLabel", true)[0]
+                };
+                initLabelList[0].Text = toAdd.name;
+                initNumLabelList[0].Text = Convert.ToString(toAdd.init_roll);
+                initChar = 1;
+            }
+            else 
+            {
+                CloneInitiativeTable(toAdd);
+            }
         }
 
         private void CloneInitiativeTable(Fighter toAdd)
@@ -433,6 +453,7 @@ namespace Dungeon_Master_Helper
                 RowCount = 1,
                 Size = new System.Drawing.Size(235, 40),
                 TabIndex = 0,
+                Tag = toAdd.id
             });
             initTableList[initChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             initTableList[initChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -518,6 +539,15 @@ namespace Dungeon_Master_Helper
         {
             notImplementedForm nif = new notImplementedForm();
             nif.ShowDialog();
+        }
+
+        private void initiativeButt_Click(object sender, EventArgs e)
+        {
+            initiativeForm initDialog = new initiativeForm(new List<Fighter>
+            {
+                fighterList[0]
+            });
+            initDialog.ShowDialog();
         }
     }
 }
