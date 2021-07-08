@@ -82,7 +82,7 @@ namespace Dungeon_Master_Helper
         {
             public int curr_hp;
             public List<int> conditions;
-            public int init_roll;
+            public int init_roll = -1;
             public int id;
         }
 
@@ -137,7 +137,7 @@ namespace Dungeon_Master_Helper
                 {
                     this.baseFighterTable
                 };
-                this.baseFighterTable.Tag = toAdd.id;
+                fighterTableList[0].Tag = toAdd.id;
 
                 fighterList = new List<Fighter>
                 {
@@ -188,6 +188,7 @@ namespace Dungeon_Master_Helper
     }
             else
             {
+                fighterList.Add(toAdd);
                 CloneCreatureTable(toAdd);
             }
             return;
@@ -543,11 +544,19 @@ namespace Dungeon_Master_Helper
 
         private void initiativeButt_Click(object sender, EventArgs e)
         {
-            initiativeForm initDialog = new initiativeForm(new List<Fighter>
+            List<Fighter> notInit = new List<Fighter>();
+            List<Fighter> initted = new List<Fighter>();
+            foreach(System.Windows.Forms.TableLayoutPanel table in selected)
             {
-                fighterList[0]
-            }, this);
-            initDialog.ShowDialog();
+                Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(table.Tag));
+                if(temp.init_roll == -1) { notInit.Add(temp); }
+                else { initted.Add(temp); }
+            }
+            if(notInit.Count != 0)
+            {
+                initiativeForm initDialog = new initiativeForm(notInit, this);
+                initDialog.ShowDialog();
+            }
         }
     }
 }

@@ -90,7 +90,7 @@ namespace Dungeon_Master_Helper
                 Text = toAdd.name,
                 Tag = toAdd.id
             });
-            initTableList[index].Controls.Add(initNameList[index], 0, index);
+            initTableList[index].Controls.Add(initNameList[index], 0, 0);
 
             initNumList.Add(new System.Windows.Forms.NumericUpDown
             {
@@ -103,8 +103,9 @@ namespace Dungeon_Master_Helper
                 Value = toAdd.dex[2],
                 Tag = toAdd.id
             });
-            initTableList[index].Controls.Add(initNumList[index], 1, index);
+            initTableList[index].Controls.Add(initNumList[index], 1, 0);
 
+            this.nameTable.Controls.Add(initTableList[index]);
             index++;
             return;
         }
