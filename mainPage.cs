@@ -129,7 +129,7 @@ namespace Dungeon_Master_Helper
             }
         }
 
-        public void addToEncounter(Fighter toAdd)
+        private void addToEncounter(Fighter toAdd)
         {
             if (!Convert.ToBoolean(toAdd.id))
             {
@@ -436,6 +436,7 @@ namespace Dungeon_Master_Helper
             else 
             {
                 CloneInitiativeTable(toAdd);
+                SortInitiativeTable();
             }
         }
 
@@ -499,6 +500,18 @@ namespace Dungeon_Master_Helper
             });
             initTableList[initChar].Controls.Add(initNumLabelList[initChar], 2, 0);
             this.initTable.Controls.Add(initTableList[initChar++], 0, initChar-1);
+            return;
+        }
+
+        private void SortInitiativeTable()
+        {
+            List<Fighter> initted = fighterList.FindAll(r => r.init_roll != -1);
+            List<Fighter> sorted = initted.OrderByDescending(r => r.init_roll).ToList();
+            for(int i = 0; i < initted.Count; i++)
+            {
+                initLabelList[i].Text = sorted[i].name;
+                initNumLabelList[i].Text = Convert.ToString(sorted[i].init_roll);
+            }
             return;
         }
 
