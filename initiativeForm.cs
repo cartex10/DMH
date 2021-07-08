@@ -12,9 +12,11 @@ namespace Dungeon_Master_Helper
 {
     public partial class initiativeForm : Form
     {
-        public initiativeForm(List<mainPage.Fighter> addList)
+        public initiativeForm(List<mainPage.Fighter> addList, mainPage original)
         {
             bool first = true;
+            charList = addList;
+            father = original;
             InitializeComponent();
             foreach (mainPage.Fighter toAdd in addList)
             {
@@ -49,6 +51,8 @@ namespace Dungeon_Master_Helper
             }
         }
 
+        public List<mainPage.Fighter> charList;
+        public mainPage father;
         public List<System.Windows.Forms.TableLayoutPanel> initTableList;
         public List<System.Windows.Forms.Label> initNameList;
         public List<System.Windows.Forms.NumericUpDown> initNumList;
@@ -67,7 +71,8 @@ namespace Dungeon_Master_Helper
                 Name = "baseTable" + str,
                 RowCount = 1,
                 Size = new System.Drawing.Size(281, 37),
-                TabIndex = 0
+                TabIndex = 0,
+                Tag = toAdd.id
             });
             initTableList[index].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.59567F));
             initTableList[index].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.40433F));
@@ -82,7 +87,8 @@ namespace Dungeon_Master_Helper
                 Name = "initNameLabel" + str,
                 Size = new System.Drawing.Size(136, 25),
                 TabIndex = 0,
-                Text = toAdd.name
+                Text = toAdd.name,
+                Tag = toAdd.id
             });
             initTableList[index].Controls.Add(initNameList[index], 0, index);
 
@@ -94,12 +100,26 @@ namespace Dungeon_Master_Helper
                 Name = "initNumBox" + str,
                 Size = new System.Drawing.Size(60, 30),
                 TabIndex = 1,
-                Value = toAdd.dex[2]
+                Value = toAdd.dex[2],
+                Tag = toAdd.id
             });
             initTableList[index].Controls.Add(initNumList[index], 1, index);
 
             index++;
             return;
+        }
+
+        private void Finish(object sender, EventArgs e)
+        {
+            foreach(mainPage.Fighter i in charList)
+            {
+                var box = initNumList.Find(r => Convert.ToString(r.Tag) == Convert.ToString(i.id));
+                var num = Convert.ToInt32(box.Value);
+                var fighter = father.fighterList.Find(r => Convert.ToString(r.id) == Convert.ToString(i.id));
+                fighter.init_roll = num;
+                father.AddToInitiative(fighter);
+            }
+            this.Close();
         }
     }
 }

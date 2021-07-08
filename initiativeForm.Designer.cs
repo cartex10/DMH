@@ -38,6 +38,7 @@ namespace Dungeon_Master_Helper
             this.baseTable = new System.Windows.Forms.TableLayoutPanel();
             this.initNameLabel = new System.Windows.Forms.Label();
             this.initNumBox = new System.Windows.Forms.NumericUpDown();
+            this.doneButton = new System.Windows.Forms.Button();
             this.mainTable.SuspendLayout();
             this.namePanel.SuspendLayout();
             this.nameTable.SuspendLayout();
@@ -56,6 +57,7 @@ namespace Dungeon_Master_Helper
             this.mainTable.Controls.Add(this.namePanel, 1, 1);
             this.mainTable.Controls.Add(this.label1, 1, 0);
             this.mainTable.Controls.Add(this.label2, 2, 0);
+            this.mainTable.Controls.Add(this.doneButton, 4, 1);
             this.mainTable.Location = new System.Drawing.Point(0, 0);
             this.mainTable.Name = "mainTable";
             this.mainTable.RowCount = 2;
@@ -152,6 +154,17 @@ namespace Dungeon_Master_Helper
             this.initNumBox.Size = new System.Drawing.Size(60, 30);
             this.initNumBox.TabIndex = 1;
             // 
+            // doneButton
+            // 
+            this.doneButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.doneButton.Location = new System.Drawing.Point(409, 468);
+            this.doneButton.Name = "doneButton";
+            this.doneButton.Size = new System.Drawing.Size(75, 23);
+            this.doneButton.TabIndex = 3;
+            this.doneButton.Text = "Done";
+            this.doneButton.UseVisualStyleBackColor = true;
+            this.doneButton.Click += new System.EventHandler(this.Finish);
+            // 
             // initiativeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,5 +196,6 @@ namespace Dungeon_Master_Helper
         private System.Windows.Forms.TableLayoutPanel baseTable;
         private System.Windows.Forms.Label initNameLabel;
         private System.Windows.Forms.NumericUpDown initNumBox;
+        private System.Windows.Forms.Button doneButton;
     }
 }

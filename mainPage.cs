@@ -408,9 +408,9 @@ namespace Dungeon_Master_Helper
             return;
         }
 
-        private void AddToInitiative(Fighter toAdd)
+        public void AddToInitiative(Fighter toAdd)
         {
-            if (Convert.ToBoolean(initChar))
+            if (!Convert.ToBoolean(initChar))
             {
                 initTableList = new List<System.Windows.Forms.TableLayoutPanel>
                 {
@@ -497,7 +497,7 @@ namespace Dungeon_Master_Helper
                 Text = Convert.ToString(toAdd.init_roll)
             });
             initTableList[initChar].Controls.Add(initNumLabelList[initChar], 2, 0);
-            this.initTable.Controls.Add(initTableList[initChar++], 0, initChar);
+            this.initTable.Controls.Add(initTableList[initChar++], 0, initChar-1);
             return;
         }
 
@@ -546,7 +546,7 @@ namespace Dungeon_Master_Helper
             initiativeForm initDialog = new initiativeForm(new List<Fighter>
             {
                 fighterList[0]
-            });
+            }, this);
             initDialog.ShowDialog();
         }
     }
