@@ -1,1 +1,36 @@
 # DMH
+
+### The Dungeon Master Helper is an application aiming to make running combat easier for DMs by collecting all info necessary into one interface, and storing and maintaining the information necessary for a tpk.
+
+## Purpose of the Project
+I began working on this project in order to help teach myself different parts of C#, and mainly to gain experience working with Windows Forms. The project has helped me learn the fundamentals of programming in C#, and some of its intricacies.
+
+## Current Functionality
+- Creating new creatures that store
+  - Name
+  - Level
+  - Max HP
+  - AC
+  - PP
+  - Stats
+  - Damage immunities, invulnerabilities, and resistances
+  - Whether the creature is playable
+  - Whether the creature has evasion
+- Adding saved creatures to the encounter where certain info will be shown
+  - Name
+  - Current HP
+  - AC
+  - PP
+
+## Planned Features
+- Adding Creatures to Initiative
+- Dynamic condition tracking
+- Showing which damage immunities, invulnerabilities, and resistances a creature has
+- Editting previously saved creatures
+- Saving encounters
+- Saving parties of player characters
+- Loading premade monsters from monster manual
+- Saving proficiencies
+- Mass damage and save calculators
+- Opening specific pages from DMG and MM
+- Dice Roller
