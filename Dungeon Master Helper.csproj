@@ -55,6 +55,12 @@
     <Compile Include="createCreatureForm.Designer.cs">
       <DependentUpon>createCreatureForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="notImplementedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notImplementedForm.Designer.cs">
+      <DependentUpon>notImplementedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="createCreatureForm.resx">
       <DependentUpon>createCreatureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notImplementedForm.resx">
+      <DependentUpon>notImplementedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainPage.resx">
       <DependentUpon>mainPage.cs</DependentUpon>

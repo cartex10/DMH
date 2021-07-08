@@ -384,8 +384,8 @@ namespace Dungeon_Master_Helper
 
         private void ShowNotImplementedDialog(object sender, EventArgs e)
         {
-            //TO DO
-            return;
+            notImplementedForm nif = new notImplementedForm();
+            nif.ShowDialog();
         }
     }
 }
