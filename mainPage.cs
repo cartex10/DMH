@@ -17,6 +17,17 @@ namespace Dungeon_Master_Helper
             InitializeComponent();
         }
 
+        public List<Fighter> fighterList;
+        public List<System.Windows.Forms.TableLayoutPanel> fighterTableList;
+        public List<System.Windows.Forms.Control> fighterPictureList;
+        public List<List<System.Windows.Forms.Label>> fighterDescLabelList;
+        public List<List<System.Windows.Forms.Label>> fighterLabelList;
+        public int nextLoadedID = 0;
+        public int picIndex = 1;
+        public int descIndex = 6;
+        public int changedIndex = 4;
+        public int numChar = 0;
+        
         public class Creature
         {
             public string name = "NULL";
@@ -33,6 +44,29 @@ namespace Dungeon_Master_Helper
             public bool evasion = false;
             public int max_hp = 1;
             public int level = 1;
+
+            public Fighter Convert()
+            {
+                Fighter toReturn = new Fighter()
+                {
+                    name = this.name,
+                    ac = this.ac,
+                    pp = this.pp,
+                    str = this.str,
+                    dex = this.dex,
+                    con = this.con,
+                    int_stat = this.int_stat,
+                    wis = this.wis,
+                    cha = this.cha,
+                    playable = this.playable,
+                    evasion = this.evasion,
+                    max_hp = this.max_hp,
+                    level = this.level,
+                    curr_hp = this.max_hp,
+
+            };
+                return toReturn;
+            }
         }
 
         public class Fighter : Creature
@@ -40,6 +74,7 @@ namespace Dungeon_Master_Helper
             public int curr_hp;
             public List<int> conditions;
             public int init_roll;
+            public int id;
         }
 
         public enum Damagetypes
@@ -59,12 +94,6 @@ namespace Dungeon_Master_Helper
             slashing
         }
 
-        public void addToEncounter(Fighter toAdd)
-        {
-            //TO DO
-            return;
-        }
-
         private void newCreatureToolStripMenuItem_Click(object sender, EventArgs e)
         {
             createCreatureForm createCreature = new createCreatureForm();
@@ -77,16 +106,286 @@ namespace Dungeon_Master_Helper
             {
                 Title = "Open Creature"
             };
-            openFileDialog.ShowDialog();
-            System.Xml.Serialization.XmlSerializer reader = new System.Xml.Serialization.XmlSerializer(typeof(Creature));
-            System.IO.StreamReader file = new System.IO.StreamReader(openFileDialog.FileName);
-            Creature loaded = new Creature();
-            loaded = (Creature)reader.Deserialize(file);
-            file.Close();
-            Fighter toAdd = new Fighter();
-            toAdd = (Fighter)loaded;
-            toAdd.curr_hp = toAdd.max_hp;
-            addToEncounter(toAdd);
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                System.Xml.Serialization.XmlSerializer reader = new System.Xml.Serialization.XmlSerializer(typeof(Creature));
+                System.IO.StreamReader file = new System.IO.StreamReader(openFileDialog.FileName);
+                Creature loaded = new Creature();
+                loaded = (Creature)reader.Deserialize(file);
+                file.Close();
+                Fighter toAdd = new Fighter();
+                toAdd = loaded.Convert();
+                toAdd.id = nextLoadedID++;
+                addToEncounter(toAdd);
+            }
+        }
+
+        public void addToEncounter(Fighter toAdd)
+        {
+            if (!Convert.ToBoolean(toAdd.id))
+            {
+                fighterTableList = new List<System.Windows.Forms.TableLayoutPanel>
+                {
+                    this.baseFighterTable
+                };
+
+                fighterList = new List<Fighter>
+                {
+                    toAdd
+                };
+
+                fighterPictureList = new List<System.Windows.Forms.Control>
+                {
+                    baseFighterTable.Controls.Find("charPicBox", true)[0]
+                };
+
+                fighterDescLabelList = new List<List<System.Windows.Forms.Label>>
+                {
+                    new List<System.Windows.Forms.Label>
+                    {
+                        (System.Windows.Forms.Label)baseFighterTable.Controls.Find("charDescLabel1", true)[0],
+                        (System.Windows.Forms.Label)baseFighterTable.Controls.Find("charDescLabel2", true)[0],
+                        (System.Windows.Forms.Label)baseFighterTable.Controls.Find("charDescLabel3", true)[0],
+                        (System.Windows.Forms.Label)baseFighterTable.Controls.Find("charDescLabel4", true)[0],
+                        (System.Windows.Forms.Label)baseFighterTable.Controls.Find("charDescLabel5", true)[0],
+                        (System.Windows.Forms.Label)baseFighterTable.Controls.Find("charDescLabel6", true)[0]
+                    }
+                };
+
+                fighterLabelList = new List<List<System.Windows.Forms.Label>>
+                {
+                    new List<System.Windows.Forms.Label>
+                    {
+                        (System.Windows.Forms.Label)baseFighterTable.Controls.Find("charLabel1", true)[0],
+                        (System.Windows.Forms.Label)baseFighterTable.Controls.Find("charLabel2", true)[0],
+                        (System.Windows.Forms.Label)baseFighterTable.Controls.Find("charLabel3", true)[0],
+                        (System.Windows.Forms.Label)baseFighterTable.Controls.Find("charLabel4", true)[0]
+                    }
+                };
+
+                Control[] editting = this.baseFighterTable.Controls.Find("charLabel1", true);
+                editting[0].Text = toAdd.name;
+
+                editting = this.baseFighterTable.Controls.Find("charLabel2", true);
+                editting[0].Text = Convert.ToString(toAdd.curr_hp);
+
+                editting = this.baseFighterTable.Controls.Find("charLabel3", true);
+                editting[0].Text = Convert.ToString(toAdd.ac);
+
+                editting = this.baseFighterTable.Controls.Find("charLabel4", true);
+                editting[0].Text = Convert.ToString(toAdd.pp);
+                numChar = 1;
+            }
+            else
+            {
+                CloneTable(toAdd);
+            }
+            return;
+        }
+
+        private void CloneTable(Fighter toAdd)//System.Windows.Forms.TableLayoutPanel toClone)
+        {
+            string charstr = Convert.ToString(numChar);
+            fighterTableList.Add(new System.Windows.Forms.TableLayoutPanel
+            {
+                Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            |     System.Windows.Forms.AnchorStyles.Left)
+            |     System.Windows.Forms.AnchorStyles.Right))),
+                ColumnCount = 7,
+                Location = new System.Drawing.Point(1, 1),
+                Margin = new System.Windows.Forms.Padding(0),
+                Name = "baseFighterTable" + charstr,
+                RowCount = 2,
+                Size = new System.Drawing.Size(573, 80),
+                TabIndex = 0
+            });
+            fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            fighterTableList[numChar].RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            fighterTableList[numChar].RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+
+
+            string str = Convert.ToString(picIndex);
+            fighterPictureList.Add(new System.Windows.Forms.PictureBox
+            {
+                Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette,
+                Location = new System.Drawing.Point(10, 10),
+                Margin = new System.Windows.Forms.Padding(10),
+                Name = "charPicBox" + str,
+                Size = new System.Drawing.Size(60, 60),
+                SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage,
+                TabIndex = 0,
+                TabStop = false
+            });
+            fighterTableList[numChar].Controls.Add(fighterPictureList[picIndex], 0, 0);
+            fighterTableList[numChar].SetRowSpan(fighterPictureList[picIndex++], 2);
+
+            string descstr = Convert.ToString(descIndex++);
+            var temp = new List<System.Windows.Forms.Label>
+            {
+                new System.Windows.Forms.Label
+                {
+                    Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left))),
+                    AutoSize = true,
+                    Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))),
+                    Location = new System.Drawing.Point(83, 20),
+                    Name = "charDescLabel" + descstr,
+                    Size = new System.Drawing.Size(55, 20),
+                    TabIndex = 1,
+                    Text = "Name"
+                },
+            };
+            fighterTableList[numChar].Controls.Add(temp[0], 1, 0);
+            descstr = Convert.ToString(descIndex++);
+            temp.Add(new System.Windows.Forms.Label
+            {
+                Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right))),
+                AutoSize = true,
+                Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))),
+                Location = new System.Drawing.Point(203, 20),
+                Name = "charDescLabel" + descstr,
+                Size = new System.Drawing.Size(44, 20),
+                TabIndex = 2,
+                Text = "HP",
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            });
+            fighterTableList[numChar].Controls.Add(temp[1], 2, 0);
+            descstr = Convert.ToString(descIndex++);
+            temp.Add(new System.Windows.Forms.Label
+            {
+                Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right))),
+                AutoSize = true,
+                Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))),
+                Location = new System.Drawing.Point(253, 20),
+                Name = "charDescLabel" + descstr,
+                Size = new System.Drawing.Size(44, 20),
+                TabIndex = 3,
+                Text = "AC",
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            });
+            fighterTableList[numChar].Controls.Add(temp[2], 3, 0);
+            descstr = Convert.ToString(descIndex++);
+            temp.Add(new System.Windows.Forms.Label
+            {
+                Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right))),
+                AutoSize = true,
+                Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))),
+                Location = new System.Drawing.Point(303, 20),
+                Name = "charDescLabel" + descstr,
+                Size = new System.Drawing.Size(44, 20),
+                TabIndex = 4,
+                Text = "PP",
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            });
+            fighterTableList[numChar].Controls.Add(temp[3], 4, 0);
+            descstr = Convert.ToString(descIndex++);
+            temp.Add(new System.Windows.Forms.Label
+            {
+                Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right))),
+                AutoSize = true,
+                Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))),
+                Location = new System.Drawing.Point(353, 20),
+                Name = "charDescLabel" + descstr,
+                Size = new System.Drawing.Size(105, 20),
+                TabIndex = 5,
+                Text = "Damage",
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            });
+            fighterTableList[numChar].Controls.Add(temp[4], 5, 0);
+            descstr = Convert.ToString(descIndex++);
+            temp.Add(new System.Windows.Forms.Label
+            {
+                Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right))),
+                AutoSize = true,
+                Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))),
+                Location = new System.Drawing.Point(464, 20),
+                Name = "charDescLabel" + descstr,
+                Size = new System.Drawing.Size(106, 20),
+                TabIndex = 6,
+                Text = "Conditions",
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            });
+            fighterTableList[numChar].Controls.Add(temp[5], 6, 0);
+            fighterDescLabelList.Add(temp);
+
+            string changedstr = Convert.ToString(changedIndex++);
+            var newtemp = new List<System.Windows.Forms.Label>
+            {
+                new System.Windows.Forms.Label
+                {
+                    Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right))),
+                    AutoSize = true,
+                    Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))),
+                    Location = new System.Drawing.Point(83, 50),
+                    Name = "charLabel" + changedstr,
+                    Size = new System.Drawing.Size(114, 20),
+                    TabIndex = 7,
+                    TextAlign = System.Drawing.ContentAlignment.MiddleLeft,
+                    Text = toAdd.name
+                }
+            };
+            fighterTableList[numChar].Controls.Add(newtemp[0], 1, 1);
+            changedstr = Convert.ToString(changedIndex++);
+            newtemp.Add(new System.Windows.Forms.Label
+            {
+                Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right))),
+                AutoSize = true,
+                Font = new System.Drawing.Font("Microsoft Sans Serif", 10F),
+                Location = new System.Drawing.Point(203, 51),
+                Name = "charLabel" + changedstr,
+                Size = new System.Drawing.Size(44, 17),
+                TabIndex = 8,
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
+                Text = Convert.ToString(toAdd.curr_hp)
+            });
+            fighterTableList[numChar].Controls.Add(newtemp[1], 2, 1);
+            changedstr = Convert.ToString(changedIndex++);
+            newtemp.Add(new System.Windows.Forms.Label
+            {
+                Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right))),
+                AutoSize = true,
+                Font = new System.Drawing.Font("Microsoft Sans Serif", 10F),
+                Location = new System.Drawing.Point(253, 51),
+                Name = "charLabel" + changedstr,
+                Size = new System.Drawing.Size(44, 17),
+                TabIndex = 9,
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
+                Text = Convert.ToString(toAdd.ac)
+            });
+            fighterTableList[numChar].Controls.Add(newtemp[2], 3, 1);
+            changedstr = Convert.ToString(changedIndex++);
+            newtemp.Add(new System.Windows.Forms.Label
+            {
+                Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right))),
+                AutoSize = true,
+                Font = new System.Drawing.Font("Microsoft Sans Serif", 10F),
+                Location = new System.Drawing.Point(303, 51),
+                Name = "charLabel" + changedstr,
+                Size = new System.Drawing.Size(44, 17),
+                TabIndex = 10,
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
+                Text = Convert.ToString(toAdd.pp)
+            });
+            fighterTableList[numChar].Controls.Add(newtemp[3], 4, 1);
+            fighterLabelList.Add(temp);
+            this.fighterTable.Controls.Add(fighterTableList[numChar++], 0, numChar-1);
+            return;
+        }
+
+        private void ShowNotImplementedDialog(object sender, EventArgs e)
+        {
+            //TO DO
+            return;
         }
     }
 }

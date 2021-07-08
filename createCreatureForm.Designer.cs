@@ -38,11 +38,15 @@ namespace Dungeon_Master_Helper
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.acNumBox = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
+            this.hpNumBox = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.levelNumBox = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.ppNumBox = new System.Windows.Forms.NumericUpDown();
             this.ppLabel = new System.Windows.Forms.Label();
+            this.acNumBox = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.gameInfoTable = new System.Windows.Forms.TableLayoutPanel();
             this.statTable = new System.Windows.Forms.TableLayoutPanel();
             this.chaPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -178,18 +182,16 @@ namespace Dungeon_Master_Helper
             this.label16 = new System.Windows.Forms.Label();
             this.evasionCheckBox = new System.Windows.Forms.CheckBox();
             this.damageTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.hpNumBox = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.levelNumBox = new System.Windows.Forms.NumericUpDown();
-            this.label18 = new System.Windows.Forms.Label();
             this.mainTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.charPicBox)).BeginInit();
             this.infoTable.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.acNumBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hpNumBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelNumBox)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ppNumBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acNumBox)).BeginInit();
             this.gameInfoTable.SuspendLayout();
             this.statTable.SuspendLayout();
             this.chaPanel.SuspendLayout();
@@ -248,8 +250,6 @@ namespace Dungeon_Master_Helper
             this.extraInfoTable.SuspendLayout();
             this.npcPanel.SuspendLayout();
             this.evasionPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hpNumBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.levelNumBox)).BeginInit();
             this.SuspendLayout();
             // 
             // mainTable
@@ -353,28 +353,66 @@ namespace Dungeon_Master_Helper
             this.flowLayoutPanel2.Size = new System.Drawing.Size(96, 98);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
-            // acNumBox
+            // hpNumBox
             // 
-            this.acNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.acNumBox.Location = new System.Drawing.Point(3, 26);
-            this.acNumBox.Name = "acNumBox";
-            this.acNumBox.Size = new System.Drawing.Size(73, 23);
-            this.acNumBox.TabIndex = 0;
-            this.acNumBox.Value = new decimal(new int[] {
-            10,
+            this.hpNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.hpNumBox.Location = new System.Drawing.Point(3, 72);
+            this.hpNumBox.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.hpNumBox.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.hpNumBox.Name = "hpNumBox";
+            this.hpNumBox.Size = new System.Drawing.Size(93, 23);
+            this.hpNumBox.TabIndex = 0;
+            this.hpNumBox.Value = new decimal(new int[] {
+            1,
             0,
             0,
             0});
             // 
-            // label2
+            // label17
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(3, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "AC";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label17.Location = new System.Drawing.Point(3, 52);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(27, 17);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "HP";
+            // 
+            // levelNumBox
+            // 
+            this.levelNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.levelNumBox.Location = new System.Drawing.Point(3, 26);
+            this.levelNumBox.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.levelNumBox.Name = "levelNumBox";
+            this.levelNumBox.Size = new System.Drawing.Size(93, 23);
+            this.levelNumBox.TabIndex = 2;
+            this.levelNumBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label18.Location = new System.Drawing.Point(3, 6);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(42, 17);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Level";
             // 
             // flowLayoutPanel3
             // 
@@ -413,6 +451,29 @@ namespace Dungeon_Master_Helper
             this.ppLabel.Size = new System.Drawing.Size(26, 17);
             this.ppLabel.TabIndex = 1;
             this.ppLabel.Text = "PP";
+            // 
+            // acNumBox
+            // 
+            this.acNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.acNumBox.Location = new System.Drawing.Point(3, 26);
+            this.acNumBox.Name = "acNumBox";
+            this.acNumBox.Size = new System.Drawing.Size(73, 23);
+            this.acNumBox.TabIndex = 0;
+            this.acNumBox.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(3, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(26, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "AC";
             // 
             // gameInfoTable
             // 
@@ -2409,67 +2470,6 @@ namespace Dungeon_Master_Helper
             this.evasionCheckBox.TabIndex = 4;
             this.evasionCheckBox.UseVisualStyleBackColor = true;
             // 
-            // hpNumBox
-            // 
-            this.hpNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.hpNumBox.Location = new System.Drawing.Point(3, 72);
-            this.hpNumBox.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.hpNumBox.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.hpNumBox.Name = "hpNumBox";
-            this.hpNumBox.Size = new System.Drawing.Size(93, 23);
-            this.hpNumBox.TabIndex = 0;
-            this.hpNumBox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label17.Location = new System.Drawing.Point(3, 52);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(27, 17);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "HP";
-            // 
-            // levelNumBox
-            // 
-            this.levelNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.levelNumBox.Location = new System.Drawing.Point(3, 26);
-            this.levelNumBox.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.levelNumBox.Name = "levelNumBox";
-            this.levelNumBox.Size = new System.Drawing.Size(93, 23);
-            this.levelNumBox.TabIndex = 2;
-            this.levelNumBox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label18.Location = new System.Drawing.Point(3, 6);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(42, 17);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Level";
-            // 
             // createCreatureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2490,10 +2490,12 @@ namespace Dungeon_Master_Helper
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.acNumBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hpNumBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelNumBox)).EndInit();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ppNumBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acNumBox)).EndInit();
             this.gameInfoTable.ResumeLayout(false);
             this.statTable.ResumeLayout(false);
             this.chaPanel.ResumeLayout(false);
@@ -2575,8 +2577,6 @@ namespace Dungeon_Master_Helper
             this.npcPanel.PerformLayout();
             this.evasionPanel.ResumeLayout(false);
             this.evasionPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hpNumBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.levelNumBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
