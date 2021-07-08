@@ -27,7 +27,13 @@ namespace Dungeon_Master_Helper
         public int descIndex = 6;
         public int changedIndex = 4;
         public int numChar = 0;
-        
+
+        public List<System.Windows.Forms.TableLayoutPanel> initTableList;
+        public List<System.Windows.Forms.Control> initPictureList;
+        public List<System.Windows.Forms.Label> initLabelList;
+        public List<System.Windows.Forms.Label> initNumLabelList;
+        public int initChar = 0;
+
         public class Creature
         {
             public string name = "NULL";
@@ -175,15 +181,22 @@ namespace Dungeon_Master_Helper
                 editting = this.baseFighterTable.Controls.Find("charLabel4", true);
                 editting[0].Text = Convert.ToString(toAdd.pp);
                 numChar = 1;
-            }
+
+                initTableList = new List<System.Windows.Forms.TableLayoutPanel>();
+                initPictureList = new List<System.Windows.Forms.Control>();
+                initLabelList = new List<System.Windows.Forms.Label >();
+                initNumLabelList = new List<System.Windows.Forms.Label>();
+    }
             else
             {
-                CloneTable(toAdd);
+                CloneCreatureTable(toAdd);
             }
+            toAdd.init_roll = 20;
+            CloneInitiativeTable(toAdd);
             return;
         }
 
-        private void CloneTable(Fighter toAdd)//System.Windows.Forms.TableLayoutPanel toClone)
+        private void CloneCreatureTable(Fighter toAdd)
         {
             string charstr = Convert.ToString(numChar);
             fighterTableList.Add(new System.Windows.Forms.TableLayoutPanel
@@ -379,6 +392,73 @@ namespace Dungeon_Master_Helper
             fighterTableList[numChar].Controls.Add(newtemp[3], 4, 1);
             fighterLabelList.Add(temp);
             this.fighterTable.Controls.Add(fighterTableList[numChar++], 0, numChar-1);
+            return;
+        }
+
+        private void AddToInitiative(Fighter toAdd)
+        {
+            // TO DO
+        }
+
+        private void CloneInitiativeTable(Fighter toAdd)
+        {
+            string str = Convert.ToString(initChar);
+            initTableList.Add(new System.Windows.Forms.TableLayoutPanel
+            {
+                Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                | System.Windows.Forms.AnchorStyles.Left)
+                | System.Windows.Forms.AnchorStyles.Right))),
+                ColumnCount = 3,
+                Location = new System.Drawing.Point(1, 1),
+                Margin = new System.Windows.Forms.Padding(0),
+                Name = "baseInitTable" + str,
+                RowCount = 1,
+                Size = new System.Drawing.Size(235, 40),
+                TabIndex = 0,
+            });
+            initTableList[initChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            initTableList[initChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            initTableList[initChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            initTableList[initChar].RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+
+            initPictureList.Add(new System.Windows.Forms.PictureBox
+            {
+                Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette,
+                Location = new System.Drawing.Point(3, 3),
+                Name = "initPicBox" + str,
+                Size = new System.Drawing.Size(34, 34),
+                SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage,
+                TabIndex = 0,
+                TabStop = false,
+            });
+            initTableList[initChar].Controls.Add(initPictureList[initChar], 0, 0);
+
+            initLabelList.Add(new System.Windows.Forms.Label
+            {
+                Anchor = System.Windows.Forms.AnchorStyles.Left,
+                AutoSize = true,
+                Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))),
+                Location = new System.Drawing.Point(43, 7),
+                Name = "initLabel" + str,
+                Size = new System.Drawing.Size(0, 25),
+                TabIndex = 1,
+                Text = Convert.ToString(toAdd.name)
+            });
+            initTableList[initChar].Controls.Add(initLabelList[initChar], 1, 0);
+
+            initNumLabelList.Add(new System.Windows.Forms.Label
+            {
+                Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right))),
+                AutoSize = true,
+                Font = new System.Drawing.Font("Microsoft Sans Serif", 12F),
+                Location = new System.Drawing.Point(178, 10),
+                Name = "initNumLabel" + str,
+                Size = new System.Drawing.Size(54, 20),
+                TabIndex = 2,
+                Text = Convert.ToString(toAdd.init_roll)
+            });
+            initTableList[initChar].Controls.Add(initNumLabelList[initChar], 2, 0);
+            this.initTable.Controls.Add(initTableList[initChar++], 0, initChar);
             return;
         }
 

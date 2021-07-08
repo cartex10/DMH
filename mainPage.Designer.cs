@@ -54,7 +54,7 @@ namespace Dungeon_Master_Helper
             this.diceRollerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.watchKeeperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTable = new System.Windows.Forms.TableLayoutPanel();
-            this.InitiativeLableTable = new System.Windows.Forms.TableLayoutPanel();
+            this.InitiativeLabelTable = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.continueButt = new System.Windows.Forms.Button();
             this.buttonPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -77,14 +77,24 @@ namespace Dungeon_Master_Helper
             this.charPicBox = new System.Windows.Forms.PictureBox();
             this.charDescLabel1 = new System.Windows.Forms.Label();
             this.charDescLabel2 = new System.Windows.Forms.Label();
+            this.initPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.initTable = new System.Windows.Forms.TableLayoutPanel();
+            this.baseInitTable = new System.Windows.Forms.TableLayoutPanel();
+            this.initPicBox = new System.Windows.Forms.PictureBox();
+            this.initLabel = new System.Windows.Forms.Label();
+            this.initNumLabel = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.mainTable.SuspendLayout();
-            this.InitiativeLableTable.SuspendLayout();
+            this.InitiativeLabelTable.SuspendLayout();
             this.buttonPanel.SuspendLayout();
             this.fighterPanel.SuspendLayout();
             this.fighterTable.SuspendLayout();
             this.baseFighterTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.charPicBox)).BeginInit();
+            this.initPanel.SuspendLayout();
+            this.initTable.SuspendLayout();
+            this.baseInitTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.initPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -283,9 +293,10 @@ namespace Dungeon_Master_Helper
             this.mainTable.ColumnCount = 2;
             this.mainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.mainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.mainTable.Controls.Add(this.InitiativeLableTable, 1, 0);
+            this.mainTable.Controls.Add(this.InitiativeLabelTable, 1, 0);
             this.mainTable.Controls.Add(this.buttonPanel, 0, 0);
             this.mainTable.Controls.Add(this.fighterPanel, 0, 1);
+            this.mainTable.Controls.Add(this.initPanel, 1, 1);
             this.mainTable.Location = new System.Drawing.Point(0, 27);
             this.mainTable.Name = "mainTable";
             this.mainTable.RowCount = 2;
@@ -294,23 +305,23 @@ namespace Dungeon_Master_Helper
             this.mainTable.Size = new System.Drawing.Size(849, 424);
             this.mainTable.TabIndex = 2;
             // 
-            // InitiativeLableTable
+            // InitiativeLabelTable
             // 
-            this.InitiativeLableTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.InitiativeLabelTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.InitiativeLableTable.AutoSize = true;
-            this.InitiativeLableTable.ColumnCount = 2;
-            this.InitiativeLableTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.InitiativeLableTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.InitiativeLableTable.Controls.Add(this.label1, 0, 0);
-            this.InitiativeLableTable.Controls.Add(this.continueButt, 1, 0);
-            this.InitiativeLableTable.Location = new System.Drawing.Point(597, 4);
-            this.InitiativeLableTable.Name = "InitiativeLableTable";
-            this.InitiativeLableTable.RowCount = 1;
-            this.InitiativeLableTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.InitiativeLableTable.Size = new System.Drawing.Size(248, 21);
-            this.InitiativeLableTable.TabIndex = 0;
+            this.InitiativeLabelTable.AutoSize = true;
+            this.InitiativeLabelTable.ColumnCount = 2;
+            this.InitiativeLabelTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.InitiativeLabelTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.InitiativeLabelTable.Controls.Add(this.label1, 0, 0);
+            this.InitiativeLabelTable.Controls.Add(this.continueButt, 1, 0);
+            this.InitiativeLabelTable.Location = new System.Drawing.Point(597, 4);
+            this.InitiativeLabelTable.Name = "InitiativeLabelTable";
+            this.InitiativeLabelTable.RowCount = 1;
+            this.InitiativeLabelTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.InitiativeLabelTable.Size = new System.Drawing.Size(248, 21);
+            this.InitiativeLabelTable.TabIndex = 0;
             // 
             // label1
             // 
@@ -618,6 +629,94 @@ namespace Dungeon_Master_Helper
             this.charDescLabel2.Text = "HP";
             this.charDescLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // initPanel
+            // 
+            this.initPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.initPanel.AutoScroll = true;
+            this.initPanel.Controls.Add(this.initTable);
+            this.initPanel.Location = new System.Drawing.Point(594, 29);
+            this.initPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.initPanel.Name = "initPanel";
+            this.initPanel.Size = new System.Drawing.Size(254, 394);
+            this.initPanel.TabIndex = 3;
+            // 
+            // initTable
+            // 
+            this.initTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.initTable.ColumnCount = 1;
+            this.initTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.initTable.Controls.Add(this.baseInitTable, 0, 0);
+            this.initTable.Location = new System.Drawing.Point(0, 0);
+            this.initTable.Margin = new System.Windows.Forms.Padding(0);
+            this.initTable.Name = "initTable";
+            this.initTable.RowCount = 12;
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.initTable.Size = new System.Drawing.Size(237, 440);
+            this.initTable.TabIndex = 0;
+            // 
+            // baseInitTable
+            // 
+            this.baseInitTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.baseInitTable.ColumnCount = 3;
+            this.baseInitTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.baseInitTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.baseInitTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.baseInitTable.Controls.Add(this.initPicBox, 0, 0);
+            this.baseInitTable.Controls.Add(this.initLabel, 1, 0);
+            this.baseInitTable.Controls.Add(this.initNumLabel, 2, 0);
+            this.baseInitTable.Location = new System.Drawing.Point(1, 1);
+            this.baseInitTable.Margin = new System.Windows.Forms.Padding(0);
+            this.baseInitTable.Name = "baseInitTable";
+            this.baseInitTable.RowCount = 1;
+            this.baseInitTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.baseInitTable.Size = new System.Drawing.Size(235, 40);
+            this.baseInitTable.TabIndex = 0;
+            // 
+            // initPicBox
+            // 
+            this.initPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette;
+            this.initPicBox.Location = new System.Drawing.Point(3, 3);
+            this.initPicBox.Name = "initPicBox";
+            this.initPicBox.Size = new System.Drawing.Size(34, 34);
+            this.initPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.initPicBox.TabIndex = 0;
+            this.initPicBox.TabStop = false;
+            // 
+            // initLabel
+            // 
+            this.initLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.initLabel.AutoSize = true;
+            this.initLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.initLabel.Location = new System.Drawing.Point(43, 7);
+            this.initLabel.Name = "initLabel";
+            this.initLabel.Size = new System.Drawing.Size(0, 25);
+            this.initLabel.TabIndex = 1;
+            // 
+            // initNumLabel
+            // 
+            this.initNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.initNumLabel.AutoSize = true;
+            this.initNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.initNumLabel.Location = new System.Drawing.Point(178, 10);
+            this.initNumLabel.Name = "initNumLabel";
+            this.initNumLabel.Size = new System.Drawing.Size(54, 20);
+            this.initNumLabel.TabIndex = 2;
+            // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -635,8 +734,8 @@ namespace Dungeon_Master_Helper
             this.menuStrip.PerformLayout();
             this.mainTable.ResumeLayout(false);
             this.mainTable.PerformLayout();
-            this.InitiativeLableTable.ResumeLayout(false);
-            this.InitiativeLableTable.PerformLayout();
+            this.InitiativeLabelTable.ResumeLayout(false);
+            this.InitiativeLabelTable.PerformLayout();
             this.buttonPanel.ResumeLayout(false);
             this.buttonPanel.PerformLayout();
             this.fighterPanel.ResumeLayout(false);
@@ -645,6 +744,11 @@ namespace Dungeon_Master_Helper
             this.baseFighterTable.ResumeLayout(false);
             this.baseFighterTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.charPicBox)).EndInit();
+            this.initPanel.ResumeLayout(false);
+            this.initTable.ResumeLayout(false);
+            this.baseInitTable.ResumeLayout(false);
+            this.baseInitTable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.initPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -675,7 +779,7 @@ namespace Dungeon_Master_Helper
         private System.Windows.Forms.ToolStripMenuItem diceRollerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem watchKeeperToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel mainTable;
-        private System.Windows.Forms.TableLayoutPanel InitiativeLableTable;
+        private System.Windows.Forms.TableLayoutPanel InitiativeLabelTable;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel buttonPanel;
         private System.Windows.Forms.Button editConditionsButt;
@@ -698,6 +802,12 @@ namespace Dungeon_Master_Helper
         private System.Windows.Forms.Label charDescLabel4;
         private System.Windows.Forms.Label charDescLabel3;
         private System.Windows.Forms.Label charDescLabel2;
+        private System.Windows.Forms.FlowLayoutPanel initPanel;
+        private System.Windows.Forms.TableLayoutPanel initTable;
+        private System.Windows.Forms.TableLayoutPanel baseInitTable;
+        private System.Windows.Forms.PictureBox initPicBox;
+        private System.Windows.Forms.Label initLabel;
+        private System.Windows.Forms.Label initNumLabel;
     }
 }
 
