@@ -506,7 +506,22 @@ namespace Dungeon_Master_Helper
         private void SortInitiativeTable()
         {
             List<Fighter> initted = fighterList.FindAll(r => r.init_roll != -1);
+            List<Fighter> almostsorted = initted.OrderByDescending(r => r.init_roll).ToList();
             List<Fighter> sorted = initted.OrderByDescending(r => r.init_roll).ToList();
+            for(int i = 0; i < almostsorted.Count; i++)
+            {
+                Fighter iChar = almostsorted[i];
+                for(int j = i; j < almostsorted.Count; j++)
+                {
+                    Fighter jChar = almostsorted[j];
+                    if (iChar.init_roll == jChar.init_roll && iChar.dex[2] < jChar.dex[2])
+                    {
+                        Fighter temp = iChar;
+                        sorted[almostsorted.IndexOf(iChar)] = jChar;
+                        sorted[almostsorted.IndexOf(jChar)] = temp;
+                    }
+                }
+            }
             for(int i = 0; i < initted.Count; i++)
             {
                 initLabelList[i].Text = sorted[i].name;
