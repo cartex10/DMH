@@ -23,7 +23,8 @@ I began working on this project in order to help teach myself different parts of
   - PP
 
 ## Planned Features
-- Adding Creatures to Initiative
+- Adding creatures to initiative
+- Adding Pictures to saved creatures
 - Dynamic condition tracking
 - Showing which damage immunities, invulnerabilities, and resistances a creature has
 - Editting previously saved creatures
