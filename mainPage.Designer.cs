@@ -74,15 +74,15 @@ namespace Dungeon_Master_Helper
             this.charDescLabel5 = new System.Windows.Forms.Label();
             this.charDescLabel4 = new System.Windows.Forms.Label();
             this.charDescLabel3 = new System.Windows.Forms.Label();
-            this.charPicBox = new System.Windows.Forms.PictureBox();
             this.charDescLabel1 = new System.Windows.Forms.Label();
             this.charDescLabel2 = new System.Windows.Forms.Label();
             this.initPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.initTable = new System.Windows.Forms.TableLayoutPanel();
             this.baseInitTable = new System.Windows.Forms.TableLayoutPanel();
-            this.initPicBox = new System.Windows.Forms.PictureBox();
             this.initLabel = new System.Windows.Forms.Label();
             this.initNumLabel = new System.Windows.Forms.Label();
+            this.charPicBox = new System.Windows.Forms.PictureBox();
+            this.initPicBox = new System.Windows.Forms.PictureBox();
             this.menuStrip.SuspendLayout();
             this.mainTable.SuspendLayout();
             this.InitiativeLabelTable.SuspendLayout();
@@ -90,10 +90,10 @@ namespace Dungeon_Master_Helper
             this.fighterPanel.SuspendLayout();
             this.fighterTable.SuspendLayout();
             this.baseFighterTable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.charPicBox)).BeginInit();
             this.initPanel.SuspendLayout();
             this.initTable.SuspendLayout();
             this.baseInitTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.charPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.initPicBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,35 +127,35 @@ namespace Dungeon_Master_Helper
             // newEncounterToolStripMenuItem
             // 
             this.newEncounterToolStripMenuItem.Name = "newEncounterToolStripMenuItem";
-            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newEncounterToolStripMenuItem.Text = "New Encounter";
             this.newEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // saveEncounterToolStripMenuItem
             // 
             this.saveEncounterToolStripMenuItem.Name = "saveEncounterToolStripMenuItem";
-            this.saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveEncounterToolStripMenuItem.Text = "Save Encounter";
             this.saveEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // loadEncounterToolStripMenuItem
             // 
             this.loadEncounterToolStripMenuItem.Name = "loadEncounterToolStripMenuItem";
-            this.loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadEncounterToolStripMenuItem.Text = "Load Encounter";
             this.loadEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // savePartyToolStripMenuItem
             // 
             this.savePartyToolStripMenuItem.Name = "savePartyToolStripMenuItem";
-            this.savePartyToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.savePartyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.savePartyToolStripMenuItem.Text = "Save Party";
             this.savePartyToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // loadPartyToolStripMenuItem
             // 
             this.loadPartyToolStripMenuItem.Name = "loadPartyToolStripMenuItem";
-            this.loadPartyToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.loadPartyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadPartyToolStripMenuItem.Text = "Load Party";
             this.loadPartyToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -172,21 +172,21 @@ namespace Dungeon_Master_Helper
             // newCreatureToolStripMenuItem
             // 
             this.newCreatureToolStripMenuItem.Name = "newCreatureToolStripMenuItem";
-            this.newCreatureToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.newCreatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newCreatureToolStripMenuItem.Text = "New Creature";
             this.newCreatureToolStripMenuItem.Click += new System.EventHandler(this.newCreatureToolStripMenuItem_Click);
             // 
             // loadCreatureToolStripMenuItem
             // 
             this.loadCreatureToolStripMenuItem.Name = "loadCreatureToolStripMenuItem";
-            this.loadCreatureToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.loadCreatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadCreatureToolStripMenuItem.Text = "Load Creature";
             this.loadCreatureToolStripMenuItem.Click += new System.EventHandler(this.loadCreatureToolStripMenuItem_Click);
             // 
             // editCreatureToolStripMenuItem
             // 
             this.editCreatureToolStripMenuItem.Name = "editCreatureToolStripMenuItem";
-            this.editCreatureToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.editCreatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editCreatureToolStripMenuItem.Text = "Edit Creature";
             this.editCreatureToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -204,28 +204,28 @@ namespace Dungeon_Master_Helper
             // singleDamageToolStripMenuItem
             // 
             this.singleDamageToolStripMenuItem.Name = "singleDamageToolStripMenuItem";
-            this.singleDamageToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.singleDamageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.singleDamageToolStripMenuItem.Text = "Single Damage";
             this.singleDamageToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // massDamageToolStripMenuItem
             // 
             this.massDamageToolStripMenuItem.Name = "massDamageToolStripMenuItem";
-            this.massDamageToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.massDamageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.massDamageToolStripMenuItem.Text = "Mass Damage";
             this.massDamageToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // massDCCheckToolStripMenuItem
             // 
             this.massDCCheckToolStripMenuItem.Name = "massDCCheckToolStripMenuItem";
-            this.massDCCheckToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.massDCCheckToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.massDCCheckToolStripMenuItem.Text = "Mass DC Check";
             this.massDCCheckToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // editConditionsToolStripMenuItem
             // 
             this.editConditionsToolStripMenuItem.Name = "editConditionsToolStripMenuItem";
-            this.editConditionsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.editConditionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editConditionsToolStripMenuItem.Text = "Edit Conditions";
             this.editConditionsToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -238,26 +238,25 @@ namespace Dungeon_Master_Helper
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
             this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.infoToolStripMenuItem.Text = "Info";
-            this.infoToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // openDMGToolStripMenuItem
             // 
             this.openDMGToolStripMenuItem.Name = "openDMGToolStripMenuItem";
-            this.openDMGToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.openDMGToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openDMGToolStripMenuItem.Text = "Open DMG";
             this.openDMGToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // openMMToolStripMenuItem
             // 
             this.openMMToolStripMenuItem.Name = "openMMToolStripMenuItem";
-            this.openMMToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.openMMToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openMMToolStripMenuItem.Text = "Open MM";
             this.openMMToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // viewConditionsToolStripMenuItem
             // 
             this.viewConditionsToolStripMenuItem.Name = "viewConditionsToolStripMenuItem";
-            this.viewConditionsToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.viewConditionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewConditionsToolStripMenuItem.Text = "View Conditions";
             this.viewConditionsToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -273,14 +272,14 @@ namespace Dungeon_Master_Helper
             // diceRollerToolStripMenuItem
             // 
             this.diceRollerToolStripMenuItem.Name = "diceRollerToolStripMenuItem";
-            this.diceRollerToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.diceRollerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.diceRollerToolStripMenuItem.Text = "Dice Roller";
             this.diceRollerToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // watchKeeperToolStripMenuItem
             // 
             this.watchKeeperToolStripMenuItem.Name = "watchKeeperToolStripMenuItem";
-            this.watchKeeperToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.watchKeeperToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.watchKeeperToolStripMenuItem.Text = "Watch Keeper";
             this.watchKeeperToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -602,19 +601,6 @@ namespace Dungeon_Master_Helper
             this.charDescLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.charDescLabel3.Click += new System.EventHandler(this.CharacterClick);
             // 
-            // charPicBox
-            // 
-            this.charPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette;
-            this.charPicBox.Location = new System.Drawing.Point(10, 10);
-            this.charPicBox.Margin = new System.Windows.Forms.Padding(10);
-            this.charPicBox.Name = "charPicBox";
-            this.baseFighterTable.SetRowSpan(this.charPicBox, 2);
-            this.charPicBox.Size = new System.Drawing.Size(60, 60);
-            this.charPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.charPicBox.TabIndex = 0;
-            this.charPicBox.TabStop = false;
-            this.charPicBox.Click += new System.EventHandler(this.CharacterClick);
-            // 
             // charDescLabel1
             // 
             this.charDescLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -699,16 +685,6 @@ namespace Dungeon_Master_Helper
             this.baseInitTable.Size = new System.Drawing.Size(235, 40);
             this.baseInitTable.TabIndex = 0;
             // 
-            // initPicBox
-            // 
-            this.initPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette;
-            this.initPicBox.Location = new System.Drawing.Point(3, 3);
-            this.initPicBox.Name = "initPicBox";
-            this.initPicBox.Size = new System.Drawing.Size(34, 34);
-            this.initPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.initPicBox.TabIndex = 0;
-            this.initPicBox.TabStop = false;
-            // 
             // initLabel
             // 
             this.initLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -728,6 +704,29 @@ namespace Dungeon_Master_Helper
             this.initNumLabel.Name = "initNumLabel";
             this.initNumLabel.Size = new System.Drawing.Size(54, 20);
             this.initNumLabel.TabIndex = 2;
+            // 
+            // charPicBox
+            // 
+            this.charPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette;
+            this.charPicBox.Location = new System.Drawing.Point(10, 10);
+            this.charPicBox.Margin = new System.Windows.Forms.Padding(10);
+            this.charPicBox.Name = "charPicBox";
+            this.baseFighterTable.SetRowSpan(this.charPicBox, 2);
+            this.charPicBox.Size = new System.Drawing.Size(60, 60);
+            this.charPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.charPicBox.TabIndex = 0;
+            this.charPicBox.TabStop = false;
+            this.charPicBox.Click += new System.EventHandler(this.CharacterClick);
+            // 
+            // initPicBox
+            // 
+            this.initPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette;
+            this.initPicBox.Location = new System.Drawing.Point(3, 3);
+            this.initPicBox.Name = "initPicBox";
+            this.initPicBox.Size = new System.Drawing.Size(34, 34);
+            this.initPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.initPicBox.TabIndex = 0;
+            this.initPicBox.TabStop = false;
             // 
             // mainPage
             // 
@@ -755,11 +754,11 @@ namespace Dungeon_Master_Helper
             this.fighterTable.ResumeLayout(false);
             this.baseFighterTable.ResumeLayout(false);
             this.baseFighterTable.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.charPicBox)).EndInit();
             this.initPanel.ResumeLayout(false);
             this.initTable.ResumeLayout(false);
             this.baseInitTable.ResumeLayout(false);
             this.baseInitTable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.charPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.initPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

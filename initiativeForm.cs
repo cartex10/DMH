@@ -100,9 +100,14 @@ namespace Dungeon_Master_Helper
                 Name = "initNumBox" + str,
                 Size = new System.Drawing.Size(60, 30),
                 TabIndex = 1,
+                Minimum = new decimal(new int[] {
+                5,
+                0,
+                0,
+                -2147483648}),
                 Value = toAdd.dex[2],
                 Tag = toAdd.id
-            });
+        });
             initTableList[index].Controls.Add(initNumList[index], 1, 0);
 
             this.nameTable.Controls.Add(initTableList[index]);

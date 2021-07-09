@@ -82,7 +82,7 @@ namespace Dungeon_Master_Helper
         {
             public int curr_hp;
             public List<int> conditions;
-            public int init_roll = -1;
+            public int init_roll = -9;
             public int id;
         }
 
@@ -505,7 +505,7 @@ namespace Dungeon_Master_Helper
 
         private void SortInitiativeTable()
         {
-            List<Fighter> initted = fighterList.FindAll(r => r.init_roll != -1);
+            List<Fighter> initted = fighterList.FindAll(r => r.init_roll != -9);
             List<Fighter> almostsorted = initted.OrderByDescending(r => r.init_roll).ToList();
             List<Fighter> sorted = initted.OrderByDescending(r => r.init_roll).ToList();
             for(int i = 0; i < almostsorted.Count; i++)
@@ -577,7 +577,7 @@ namespace Dungeon_Master_Helper
             foreach(System.Windows.Forms.TableLayoutPanel table in selected)
             {
                 Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(table.Tag));
-                if(temp.init_roll == -1) { notInit.Add(temp); }
+                if(temp.init_roll == -9) { notInit.Add(temp); }
                 else { initted.Add(temp); }
             }
             if(notInit.Count != 0)
