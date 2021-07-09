@@ -21,9 +21,14 @@ I began working on this project in order to help teach myself different parts of
   - Current HP
   - AC
   - PP
+- Adding multiple creatures at once to initiative, where they'll be sorted by roll, then dex modifier
+
+## Screenshots
+![](https://github.com/cartex10/DMH/blob/main/img/git/mainPage.PNG)
+![](https://github.com/cartex10/DMH/blob/main/img/git/createCreature.PNG)
+![](https://github.com/cartex10/DMH/blob/main/img/git/addtoinitiative.PNG)
 
 ## Planned Features
-- Adding creatures to initiative
 - Adding Pictures to saved creatures
 - Dynamic condition tracking
 - Showing which damage immunities, invulnerabilities, and resistances a creature has
@@ -31,7 +36,7 @@ I began working on this project in order to help teach myself different parts of
 - Saving encounters
 - Saving parties of player characters
 - Loading premade monsters from monster manual
-- Saving proficiencies
+- Saving save proficiencies
 - Mass damage and save calculators
 - Opening specific pages from DMG and MM
 - Dice Roller
