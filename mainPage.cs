@@ -113,19 +113,24 @@ namespace Dungeon_Master_Helper
         {
             System.Windows.Forms.OpenFileDialog openFileDialog = new System.Windows.Forms.OpenFileDialog
             {
-                Title = "Open Creature"
+                Title = "Open Creature",
+                Filter = "XML files (*.xml)|*.creature.xml",
+                Multiselect = true
             };
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                System.Xml.Serialization.XmlSerializer reader = new System.Xml.Serialization.XmlSerializer(typeof(Creature));
-                System.IO.StreamReader file = new System.IO.StreamReader(openFileDialog.FileName);
-                Creature loaded = new Creature();
-                loaded = (Creature)reader.Deserialize(file);
-                file.Close();
-                Fighter toAdd = new Fighter();
-                toAdd = loaded.Convert();
-                toAdd.id = nextLoadedID++;
-                addToEncounter(toAdd);
+                foreach(string i in openFileDialog.FileNames)
+                {
+                    System.Xml.Serialization.XmlSerializer reader = new System.Xml.Serialization.XmlSerializer(typeof(Creature));
+                    System.IO.StreamReader file = new System.IO.StreamReader(i);
+                    Creature loaded = new Creature();
+                    loaded = (Creature)reader.Deserialize(file);
+                    file.Close();
+                    Fighter toAdd = new Fighter();
+                    toAdd = loaded.Convert();
+                    toAdd.id = nextLoadedID++;
+                    addToEncounter(toAdd);
+                }
             }
         }
 
