@@ -12,17 +12,16 @@ namespace Dungeon_Master_Helper
 {
     public partial class removeInitForm : Form
     {
-        public removeInitForm(List<mainPage.Fighter> addList, mainPage original)
+        public removeInitForm(List<mainPage.Fighter> remList, mainPage original)
         {
-            charList = addList;
+            charList = remList;
             father = original;
             InitializeComponent();
-            string nametext = "";
             foreach(mainPage.Fighter i in charList)
             {
-                nametext += i.name + "\n";
+                creatureNameBox.AppendText(i.name);
+                creatureNameBox.AppendText(Environment.NewLine);
             }
-            creatureNameBox.Text = nametext;
         }
 
         public List<mainPage.Fighter> charList;
@@ -33,8 +32,14 @@ namespace Dungeon_Master_Helper
             System.Windows.Forms.Button butt = (System.Windows.Forms.Button)sender;
             if((string)butt.Tag == "remove")
             {
-                
+                foreach(mainPage.Fighter i in charList)
+                {
+                    var fighter = father.fighterList.Find(r => Convert.ToString(r.id) == Convert.ToString(i.id));
+                    fighter.init_roll = -9;
+                    father.RemoveFromInitiative(fighter);
+                }
             }
+            this.Close();
         }
     }
 }

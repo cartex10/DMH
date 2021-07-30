@@ -29,6 +29,7 @@ namespace Dungeon_Master_Helper
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(removeInitForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.creatureNameBox = new System.Windows.Forms.TextBox();
@@ -112,6 +113,7 @@ namespace Dungeon_Master_Helper
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(359, 450);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(375, 489);
             this.MinimumSize = new System.Drawing.Size(375, 489);
             this.Name = "removeInitForm";

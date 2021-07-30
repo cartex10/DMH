@@ -435,6 +435,10 @@ namespace Dungeon_Master_Helper
             }
             else 
             {
+                if(initChar == -1)
+                {
+                    initChar = 0;
+                }
                 CloneInitiativeTable(toAdd);
                 SortInitiativeTable();
             }
@@ -528,6 +532,21 @@ namespace Dungeon_Master_Helper
                 initNumLabelList[i].Text = Convert.ToString(sorted[i].init_roll);
             }
             return;
+        }
+
+        public void RemoveFromInitiative(Fighter toRem)
+        {
+            initChar -= 1;
+            initLabelList[initChar].Text = "";
+            initNumLabelList[initChar].Text = "";
+            if (initChar == 0)
+            {
+                initChar = -1;
+            }
+            else
+            {
+                SortInitiativeTable();
+            }
         }
 
         private void CharacterClick(object sender, EventArgs e)
