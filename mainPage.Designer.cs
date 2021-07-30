@@ -415,7 +415,7 @@ namespace Dungeon_Master_Helper
             this.openStatsButt.TabIndex = 3;
             this.openStatsButt.Text = "Open Stats";
             this.openStatsButt.UseVisualStyleBackColor = true;
-            this.openStatsButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            this.openStatsButt.Click += new System.EventHandler(this.openStatsButt_Click);
             // 
             // dcCheckButt
             // 

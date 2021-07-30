@@ -269,5 +269,42 @@ namespace Dungeon_Master_Helper
                 count++;
             }
         }
+
+        public void DisableAll()
+        {
+            nameTextBox.Enabled = false;
+            levelNumBox.Enabled = false;
+            hpNumBox.Enabled = false;
+            acNumBox.Enabled = false;
+            ppNumBox.Enabled = false;
+            strStatBox.Enabled = false;
+            strMiscBox.Enabled = false;
+            dexStatBox.Enabled = false;
+            dexMiscBox.Enabled = false;
+            conStatBox.Enabled = false;
+            conMiscBox.Enabled = false;
+            intStatBox.Enabled = false;
+            intMiscBox.Enabled = false;
+            wisStatBox.Enabled = false;
+            wisMiscBox.Enabled = false;
+            chaStatBox.Enabled = false;
+            chaMiscBox.Enabled = false;
+            pcButt.Enabled = false;
+            npcButt.Enabled = false;
+            evasionCheckBox.Enabled = false;
+            saveButton.Enabled = false;
+            saveButton.Visible = false;
+            for(int i = 0; i < 13; i++)
+            {
+                string dmgtype = Enum.GetName(typeof(mainPage.Damagetypes), i);
+                System.Windows.Forms.Control panel = damageTable.Controls.Find(dmgtype + "Panel", true)[0];
+                for(int j = 0; j < 4; j++)
+                {
+                    System.Windows.Forms.RadioButton butt = (System.Windows.Forms.RadioButton)panel.Controls.Find(dmgtype + "Butt" + j, true)[0];
+                    butt.Enabled = false;
+                }
+                
+            }
+        }
     }
 }

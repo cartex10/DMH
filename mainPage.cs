@@ -56,7 +56,7 @@ namespace Dungeon_Master_Helper
 
             public Fighter Convert()
             {
-                Fighter toReturn = new Fighter()
+                return new Fighter()
                 {
                     name = this.name,
                     ac = this.ac,
@@ -72,10 +72,8 @@ namespace Dungeon_Master_Helper
                     evasion = this.evasion,
                     max_hp = this.max_hp,
                     level = this.level,
-                    curr_hp = this.max_hp,
-
-            };
-                return toReturn;
+                    curr_hp = this.max_hp
+                };
             }
         }
 
@@ -139,7 +137,6 @@ namespace Dungeon_Master_Helper
 
         private void editCreatureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             foreach(System.Windows.Forms.TableLayoutPanel i in selected)
             {
                 Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(i.Tag));
@@ -147,7 +144,6 @@ namespace Dungeon_Master_Helper
                 ccf.LoadFighter(temp);
                 ccf.Show();
             }
-
         }
         //
         //  BUTTON FUNCTIONS
@@ -171,6 +167,18 @@ namespace Dungeon_Master_Helper
             {
                 removeInitForm rmDialog = new removeInitForm(initted, this);
                 rmDialog.ShowDialog();
+            }
+        }
+
+        private void openStatsButt_Click(object sender, EventArgs e)
+        {
+            foreach (System.Windows.Forms.TableLayoutPanel i in selected)
+            {
+                Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(i.Tag));
+                createCreatureForm ccf = new createCreatureForm { Text = "Edit Creature" };
+                ccf.LoadFighter(temp);
+                ccf.DisableAll();
+                ccf.Show();
             }
         }
         //
