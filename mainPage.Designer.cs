@@ -188,7 +188,7 @@ namespace Dungeon_Master_Helper
             this.editCreatureToolStripMenuItem.Name = "editCreatureToolStripMenuItem";
             this.editCreatureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editCreatureToolStripMenuItem.Text = "Edit Creature";
-            this.editCreatureToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            this.editCreatureToolStripMenuItem.Click += new System.EventHandler(this.editCreatureToolStripMenuItem_Click);
             // 
             // combatToolStripMenuItem
             // 

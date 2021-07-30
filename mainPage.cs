@@ -67,6 +67,7 @@ namespace Dungeon_Master_Helper
                     int_stat = this.int_stat,
                     wis = this.wis,
                     cha = this.cha,
+                    dmg = this.dmg,
                     playable = this.playable,
                     evasion = this.evasion,
                     max_hp = this.max_hp,
@@ -136,10 +137,21 @@ namespace Dungeon_Master_Helper
             }
         }
 
+        private void editCreatureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            foreach(System.Windows.Forms.TableLayoutPanel i in selected)
+            {
+                Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(i.Tag));
+                createCreatureForm ccf = new createCreatureForm { Text = "Edit Creature" };
+                ccf.LoadFighter(temp);
+                ccf.Show();
+            }
+
+        }
         //
         //  BUTTON FUNCTIONS
         //
-
         private void initiativeButt_Click(object sender, EventArgs e)
         {
             List<Fighter> notInit = new List<Fighter>();
@@ -161,7 +173,6 @@ namespace Dungeon_Master_Helper
                 rmDialog.ShowDialog();
             }
         }
-
         //
         //  ENCOUNTER FUNCTIONS
         //
@@ -572,17 +583,11 @@ namespace Dungeon_Master_Helper
 
         public void RemoveFromInitiative(Fighter toRem)
         {
-            initChar -= 1;
+            initChar--;
             initLabelList[initChar].Text = "";
             initNumLabelList[initChar].Text = "";
-            if (initChar == 0)
-            {
-                initChar = -1;
-            }
-            else
-            {
-                SortInitiativeTable();
-            }
+            if (initChar == 0) { initChar = -1; }
+            else { SortInitiativeTable(); }
         }
 
         private void CharacterClick(object sender, EventArgs e)
@@ -624,6 +629,5 @@ namespace Dungeon_Master_Helper
             notImplementedForm nif = new notImplementedForm();
             nif.ShowDialog();
         }
-
     }
 }

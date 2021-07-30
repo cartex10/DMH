@@ -149,8 +149,6 @@ namespace Dungeon_Master_Helper
                 ToInt32(chaMod)
             };
 
-            List<int> dmg = damageStr;
-
             var toSave = new mainPage.Creature
             {
                 name = this.nameTextBox.Text,
@@ -162,7 +160,7 @@ namespace Dungeon_Master_Helper
                 wis = wisList,
                 int_stat = intList,
                 cha = chaList,
-                dmg = dmg,
+                dmg = damageStr,
                 playable = playable,
                 evasion = this.evasionCheckBox.Checked,
                 max_hp = ToInt32(this.hpNumBox.Value),
@@ -227,6 +225,48 @@ namespace Dungeon_Master_Helper
                         playable = false;
                         break;
                 }
+            }
+        }
+
+        public void LoadFighter(mainPage.Fighter loader)
+        {
+            nameTextBox.Text = loader.name;
+            levelNumBox.Value = ToInt32(loader.level);
+            hpNumBox.Value = ToInt32(loader.max_hp);
+            acNumBox.Value = ToInt32(loader.ac);
+            ppNumBox.Value = ToInt32(loader.pp);
+            strStatBox.Value = ToInt32(loader.str[0]);
+            strMiscBox.Value = ToInt32(loader.str[1]);
+            dexStatBox.Value = ToInt32(loader.dex[0]);
+            dexMiscBox.Value = ToInt32(loader.dex[1]);
+            conStatBox.Value = ToInt32(loader.con[0]);
+            conMiscBox.Value = ToInt32(loader.con[1]);
+            intStatBox.Value = ToInt32(loader.int_stat[0]);
+            intMiscBox.Value = ToInt32(loader.int_stat[1]);
+            wisStatBox.Value = ToInt32(loader.wis[0]);
+            wisMiscBox.Value = ToInt32(loader.wis[1]);
+            chaStatBox.Value = ToInt32(loader.cha[0]);
+            chaMiscBox.Value = ToInt32(loader.cha[1]);
+            if (loader.playable) 
+            {
+                pcButt.Checked = true;
+                playable = true;
+            }
+            else if(!loader.playable)
+            {
+                npcButt.Checked = true;
+                playable = false;
+            }
+            if (loader.evasion) { evasionCheckBox.Checked = true; }
+            int count = 0;
+            foreach(int i in loader.dmg)
+            {
+                string dmgtype = Enum.GetName(typeof(mainPage.Damagetypes), count);
+                System.Windows.Forms.Control panel = damageTable.Controls.Find(dmgtype + "Panel", true)[0];
+                System.Windows.Forms.RadioButton butt = (System.Windows.Forms.RadioButton)panel.Controls.Find(dmgtype + "Butt" + i, true)[0];
+                butt.Checked = true;
+                damageStr[count] = i;
+                count++;
             }
         }
     }
