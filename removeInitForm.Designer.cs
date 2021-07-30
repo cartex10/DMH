@@ -59,7 +59,7 @@ namespace Dungeon_Master_Helper
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.8312F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.1688F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(356, 448);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(356, 447);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -76,17 +76,18 @@ namespace Dungeon_Master_Helper
             // 
             // creatureNameBox
             // 
+            this.creatureNameBox.Enabled = false;
             this.creatureNameBox.Location = new System.Drawing.Point(92, 103);
             this.creatureNameBox.Multiline = true;
             this.creatureNameBox.Name = "creatureNameBox";
             this.creatureNameBox.ReadOnly = true;
-            this.creatureNameBox.Size = new System.Drawing.Size(171, 284);
+            this.creatureNameBox.Size = new System.Drawing.Size(171, 283);
             this.creatureNameBox.TabIndex = 1;
             // 
             // removeButt
             // 
             this.removeButt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.removeButt.Location = new System.Drawing.Point(274, 407);
+            this.removeButt.Location = new System.Drawing.Point(274, 406);
             this.removeButt.Name = "removeButt";
             this.removeButt.Size = new System.Drawing.Size(75, 23);
             this.removeButt.TabIndex = 3;
@@ -98,7 +99,7 @@ namespace Dungeon_Master_Helper
             // cancelButt
             // 
             this.cancelButt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cancelButt.Location = new System.Drawing.Point(7, 407);
+            this.cancelButt.Location = new System.Drawing.Point(7, 406);
             this.cancelButt.Name = "cancelButt";
             this.cancelButt.Size = new System.Drawing.Size(75, 23);
             this.cancelButt.TabIndex = 2;
