@@ -632,10 +632,16 @@ namespace Dungeon_Master_Helper
             }
         }
 
-        private void ShowNotImplementedDialog(object sender, EventArgs e)
+        public void ShowNotImplementedDialog(object sender, EventArgs e)
         {
             notImplementedForm nif = new notImplementedForm();
             nif.ShowDialog();
+        }
+
+        private void calculatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            calculatorForm calc = new calculatorForm(0, this, null);
+            calc.Show();
         }
     }
 }

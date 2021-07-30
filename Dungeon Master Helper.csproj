@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="calculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="calculatorForm.Designer.cs">
+      <DependentUpon>calculatorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="createCreatureForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="removeInitForm.Designer.cs">
       <DependentUpon>removeInitForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="calculatorForm.resx">
+      <DependentUpon>calculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="createCreatureForm.resx">
       <DependentUpon>createCreatureForm.cs</DependentUpon>
     </EmbeddedResource>

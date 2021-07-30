@@ -303,7 +303,6 @@ namespace Dungeon_Master_Helper
                     System.Windows.Forms.RadioButton butt = (System.Windows.Forms.RadioButton)panel.Controls.Find(dmgtype + "Butt" + j, true)[0];
                     butt.Enabled = false;
                 }
-                
             }
         }
     }
