@@ -585,6 +585,11 @@ namespace Dungeon_Master_Helper
                 initiativeForm initDialog = new initiativeForm(notInit, this);
                 initDialog.ShowDialog();
             }
+            if(initted.Count != 0)
+            {
+                removeInitForm rmDialog = new removeInitForm(initted, this);
+                rmDialog.ShowDialog();
+            }
         }
     }
 }

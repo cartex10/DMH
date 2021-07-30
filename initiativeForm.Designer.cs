@@ -53,7 +53,7 @@ namespace Dungeon_Master_Helper
             this.mainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.0221F));
             this.mainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.mainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.mainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.mainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.mainTable.Controls.Add(this.namePanel, 1, 1);
             this.mainTable.Controls.Add(this.label1, 1, 0);
             this.mainTable.Controls.Add(this.label2, 2, 0);
@@ -77,7 +77,7 @@ namespace Dungeon_Master_Helper
             this.namePanel.Location = new System.Drawing.Point(81, 70);
             this.namePanel.Margin = new System.Windows.Forms.Padding(0);
             this.namePanel.Name = "namePanel";
-            this.namePanel.Size = new System.Drawing.Size(306, 424);
+            this.namePanel.Size = new System.Drawing.Size(304, 424);
             this.namePanel.TabIndex = 0;
             // 
             // nameTable
@@ -102,7 +102,7 @@ namespace Dungeon_Master_Helper
             this.nameTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.nameTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.nameTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.nameTable.Size = new System.Drawing.Size(289, 452);
+            this.nameTable.Size = new System.Drawing.Size(287, 452);
             this.nameTable.TabIndex = 0;
             // 
             // baseTable
@@ -119,7 +119,7 @@ namespace Dungeon_Master_Helper
             this.baseTable.Name = "baseTable";
             this.baseTable.RowCount = 1;
             this.baseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.baseTable.Size = new System.Drawing.Size(281, 34);
+            this.baseTable.Size = new System.Drawing.Size(279, 34);
             this.baseTable.TabIndex = 0;
             // 
             // initNameLabel
@@ -137,7 +137,7 @@ namespace Dungeon_Master_Helper
             // 
             this.initNumBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.initNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.initNumBox.Location = new System.Drawing.Point(188, 3);
+            this.initNumBox.Location = new System.Drawing.Point(186, 3);
             this.initNumBox.Minimum = new decimal(new int[] {
             5,
             0,
@@ -152,7 +152,7 @@ namespace Dungeon_Master_Helper
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 50);
+            this.label1.Location = new System.Drawing.Point(90, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 20);
             this.label1.TabIndex = 1;
@@ -163,7 +163,7 @@ namespace Dungeon_Master_Helper
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(247, 50);
+            this.label2.Location = new System.Drawing.Point(245, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 20);
             this.label2.TabIndex = 2;
@@ -172,7 +172,7 @@ namespace Dungeon_Master_Helper
             // doneButton
             // 
             this.doneButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.doneButton.Location = new System.Drawing.Point(408, 468);
+            this.doneButton.Location = new System.Drawing.Point(407, 468);
             this.doneButton.Name = "doneButton";
             this.doneButton.Size = new System.Drawing.Size(75, 23);
             this.doneButton.TabIndex = 3;
