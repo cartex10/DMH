@@ -17,7 +17,7 @@ namespace Dungeon_Master_Helper
             InitializeComponent();
             selected = new List<System.Windows.Forms.TableLayoutPanel>();
         }
-
+        //  FIGHTER VARIABLES
         public List<Fighter> fighterList;
         public List<System.Windows.Forms.TableLayoutPanel> fighterTableList;
         public List<System.Windows.Forms.Control> fighterPictureList;
@@ -28,7 +28,7 @@ namespace Dungeon_Master_Helper
         public int descIndex = 6;
         public int changedIndex = 4;
         public int numChar = 0;
-
+        //  INITIATIVE VARIABLES
         public List<System.Windows.Forms.TableLayoutPanel> initTableList;
         public List<System.Windows.Forms.Control> initPictureList;
         public List<System.Windows.Forms.Label> initLabelList;
@@ -36,7 +36,7 @@ namespace Dungeon_Master_Helper
         public int initChar = 0;
 
         public List<System.Windows.Forms.TableLayoutPanel> selected;
-
+        // CLASSES
         public class Creature
         {
             public string name = "NULL";
@@ -102,7 +102,9 @@ namespace Dungeon_Master_Helper
             piercing,
             slashing
         }
-
+        //
+        //  TOOL STRIP MENU ACTIONS
+        //
         private void newCreatureToolStripMenuItem_Click(object sender, EventArgs e)
         {
             createCreatureForm createCreature = new createCreatureForm();
@@ -134,6 +136,35 @@ namespace Dungeon_Master_Helper
             }
         }
 
+        //
+        //  BUTTON FUNCTIONS
+        //
+
+        private void initiativeButt_Click(object sender, EventArgs e)
+        {
+            List<Fighter> notInit = new List<Fighter>();
+            List<Fighter> initted = new List<Fighter>();
+            foreach (System.Windows.Forms.TableLayoutPanel table in selected)
+            {
+                Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(table.Tag));
+                if (temp.init_roll == -9) { notInit.Add(temp); }
+                else { initted.Add(temp); }
+            }
+            if (notInit.Count != 0)
+            {
+                initiativeForm initDialog = new initiativeForm(notInit, this);
+                initDialog.ShowDialog();
+            }
+            if (initted.Count != 0)
+            {
+                removeInitForm rmDialog = new removeInitForm(initted, this);
+                rmDialog.ShowDialog();
+            }
+        }
+
+        //
+        //  ENCOUNTER FUNCTIONS
+        //
         private void addToEncounter(Fighter toAdd)
         {
             if (!Convert.ToBoolean(toAdd.id))
@@ -594,26 +625,5 @@ namespace Dungeon_Master_Helper
             nif.ShowDialog();
         }
 
-        private void initiativeButt_Click(object sender, EventArgs e)
-        {
-            List<Fighter> notInit = new List<Fighter>();
-            List<Fighter> initted = new List<Fighter>();
-            foreach(System.Windows.Forms.TableLayoutPanel table in selected)
-            {
-                Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(table.Tag));
-                if(temp.init_roll == -9) { notInit.Add(temp); }
-                else { initted.Add(temp); }
-            }
-            if(notInit.Count != 0)
-            {
-                initiativeForm initDialog = new initiativeForm(notInit, this);
-                initDialog.ShowDialog();
-            }
-            if(initted.Count != 0)
-            {
-                removeInitForm rmDialog = new removeInitForm(initted, this);
-                rmDialog.ShowDialog();
-            }
-        }
     }
 }

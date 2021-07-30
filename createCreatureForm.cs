@@ -208,7 +208,7 @@ namespace Dungeon_Master_Helper
                         newdmg += damageStr[i];
                     }
                 }
-*/                damageStr[index] = num;
+*/              damageStr[index] = num;
             }
             
         }
