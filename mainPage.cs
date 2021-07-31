@@ -431,8 +431,7 @@ namespace Dungeon_Master_Helper
                     Size = new System.Drawing.Size(114, 20),
                     TabIndex = 7,
                     TextAlign = System.Drawing.ContentAlignment.MiddleLeft,
-                    Text = toAdd.name,
-                    Tag = "hp"
+                    Text = toAdd.name
                 }
             };
             newtemp[0].Click += new System.EventHandler(this.CharacterClick);
@@ -448,7 +447,8 @@ namespace Dungeon_Master_Helper
                 Size = new System.Drawing.Size(44, 17),
                 TabIndex = 8,
                 TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
-                Text = Convert.ToString(toAdd.curr_hp)
+                Text = Convert.ToString(toAdd.curr_hp),
+                Tag = "hp"
             });
             newtemp[1].Click += new System.EventHandler(this.CharacterClick);
             fighterTableList[numChar].Controls.Add(newtemp[1], 2, 1);
