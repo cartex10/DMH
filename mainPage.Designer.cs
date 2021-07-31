@@ -393,7 +393,7 @@ namespace Dungeon_Master_Helper
             this.editHealthButt.TabIndex = 1;
             this.editHealthButt.Text = "Edit HP";
             this.editHealthButt.UseVisualStyleBackColor = true;
-            this.editHealthButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            this.editHealthButt.Click += new System.EventHandler(this.editHPButt_Click);
             // 
             // initiativeButt
             // 
@@ -532,6 +532,7 @@ namespace Dungeon_Master_Helper
             this.charLabel2.Name = "charLabel2";
             this.charLabel2.Size = new System.Drawing.Size(44, 17);
             this.charLabel2.TabIndex = 8;
+            this.charLabel2.Tag = "hp";
             this.charLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.charLabel2.Click += new System.EventHandler(this.CharacterClick);
             // 

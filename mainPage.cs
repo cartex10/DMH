@@ -145,6 +145,12 @@ namespace Dungeon_Master_Helper
                 ccf.Show();
             }
         }
+
+        private void calculatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            calculatorForm calc = new calculatorForm(0, null, null, this);
+            calc.Show();
+        }
         //
         //  BUTTON FUNCTIONS
         //
@@ -180,6 +186,25 @@ namespace Dungeon_Master_Helper
                 ccf.DisableAll();
                 ccf.Show();
             }
+        }
+
+        private void editHPButt_Click(object sender, EventArgs e)
+        {
+            if(selected.Count == 1)
+            {
+                Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(selected[0].Tag));
+                System.Windows.Forms.Label label = null;
+                foreach(System.Windows.Forms.Control control in selected[0].Controls)
+                {
+                    if(Convert.ToString(control.Tag) == "hp") { label = (System.Windows.Forms.Label)control; }
+                }
+                calculatorForm calc = new calculatorForm(temp.curr_hp, label, temp, this)
+                {
+                    Name = "Edit HP"
+                };
+                calc.Show();
+            }
+            // TODO: ADD MASS DAMAGE HERE
         }
         //
         //  ENCOUNTER FUNCTIONS
@@ -406,7 +431,8 @@ namespace Dungeon_Master_Helper
                     Size = new System.Drawing.Size(114, 20),
                     TabIndex = 7,
                     TextAlign = System.Drawing.ContentAlignment.MiddleLeft,
-                    Text = toAdd.name
+                    Text = toAdd.name,
+                    Tag = "hp"
                 }
             };
             newtemp[0].Click += new System.EventHandler(this.CharacterClick);
@@ -636,12 +662,6 @@ namespace Dungeon_Master_Helper
         {
             notImplementedForm nif = new notImplementedForm();
             nif.ShowDialog();
-        }
-
-        private void calculatorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            calculatorForm calc = new calculatorForm(0, this, null);
-            calc.Show();
         }
     }
 }

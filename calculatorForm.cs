@@ -12,11 +12,12 @@ namespace Dungeon_Master_Helper
 {
     public partial class calculatorForm : Form
     {
-        public calculatorForm(int num, mainPage highest, System.Windows.Forms.Control higher)
+        public calculatorForm(int num, System.Windows.Forms.Control import, mainPage.Fighter import2, mainPage highest)
         {
             startnum = num;
-            grandfather = highest;
-            father = higher;
+            toEdit = import;
+            toEdit2 = import2;
+            father = highest;
             InitializeComponent();
             mainTextBox.Text = Convert.ToString(num);
             currstate = 0;
@@ -31,8 +32,9 @@ namespace Dungeon_Master_Helper
         }
 
         int startnum;
-        mainPage grandfather;
-        System.Windows.Forms.Control father;
+        System.Windows.Forms.Control toEdit;
+        mainPage.Fighter toEdit2;
+        mainPage father;
 
         double num1, num2, result;
         char operation;
@@ -52,7 +54,6 @@ namespace Dungeon_Master_Helper
                 if (Convert.ToInt32(currstate) == 4) { currstate = (calcstates)0; }
                 mainTextBox.Text = button.Text;
             }
-            Console.WriteLine(Convert.ToInt32(currstate));
         }
 
         public void backspaceButt_Click(object sender, EventArgs e)
@@ -102,8 +103,13 @@ namespace Dungeon_Master_Helper
                         result = Math.Floor(num1 / num2);
                         break;
                 }
-                Console.WriteLine(Convert.ToInt32(currstate));
                 mainTextBox.Text = Convert.ToString(result);
+                if (toEdit != null)
+                {
+                    toEdit.Text = Convert.ToString(result);
+                    toEdit2.curr_hp = Convert.ToInt32(result);
+                    this.Close();
+                }
             }
         }
 
@@ -113,12 +119,12 @@ namespace Dungeon_Master_Helper
             num1 = 0;
             num2 = 0;
             result = 0;
-            mainTextBox.Text = "0";
+            mainTextBox.Text = Convert.ToString(startnum);
         }
 
         private void dieRollButt_Click(object sender, EventArgs e)
         {
-            grandfather.ShowNotImplementedDialog(sender, e);
+            father.ShowNotImplementedDialog(sender, e);
         }
 
         private void operationButt_Click(object sender, EventArgs e)
@@ -140,7 +146,6 @@ namespace Dungeon_Master_Helper
                 num1 = num2;
                 currstate = (calcstates)1;
             }
-            Console.WriteLine(Convert.ToInt32(currstate));
         }
     }
 }
