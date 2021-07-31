@@ -16,12 +16,15 @@ I began working on this project in order to help teach myself different parts of
   - Damage immunities, invulnerabilities, and resistances
   - Whether the creature is playable
   - Whether the creature has evasion
-- Adding saved creatures to the encounter where certain info will be shown
+- Adding multiple saved creatures to the encounter where certain info will be shown
   - Name
   - Current HP
   - AC
   - PP
 - Adding multiple creatures at once to initiative, where they'll be sorted by roll, then dex modifier
+- Editting previously saved creatures
+- Editting creature health
+- Viewing stats without editting
 
 ## Screenshots
 ![](https://github.com/cartex10/DMH/blob/main/img/git/mainPage.PNG)
@@ -32,7 +35,6 @@ I began working on this project in order to help teach myself different parts of
 - Adding Pictures to saved creatures
 - Dynamic condition tracking
 - Showing which damage immunities, invulnerabilities, and resistances a creature has
-- Editting previously saved creatures
 - Saving encounters
 - Saving parties of player characters
 - Loading premade monsters from monster manual
