@@ -23,3 +23,4 @@ C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon_Maste
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.removeInitForm.resources
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.calculatorForm.resources
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.AssemblyReference.cache
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.loadDefaultForm.resources

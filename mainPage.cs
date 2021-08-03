@@ -151,6 +151,12 @@ namespace Dungeon_Master_Helper
             calculatorForm calc = new calculatorForm(0, null, null, this);
             calc.Show();
         }
+
+        private void loadDefaultCreatureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadDefaultForm form = new loadDefaultForm();
+            form.Show();
+        }
         //
         //  BUTTON FUNCTIONS
         //

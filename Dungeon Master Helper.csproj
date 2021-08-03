@@ -76,12 +76,20 @@
     <Compile Include="createCreatureForm.Designer.cs">
       <DependentUpon>createCreatureForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="data\monster_enum.cs" />
     <Compile Include="initiativeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="initiativeForm.Designer.cs">
       <DependentUpon>initiativeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="loadDefaultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loadDefaultForm.Designer.cs">
+      <DependentUpon>loadDefaultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monster_enum.cs" />
     <Compile Include="notImplementedForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="initiativeForm.resx">
       <DependentUpon>initiativeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loadDefaultForm.resx">
+      <DependentUpon>loadDefaultForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="notImplementedForm.resx">
       <DependentUpon>notImplementedForm.cs</DependentUpon>
