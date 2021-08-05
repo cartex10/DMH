@@ -22,6 +22,7 @@ namespace Dungeon_Master_Helper
             rightPanelList = new List<System.Windows.Forms.FlowLayoutPanel>();
             rightLabelList = new List<System.Windows.Forms.Label>();
             rightSelectedList = new List<System.Windows.Forms.FlowLayoutPanel>();
+            numBoxList = new List<System.Windows.Forms.NumericUpDown>();
             InitializeComponent();
 
             leftPanelList.Add(this.flowLayoutPanel1);
@@ -75,6 +76,7 @@ namespace Dungeon_Master_Helper
         public List<System.Windows.Forms.FlowLayoutPanel> rightPanelList;
         public List<System.Windows.Forms.Label> rightLabelList;
         public List<System.Windows.Forms.FlowLayoutPanel> rightSelectedList;
+        public List<System.Windows.Forms.NumericUpDown> numBoxList;
 
         public int selecting = 0;
 
@@ -192,6 +194,7 @@ namespace Dungeon_Master_Helper
                             0 }),
                         Tag = checktag
                     };
+                    numBoxList.Add(tempBox);
                     toAddTable.Controls.Add(tempBox, 1, selecting);
                     tempPanel.Controls.Add(tempLabel);
 
@@ -203,19 +206,18 @@ namespace Dungeon_Master_Helper
                 //TODO
                 father.ShowNotImplementedDialog(sender, e);
             }
-            //SortRightTable();
+            SortRightTable();
         }
 
         private void SortRightTable()
         {
+            rightPanelList = rightPanelList.OrderBy(r => r.Tag.ToString()).ToList();
+            rightLabelList = rightLabelList.OrderBy(r => r.Tag.ToString()).ToList();
+            numBoxList = numBoxList.OrderBy(r => r.Tag.ToString()).ToList();
             for(int i = 0; i < selecting; i++)
             {
-                string tag1 = rightPanelList[i].Tag.ToString();
-                for(int j = i; j < selecting; j++)
-                {
-                    string tag2 = rightPanelList[j].Tag.ToString();
-                    //TODO
-                }
+                toAddTable.SetRow(rightPanelList[i], i);
+                toAddTable.SetRow(numBoxList[i], i);
             }
         }
     }
