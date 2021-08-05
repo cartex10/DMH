@@ -278,7 +278,7 @@ namespace Dungeon_Master_Helper
             this.charPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.charPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette;
+            this.charPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.silhouette;
             this.charPicBox.InitialImage = null;
             this.charPicBox.Location = new System.Drawing.Point(3, 3);
             this.charPicBox.Name = "charPicBox";
@@ -1120,7 +1120,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.slashingPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.slashingPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.slashing_imm;
+            this.slashingPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.slashing_imm;
             this.slashingPicBox.Location = new System.Drawing.Point(70, 0);
             this.slashingPicBox.Margin = new System.Windows.Forms.Padding(0);
             this.slashingPicBox.Name = "slashingPicBox";
@@ -1211,7 +1211,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.piercingPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.piercingPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.piercing_imm;
+            this.piercingPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.piercing_imm;
             this.piercingPicBox.Location = new System.Drawing.Point(70, 0);
             this.piercingPicBox.Margin = new System.Windows.Forms.Padding(0);
             this.piercingPicBox.Name = "piercingPicBox";
@@ -1302,7 +1302,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bludgeoningPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bludgeoningPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.bludgeoning_imm;
+            this.bludgeoningPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.bludgeoning_imm;
             this.bludgeoningPicBox.Location = new System.Drawing.Point(70, 0);
             this.bludgeoningPicBox.Margin = new System.Windows.Forms.Padding(0);
             this.bludgeoningPicBox.Name = "bludgeoningPicBox";
@@ -1393,7 +1393,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.thunderPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.thunderPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.thunder_imm;
+            this.thunderPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.thunder_imm;
             this.thunderPicBox.Location = new System.Drawing.Point(70, 0);
             this.thunderPicBox.Margin = new System.Windows.Forms.Padding(0);
             this.thunderPicBox.Name = "thunderPicBox";
@@ -1484,7 +1484,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radiantPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.radiantPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.radiant_imm;
+            this.radiantPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.radiant_imm;
             this.radiantPicBox.Location = new System.Drawing.Point(70, 0);
             this.radiantPicBox.Margin = new System.Windows.Forms.Padding(0);
             this.radiantPicBox.Name = "radiantPicBox";
@@ -1575,7 +1575,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.psychicPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.psychicPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.psychic_imm;
+            this.psychicPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.psychic_imm;
             this.psychicPicBox.Location = new System.Drawing.Point(70, 0);
             this.psychicPicBox.Margin = new System.Windows.Forms.Padding(0);
             this.psychicPicBox.Name = "psychicPicBox";
@@ -1666,7 +1666,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.poisonPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.poisonPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.poison_imm;
+            this.poisonPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.poison_imm;
             this.poisonPicBox.Location = new System.Drawing.Point(70, 0);
             this.poisonPicBox.Margin = new System.Windows.Forms.Padding(0);
             this.poisonPicBox.Name = "poisonPicBox";
@@ -1757,7 +1757,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.necroticPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.necroticPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.necrotic_imm;
+            this.necroticPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.necrotic_imm;
             this.necroticPicBox.Location = new System.Drawing.Point(70, 0);
             this.necroticPicBox.Margin = new System.Windows.Forms.Padding(0);
             this.necroticPicBox.Name = "necroticPicBox";
@@ -1848,7 +1848,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lightningPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.lightningPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.lightning_imm;
+            this.lightningPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.lightning_imm;
             this.lightningPicBox.Location = new System.Drawing.Point(70, 0);
             this.lightningPicBox.Margin = new System.Windows.Forms.Padding(0);
             this.lightningPicBox.Name = "lightningPicBox";
@@ -1939,7 +1939,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forcePicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.forcePicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.force_imm;
+            this.forcePicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.force_imm;
             this.forcePicBox.Location = new System.Drawing.Point(70, 0);
             this.forcePicBox.Margin = new System.Windows.Forms.Padding(0);
             this.forcePicBox.Name = "forcePicBox";
@@ -2031,7 +2031,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.firePicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.firePicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.fire_imm;
+            this.firePicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.fire_imm;
             this.firePicBox.Location = new System.Drawing.Point(70, 0);
             this.firePicBox.Margin = new System.Windows.Forms.Padding(0);
             this.firePicBox.Name = "firePicBox";
@@ -2122,7 +2122,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.coldPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.coldPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.cold_imm;
+            this.coldPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.cold_imm;
             this.coldPicBox.Location = new System.Drawing.Point(70, 0);
             this.coldPicBox.Margin = new System.Windows.Forms.Padding(0);
             this.coldPicBox.Name = "coldPicBox";
@@ -2280,7 +2280,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.acidPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.acidPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.acid_imm;
+            this.acidPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.acid_imm;
             this.acidPicBox.Location = new System.Drawing.Point(70, 0);
             this.acidPicBox.Margin = new System.Windows.Forms.Padding(0);
             this.acidPicBox.Name = "acidPicBox";

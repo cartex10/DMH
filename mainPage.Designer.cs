@@ -615,7 +615,7 @@ namespace Dungeon_Master_Helper
             // 
             // charPicBox
             // 
-            this.charPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette;
+            this.charPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.silhouette;
             this.charPicBox.Location = new System.Drawing.Point(10, 10);
             this.charPicBox.Margin = new System.Windows.Forms.Padding(10);
             this.charPicBox.Name = "charPicBox";
@@ -712,7 +712,7 @@ namespace Dungeon_Master_Helper
             // 
             // initPicBox
             // 
-            this.initPicBox.Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette;
+            this.initPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.silhouette;
             this.initPicBox.Location = new System.Drawing.Point(3, 3);
             this.initPicBox.Name = "initPicBox";
             this.initPicBox.Size = new System.Drawing.Size(34, 34);

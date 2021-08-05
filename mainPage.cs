@@ -154,7 +154,7 @@ namespace Dungeon_Master_Helper
 
         private void loadDefaultCreatureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadDefaultForm form = new loadDefaultForm();
+            loadDefaultForm form = new loadDefaultForm(this);
             form.Show();
         }
         //
@@ -312,7 +312,7 @@ namespace Dungeon_Master_Helper
             string str = Convert.ToString(picIndex);
             fighterPictureList.Add(new System.Windows.Forms.PictureBox
             {
-                Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette,
+                Image = global::Dungeon_Master_Helper.Properties.charCreationResources.silhouette,
                 Location = new System.Drawing.Point(10, 10),
                 Margin = new System.Windows.Forms.Padding(10),
                 Name = "charPicBox" + str,
@@ -555,7 +555,7 @@ namespace Dungeon_Master_Helper
 
             initPictureList.Add(new System.Windows.Forms.PictureBox
             {
-                Image = global::Dungeon_Master_Helper.Properties.Resources.silhouette,
+                Image = global::Dungeon_Master_Helper.Properties.charCreationResources.silhouette,
                 Location = new System.Drawing.Point(3, 3),
                 Name = "initPicBox" + str,
                 Size = new System.Drawing.Size(34, 34),
@@ -634,18 +634,9 @@ namespace Dungeon_Master_Helper
         {
             var type = sender.GetType();
             System.Windows.Forms.TableLayoutPanel mainTable;
-            if(Convert.ToString(type) == "System.Windows.Forms.Label")
-            {
-                mainTable = (System.Windows.Forms.TableLayoutPanel)(((System.Windows.Forms.Label)sender).Parent);
-            }
-            else if (Convert.ToString(type) == "System.Windows.Forms.PictureBox")
-            {
-                mainTable = (System.Windows.Forms.TableLayoutPanel)(((System.Windows.Forms.PictureBox)sender).Parent);
-            }
-            else if (Convert.ToString(type) == "System.Windows.Forms.TableLayoutPanel")
-            {
-                mainTable = (System.Windows.Forms.TableLayoutPanel)sender;
-            }
+            if (Convert.ToString(type) == "System.Windows.Forms.Label") { mainTable = (System.Windows.Forms.TableLayoutPanel)(((System.Windows.Forms.Label)sender).Parent); }
+            else if (Convert.ToString(type) == "System.Windows.Forms.PictureBox") { mainTable = (System.Windows.Forms.TableLayoutPanel)(((System.Windows.Forms.PictureBox)sender).Parent); }
+            else if (Convert.ToString(type) == "System.Windows.Forms.TableLayoutPanel") { mainTable = (System.Windows.Forms.TableLayoutPanel)sender; }
             else
             {
                 Console.WriteLine(type);
