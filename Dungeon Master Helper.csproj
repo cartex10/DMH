@@ -77,11 +77,6 @@
       <DependentUpon>createCreatureForm.cs</DependentUpon>
     </Compile>
     <Compile Include="data\monster_enum.cs" />
-    <Compile Include="monsterStatsResource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>monsterStatsResource.resx</DependentUpon>
-    </Compile>
     <Compile Include="initiativeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,11 +88,6 @@
     </Compile>
     <Compile Include="loadDefaultForm.Designer.cs">
       <DependentUpon>loadDefaultForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="monsterXML.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>monsterXML.resx</DependentUpon>
     </Compile>
     <Compile Include="monster_enum.cs" />
     <Compile Include="notImplementedForm.cs">
@@ -114,6 +104,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\monsterStatsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>monsterStatsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\monsterXML.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>monsterXML.resx</DependentUpon>
+    </Compile>
     <Compile Include="removeInitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,7 +126,7 @@
     <EmbeddedResource Include="createCreatureForm.resx">
       <DependentUpon>createCreatureForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="monsterStatsResource.resx">
+    <EmbeddedResource Include="Properties\monsterStatsResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>monsterStatsResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -136,8 +136,8 @@
     <EmbeddedResource Include="loadDefaultForm.resx">
       <DependentUpon>loadDefaultForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="monsterXML.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+    <EmbeddedResource Include="Properties\monsterXML.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>monsterXML.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="notImplementedForm.resx">

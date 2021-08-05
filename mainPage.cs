@@ -215,7 +215,7 @@ namespace Dungeon_Master_Helper
         //
         //  ENCOUNTER FUNCTIONS
         //
-        private void addToEncounter(Fighter toAdd)
+        public void addToEncounter(Fighter toAdd)
         {
             if (!Convert.ToBoolean(toAdd.id))
             {

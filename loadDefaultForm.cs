@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using System.Resources;
+using System.IO;
+using System.Reflection;
+using System.Xml.Serialization;
 
 namespace Dungeon_Master_Helper
 {
@@ -219,6 +223,27 @@ namespace Dungeon_Master_Helper
                 toAddTable.SetRow(rightPanelList[i], i);
                 toAddTable.SetRow(numBoxList[i], i);
             }
+        }
+
+        private void Finish(object sender, EventArgs e)
+        {
+            foreach (System.Windows.Forms.NumericUpDown i in numBoxList)
+            {
+                string tofile = i.Tag.ToString() + "_creature";
+                string stream = Dungeon_Master_Helper.Properties.monsterXML.ResourceManager.GetString(tofile); 
+                TextReader reader = new StringReader(stream);
+                mainPage.Creature loaded = (mainPage.Creature)new XmlSerializer(typeof(mainPage.Creature)).Deserialize(reader);
+                mainPage.Fighter toAdd = new mainPage.Fighter();
+                toAdd = loaded.Convert();
+                string name = toAdd.name;
+                for(int j = 0; j < i.Value; j++)
+                {
+                    toAdd.id = father.nextLoadedID++;
+                    toAdd.name = name + " " + Convert.ToString(j + 1);
+                    father.addToEncounter(toAdd);
+                }
+            }
+            this.Close();
         }
     }
 }
