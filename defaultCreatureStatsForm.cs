@@ -19,7 +19,6 @@ namespace Dungeon_Master_Helper
             InitializeComponent();
             object img = Dungeon_Master_Helper.Properties.monsterStatsResource.ResourceManager.GetObject(creature);
             pictureBox1.Image = (System.Drawing.Image)img;
-            Console.WriteLine(creature);
         }
     }
 }
