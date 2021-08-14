@@ -235,6 +235,7 @@ namespace Dungeon_Master_Helper
                 mainPage.Creature loaded = (mainPage.Creature)new XmlSerializer(typeof(mainPage.Creature)).Deserialize(reader);
                 mainPage.Fighter toAdd = new mainPage.Fighter();
                 toAdd = loaded.Convert();
+                toAdd.tag = i.Tag.ToString();
                 string name = toAdd.name;
                 for(int j = 0; j < i.Value; j++)
                 {

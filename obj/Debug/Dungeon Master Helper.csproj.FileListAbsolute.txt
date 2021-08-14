@@ -30,3 +30,4 @@ C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon Maste
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.exe
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.pdb
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.AssemblyReference.cache
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.defaultCreatureStatsForm.resources

@@ -74,7 +74,8 @@ namespace Dungeon_Master_Helper
                     max_hp = this.max_hp,
                     level = this.level,
                     curr_hp = this.max_hp,
-                    user_created = this.user_created
+                    user_created = this.user_created,
+                    tag = this.name
                 };
             }
         }
@@ -85,6 +86,7 @@ namespace Dungeon_Master_Helper
             public List<int> conditions;
             public int init_roll = -9;
             public int id;
+            public string tag;
         }
 
         public enum Damagetypes
@@ -198,7 +200,8 @@ namespace Dungeon_Master_Helper
                 }
                 else
                 {
-                    ShowNotImplementedDialog(sender, e);
+                    defaultCreatureStatsForm dcsf = new defaultCreatureStatsForm(temp.tag);
+                    dcsf.Show();
                 }
             }
         }
