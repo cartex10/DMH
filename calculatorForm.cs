@@ -143,7 +143,7 @@ namespace Dungeon_Master_Helper
             }
             else if (Convert.ToInt32(currstate) == 3)
             {
-                num1 = num2;
+                num1 = result;
                 currstate = (calcstates)1;
             }
         }
