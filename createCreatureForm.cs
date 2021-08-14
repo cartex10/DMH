@@ -162,7 +162,8 @@ namespace Dungeon_Master_Helper
                 playable = playable,
                 evasion = this.evasionCheckBox.Checked,
                 max_hp = ToInt32(this.hpNumBox.Value),
-                level = ToInt32(this.levelNumBox.Value)
+                level = ToInt32(this.levelNumBox.Value),
+                user_created = true
             };
 
             System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(mainPage.Creature));

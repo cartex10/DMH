@@ -53,6 +53,7 @@ namespace Dungeon_Master_Helper
             public bool evasion = false;
             public int max_hp = 1;
             public int level = 1;
+            public bool user_created = true;
 
             public Fighter Convert()
             {
@@ -72,7 +73,8 @@ namespace Dungeon_Master_Helper
                     evasion = this.evasion,
                     max_hp = this.max_hp,
                     level = this.level,
-                    curr_hp = this.max_hp
+                    curr_hp = this.max_hp,
+                    user_created = this.user_created
                 };
             }
         }
@@ -187,10 +189,17 @@ namespace Dungeon_Master_Helper
             foreach (System.Windows.Forms.TableLayoutPanel i in selected)
             {
                 Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(i.Tag));
-                createCreatureForm ccf = new createCreatureForm { Text = "Edit Creature" };
-                ccf.LoadFighter(temp);
-                ccf.DisableAll();
-                ccf.Show();
+                if (temp.user_created)
+                {
+                    createCreatureForm ccf = new createCreatureForm { Text = "Edit Creature" };
+                    ccf.LoadFighter(temp);
+                    ccf.DisableAll();
+                    ccf.Show();
+                }
+                else
+                {
+                    ShowNotImplementedDialog(sender, e);
+                }
             }
         }
 
