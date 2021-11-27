@@ -7,7 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * TODO:
+ *  fix duplicate default creatures not being able to be added to initiative
+ *  add change name button
+ *  code continue initiative button
+ *  add labels to default creatures form
+ *  make new selectedCreatures list and fix all references to selected
+ *  change selected to selectedPanels and edit all references
+ */
 namespace Dungeon_Master_Helper
 {
     public partial class mainPage : Form
