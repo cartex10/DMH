@@ -15,6 +15,8 @@ using System.Windows.Forms;
  *  add labels to default creatures form
  *  make new selectedCreatures list and fix all references to selected
  *  change selected to selectedPanels and edit all references
+ *  fix default creatures hp all being 1
+ *  fix default creatures not showing stat block png when open stats is pressed
  */
 namespace Dungeon_Master_Helper
 {
