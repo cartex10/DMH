@@ -108,7 +108,6 @@
     <Compile Include="loadDefaultForm.Designer.cs">
       <DependentUpon>loadDefaultForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="monster_enum.cs" />
     <Compile Include="notImplementedForm.cs">
       <SubType>Form</SubType>
     </Compile>

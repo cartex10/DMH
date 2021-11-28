@@ -31,3 +31,26 @@ C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon Maste
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.pdb
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.AssemblyReference.cache
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.defaultCreatureStatsForm.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.AssemblyReference.cache
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.calculatorForm.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.createCreatureForm.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.defaultCreatureStatsForm.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.Properties.monsterStatsResource.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.initiativeForm.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.loadDefaultForm.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.Properties.monsterXML.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.notImplementedForm.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.mainPage.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.Properties.charCreationResources.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.removeInitForm.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.GenerateResource.cache
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.CoreCompileInputs.cache
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.exe
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.pdb
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.exe.config
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.exe.manifest
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.application
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.exe
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.pdb
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.exe.manifest
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.application
