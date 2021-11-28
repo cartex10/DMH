@@ -1,0 +1,13 @@
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\bin\Release\Dungeon Master Helper.exe.config
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\bin\Release\Dungeon Master Helper.exe
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\bin\Release\Dungeon Master Helper.pdb
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Release\Dungeon Master Helper.csproj.AssemblyReference.cache
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Release\Dungeon_Master_Helper.createCreatureForm.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Release\Dungeon_Master_Helper.initiativeForm.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Release\Dungeon_Master_Helper.notImplementedForm.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Release\Dungeon_Master_Helper.mainPage.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Release\Dungeon_Master_Helper.Properties.Resources.resources
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Release\Dungeon Master Helper.csproj.GenerateResource.cache
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Release\Dungeon Master Helper.csproj.CoreCompileInputs.cache
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Release\Dungeon Master Helper.exe
+C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\obj\Release\Dungeon Master Helper.pdb
