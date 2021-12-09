@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /*
  * TODO:
+ *  disable num buttons in calc when editting hp
  *  add change name button
  *  add remove creature button
  *  code continue initiative button
@@ -24,7 +25,8 @@ namespace Dungeon_Master_Helper
         public mainPage()
         {
             InitializeComponent();
-            selected = new List<System.Windows.Forms.TableLayoutPanel>();
+            selectedFighters = new List<Fighter>();
+            selectedTables = new List<System.Windows.Forms.TableLayoutPanel>();
         }
         //  FIGHTER VARIABLES
         public List<Fighter> fighterList;
@@ -44,7 +46,8 @@ namespace Dungeon_Master_Helper
         public List<System.Windows.Forms.Label> initNumLabelList;
         public int initChar = 0;
 
-        public List<System.Windows.Forms.TableLayoutPanel> selected;
+        public List<System.Windows.Forms.TableLayoutPanel> selectedTables;
+        public List<mainPage.Fighter> selectedFighters;
         // CLASSES
         public class Creature
         {
@@ -176,11 +179,11 @@ namespace Dungeon_Master_Helper
 
         private void editCreatureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach(System.Windows.Forms.TableLayoutPanel i in selected)
+            foreach(Fighter i in selectedFighters)
             {
-                Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(i.Tag));
+                //Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(i.Tag));
                 createCreatureForm ccf = new createCreatureForm { Text = "Edit Creature" };
-                ccf.LoadFighter(temp);
+                ccf.LoadFighter(i);
                 ccf.Show();
             }
         }
@@ -203,11 +206,11 @@ namespace Dungeon_Master_Helper
         {
             List<Fighter> notInit = new List<Fighter>();
             List<Fighter> initted = new List<Fighter>();
-            foreach (System.Windows.Forms.TableLayoutPanel table in selected)
+            foreach (mainPage.Fighter fighter in selectedFighters)
             {
-                Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(table.Tag));
-                if (temp.init_roll == -9) { notInit.Add(temp); }
-                else { initted.Add(temp); }
+                //Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(table.Tag));
+                if (fighter.init_roll == -9) { notInit.Add(fighter); }
+                else { initted.Add(fighter); }
             }
             if (notInit.Count != 0)
             {
@@ -223,9 +226,9 @@ namespace Dungeon_Master_Helper
 
         private void openStatsButt_Click(object sender, EventArgs e)
         {
-            foreach (System.Windows.Forms.TableLayoutPanel i in selected)
+            foreach (mainPage.Fighter temp in selectedFighters)
             {
-                Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(i.Tag));
+                //Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(i.Tag));
                 if (temp.user_created)
                 {
                     createCreatureForm ccf = new createCreatureForm { Text = "Edit Creature" };
@@ -243,11 +246,11 @@ namespace Dungeon_Master_Helper
 
         private void editHPButt_Click(object sender, EventArgs e)
         {
-            if(selected.Count == 1)
+            if(selectedFighters.Count == 1)
             {
-                Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(selected[0].Tag));
+                Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(selectedTables[0].Tag));
                 System.Windows.Forms.Label label = null;
-                foreach(System.Windows.Forms.Control control in selected[0].Controls)
+                foreach(System.Windows.Forms.Control control in selectedTables[0].Controls)
                 {
                     if(Convert.ToString(control.Tag) == "hp") { label = (System.Windows.Forms.Label)control; }
                 }
@@ -257,7 +260,10 @@ namespace Dungeon_Master_Helper
                 };
                 calc.Show();
             }
-            // TODO: ADD MASS DAMAGE HERE
+            else
+            {
+                // TODO: ADD MASS DAMAGE HERE
+            }
         }
         //
         //  ENCOUNTER FUNCTIONS
@@ -689,16 +695,18 @@ namespace Dungeon_Master_Helper
                 Console.WriteLine(type);
                 return;
             }
-
-            if (selected.Contains(mainTable))
+            Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(mainTable.Tag));
+            if (selectedTables.Contains(mainTable))
             {
                 mainTable.BackColor = System.Drawing.SystemColors.Control;
-                selected.Remove(mainTable);
+                selectedTables.Remove(mainTable);
+                selectedFighters.Remove(temp);
             }
             else
             {
                 mainTable.BackColor = System.Drawing.SystemColors.ControlDark;
-                selected.Add(mainTable);
+                selectedTables.Add(mainTable);
+                selectedFighters.Add(temp);
             }
         }
 
