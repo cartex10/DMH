@@ -695,6 +695,7 @@ namespace Dungeon_Master_Helper
                 Console.WriteLine(type);
                 return;
             }
+            if(mainTable.Tag.ToString() == "NULL") { return; }
             Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(mainTable.Tag));
             if (selectedTables.Contains(mainTable))
             {
