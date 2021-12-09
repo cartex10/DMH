@@ -722,5 +722,10 @@ namespace Dungeon_Master_Helper
                 cnf.ShowDialog();
             }
         }
+
+        private void buttHover(object sender, EventArgs e)
+        {
+            this.toolTip1.SetToolTip((Button)sender, ((Button)sender).Tag.ToString());
+        }
     }
 }

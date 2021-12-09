@@ -29,6 +29,7 @@ namespace Dungeon_Master_Helper
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainPage));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,6 +87,7 @@ namespace Dungeon_Master_Helper
             this.initPicBox = new System.Windows.Forms.PictureBox();
             this.initLabel = new System.Windows.Forms.Label();
             this.initNumLabel = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip.SuspendLayout();
             this.mainTable.SuspendLayout();
             this.InitiativeLabelTable.SuspendLayout();
@@ -376,9 +378,11 @@ namespace Dungeon_Master_Helper
             this.continueButt.Name = "continueButt";
             this.continueButt.Size = new System.Drawing.Size(36, 32);
             this.continueButt.TabIndex = 1;
+            this.continueButt.Tag = "Step Forward In Initiative";
             this.continueButt.Text = "->";
             this.continueButt.UseVisualStyleBackColor = true;
             this.continueButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            this.continueButt.MouseHover += new System.EventHandler(this.buttHover);
             // 
             // buttonPanel
             // 
@@ -410,8 +414,10 @@ namespace Dungeon_Master_Helper
             this.editConditionsButt.Name = "editConditionsButt";
             this.editConditionsButt.Size = new System.Drawing.Size(45, 36);
             this.editConditionsButt.TabIndex = 0;
+            this.editConditionsButt.Tag = "Edit Conditions";
             this.editConditionsButt.UseVisualStyleBackColor = true;
             this.editConditionsButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            this.editConditionsButt.MouseHover += new System.EventHandler(this.buttHover);
             // 
             // editHealthButt
             // 
@@ -424,8 +430,10 @@ namespace Dungeon_Master_Helper
             this.editHealthButt.Name = "editHealthButt";
             this.editHealthButt.Size = new System.Drawing.Size(50, 33);
             this.editHealthButt.TabIndex = 1;
+            this.editHealthButt.Tag = "Deal Damage/Heal";
             this.editHealthButt.UseVisualStyleBackColor = true;
             this.editHealthButt.Click += new System.EventHandler(this.editHPButt_Click);
+            this.editHealthButt.MouseHover += new System.EventHandler(this.buttHover);
             // 
             // initiativeButt
             // 
@@ -437,8 +445,10 @@ namespace Dungeon_Master_Helper
             this.initiativeButt.Name = "initiativeButt";
             this.initiativeButt.Size = new System.Drawing.Size(49, 32);
             this.initiativeButt.TabIndex = 2;
+            this.initiativeButt.Tag = "Add/Remove From Initiative";
             this.initiativeButt.UseVisualStyleBackColor = true;
             this.initiativeButt.Click += new System.EventHandler(this.initiativeButt_Click);
+            this.initiativeButt.MouseHover += new System.EventHandler(this.buttHover);
             // 
             // openStatsButt
             // 
@@ -450,8 +460,10 @@ namespace Dungeon_Master_Helper
             this.openStatsButt.Name = "openStatsButt";
             this.openStatsButt.Size = new System.Drawing.Size(48, 32);
             this.openStatsButt.TabIndex = 3;
+            this.openStatsButt.Tag = "Open Stats";
             this.openStatsButt.UseVisualStyleBackColor = true;
             this.openStatsButt.Click += new System.EventHandler(this.openStatsButt_Click);
+            this.openStatsButt.MouseHover += new System.EventHandler(this.buttHover);
             // 
             // dcCheckButt
             // 
@@ -465,8 +477,10 @@ namespace Dungeon_Master_Helper
             this.dcCheckButt.Name = "dcCheckButt";
             this.dcCheckButt.Size = new System.Drawing.Size(50, 32);
             this.dcCheckButt.TabIndex = 4;
+            this.dcCheckButt.Tag = "DC Check";
             this.dcCheckButt.UseVisualStyleBackColor = true;
             this.dcCheckButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            this.dcCheckButt.MouseHover += new System.EventHandler(this.buttHover);
             // 
             // changeNameButt
             // 
@@ -478,8 +492,10 @@ namespace Dungeon_Master_Helper
             this.changeNameButt.Name = "changeNameButt";
             this.changeNameButt.Size = new System.Drawing.Size(52, 32);
             this.changeNameButt.TabIndex = 5;
+            this.changeNameButt.Tag = "Change Name";
             this.changeNameButt.UseVisualStyleBackColor = true;
             this.changeNameButt.Click += new System.EventHandler(this.ChangeName);
+            this.changeNameButt.MouseHover += new System.EventHandler(this.buttHover);
             // 
             // fighterPanel
             // 
@@ -889,6 +905,7 @@ namespace Dungeon_Master_Helper
         private System.Windows.Forms.ToolStripMenuItem calculatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadDefaultCreatureToolStripMenuItem;
         private System.Windows.Forms.Button changeNameButt;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
