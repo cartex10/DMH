@@ -14,7 +14,6 @@ using System.Windows.Forms;
  *  create tutorial?
  *  Saving/Loading encounters
  *  Rewrite removeFromInit form to be more like deleteCreature()
- *  fix errors when adding creature after deleting all creatures
  */
 namespace Dungeon_Master_Helper
 {
@@ -36,7 +35,7 @@ namespace Dungeon_Master_Helper
         public int picIndex = 1;
         public int descIndex = 6;
         public int changedIndex = 4;
-        public int numChar = 0;
+        public int numChar = -1;
         //  INITIATIVE VARIABLES
         public List<System.Windows.Forms.TableLayoutPanel> initTableList;
         public List<System.Windows.Forms.Control> initPictureList;
@@ -269,7 +268,7 @@ namespace Dungeon_Master_Helper
         //
         public void addToEncounter(Fighter toAdd)
         {
-            if (!Convert.ToBoolean(numChar))
+            if (numChar == -1)
             {
                 fighterTableList = new List<System.Windows.Forms.TableLayoutPanel>
                 {
