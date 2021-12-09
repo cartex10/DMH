@@ -41,6 +41,7 @@ namespace Dungeon_Master_Helper
             this.newCreatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadCreatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editCreatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadDefaultCreatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.combatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.singleDamageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.massDamageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,7 +85,6 @@ namespace Dungeon_Master_Helper
             this.initPicBox = new System.Windows.Forms.PictureBox();
             this.initLabel = new System.Windows.Forms.Label();
             this.initNumLabel = new System.Windows.Forms.Label();
-            this.loadDefaultCreatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.mainTable.SuspendLayout();
             this.InitiativeLabelTable.SuspendLayout();
@@ -101,6 +101,7 @@ namespace Dungeon_Master_Helper
             // 
             // menuStrip
             // 
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.creaturesToolStripMenuItem,
@@ -110,7 +111,7 @@ namespace Dungeon_Master_Helper
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip.Size = new System.Drawing.Size(849, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1129, 28);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip2";
             // 
@@ -122,42 +123,43 @@ namespace Dungeon_Master_Helper
             this.loadEncounterToolStripMenuItem,
             this.savePartyToolStripMenuItem,
             this.loadPartyToolStripMenuItem});
+            this.fileToolStripMenuItem.Enabled = false;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newEncounterToolStripMenuItem
             // 
             this.newEncounterToolStripMenuItem.Name = "newEncounterToolStripMenuItem";
-            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.newEncounterToolStripMenuItem.Text = "New Encounter";
             this.newEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // saveEncounterToolStripMenuItem
             // 
             this.saveEncounterToolStripMenuItem.Name = "saveEncounterToolStripMenuItem";
-            this.saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.saveEncounterToolStripMenuItem.Text = "Save Encounter";
             this.saveEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // loadEncounterToolStripMenuItem
             // 
             this.loadEncounterToolStripMenuItem.Name = "loadEncounterToolStripMenuItem";
-            this.loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loadEncounterToolStripMenuItem.Text = "Load Encounter";
             this.loadEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // savePartyToolStripMenuItem
             // 
             this.savePartyToolStripMenuItem.Name = "savePartyToolStripMenuItem";
-            this.savePartyToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.savePartyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.savePartyToolStripMenuItem.Text = "Save Party";
             this.savePartyToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // loadPartyToolStripMenuItem
             // 
             this.loadPartyToolStripMenuItem.Name = "loadPartyToolStripMenuItem";
-            this.loadPartyToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.loadPartyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loadPartyToolStripMenuItem.Text = "Load Party";
             this.loadPartyToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -169,29 +171,36 @@ namespace Dungeon_Master_Helper
             this.editCreatureToolStripMenuItem,
             this.loadDefaultCreatureToolStripMenuItem});
             this.creaturesToolStripMenuItem.Name = "creaturesToolStripMenuItem";
-            this.creaturesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.creaturesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.creaturesToolStripMenuItem.Text = "Creatures";
             // 
             // newCreatureToolStripMenuItem
             // 
             this.newCreatureToolStripMenuItem.Name = "newCreatureToolStripMenuItem";
-            this.newCreatureToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.newCreatureToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.newCreatureToolStripMenuItem.Text = "New Creature";
             this.newCreatureToolStripMenuItem.Click += new System.EventHandler(this.newCreatureToolStripMenuItem_Click);
             // 
             // loadCreatureToolStripMenuItem
             // 
             this.loadCreatureToolStripMenuItem.Name = "loadCreatureToolStripMenuItem";
-            this.loadCreatureToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.loadCreatureToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.loadCreatureToolStripMenuItem.Text = "Load Creature";
             this.loadCreatureToolStripMenuItem.Click += new System.EventHandler(this.loadCreatureToolStripMenuItem_Click);
             // 
             // editCreatureToolStripMenuItem
             // 
             this.editCreatureToolStripMenuItem.Name = "editCreatureToolStripMenuItem";
-            this.editCreatureToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.editCreatureToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.editCreatureToolStripMenuItem.Text = "Edit Creature";
             this.editCreatureToolStripMenuItem.Click += new System.EventHandler(this.editCreatureToolStripMenuItem_Click);
+            // 
+            // loadDefaultCreatureToolStripMenuItem
+            // 
+            this.loadDefaultCreatureToolStripMenuItem.Name = "loadDefaultCreatureToolStripMenuItem";
+            this.loadDefaultCreatureToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.loadDefaultCreatureToolStripMenuItem.Text = "Load Default Creature";
+            this.loadDefaultCreatureToolStripMenuItem.Click += new System.EventHandler(this.loadDefaultCreatureToolStripMenuItem_Click);
             // 
             // combatToolStripMenuItem
             // 
@@ -200,35 +209,36 @@ namespace Dungeon_Master_Helper
             this.massDamageToolStripMenuItem,
             this.massDCCheckToolStripMenuItem,
             this.editConditionsToolStripMenuItem});
+            this.combatToolStripMenuItem.Enabled = false;
             this.combatToolStripMenuItem.Name = "combatToolStripMenuItem";
-            this.combatToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.combatToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.combatToolStripMenuItem.Text = "Combat";
             // 
             // singleDamageToolStripMenuItem
             // 
             this.singleDamageToolStripMenuItem.Name = "singleDamageToolStripMenuItem";
-            this.singleDamageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.singleDamageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.singleDamageToolStripMenuItem.Text = "Single Damage";
             this.singleDamageToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // massDamageToolStripMenuItem
             // 
             this.massDamageToolStripMenuItem.Name = "massDamageToolStripMenuItem";
-            this.massDamageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.massDamageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.massDamageToolStripMenuItem.Text = "Mass Damage";
             this.massDamageToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // massDCCheckToolStripMenuItem
             // 
             this.massDCCheckToolStripMenuItem.Name = "massDCCheckToolStripMenuItem";
-            this.massDCCheckToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.massDCCheckToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.massDCCheckToolStripMenuItem.Text = "Mass DC Check";
             this.massDCCheckToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // editConditionsToolStripMenuItem
             // 
             this.editConditionsToolStripMenuItem.Name = "editConditionsToolStripMenuItem";
-            this.editConditionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editConditionsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.editConditionsToolStripMenuItem.Text = "Edit Conditions";
             this.editConditionsToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -238,28 +248,29 @@ namespace Dungeon_Master_Helper
             this.openDMGToolStripMenuItem,
             this.openMMToolStripMenuItem,
             this.viewConditionsToolStripMenuItem});
+            this.infoToolStripMenuItem.Enabled = false;
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.infoToolStripMenuItem.Text = "Info";
             // 
             // openDMGToolStripMenuItem
             // 
             this.openDMGToolStripMenuItem.Name = "openDMGToolStripMenuItem";
-            this.openDMGToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openDMGToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.openDMGToolStripMenuItem.Text = "Open DMG";
             this.openDMGToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // openMMToolStripMenuItem
             // 
             this.openMMToolStripMenuItem.Name = "openMMToolStripMenuItem";
-            this.openMMToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openMMToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.openMMToolStripMenuItem.Text = "Open MM";
             this.openMMToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // viewConditionsToolStripMenuItem
             // 
             this.viewConditionsToolStripMenuItem.Name = "viewConditionsToolStripMenuItem";
-            this.viewConditionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewConditionsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewConditionsToolStripMenuItem.Text = "View Conditions";
             this.viewConditionsToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -270,27 +281,29 @@ namespace Dungeon_Master_Helper
             this.watchKeeperToolStripMenuItem,
             this.calculatorToolStripMenuItem});
             this.extraToolStripMenuItem.Name = "extraToolStripMenuItem";
-            this.extraToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.extraToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
             this.extraToolStripMenuItem.Text = "Extra";
             // 
             // diceRollerToolStripMenuItem
             // 
+            this.diceRollerToolStripMenuItem.Enabled = false;
             this.diceRollerToolStripMenuItem.Name = "diceRollerToolStripMenuItem";
-            this.diceRollerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.diceRollerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.diceRollerToolStripMenuItem.Text = "Dice Roller";
             this.diceRollerToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // watchKeeperToolStripMenuItem
             // 
+            this.watchKeeperToolStripMenuItem.Enabled = false;
             this.watchKeeperToolStripMenuItem.Name = "watchKeeperToolStripMenuItem";
-            this.watchKeeperToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.watchKeeperToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.watchKeeperToolStripMenuItem.Text = "Watch Keeper";
             this.watchKeeperToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // calculatorToolStripMenuItem
             // 
             this.calculatorToolStripMenuItem.Name = "calculatorToolStripMenuItem";
-            this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.calculatorToolStripMenuItem.Text = "Calculator";
             this.calculatorToolStripMenuItem.Click += new System.EventHandler(this.calculatorToolStripMenuItem_Click);
             // 
@@ -307,12 +320,13 @@ namespace Dungeon_Master_Helper
             this.mainTable.Controls.Add(this.buttonPanel, 0, 0);
             this.mainTable.Controls.Add(this.fighterPanel, 0, 1);
             this.mainTable.Controls.Add(this.initPanel, 1, 1);
-            this.mainTable.Location = new System.Drawing.Point(0, 27);
+            this.mainTable.Location = new System.Drawing.Point(0, 33);
+            this.mainTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mainTable.Name = "mainTable";
             this.mainTable.RowCount = 2;
-            this.mainTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.mainTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.mainTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.mainTable.Size = new System.Drawing.Size(849, 424);
+            this.mainTable.Size = new System.Drawing.Size(1132, 522);
             this.mainTable.TabIndex = 2;
             // 
             // InitiativeLabelTable
@@ -323,14 +337,15 @@ namespace Dungeon_Master_Helper
             this.InitiativeLabelTable.AutoSize = true;
             this.InitiativeLabelTable.ColumnCount = 2;
             this.InitiativeLabelTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.InitiativeLabelTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.InitiativeLabelTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.InitiativeLabelTable.Controls.Add(this.label1, 0, 0);
             this.InitiativeLabelTable.Controls.Add(this.continueButt, 1, 0);
-            this.InitiativeLabelTable.Location = new System.Drawing.Point(597, 4);
+            this.InitiativeLabelTable.Location = new System.Drawing.Point(796, 5);
+            this.InitiativeLabelTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InitiativeLabelTable.Name = "InitiativeLabelTable";
             this.InitiativeLabelTable.RowCount = 1;
             this.InitiativeLabelTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.InitiativeLabelTable.Size = new System.Drawing.Size(248, 21);
+            this.InitiativeLabelTable.Size = new System.Drawing.Size(331, 25);
             this.InitiativeLabelTable.TabIndex = 0;
             // 
             // label1
@@ -340,9 +355,10 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(4, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 21);
+            this.label1.Size = new System.Drawing.Size(287, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "INITIATIVE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -353,10 +369,11 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.continueButt.AutoSize = true;
-            this.continueButt.Location = new System.Drawing.Point(221, 0);
+            this.continueButt.Enabled = false;
+            this.continueButt.Location = new System.Drawing.Point(295, 0);
             this.continueButt.Margin = new System.Windows.Forms.Padding(0);
             this.continueButt.Name = "continueButt";
-            this.continueButt.Size = new System.Drawing.Size(27, 21);
+            this.continueButt.Size = new System.Drawing.Size(36, 25);
             this.continueButt.TabIndex = 1;
             this.continueButt.Text = "->";
             this.continueButt.UseVisualStyleBackColor = true;
@@ -377,16 +394,18 @@ namespace Dungeon_Master_Helper
             this.buttonPanel.Margin = new System.Windows.Forms.Padding(0);
             this.buttonPanel.Name = "buttonPanel";
             this.buttonPanel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.buttonPanel.Size = new System.Drawing.Size(592, 27);
+            this.buttonPanel.Size = new System.Drawing.Size(790, 33);
             this.buttonPanel.TabIndex = 1;
             // 
             // editConditionsButt
             // 
             this.editConditionsButt.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.editConditionsButt.AutoSize = true;
-            this.editConditionsButt.Location = new System.Drawing.Point(502, 3);
+            this.editConditionsButt.Enabled = false;
+            this.editConditionsButt.Location = new System.Drawing.Point(645, 4);
+            this.editConditionsButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.editConditionsButt.Name = "editConditionsButt";
-            this.editConditionsButt.Size = new System.Drawing.Size(87, 23);
+            this.editConditionsButt.Size = new System.Drawing.Size(141, 32);
             this.editConditionsButt.TabIndex = 0;
             this.editConditionsButt.Text = "Edit Conditions";
             this.editConditionsButt.UseVisualStyleBackColor = true;
@@ -396,9 +415,10 @@ namespace Dungeon_Master_Helper
             // 
             this.editHealthButt.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.editHealthButt.AutoSize = true;
-            this.editHealthButt.Location = new System.Drawing.Point(421, 3);
+            this.editHealthButt.Location = new System.Drawing.Point(537, 4);
+            this.editHealthButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.editHealthButt.Name = "editHealthButt";
-            this.editHealthButt.Size = new System.Drawing.Size(75, 23);
+            this.editHealthButt.Size = new System.Drawing.Size(100, 32);
             this.editHealthButt.TabIndex = 1;
             this.editHealthButt.Text = "Edit HP";
             this.editHealthButt.UseVisualStyleBackColor = true;
@@ -408,9 +428,10 @@ namespace Dungeon_Master_Helper
             // 
             this.initiativeButt.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.initiativeButt.AutoSize = true;
-            this.initiativeButt.Location = new System.Drawing.Point(340, 3);
+            this.initiativeButt.Location = new System.Drawing.Point(429, 4);
+            this.initiativeButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.initiativeButt.Name = "initiativeButt";
-            this.initiativeButt.Size = new System.Drawing.Size(75, 23);
+            this.initiativeButt.Size = new System.Drawing.Size(100, 32);
             this.initiativeButt.TabIndex = 2;
             this.initiativeButt.Text = "Initiative";
             this.initiativeButt.UseVisualStyleBackColor = true;
@@ -420,9 +441,10 @@ namespace Dungeon_Master_Helper
             // 
             this.openStatsButt.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.openStatsButt.AutoSize = true;
-            this.openStatsButt.Location = new System.Drawing.Point(259, 3);
+            this.openStatsButt.Location = new System.Drawing.Point(310, 4);
+            this.openStatsButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.openStatsButt.Name = "openStatsButt";
-            this.openStatsButt.Size = new System.Drawing.Size(75, 23);
+            this.openStatsButt.Size = new System.Drawing.Size(111, 32);
             this.openStatsButt.TabIndex = 3;
             this.openStatsButt.Text = "Open Stats";
             this.openStatsButt.UseVisualStyleBackColor = true;
@@ -432,9 +454,11 @@ namespace Dungeon_Master_Helper
             // 
             this.dcCheckButt.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dcCheckButt.AutoSize = true;
-            this.dcCheckButt.Location = new System.Drawing.Point(178, 3);
+            this.dcCheckButt.Enabled = false;
+            this.dcCheckButt.Location = new System.Drawing.Point(199, 4);
+            this.dcCheckButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dcCheckButt.Name = "dcCheckButt";
-            this.dcCheckButt.Size = new System.Drawing.Size(75, 23);
+            this.dcCheckButt.Size = new System.Drawing.Size(103, 32);
             this.dcCheckButt.TabIndex = 4;
             this.dcCheckButt.Text = "DC Check";
             this.dcCheckButt.UseVisualStyleBackColor = true;
@@ -447,10 +471,10 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fighterPanel.AutoScroll = true;
             this.fighterPanel.Controls.Add(this.fighterTable);
-            this.fighterPanel.Location = new System.Drawing.Point(1, 29);
+            this.fighterPanel.Location = new System.Drawing.Point(1, 35);
             this.fighterPanel.Margin = new System.Windows.Forms.Padding(0);
             this.fighterPanel.Name = "fighterPanel";
-            this.fighterPanel.Size = new System.Drawing.Size(592, 394);
+            this.fighterPanel.Size = new System.Drawing.Size(790, 486);
             this.fighterPanel.TabIndex = 2;
             // 
             // fighterTable
@@ -462,16 +486,16 @@ namespace Dungeon_Master_Helper
             this.fighterTable.Controls.Add(this.baseFighterTable, 0, 0);
             this.fighterTable.Location = new System.Drawing.Point(0, 0);
             this.fighterTable.Margin = new System.Windows.Forms.Padding(0);
-            this.fighterTable.MinimumSize = new System.Drawing.Size(575, 400);
+            this.fighterTable.MinimumSize = new System.Drawing.Size(767, 492);
             this.fighterTable.Name = "fighterTable";
             this.fighterTable.RowCount = 6;
-            this.fighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.fighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.fighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.fighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.fighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.fighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.fighterTable.Size = new System.Drawing.Size(575, 487);
+            this.fighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.fighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.fighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.fighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.fighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.fighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.fighterTable.Size = new System.Drawing.Size(767, 595);
             this.fighterTable.TabIndex = 0;
             // 
             // baseFighterTable
@@ -480,13 +504,13 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.baseFighterTable.ColumnCount = 7;
-            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
-            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
+            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
+            this.baseFighterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
             this.baseFighterTable.Controls.Add(this.charLabel4, 4, 1);
             this.baseFighterTable.Controls.Add(this.charLabel3, 3, 1);
             this.baseFighterTable.Controls.Add(this.charLabel2, 2, 1);
@@ -504,7 +528,7 @@ namespace Dungeon_Master_Helper
             this.baseFighterTable.RowCount = 2;
             this.baseFighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.baseFighterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.baseFighterTable.Size = new System.Drawing.Size(573, 80);
+            this.baseFighterTable.Size = new System.Drawing.Size(765, 98);
             this.baseFighterTable.TabIndex = 0;
             this.baseFighterTable.Click += new System.EventHandler(this.CharacterClick);
             // 
@@ -513,9 +537,10 @@ namespace Dungeon_Master_Helper
             this.charLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.charLabel4.AutoSize = true;
             this.charLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.charLabel4.Location = new System.Drawing.Point(303, 51);
+            this.charLabel4.Location = new System.Drawing.Point(405, 63);
+            this.charLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.charLabel4.Name = "charLabel4";
-            this.charLabel4.Size = new System.Drawing.Size(44, 17);
+            this.charLabel4.Size = new System.Drawing.Size(59, 20);
             this.charLabel4.TabIndex = 10;
             this.charLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.charLabel4.Click += new System.EventHandler(this.CharacterClick);
@@ -525,9 +550,10 @@ namespace Dungeon_Master_Helper
             this.charLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.charLabel3.AutoSize = true;
             this.charLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.charLabel3.Location = new System.Drawing.Point(253, 51);
+            this.charLabel3.Location = new System.Drawing.Point(338, 63);
+            this.charLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.charLabel3.Name = "charLabel3";
-            this.charLabel3.Size = new System.Drawing.Size(44, 17);
+            this.charLabel3.Size = new System.Drawing.Size(59, 20);
             this.charLabel3.TabIndex = 9;
             this.charLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.charLabel3.Click += new System.EventHandler(this.CharacterClick);
@@ -537,9 +563,10 @@ namespace Dungeon_Master_Helper
             this.charLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.charLabel2.AutoSize = true;
             this.charLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.charLabel2.Location = new System.Drawing.Point(203, 51);
+            this.charLabel2.Location = new System.Drawing.Point(271, 63);
+            this.charLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.charLabel2.Name = "charLabel2";
-            this.charLabel2.Size = new System.Drawing.Size(44, 17);
+            this.charLabel2.Size = new System.Drawing.Size(59, 20);
             this.charLabel2.TabIndex = 8;
             this.charLabel2.Tag = "hp";
             this.charLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -550,9 +577,10 @@ namespace Dungeon_Master_Helper
             this.charLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.charLabel1.AutoSize = true;
             this.charLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.charLabel1.Location = new System.Drawing.Point(83, 50);
+            this.charLabel1.Location = new System.Drawing.Point(111, 61);
+            this.charLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.charLabel1.Name = "charLabel1";
-            this.charLabel1.Size = new System.Drawing.Size(114, 20);
+            this.charLabel1.Size = new System.Drawing.Size(152, 25);
             this.charLabel1.TabIndex = 7;
             this.charLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.charLabel1.Click += new System.EventHandler(this.CharacterClick);
@@ -563,9 +591,10 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.charDescLabel6.AutoSize = true;
             this.charDescLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.charDescLabel6.Location = new System.Drawing.Point(464, 20);
+            this.charDescLabel6.Location = new System.Drawing.Point(620, 24);
+            this.charDescLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.charDescLabel6.Name = "charDescLabel6";
-            this.charDescLabel6.Size = new System.Drawing.Size(106, 20);
+            this.charDescLabel6.Size = new System.Drawing.Size(141, 25);
             this.charDescLabel6.TabIndex = 6;
             this.charDescLabel6.Text = "Conditions";
             this.charDescLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -577,9 +606,10 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.charDescLabel5.AutoSize = true;
             this.charDescLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.charDescLabel5.Location = new System.Drawing.Point(353, 20);
+            this.charDescLabel5.Location = new System.Drawing.Point(472, 24);
+            this.charDescLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.charDescLabel5.Name = "charDescLabel5";
-            this.charDescLabel5.Size = new System.Drawing.Size(105, 20);
+            this.charDescLabel5.Size = new System.Drawing.Size(140, 25);
             this.charDescLabel5.TabIndex = 5;
             this.charDescLabel5.Text = "Damage";
             this.charDescLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -591,9 +621,10 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.charDescLabel4.AutoSize = true;
             this.charDescLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.charDescLabel4.Location = new System.Drawing.Point(303, 20);
+            this.charDescLabel4.Location = new System.Drawing.Point(405, 24);
+            this.charDescLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.charDescLabel4.Name = "charDescLabel4";
-            this.charDescLabel4.Size = new System.Drawing.Size(44, 20);
+            this.charDescLabel4.Size = new System.Drawing.Size(59, 25);
             this.charDescLabel4.TabIndex = 4;
             this.charDescLabel4.Text = "PP";
             this.charDescLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -605,9 +636,10 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.charDescLabel3.AutoSize = true;
             this.charDescLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.charDescLabel3.Location = new System.Drawing.Point(253, 20);
+            this.charDescLabel3.Location = new System.Drawing.Point(338, 24);
+            this.charDescLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.charDescLabel3.Name = "charDescLabel3";
-            this.charDescLabel3.Size = new System.Drawing.Size(44, 20);
+            this.charDescLabel3.Size = new System.Drawing.Size(59, 25);
             this.charDescLabel3.TabIndex = 3;
             this.charDescLabel3.Text = "AC";
             this.charDescLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -616,11 +648,11 @@ namespace Dungeon_Master_Helper
             // charPicBox
             // 
             this.charPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.silhouette;
-            this.charPicBox.Location = new System.Drawing.Point(10, 10);
-            this.charPicBox.Margin = new System.Windows.Forms.Padding(10);
+            this.charPicBox.Location = new System.Drawing.Point(13, 12);
+            this.charPicBox.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.charPicBox.Name = "charPicBox";
             this.baseFighterTable.SetRowSpan(this.charPicBox, 2);
-            this.charPicBox.Size = new System.Drawing.Size(60, 60);
+            this.charPicBox.Size = new System.Drawing.Size(80, 74);
             this.charPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.charPicBox.TabIndex = 0;
             this.charPicBox.TabStop = false;
@@ -631,9 +663,10 @@ namespace Dungeon_Master_Helper
             this.charDescLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.charDescLabel1.AutoSize = true;
             this.charDescLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.charDescLabel1.Location = new System.Drawing.Point(83, 20);
+            this.charDescLabel1.Location = new System.Drawing.Point(111, 24);
+            this.charDescLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.charDescLabel1.Name = "charDescLabel1";
-            this.charDescLabel1.Size = new System.Drawing.Size(55, 20);
+            this.charDescLabel1.Size = new System.Drawing.Size(68, 25);
             this.charDescLabel1.TabIndex = 1;
             this.charDescLabel1.Text = "Name";
             this.charDescLabel1.Click += new System.EventHandler(this.CharacterClick);
@@ -644,9 +677,10 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.charDescLabel2.AutoSize = true;
             this.charDescLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.charDescLabel2.Location = new System.Drawing.Point(203, 20);
+            this.charDescLabel2.Location = new System.Drawing.Point(271, 24);
+            this.charDescLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.charDescLabel2.Name = "charDescLabel2";
-            this.charDescLabel2.Size = new System.Drawing.Size(44, 20);
+            this.charDescLabel2.Size = new System.Drawing.Size(59, 25);
             this.charDescLabel2.TabIndex = 2;
             this.charDescLabel2.Text = "HP";
             this.charDescLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -659,10 +693,10 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.initPanel.AutoScroll = true;
             this.initPanel.Controls.Add(this.initTable);
-            this.initPanel.Location = new System.Drawing.Point(594, 29);
+            this.initPanel.Location = new System.Drawing.Point(792, 35);
             this.initPanel.Margin = new System.Windows.Forms.Padding(0);
             this.initPanel.Name = "initPanel";
-            this.initPanel.Size = new System.Drawing.Size(254, 394);
+            this.initPanel.Size = new System.Drawing.Size(339, 486);
             this.initPanel.TabIndex = 3;
             // 
             // initTable
@@ -675,19 +709,19 @@ namespace Dungeon_Master_Helper
             this.initTable.Margin = new System.Windows.Forms.Padding(0);
             this.initTable.Name = "initTable";
             this.initTable.RowCount = 12;
-            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.initTable.Size = new System.Drawing.Size(237, 440);
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.initTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.initTable.Size = new System.Drawing.Size(316, 542);
             this.initTable.TabIndex = 0;
             // 
             // baseInitTable
@@ -696,9 +730,9 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.baseInitTable.ColumnCount = 3;
-            this.baseInitTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.baseInitTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.baseInitTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.baseInitTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.baseInitTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.baseInitTable.Controls.Add(this.initPicBox, 0, 0);
             this.baseInitTable.Controls.Add(this.initLabel, 1, 0);
             this.baseInitTable.Controls.Add(this.initNumLabel, 2, 0);
@@ -707,15 +741,16 @@ namespace Dungeon_Master_Helper
             this.baseInitTable.Name = "baseInitTable";
             this.baseInitTable.RowCount = 1;
             this.baseInitTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.baseInitTable.Size = new System.Drawing.Size(235, 40);
+            this.baseInitTable.Size = new System.Drawing.Size(314, 49);
             this.baseInitTable.TabIndex = 0;
             // 
             // initPicBox
             // 
             this.initPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.silhouette;
-            this.initPicBox.Location = new System.Drawing.Point(3, 3);
+            this.initPicBox.Location = new System.Drawing.Point(4, 4);
+            this.initPicBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.initPicBox.Name = "initPicBox";
-            this.initPicBox.Size = new System.Drawing.Size(34, 34);
+            this.initPicBox.Size = new System.Drawing.Size(45, 41);
             this.initPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.initPicBox.TabIndex = 0;
             this.initPicBox.TabStop = false;
@@ -725,9 +760,10 @@ namespace Dungeon_Master_Helper
             this.initLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.initLabel.AutoSize = true;
             this.initLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.initLabel.Location = new System.Drawing.Point(43, 7);
+            this.initLabel.Location = new System.Drawing.Point(57, 10);
+            this.initLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.initLabel.Name = "initLabel";
-            this.initLabel.Size = new System.Drawing.Size(0, 25);
+            this.initLabel.Size = new System.Drawing.Size(0, 29);
             this.initLabel.TabIndex = 1;
             // 
             // initNumLabel
@@ -735,29 +771,24 @@ namespace Dungeon_Master_Helper
             this.initNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.initNumLabel.AutoSize = true;
             this.initNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.initNumLabel.Location = new System.Drawing.Point(178, 10);
+            this.initNumLabel.Location = new System.Drawing.Point(238, 12);
+            this.initNumLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.initNumLabel.Name = "initNumLabel";
-            this.initNumLabel.Size = new System.Drawing.Size(54, 20);
+            this.initNumLabel.Size = new System.Drawing.Size(72, 25);
             this.initNumLabel.TabIndex = 2;
-            // 
-            // loadDefaultCreatureToolStripMenuItem
-            // 
-            this.loadDefaultCreatureToolStripMenuItem.Name = "loadDefaultCreatureToolStripMenuItem";
-            this.loadDefaultCreatureToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.loadDefaultCreatureToolStripMenuItem.Text = "Load Default Creature";
-            this.loadDefaultCreatureToolStripMenuItem.Click += new System.EventHandler(this.loadDefaultCreatureToolStripMenuItem_Click);
             // 
             // mainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 450);
+            this.ClientSize = new System.Drawing.Size(1129, 554);
             this.Controls.Add(this.mainTable);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(865, 1080);
-            this.MinimumSize = new System.Drawing.Size(865, 489);
+            this.MaximumSize = new System.Drawing.Size(1147, 1318);
+            this.MinimumSize = new System.Drawing.Size(1147, 591);
             this.Name = "mainPage";
             this.Text = "Dungeon Master Helper";
             this.menuStrip.ResumeLayout(false);

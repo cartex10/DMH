@@ -12,10 +12,10 @@ using System.Windows.Forms;
  *  add change name button
  *  add remove creature button
  *  code continue initiative button
- *  add labels to default creatures form
  *  make new selectedCreatures list and fix all references to selected
  *  change selected to selectedPanels and edit all references
  *  add empty default creture which helps quickly make an npc
+ *  create tutorial?
  */
 namespace Dungeon_Master_Helper
 {
