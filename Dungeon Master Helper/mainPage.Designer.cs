@@ -88,6 +88,7 @@ namespace Dungeon_Master_Helper
             this.initLabel = new System.Windows.Forms.Label();
             this.initNumLabel = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.deleteButt = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.mainTable.SuspendLayout();
             this.InitiativeLabelTable.SuspendLayout();
@@ -134,35 +135,35 @@ namespace Dungeon_Master_Helper
             // newEncounterToolStripMenuItem
             // 
             this.newEncounterToolStripMenuItem.Name = "newEncounterToolStripMenuItem";
-            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.newEncounterToolStripMenuItem.Text = "New Encounter";
             this.newEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // saveEncounterToolStripMenuItem
             // 
             this.saveEncounterToolStripMenuItem.Name = "saveEncounterToolStripMenuItem";
-            this.saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.saveEncounterToolStripMenuItem.Text = "Save Encounter";
             this.saveEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // loadEncounterToolStripMenuItem
             // 
             this.loadEncounterToolStripMenuItem.Name = "loadEncounterToolStripMenuItem";
-            this.loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loadEncounterToolStripMenuItem.Text = "Load Encounter";
             this.loadEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // savePartyToolStripMenuItem
             // 
             this.savePartyToolStripMenuItem.Name = "savePartyToolStripMenuItem";
-            this.savePartyToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.savePartyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.savePartyToolStripMenuItem.Text = "Save Party";
             this.savePartyToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // loadPartyToolStripMenuItem
             // 
             this.loadPartyToolStripMenuItem.Name = "loadPartyToolStripMenuItem";
-            this.loadPartyToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.loadPartyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loadPartyToolStripMenuItem.Text = "Load Party";
             this.loadPartyToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -220,28 +221,28 @@ namespace Dungeon_Master_Helper
             // singleDamageToolStripMenuItem
             // 
             this.singleDamageToolStripMenuItem.Name = "singleDamageToolStripMenuItem";
-            this.singleDamageToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.singleDamageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.singleDamageToolStripMenuItem.Text = "Single Damage";
             this.singleDamageToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // massDamageToolStripMenuItem
             // 
             this.massDamageToolStripMenuItem.Name = "massDamageToolStripMenuItem";
-            this.massDamageToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.massDamageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.massDamageToolStripMenuItem.Text = "Mass Damage";
             this.massDamageToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // massDCCheckToolStripMenuItem
             // 
             this.massDCCheckToolStripMenuItem.Name = "massDCCheckToolStripMenuItem";
-            this.massDCCheckToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.massDCCheckToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.massDCCheckToolStripMenuItem.Text = "Mass DC Check";
             this.massDCCheckToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // editConditionsToolStripMenuItem
             // 
             this.editConditionsToolStripMenuItem.Name = "editConditionsToolStripMenuItem";
-            this.editConditionsToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.editConditionsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.editConditionsToolStripMenuItem.Text = "Edit Conditions";
             this.editConditionsToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -259,21 +260,21 @@ namespace Dungeon_Master_Helper
             // openDMGToolStripMenuItem
             // 
             this.openDMGToolStripMenuItem.Name = "openDMGToolStripMenuItem";
-            this.openDMGToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.openDMGToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.openDMGToolStripMenuItem.Text = "Open DMG";
             this.openDMGToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // openMMToolStripMenuItem
             // 
             this.openMMToolStripMenuItem.Name = "openMMToolStripMenuItem";
-            this.openMMToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.openMMToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.openMMToolStripMenuItem.Text = "Open MM";
             this.openMMToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // viewConditionsToolStripMenuItem
             // 
             this.viewConditionsToolStripMenuItem.Name = "viewConditionsToolStripMenuItem";
-            this.viewConditionsToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.viewConditionsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewConditionsToolStripMenuItem.Text = "View Conditions";
             this.viewConditionsToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -396,6 +397,7 @@ namespace Dungeon_Master_Helper
             this.buttonPanel.Controls.Add(this.openStatsButt);
             this.buttonPanel.Controls.Add(this.dcCheckButt);
             this.buttonPanel.Controls.Add(this.changeNameButt);
+            this.buttonPanel.Controls.Add(this.deleteButt);
             this.buttonPanel.Location = new System.Drawing.Point(1, 1);
             this.buttonPanel.Margin = new System.Windows.Forms.Padding(0);
             this.buttonPanel.Name = "buttonPanel";
@@ -810,6 +812,20 @@ namespace Dungeon_Master_Helper
             this.initNumLabel.Size = new System.Drawing.Size(72, 25);
             this.initNumLabel.TabIndex = 2;
             // 
+            // deleteButt
+            // 
+            this.deleteButt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.deleteButt.AutoSize = true;
+            this.deleteButt.Image = ((System.Drawing.Image)(resources.GetObject("deleteButt.Image")));
+            this.deleteButt.Location = new System.Drawing.Point(392, 4);
+            this.deleteButt.Margin = new System.Windows.Forms.Padding(4);
+            this.deleteButt.Name = "deleteButt";
+            this.deleteButt.Size = new System.Drawing.Size(52, 32);
+            this.deleteButt.TabIndex = 6;
+            this.deleteButt.Tag = "Delete Creatures";
+            this.deleteButt.UseVisualStyleBackColor = true;
+            this.deleteButt.Click += new System.EventHandler(this.deleteCreature);
+            // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -906,6 +922,7 @@ namespace Dungeon_Master_Helper
         private System.Windows.Forms.ToolStripMenuItem loadDefaultCreatureToolStripMenuItem;
         private System.Windows.Forms.Button changeNameButt;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button deleteButt;
     }
 }
 

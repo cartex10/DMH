@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /*
  * TODO:
- *  add remove creature button
+ *  !!!add remove creature button!!!
  *  code continue initiative button
  *  add empty default creture which helps quickly make an npc
  *  create tutorial?
@@ -726,6 +726,32 @@ namespace Dungeon_Master_Helper
         private void buttHover(object sender, EventArgs e)
         {
             this.toolTip1.SetToolTip((Button)sender, ((Button)sender).Tag.ToString());
+        }
+
+        private void deleteCreature(object sender, EventArgs e)
+        {
+            // TODO:
+            //  create new form
+            //  on yes, 
+            //  del tables and contents in maintable and initiative if necessary
+            DialogResult dlg = DialogResult.OK; // new deleteCreatureForm();
+            Fighter test;
+            foreach(Fighter fighter in selectedFighters)
+            {
+                test = fighter;
+                if(fighter.init_roll != -9)
+                {
+                    RemoveFromInitiative(fighter);
+                }
+                test = null;
+            }
+            foreach(TableLayoutPanel table in selectedTables)
+            {
+                table.Dispose();
+            }
+            selectedFighters.Clear();
+            selectedTables.Clear();
+            return;
         }
     }
 }
