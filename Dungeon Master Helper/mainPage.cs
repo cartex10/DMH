@@ -13,6 +13,8 @@ using System.Windows.Forms;
  *  add empty default creture which helps quickly make an npc
  *  create tutorial?
  *  SortEncounter()
+ *  Saving/Loading encounters
+ *  Rewrite removeFromInit form to be more like deleteCreature()
  */
 namespace Dungeon_Master_Helper
 {
@@ -325,6 +327,7 @@ namespace Dungeon_Master_Helper
             {
                 fighterList.Add(toAdd);
                 CloneCreatureTable(toAdd);
+                SortEncounter();
             }
             return;
         }
@@ -344,7 +347,8 @@ namespace Dungeon_Master_Helper
                 RowCount = 2,
                 Size = new System.Drawing.Size(573, 80),
                 TabIndex = 0,
-                Tag = toAdd.id
+                Tag = toAdd.id,
+                Parent = this.fighterTable
         });
             fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             fighterTableList[numChar].ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
@@ -748,8 +752,39 @@ namespace Dungeon_Master_Helper
             }
             selectedFighters.Clear();
             selectedTables.Clear();
-            // SortEncounter();
+            SortEncounter();
             return;
+        }
+        
+        private void SortEncounter()
+        {
+            List<Fighter> playable = new List<Fighter>();
+            List<Fighter> notPlayable = new List<Fighter>();
+            foreach(Fighter fighter in fighterList)
+            {
+                if (fighter.playable) { playable.Add(fighter); }
+                else { notPlayable.Add(fighter); }
+            }
+            playable = playable.OrderBy(r => r.name).ToList();
+            notPlayable = notPlayable.OrderBy(r => r.name).ToList();
+            fighterList = null;
+            fighterList = new List<Fighter>();
+            foreach (Fighter i in playable) { fighterList.Add(i); }
+            foreach (Fighter i in notPlayable) { fighterList.Add(i); }
+            List<TableLayoutPanel> newTableList = new List<TableLayoutPanel>();
+            int count = 0;
+            foreach (Fighter i in fighterList)
+            {
+                foreach (TableLayoutPanel j in fighterTableList)
+                {
+                    if (i.id == Convert.ToInt32(j.Tag))
+                    {
+                        newTableList.Add(j);
+                        this.fighterTable.SetRow(j, count++);
+                        break;
+                    }
+                }
+            }
         }
     }
 }
