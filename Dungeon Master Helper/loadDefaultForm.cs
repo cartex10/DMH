@@ -251,8 +251,6 @@ namespace Dungeon_Master_Helper
             }
             foreach (mainPage.Fighter f in toAdd)
             {
-                Console.WriteLine(f.name);
-                Console.WriteLine(f.id);
                 father.addToEncounter(f);
             }
             this.Close();

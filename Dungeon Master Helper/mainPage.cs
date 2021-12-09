@@ -9,12 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /*
  * TODO:
- *  disable num buttons in calc when editting hp
- *  add change name button
  *  add remove creature button
  *  code continue initiative button
- *  make new selectedCreatures list and fix all references to selected
- *  change selected to selectedPanels and edit all references
  *  add empty default creture which helps quickly make an npc
  *  create tutorial?
  */
@@ -490,7 +486,8 @@ namespace Dungeon_Master_Helper
                     Size = new System.Drawing.Size(114, 20),
                     TabIndex = 7,
                     TextAlign = System.Drawing.ContentAlignment.MiddleLeft,
-                    Text = toAdd.name
+                    Text = toAdd.name,
+                    Tag = "name"
                 }
             };
             newtemp[0].Click += new System.EventHandler(this.CharacterClick);
@@ -715,6 +712,15 @@ namespace Dungeon_Master_Helper
         {
             notImplementedForm nif = new notImplementedForm();
             nif.ShowDialog();
+        }
+
+        private void ChangeName(object sender, EventArgs e)
+        {
+            for(int i = 0; i < selectedFighters.Count; i++)
+            {
+                changeNameForm cnf = new changeNameForm(selectedFighters[i], selectedTables[i]);
+                cnf.ShowDialog();
+            }
         }
     }
 }

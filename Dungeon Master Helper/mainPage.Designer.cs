@@ -65,6 +65,7 @@ namespace Dungeon_Master_Helper
             this.initiativeButt = new System.Windows.Forms.Button();
             this.openStatsButt = new System.Windows.Forms.Button();
             this.dcCheckButt = new System.Windows.Forms.Button();
+            this.changeNameButt = new System.Windows.Forms.Button();
             this.fighterPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.fighterTable = new System.Windows.Forms.TableLayoutPanel();
             this.baseFighterTable = new System.Windows.Forms.TableLayoutPanel();
@@ -390,6 +391,7 @@ namespace Dungeon_Master_Helper
             this.buttonPanel.Controls.Add(this.initiativeButt);
             this.buttonPanel.Controls.Add(this.openStatsButt);
             this.buttonPanel.Controls.Add(this.dcCheckButt);
+            this.buttonPanel.Controls.Add(this.changeNameButt);
             this.buttonPanel.Location = new System.Drawing.Point(1, 1);
             this.buttonPanel.Margin = new System.Windows.Forms.Padding(0);
             this.buttonPanel.Name = "buttonPanel";
@@ -463,6 +465,19 @@ namespace Dungeon_Master_Helper
             this.dcCheckButt.Text = "DC Check";
             this.dcCheckButt.UseVisualStyleBackColor = true;
             this.dcCheckButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            // 
+            // changeNameButt
+            // 
+            this.changeNameButt.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.changeNameButt.AutoSize = true;
+            this.changeNameButt.Location = new System.Drawing.Point(87, 4);
+            this.changeNameButt.Margin = new System.Windows.Forms.Padding(4);
+            this.changeNameButt.Name = "changeNameButt";
+            this.changeNameButt.Size = new System.Drawing.Size(104, 32);
+            this.changeNameButt.TabIndex = 5;
+            this.changeNameButt.Text = "Change Name";
+            this.changeNameButt.UseVisualStyleBackColor = true;
+            this.changeNameButt.Click += new System.EventHandler(this.ChangeName);
             // 
             // fighterPanel
             // 
@@ -583,6 +598,7 @@ namespace Dungeon_Master_Helper
             this.charLabel1.Name = "charLabel1";
             this.charLabel1.Size = new System.Drawing.Size(152, 25);
             this.charLabel1.TabIndex = 7;
+            this.charLabel1.Tag = "name";
             this.charLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.charLabel1.Click += new System.EventHandler(this.CharacterClick);
             // 
@@ -872,6 +888,7 @@ namespace Dungeon_Master_Helper
         private System.Windows.Forms.Label initNumLabel;
         private System.Windows.Forms.ToolStripMenuItem calculatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadDefaultCreatureToolStripMenuItem;
+        private System.Windows.Forms.Button changeNameButt;
     }
 }
 

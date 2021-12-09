@@ -83,6 +83,12 @@
     <Compile Include="calculatorForm.Designer.cs">
       <DependentUpon>calculatorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="changeNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeNameForm.Designer.cs">
+      <DependentUpon>changeNameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="createCreatureForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </Compile>
     <EmbeddedResource Include="calculatorForm.resx">
       <DependentUpon>calculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeNameForm.resx">
+      <DependentUpon>changeNameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="createCreatureForm.resx">
       <DependentUpon>createCreatureForm.cs</DependentUpon>
