@@ -12,9 +12,9 @@ using System.Windows.Forms;
  *  code continue initiative button
  *  add empty default creture which helps quickly make an npc
  *  create tutorial?
- *  SortEncounter()
  *  Saving/Loading encounters
  *  Rewrite removeFromInit form to be more like deleteCreature()
+ *  fix errors when adding creature after deleting all creatures
  */
 namespace Dungeon_Master_Helper
 {
@@ -88,6 +88,7 @@ namespace Dungeon_Master_Helper
                     tag = this.name
                 };
             }
+
         }
 
         public class Fighter : Creature
@@ -734,20 +735,22 @@ namespace Dungeon_Master_Helper
 
         private void deleteCreature(object sender, EventArgs e)
         {
+            if (selectedFighters.Count == 0) { return; }
             DialogResult dlg = new deleteCreatureForm(selectedFighters).ShowDialog();
             if(dlg == DialogResult.Cancel) { return; }
-            Fighter test;
             foreach(Fighter fighter in selectedFighters)
             {
-                test = fighter;
                 if(fighter.init_roll != -9)
                 {
                     RemoveFromInitiative(fighter);
                 }
-                test = null;
+                fighterList.Remove(fighter);
+                numChar--;
             }
             foreach(TableLayoutPanel table in selectedTables)
             {
+                table.Controls.Clear();
+                fighterTableList.Remove(table);
                 table.Dispose();
             }
             selectedFighters.Clear();
