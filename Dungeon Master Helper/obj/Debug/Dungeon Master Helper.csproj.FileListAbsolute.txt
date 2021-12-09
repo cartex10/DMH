@@ -79,3 +79,4 @@ D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.application
 D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.exe
 D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.pdb
 D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.changeNameForm.resources
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.Properties.Resources.resources

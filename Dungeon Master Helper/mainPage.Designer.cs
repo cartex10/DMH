@@ -325,7 +325,7 @@ namespace Dungeon_Master_Helper
             this.mainTable.Margin = new System.Windows.Forms.Padding(4);
             this.mainTable.Name = "mainTable";
             this.mainTable.RowCount = 2;
-            this.mainTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.mainTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.mainTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.mainTable.Size = new System.Drawing.Size(1132, 522);
             this.mainTable.TabIndex = 2;
@@ -346,7 +346,7 @@ namespace Dungeon_Master_Helper
             this.InitiativeLabelTable.Name = "InitiativeLabelTable";
             this.InitiativeLabelTable.RowCount = 1;
             this.InitiativeLabelTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.InitiativeLabelTable.Size = new System.Drawing.Size(331, 25);
+            this.InitiativeLabelTable.Size = new System.Drawing.Size(331, 32);
             this.InitiativeLabelTable.TabIndex = 0;
             // 
             // label1
@@ -359,7 +359,7 @@ namespace Dungeon_Master_Helper
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 25);
+            this.label1.Size = new System.Drawing.Size(287, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "INITIATIVE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -374,7 +374,7 @@ namespace Dungeon_Master_Helper
             this.continueButt.Location = new System.Drawing.Point(295, 0);
             this.continueButt.Margin = new System.Windows.Forms.Padding(0);
             this.continueButt.Name = "continueButt";
-            this.continueButt.Size = new System.Drawing.Size(36, 25);
+            this.continueButt.Size = new System.Drawing.Size(36, 32);
             this.continueButt.TabIndex = 1;
             this.continueButt.Text = "->";
             this.continueButt.UseVisualStyleBackColor = true;
@@ -396,86 +396,88 @@ namespace Dungeon_Master_Helper
             this.buttonPanel.Margin = new System.Windows.Forms.Padding(0);
             this.buttonPanel.Name = "buttonPanel";
             this.buttonPanel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.buttonPanel.Size = new System.Drawing.Size(790, 33);
+            this.buttonPanel.Size = new System.Drawing.Size(790, 40);
             this.buttonPanel.TabIndex = 1;
             // 
             // editConditionsButt
             // 
-            this.editConditionsButt.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.editConditionsButt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.editConditionsButt.AutoSize = true;
             this.editConditionsButt.Enabled = false;
-            this.editConditionsButt.Location = new System.Drawing.Point(645, 4);
+            this.editConditionsButt.Image = ((System.Drawing.Image)(resources.GetObject("editConditionsButt.Image")));
+            this.editConditionsButt.Location = new System.Drawing.Point(741, 4);
             this.editConditionsButt.Margin = new System.Windows.Forms.Padding(4);
             this.editConditionsButt.Name = "editConditionsButt";
-            this.editConditionsButt.Size = new System.Drawing.Size(141, 32);
+            this.editConditionsButt.Size = new System.Drawing.Size(45, 36);
             this.editConditionsButt.TabIndex = 0;
-            this.editConditionsButt.Text = "Edit Conditions";
             this.editConditionsButt.UseVisualStyleBackColor = true;
             this.editConditionsButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // editHealthButt
             // 
-            this.editHealthButt.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.editHealthButt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.editHealthButt.AutoSize = true;
-            this.editHealthButt.Location = new System.Drawing.Point(537, 4);
+            this.editHealthButt.Image = ((System.Drawing.Image)(resources.GetObject("editHealthButt.Image")));
+            this.editHealthButt.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.editHealthButt.Location = new System.Drawing.Point(683, 4);
             this.editHealthButt.Margin = new System.Windows.Forms.Padding(4);
             this.editHealthButt.Name = "editHealthButt";
-            this.editHealthButt.Size = new System.Drawing.Size(100, 32);
+            this.editHealthButt.Size = new System.Drawing.Size(50, 33);
             this.editHealthButt.TabIndex = 1;
-            this.editHealthButt.Text = "Edit HP";
             this.editHealthButt.UseVisualStyleBackColor = true;
             this.editHealthButt.Click += new System.EventHandler(this.editHPButt_Click);
             // 
             // initiativeButt
             // 
-            this.initiativeButt.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.initiativeButt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.initiativeButt.AutoSize = true;
-            this.initiativeButt.Location = new System.Drawing.Point(429, 4);
+            this.initiativeButt.Image = ((System.Drawing.Image)(resources.GetObject("initiativeButt.Image")));
+            this.initiativeButt.Location = new System.Drawing.Point(626, 4);
             this.initiativeButt.Margin = new System.Windows.Forms.Padding(4);
             this.initiativeButt.Name = "initiativeButt";
-            this.initiativeButt.Size = new System.Drawing.Size(100, 32);
+            this.initiativeButt.Size = new System.Drawing.Size(49, 32);
             this.initiativeButt.TabIndex = 2;
-            this.initiativeButt.Text = "Initiative";
             this.initiativeButt.UseVisualStyleBackColor = true;
             this.initiativeButt.Click += new System.EventHandler(this.initiativeButt_Click);
             // 
             // openStatsButt
             // 
-            this.openStatsButt.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.openStatsButt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.openStatsButt.AutoSize = true;
-            this.openStatsButt.Location = new System.Drawing.Point(310, 4);
+            this.openStatsButt.Image = ((System.Drawing.Image)(resources.GetObject("openStatsButt.Image")));
+            this.openStatsButt.Location = new System.Drawing.Point(570, 4);
             this.openStatsButt.Margin = new System.Windows.Forms.Padding(4);
             this.openStatsButt.Name = "openStatsButt";
-            this.openStatsButt.Size = new System.Drawing.Size(111, 32);
+            this.openStatsButt.Size = new System.Drawing.Size(48, 32);
             this.openStatsButt.TabIndex = 3;
-            this.openStatsButt.Text = "Open Stats";
             this.openStatsButt.UseVisualStyleBackColor = true;
             this.openStatsButt.Click += new System.EventHandler(this.openStatsButt_Click);
             // 
             // dcCheckButt
             // 
-            this.dcCheckButt.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dcCheckButt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dcCheckButt.AutoSize = true;
             this.dcCheckButt.Enabled = false;
-            this.dcCheckButt.Location = new System.Drawing.Point(199, 4);
+            this.dcCheckButt.Image = ((System.Drawing.Image)(resources.GetObject("dcCheckButt.Image")));
+            this.dcCheckButt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.dcCheckButt.Location = new System.Drawing.Point(512, 4);
             this.dcCheckButt.Margin = new System.Windows.Forms.Padding(4);
             this.dcCheckButt.Name = "dcCheckButt";
-            this.dcCheckButt.Size = new System.Drawing.Size(103, 32);
+            this.dcCheckButt.Size = new System.Drawing.Size(50, 32);
             this.dcCheckButt.TabIndex = 4;
-            this.dcCheckButt.Text = "DC Check";
             this.dcCheckButt.UseVisualStyleBackColor = true;
             this.dcCheckButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // changeNameButt
             // 
-            this.changeNameButt.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.changeNameButt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.changeNameButt.AutoSize = true;
-            this.changeNameButt.Location = new System.Drawing.Point(87, 4);
+            this.changeNameButt.Image = ((System.Drawing.Image)(resources.GetObject("changeNameButt.Image")));
+            this.changeNameButt.Location = new System.Drawing.Point(452, 4);
             this.changeNameButt.Margin = new System.Windows.Forms.Padding(4);
             this.changeNameButt.Name = "changeNameButt";
-            this.changeNameButt.Size = new System.Drawing.Size(104, 32);
+            this.changeNameButt.Size = new System.Drawing.Size(52, 32);
             this.changeNameButt.TabIndex = 5;
-            this.changeNameButt.Text = "Change Name";
             this.changeNameButt.UseVisualStyleBackColor = true;
             this.changeNameButt.Click += new System.EventHandler(this.ChangeName);
             // 
@@ -486,7 +488,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fighterPanel.AutoScroll = true;
             this.fighterPanel.Controls.Add(this.fighterTable);
-            this.fighterPanel.Location = new System.Drawing.Point(1, 35);
+            this.fighterPanel.Location = new System.Drawing.Point(1, 42);
             this.fighterPanel.Margin = new System.Windows.Forms.Padding(0);
             this.fighterPanel.Name = "fighterPanel";
             this.fighterPanel.Size = new System.Drawing.Size(790, 486);
@@ -664,7 +666,6 @@ namespace Dungeon_Master_Helper
             // 
             // charPicBox
             // 
-            this.charPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.silhouette;
             this.charPicBox.Location = new System.Drawing.Point(13, 12);
             this.charPicBox.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.charPicBox.Name = "charPicBox";
@@ -710,7 +711,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.initPanel.AutoScroll = true;
             this.initPanel.Controls.Add(this.initTable);
-            this.initPanel.Location = new System.Drawing.Point(792, 35);
+            this.initPanel.Location = new System.Drawing.Point(792, 42);
             this.initPanel.Margin = new System.Windows.Forms.Padding(0);
             this.initPanel.Name = "initPanel";
             this.initPanel.Size = new System.Drawing.Size(339, 486);
@@ -763,7 +764,6 @@ namespace Dungeon_Master_Helper
             // 
             // initPicBox
             // 
-            this.initPicBox.Image = global::Dungeon_Master_Helper.Properties.charCreationResources.silhouette;
             this.initPicBox.Location = new System.Drawing.Point(4, 4);
             this.initPicBox.Margin = new System.Windows.Forms.Padding(4);
             this.initPicBox.Name = "initPicBox";

@@ -142,9 +142,6 @@
   <data name="cold_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\dmg_ico\cold\cold_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="plusminus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\plusminus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="silhouette" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\silhouette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,5 +159,8 @@
   </data>
   <data name="slashing_imm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\dmg_ico\slashing\slashing_imm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plusminus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\plusminus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
