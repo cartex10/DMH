@@ -102,6 +102,12 @@
     <Compile Include="defaultCreatureStatsForm.Designer.cs">
       <DependentUpon>defaultCreatureStatsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="deleteCreatureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteCreatureForm.Designer.cs">
+      <DependentUpon>deleteCreatureForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="initiativeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="defaultCreatureStatsForm.resx">
       <DependentUpon>defaultCreatureStatsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteCreatureForm.resx">
+      <DependentUpon>deleteCreatureForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\monsterStatsResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

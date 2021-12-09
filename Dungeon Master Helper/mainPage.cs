@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /*
  * TODO:
- *  !!!add remove creature button!!!
  *  code continue initiative button
  *  add empty default creture which helps quickly make an npc
  *  create tutorial?
+ *  SortEncounter()
  */
 namespace Dungeon_Master_Helper
 {
@@ -730,11 +730,8 @@ namespace Dungeon_Master_Helper
 
         private void deleteCreature(object sender, EventArgs e)
         {
-            // TODO:
-            //  create new form
-            //  on yes, 
-            //  del tables and contents in maintable and initiative if necessary
-            DialogResult dlg = DialogResult.OK; // new deleteCreatureForm();
+            DialogResult dlg = new deleteCreatureForm(selectedFighters).ShowDialog();
+            if(dlg == DialogResult.Cancel) { return; }
             Fighter test;
             foreach(Fighter fighter in selectedFighters)
             {
@@ -751,6 +748,7 @@ namespace Dungeon_Master_Helper
             }
             selectedFighters.Clear();
             selectedTables.Clear();
+            // SortEncounter();
             return;
         }
     }
