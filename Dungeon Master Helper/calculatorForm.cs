@@ -21,6 +21,26 @@ namespace Dungeon_Master_Helper
             InitializeComponent();
             mainTextBox.Text = Convert.ToString(num);
             currstate = 0;
+            if(toEdit != null)
+            {
+                zeroButt.Enabled = false;
+                oneButt.Enabled = false;
+                twoButt.Enabled = false;
+                threeButt.Enabled = false;
+                fourButt.Enabled = false;
+                fiveButt.Enabled = false;
+                sixButt.Enabled = false;
+                sevenButt.Enabled = false;
+                eightButt.Enabled = false;
+                nineButt.Enabled = false;
+                backspaceButt.Enabled = false;
+                restartButt.Enabled = false;
+                dieRollButt.Enabled = false;
+                halveButt.Enabled = false;
+                divideButt.Enabled = false;
+                multiplyButt.Enabled = false;
+                equalsButt.Enabled = false;
+            }
         }
 
         public enum calcstates
@@ -135,6 +155,26 @@ namespace Dungeon_Master_Helper
             {
                 num1 = Convert.ToInt32(mainTextBox.Text);
                 currstate++;
+                if (this.toEdit != null)
+                {
+                    zeroButt.Enabled = true;
+                    oneButt.Enabled = true;
+                    twoButt.Enabled = true;
+                    threeButt.Enabled = true;
+                    fourButt.Enabled = true;
+                    fiveButt.Enabled = true;
+                    sixButt.Enabled = true;
+                    sevenButt.Enabled = true;
+                    eightButt.Enabled = true;
+                    nineButt.Enabled = true;
+                    backspaceButt.Enabled = true;
+                    restartButt.Enabled = true;
+                    dieRollButt.Enabled = true;
+                    halveButt.Enabled = true;
+                    divideButt.Enabled = true;
+                    multiplyButt.Enabled = true;
+                    equalsButt.Enabled = true;
+                }
             }
             else if (Convert.ToInt32(currstate) == 2) 
             { 
