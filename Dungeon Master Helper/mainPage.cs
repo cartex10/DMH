@@ -9,14 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /*
  * TODO:
- *  fix duplicate default creatures not being able to be added to initiative
  *  add change name button
+ *  add remove creature button
  *  code continue initiative button
  *  add labels to default creatures form
  *  make new selectedCreatures list and fix all references to selected
  *  change selected to selectedPanels and edit all references
- *  fix default creatures hp all being 1
- *  fix default creatures not showing stat block png when open stats is pressed
+ *  add empty default creture which helps quickly make an npc
  */
 namespace Dungeon_Master_Helper
 {
@@ -97,6 +96,32 @@ namespace Dungeon_Master_Helper
             public int init_roll = -9;
             public int id;
             public string tag;
+
+            public void Copy(Fighter f)
+            {
+                this.name = f.name;
+                this.ac = f.ac;
+                this.pp = f.pp;
+                this.str = f.str;
+                this.dex = f.dex;
+                this.con = f.con;
+                this.int_stat = f.int_stat;
+                this.wis = f.wis;
+                this.cha = f.cha;
+                this.dmg = f.dmg;
+                this.playable = f.playable;
+                this.evasion = f.evasion;
+                this.max_hp = f.max_hp;
+                this.level = f.level;
+                this.curr_hp = f.max_hp;
+                this.user_created = f.user_created;
+                this.tag = f.name;
+                this.curr_hp = f.curr_hp;
+                this.conditions = f.conditions;
+                this.init_roll = f.init_roll;
+                this.id = f.id;
+                this.tag = f.tag;
+            }
         }
 
         public enum Damagetypes
@@ -239,7 +264,7 @@ namespace Dungeon_Master_Helper
         //
         public void addToEncounter(Fighter toAdd)
         {
-            if (!Convert.ToBoolean(toAdd.id))
+            if (!Convert.ToBoolean(numChar))
             {
                 fighterTableList = new List<System.Windows.Forms.TableLayoutPanel>
                 {

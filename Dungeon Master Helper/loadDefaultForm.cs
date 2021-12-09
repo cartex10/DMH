@@ -227,22 +227,33 @@ namespace Dungeon_Master_Helper
 
         private void Finish(object sender, EventArgs e)
         {
+            List<mainPage.Fighter> toAdd = new List<mainPage.Fighter>();
+            int saved = 0;
             foreach (System.Windows.Forms.NumericUpDown i in numBoxList)
             {
                 string tofile = i.Tag.ToString() + "_creature";
                 string stream = Dungeon_Master_Helper.Properties.monsterXML.ResourceManager.GetString(tofile); 
                 TextReader reader = new StringReader(stream);
                 mainPage.Creature loaded = (mainPage.Creature)new XmlSerializer(typeof(mainPage.Creature)).Deserialize(reader);
-                mainPage.Fighter toAdd = new mainPage.Fighter();
-                toAdd = loaded.Convert();
-                toAdd.tag = i.Tag.ToString();
-                string name = toAdd.name;
-                for(int j = 0; j < i.Value; j++)
+                mainPage.Fighter baseFighter = loaded.Convert();
+
+                string name = loaded.name;
+                string tag = i.Tag.ToString();
+                for(int j = saved; j < saved + i.Value; j++)
                 {
-                    toAdd.id = father.nextLoadedID++;
-                    toAdd.name = name + " " + Convert.ToString(j + 1);
-                    father.addToEncounter(toAdd);
+                    toAdd.Add(new mainPage.Fighter());
+                    toAdd[j].Copy(baseFighter);
+                    toAdd[j].tag = tag;
+                    toAdd[j].id = father.nextLoadedID++;
+                    toAdd[j].name = name + " " + Convert.ToString(j + 1);
                 }
+                saved += Convert.ToInt32(i.Value);
+            }
+            foreach (mainPage.Fighter f in toAdd)
+            {
+                Console.WriteLine(f.name);
+                Console.WriteLine(f.id);
+                father.addToEncounter(f);
             }
             this.Close();
         }

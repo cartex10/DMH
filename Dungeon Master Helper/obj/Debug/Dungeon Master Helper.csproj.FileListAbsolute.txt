@@ -54,3 +54,27 @@ C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\b
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.pdb
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.exe.manifest
 C:\ProgramProjects\personal\c#\DMH\Dungeon Master Helper\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.application
+D:\pp\c#\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.exe.config
+D:\pp\c#\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.exe.manifest
+D:\pp\c#\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.application
+D:\pp\c#\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.exe
+D:\pp\c#\Dungeon Master Helper\bin\Debug\Dungeon Master Helper.pdb
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.AssemblyReference.cache
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.SuggestedBindingRedirects.cache
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.calculatorForm.resources
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.createCreatureForm.resources
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.defaultCreatureStatsForm.resources
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.Properties.monsterStatsResource.resources
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.initiativeForm.resources
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.loadDefaultForm.resources
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.Properties.monsterXML.resources
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.notImplementedForm.resources
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.mainPage.resources
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.Properties.charCreationResources.resources
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon_Master_Helper.removeInitForm.resources
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.GenerateResource.cache
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.csproj.CoreCompileInputs.cache
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.exe.manifest
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.application
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.exe
+D:\pp\c#\Dungeon Master Helper\obj\Debug\Dungeon Master Helper.pdb
