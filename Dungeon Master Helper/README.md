@@ -27,9 +27,9 @@ I began working on this project in order to help teach myself different parts of
 - Viewing stats without editting
 
 ## Screenshots
-![](https://github.com/cartex10/DMH/blob/main/DMH/img/git/mainPage.PNG)
-![](https://github.com/cartex10/DMH/blob/main/DMH/img/git/createCreature.PNG)
-![](https://github.com/cartex10/DMH/blob/main/DMH/img/git/addtoinitiative.PNG)
+![]https://github.com/cartex10/DMH/blob/888ee07becd6735c87f6a0cebf787db3f7ef2cb8/Dungeon%20Master%20Helper/img/git/mainPage.PNG)
+![](https://github.com/cartex10/DMH/blob/888ee07becd6735c87f6a0cebf787db3f7ef2cb8/Dungeon%20Master%20Helper/img/git/createCreature.PNG)
+![](https://github.com/cartex10/DMH/blob/888ee07becd6735c87f6a0cebf787db3f7ef2cb8/Dungeon%20Master%20Helper/img/git/addtoinitiative.PNG)
 
 ## Planned Features
 - Adding Pictures to saved creatures
