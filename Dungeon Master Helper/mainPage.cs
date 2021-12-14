@@ -9,11 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /*
  * TODO:
+ *  !!!!! Loading creatures immediately after creation
  *  code continue initiative button
  *  add empty default creture which helps quickly make an npc
  *  create tutorial?
  *  Saving/Loading encounters
  *  Rewrite removeFromInit form to be more like deleteCreature()
+ *  Data binding??????????
+ *  Open stats scaling
+ *  Removing from encounter and initiative at the same time
+ *  No healing beyond max hp
+ *  Rolling saving throwss automatically button 
+ *  Select all npcs button
+ *  
  */
 namespace Dungeon_Master_Helper
 {
