@@ -1,0 +1,1050 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8443DAA-0D75-4A50-B6CA-76209E45C6AE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Dungeon_Master_Helper</RootNamespace>
+    <AssemblyName>DungeonMasterHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\carlo\Desktop\dmh\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D2FB64A758DDF3A9FF6B212148A2650B274DBBC6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Dungeon Master Helper_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="calculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="calculatorForm.Designer.cs">
+      <DependentUpon>calculatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changeNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeNameForm.Designer.cs">
+      <DependentUpon>changeNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createCreatureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createCreatureForm.Designer.cs">
+      <DependentUpon>createCreatureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="data\monster_enum.cs" />
+    <Compile Include="defaultCreatureStatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="defaultCreatureStatsForm.Designer.cs">
+      <DependentUpon>defaultCreatureStatsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteCreatureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteCreatureForm.Designer.cs">
+      <DependentUpon>deleteCreatureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="initiativeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="initiativeForm.Designer.cs">
+      <DependentUpon>initiativeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loadDefaultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loadDefaultForm.Designer.cs">
+      <DependentUpon>loadDefaultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notImplementedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notImplementedForm.Designer.cs">
+      <DependentUpon>notImplementedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainPage.Designer.cs">
+      <DependentUpon>mainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\monsterStatsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>monsterStatsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\monsterXML.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>monsterXML.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="removeInitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="removeInitForm.Designer.cs">
+      <DependentUpon>removeInitForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="calculatorForm.resx">
+      <DependentUpon>calculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeNameForm.resx">
+      <DependentUpon>changeNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createCreatureForm.resx">
+      <DependentUpon>createCreatureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="defaultCreatureStatsForm.resx">
+      <DependentUpon>defaultCreatureStatsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteCreatureForm.resx">
+      <DependentUpon>deleteCreatureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\monsterStatsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>monsterStatsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="initiativeForm.resx">
+      <DependentUpon>initiativeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loadDefaultForm.resx">
+      <DependentUpon>loadDefaultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\monsterXML.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>monsterXML.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notImplementedForm.resx">
+      <DependentUpon>notImplementedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainPage.resx">
+      <DependentUpon>mainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\charCreationResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>charCreationResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="removeInitForm.resx">
+      <DependentUpon>removeInitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Dungeon Master Helper_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\charCreationResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>charCreationResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\plusminus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\cold\cold_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\acid\acid_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\fire\fire_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\force\force_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\lightning\lightning_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\necrotic\necrotic_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\poison\poison_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\psychic\psychic_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\radiant\radiant_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\thunder\thunder_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\bludgeoning\bludgeoning_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\piercing\piercing_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\dmg_ico\slashing\slashing_imm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\default_monsters\aarakocra.creature.xml" />
+    <Content Include="data\default_monsters\aarakocra.jpg" />
+    <Content Include="data\default_monsters\aboleth.creature.xml" />
+    <Content Include="data\default_monsters\aboleth.jpg" />
+    <Content Include="data\default_monsters\acolyte.creature.xml" />
+    <Content Include="data\default_monsters\acolyte.jpg" />
+    <Content Include="data\default_monsters\adult-black-dragon.creature.xml" />
+    <Content Include="data\default_monsters\adult-black-dragon.jpg" />
+    <Content Include="data\default_monsters\adult-blue-dragon.creature.xml" />
+    <Content Include="data\default_monsters\adult-blue-dragon.jpg" />
+    <Content Include="data\default_monsters\adult-brass-dragon.creature.xml" />
+    <Content Include="data\default_monsters\adult-brass-dragon.jpg" />
+    <Content Include="data\default_monsters\adult-bronze-dragon.creature.xml" />
+    <Content Include="data\default_monsters\adult-bronze-dragon.jpg" />
+    <Content Include="data\default_monsters\adult-copper-dragon.creature.xml" />
+    <Content Include="data\default_monsters\adult-copper-dragon.jpg" />
+    <Content Include="data\default_monsters\adult-gold-dragon.creature.xml" />
+    <Content Include="data\default_monsters\adult-gold-dragon.jpg" />
+    <Content Include="data\default_monsters\adult-green-dragon.creature.xml" />
+    <Content Include="data\default_monsters\adult-green-dragon.jpg" />
+    <Content Include="data\default_monsters\adult-red-dragon.creature.xml" />
+    <Content Include="data\default_monsters\adult-red-dragon.jpg" />
+    <Content Include="data\default_monsters\adult-silver-dragon.creature.xml" />
+    <Content Include="data\default_monsters\adult-silver-dragon.jpg" />
+    <Content Include="data\default_monsters\adult-white-dragon.creature.xml" />
+    <Content Include="data\default_monsters\adult-white-dragon.jpg" />
+    <Content Include="data\default_monsters\air-elemental.creature.xml" />
+    <Content Include="data\default_monsters\air-elemental.jpg" />
+    <Content Include="data\default_monsters\allosaurus.creature.xml" />
+    <Content Include="data\default_monsters\allosaurus.jpg" />
+    <Content Include="data\default_monsters\ancient-black-dragon.creature.xml" />
+    <Content Include="data\default_monsters\ancient-black-dragon.jpg" />
+    <Content Include="data\default_monsters\ancient-blue-dragon.creature.xml" />
+    <Content Include="data\default_monsters\ancient-blue-dragon.jpg" />
+    <Content Include="data\default_monsters\ancient-brass-dragon.creature.xml" />
+    <Content Include="data\default_monsters\ancient-brass-dragon.jpg" />
+    <Content Include="data\default_monsters\ancient-bronze-dragon.creature.xml" />
+    <Content Include="data\default_monsters\ancient-bronze-dragon.jpg" />
+    <Content Include="data\default_monsters\ancient-copper-dragon.creature.xml" />
+    <Content Include="data\default_monsters\ancient-copper-dragon.jpg" />
+    <Content Include="data\default_monsters\ancient-gold-dragon.creature.xml" />
+    <Content Include="data\default_monsters\ancient-gold-dragon.jpg" />
+    <Content Include="data\default_monsters\ancient-green-dragon.creature.xml" />
+    <Content Include="data\default_monsters\ancient-green-dragon.jpg" />
+    <Content Include="data\default_monsters\ancient-red-dragon.creature.xml" />
+    <Content Include="data\default_monsters\ancient-red-dragon.jpg" />
+    <Content Include="data\default_monsters\ancient-silver-dragon.creature.xml" />
+    <Content Include="data\default_monsters\ancient-silver-dragon.jpg" />
+    <Content Include="data\default_monsters\ancient-white-dragon.creature.xml" />
+    <Content Include="data\default_monsters\ancient-white-dragon.jpg" />
+    <Content Include="data\default_monsters\androsphinx.creature.xml" />
+    <Content Include="data\default_monsters\androsphinx.jpg" />
+    <Content Include="data\default_monsters\animated-armor.creature.xml" />
+    <Content Include="data\default_monsters\animated-armor.jpg" />
+    <Content Include="data\default_monsters\ankheg.creature.xml" />
+    <Content Include="data\default_monsters\ankheg.jpg" />
+    <Content Include="data\default_monsters\ankylosaurus.creature.xml" />
+    <Content Include="data\default_monsters\ankylosaurus.jpg" />
+    <Content Include="data\default_monsters\annis-hag.creature.xml" />
+    <Content Include="data\default_monsters\annis-hag.jpg" />
+    <Content Include="data\default_monsters\ape.creature.xml" />
+    <Content Include="data\default_monsters\ape.jpg" />
+    <Content Include="data\default_monsters\archmage.creature.xml" />
+    <Content Include="data\default_monsters\archmage.jpg" />
+    <Content Include="data\default_monsters\assassin.creature.xml" />
+    <Content Include="data\default_monsters\assassin.jpg" />
+    <Content Include="data\default_monsters\aurochs.creature.xml" />
+    <Content Include="data\default_monsters\aurochs.jpg" />
+    <Content Include="data\default_monsters\awakened-shrub.creature.xml" />
+    <Content Include="data\default_monsters\awakened-shrub.jpg" />
+    <Content Include="data\default_monsters\awakened-tree.creature.xml" />
+    <Content Include="data\default_monsters\awakened-tree.jpg" />
+    <Content Include="data\default_monsters\axe-beak.creature.xml" />
+    <Content Include="data\default_monsters\axe-beak.jpg" />
+    <Content Include="data\default_monsters\azer.creature.xml" />
+    <Content Include="data\default_monsters\azer.jpg" />
+    <Content Include="data\default_monsters\baboon.creature.xml" />
+    <Content Include="data\default_monsters\baboon.jpg" />
+    <Content Include="data\default_monsters\badger.creature.xml" />
+    <Content Include="data\default_monsters\badger.jpg" />
+    <Content Include="data\default_monsters\balor.creature.xml" />
+    <Content Include="data\default_monsters\balor.jpg" />
+    <Content Include="data\default_monsters\bandit-captain.creature.xml" />
+    <Content Include="data\default_monsters\bandit-captain.jpg" />
+    <Content Include="data\default_monsters\bandit.creature.xml" />
+    <Content Include="data\default_monsters\bandit.jpg" />
+    <Content Include="data\default_monsters\banshee.creature.xml" />
+    <Content Include="data\default_monsters\banshee.jpg" />
+    <Content Include="data\default_monsters\barbed-devil.creature.xml" />
+    <Content Include="data\default_monsters\barbed-devil.jpg" />
+    <Content Include="data\default_monsters\barghest.creature.xml" />
+    <Content Include="data\default_monsters\barghest.jpg" />
+    <Content Include="data\default_monsters\barlgura.creature.xml" />
+    <Content Include="data\default_monsters\barlgura.jpg" />
+    <Content Include="data\default_monsters\basilisk.creature.xml" />
+    <Content Include="data\default_monsters\basilisk.jpg" />
+    <Content Include="data\default_monsters\bat.creature.xml" />
+    <Content Include="data\default_monsters\bat.jpg" />
+    <Content Include="data\default_monsters\bearded-devil.creature.xml" />
+    <Content Include="data\default_monsters\bearded-devil.jpg" />
+    <Content Include="data\default_monsters\behir.creature.xml" />
+    <Content Include="data\default_monsters\behir.jpg" />
+    <Content Include="data\default_monsters\berserker.creature.xml" />
+    <Content Include="data\default_monsters\berserker.jpg" />
+    <Content Include="data\default_monsters\black-bear.creature.xml" />
+    <Content Include="data\default_monsters\black-bear.jpg" />
+    <Content Include="data\default_monsters\black-dragon-wyrmling.creature.xml" />
+    <Content Include="data\default_monsters\black-dragon-wyrmling.jpg" />
+    <Content Include="data\default_monsters\black-pudding.creature.xml" />
+    <Content Include="data\default_monsters\black-pudding.jpg" />
+    <Content Include="data\default_monsters\blink-dog.creature.xml" />
+    <Content Include="data\default_monsters\blink-dog.jpg" />
+    <Content Include="data\default_monsters\blood-hawk.creature.xml" />
+    <Content Include="data\default_monsters\blood-hawk.jpg" />
+    <Content Include="data\default_monsters\blue-dragon-wyrmling.creature.xml" />
+    <Content Include="data\default_monsters\blue-dragon-wyrmling.jpg" />
+    <Content Include="data\default_monsters\boar.creature.xml" />
+    <Content Include="data\default_monsters\boar.jpg" />
+    <Content Include="data\default_monsters\bone-devil.creature.xml" />
+    <Content Include="data\default_monsters\bone-devil.jpg" />
+    <Content Include="data\default_monsters\brass-dragon-wyrmling.creature.xml" />
+    <Content Include="data\default_monsters\brass-dragon-wyrmling.jpg" />
+    <Content Include="data\default_monsters\bronze-dragon-wyrmling.creature.xml" />
+    <Content Include="data\default_monsters\bronze-dragon-wyrmling.jpg" />
+    <Content Include="data\default_monsters\brown-bear.creature.xml" />
+    <Content Include="data\default_monsters\brown-bear.jpg" />
+    <Content Include="data\default_monsters\bugbear.creature.xml" />
+    <Content Include="data\default_monsters\bugbear.jpg" />
+    <Content Include="data\default_monsters\bulette.creature.xml" />
+    <Content Include="data\default_monsters\bulette.jpg" />
+    <Content Include="data\default_monsters\bullywug.creature.xml" />
+    <Content Include="data\default_monsters\bullywug.jpg" />
+    <Content Include="data\default_monsters\camel.creature.xml" />
+    <Content Include="data\default_monsters\camel.jpg" />
+    <Content Include="data\default_monsters\cat.creature.xml" />
+    <Content Include="data\default_monsters\cat.jpg" />
+    <Content Include="data\default_monsters\centaur.creature.xml" />
+    <Content Include="data\default_monsters\centaur.jpg" />
+    <Content Include="data\default_monsters\chain-devil.creature.xml" />
+    <Content Include="data\default_monsters\chain-devil.jpg" />
+    <Content Include="data\default_monsters\chimera.creature.xml" />
+    <Content Include="data\default_monsters\chimera.jpg" />
+    <Content Include="data\default_monsters\chuul.creature.xml" />
+    <Content Include="data\default_monsters\chuul.jpg" />
+    <Content Include="data\default_monsters\clay-golem.creature.xml" />
+    <Content Include="data\default_monsters\clay-golem.jpg" />
+    <Content Include="data\default_monsters\cloaker.creature.xml" />
+    <Content Include="data\default_monsters\cloaker.jpg" />
+    <Content Include="data\default_monsters\cloud-giant.creature.xml" />
+    <Content Include="data\default_monsters\cloud-giant.jpg" />
+    <Content Include="data\default_monsters\cockatrice.creature.xml" />
+    <Content Include="data\default_monsters\cockatrice.jpg" />
+    <Content Include="data\default_monsters\commoner.creature.xml" />
+    <Content Include="data\default_monsters\commoner.jpg" />
+    <Content Include="data\default_monsters\constrictor-snake.creature.xml" />
+    <Content Include="data\default_monsters\constrictor-snake.jpg" />
+    <Content Include="data\default_monsters\copper-dragon-wyrmling.creature.xml" />
+    <Content Include="data\default_monsters\copper-dragon-wyrmling.jpg" />
+    <Content Include="data\default_monsters\couatl.creature.xml" />
+    <Content Include="data\default_monsters\couatl.jpg" />
+    <Content Include="data\default_monsters\cow.creature.xml" />
+    <Content Include="data\default_monsters\cow.jpg" />
+    <Content Include="data\default_monsters\crab.creature.xml" />
+    <Content Include="data\default_monsters\crab.jpg" />
+    <Content Include="data\default_monsters\crawling-claw.creature.xml" />
+    <Content Include="data\default_monsters\crawling-claw.jpg" />
+    <Content Include="data\default_monsters\crocodile.creature.xml" />
+    <Content Include="data\default_monsters\crocodile.jpg" />
+    <Content Include="data\default_monsters\cult-fanatic.creature.xml" />
+    <Content Include="data\default_monsters\cult-fanatic.jpg" />
+    <Content Include="data\default_monsters\cultist.creature.xml" />
+    <Content Include="data\default_monsters\cultist.jpg" />
+    <Content Include="data\default_monsters\cyclops.creature.xml" />
+    <Content Include="data\default_monsters\cyclops.jpg" />
+    <Content Include="data\default_monsters\dao.creature.xml" />
+    <Content Include="data\default_monsters\dao.jpg" />
+    <Content Include="data\default_monsters\darkmantle.creature.xml" />
+    <Content Include="data\default_monsters\darkmantle.jpg" />
+    <Content Include="data\default_monsters\death-dog.creature.xml" />
+    <Content Include="data\default_monsters\death-dog.jpg" />
+    <Content Include="data\default_monsters\deep-gnome-svirfneblin.creature.xml" />
+    <Content Include="data\default_monsters\deep-gnome-svirfneblin.jpg" />
+    <Content Include="data\default_monsters\deer.creature.xml" />
+    <Content Include="data\default_monsters\deer.jpg" />
+    <Content Include="data\default_monsters\deva.creature.xml" />
+    <Content Include="data\default_monsters\deva.jpg" />
+    <Content Include="data\default_monsters\dire-wolf.creature.xml" />
+    <Content Include="data\default_monsters\dire-wolf.jpg" />
+    <Content Include="data\default_monsters\djinni.creature.xml" />
+    <Content Include="data\default_monsters\djinni.jpg" />
+    <Content Include="data\default_monsters\dolphin.creature.xml" />
+    <Content Include="data\default_monsters\dolphin.jpg" />
+    <Content Include="data\default_monsters\doppelganger.creature.xml" />
+    <Content Include="data\default_monsters\doppelganger.jpg" />
+    <Content Include="data\default_monsters\draft-horse.creature.xml" />
+    <Content Include="data\default_monsters\draft-horse.jpg" />
+    <Content Include="data\default_monsters\dragon-turtle.creature.xml" />
+    <Content Include="data\default_monsters\dragon-turtle.jpg" />
+    <Content Include="data\default_monsters\dretch.creature.xml" />
+    <Content Include="data\default_monsters\dretch.jpg" />
+    <Content Include="data\default_monsters\drider.creature.xml" />
+    <Content Include="data\default_monsters\drider.jpg" />
+    <Content Include="data\default_monsters\drow-mage.creature.xml" />
+    <Content Include="data\default_monsters\drow-mage.jpg" />
+    <Content Include="data\default_monsters\drow.creature.xml" />
+    <Content Include="data\default_monsters\drow.jpg" />
+    <Content Include="data\default_monsters\druid.creature.xml" />
+    <Content Include="data\default_monsters\druid.jpg" />
+    <Content Include="data\default_monsters\dryad.creature.xml" />
+    <Content Include="data\default_monsters\dryad.jpg" />
+    <Content Include="data\default_monsters\duergar.creature.xml" />
+    <Content Include="data\default_monsters\duergar.jpg" />
+    <Content Include="data\default_monsters\dust-mephit.creature.xml" />
+    <Content Include="data\default_monsters\dust-mephit.jpg" />
+    <Content Include="data\default_monsters\eagle.creature.xml" />
+    <Content Include="data\default_monsters\eagle.jpg" />
+    <Content Include="data\default_monsters\earth-elemental.creature.xml" />
+    <Content Include="data\default_monsters\earth-elemental.jpg" />
+    <Content Include="data\default_monsters\efreeti.creature.xml" />
+    <Content Include="data\default_monsters\efreeti.jpg" />
+    <Content Include="data\default_monsters\elephant.creature.xml" />
+    <Content Include="data\default_monsters\elephant.jpg" />
+    <Content Include="data\default_monsters\elk.creature.xml" />
+    <Content Include="data\default_monsters\elk.jpg" />
+    <Content Include="data\default_monsters\erinyes.creature.xml" />
+    <Content Include="data\default_monsters\erinyes.jpg" />
+    <Content Include="data\default_monsters\ettercap.creature.xml" />
+    <Content Include="data\default_monsters\ettercap.jpg" />
+    <Content Include="data\default_monsters\ettin.creature.xml" />
+    <Content Include="data\default_monsters\ettin.jpg" />
+    <Content Include="data\default_monsters\fire-elemental.creature.xml" />
+    <Content Include="data\default_monsters\fire-elemental.jpg" />
+    <Content Include="data\default_monsters\fire-giant.creature.xml" />
+    <Content Include="data\default_monsters\fire-giant.jpg" />
+    <Content Include="data\default_monsters\fire-snake.creature.xml" />
+    <Content Include="data\default_monsters\fire-snake.jpg" />
+    <Content Include="data\default_monsters\flameskull.creature.xml" />
+    <Content Include="data\default_monsters\flameskull.jpg" />
+    <Content Include="data\default_monsters\flesh-golem.creature.xml" />
+    <Content Include="data\default_monsters\flesh-golem.jpg" />
+    <Content Include="data\default_monsters\flind.creature.xml" />
+    <Content Include="data\default_monsters\flind.jpg" />
+    <Content Include="data\default_monsters\flying-snake.creature.xml" />
+    <Content Include="data\default_monsters\flying-snake.jpg" />
+    <Content Include="data\default_monsters\flying-sword.creature.xml" />
+    <Content Include="data\default_monsters\flying-sword.jpg" />
+    <Content Include="data\default_monsters\frog.creature.xml" />
+    <Content Include="data\default_monsters\frog.jpg" />
+    <Content Include="data\default_monsters\froghemoth.creature.xml" />
+    <Content Include="data\default_monsters\froghemoth.jpg" />
+    <Content Include="data\default_monsters\frost-giant.creature.xml" />
+    <Content Include="data\default_monsters\frost-giant.jpg" />
+    <Content Include="data\default_monsters\galeb-duhr.creature.xml" />
+    <Content Include="data\default_monsters\galeb-duhr.jpg" />
+    <Content Include="data\default_monsters\gargoyle.creature.xml" />
+    <Content Include="data\default_monsters\gargoyle.jpg" />
+    <Content Include="data\default_monsters\gauth.creature.xml" />
+    <Content Include="data\default_monsters\gauth.jpg" />
+    <Content Include="data\default_monsters\gelatinous-cube.creature.xml" />
+    <Content Include="data\default_monsters\gelatinous-cube.jpg" />
+    <Content Include="data\default_monsters\ghast.creature.xml" />
+    <Content Include="data\default_monsters\ghast.jpg" />
+    <Content Include="data\default_monsters\ghost.creature.xml" />
+    <Content Include="data\default_monsters\ghost.jpg" />
+    <Content Include="data\default_monsters\ghoul.creature.xml" />
+    <Content Include="data\default_monsters\ghoul.jpg" />
+    <Content Include="data\default_monsters\giant-ape.creature.xml" />
+    <Content Include="data\default_monsters\giant-ape.jpg" />
+    <Content Include="data\default_monsters\giant-badger.creature.xml" />
+    <Content Include="data\default_monsters\giant-badger.jpg" />
+    <Content Include="data\default_monsters\giant-bat.creature.xml" />
+    <Content Include="data\default_monsters\giant-bat.jpg" />
+    <Content Include="data\default_monsters\giant-boar.creature.xml" />
+    <Content Include="data\default_monsters\giant-boar.jpg" />
+    <Content Include="data\default_monsters\giant-centipede.creature.xml" />
+    <Content Include="data\default_monsters\giant-centipede.jpg" />
+    <Content Include="data\default_monsters\giant-constrictor-snake.creature.xml" />
+    <Content Include="data\default_monsters\giant-constrictor-snake.jpg" />
+    <Content Include="data\default_monsters\giant-crab.creature.xml" />
+    <Content Include="data\default_monsters\giant-crab.jpg" />
+    <Content Include="data\default_monsters\giant-crocodile.creature.xml" />
+    <Content Include="data\default_monsters\giant-crocodile.jpg" />
+    <Content Include="data\default_monsters\giant-eagle.creature.xml" />
+    <Content Include="data\default_monsters\giant-eagle.jpg" />
+    <Content Include="data\default_monsters\giant-elk.creature.xml" />
+    <Content Include="data\default_monsters\giant-elk.jpg" />
+    <Content Include="data\default_monsters\giant-fire-beetle.creature.xml" />
+    <Content Include="data\default_monsters\giant-fire-beetle.jpg" />
+    <Content Include="data\default_monsters\giant-frog.creature.xml" />
+    <Content Include="data\default_monsters\giant-frog.jpg" />
+    <Content Include="data\default_monsters\giant-goat.creature.xml" />
+    <Content Include="data\default_monsters\giant-goat.jpg" />
+    <Content Include="data\default_monsters\giant-hyena.creature.xml" />
+    <Content Include="data\default_monsters\giant-hyena.jpg" />
+    <Content Include="data\default_monsters\giant-lizard.creature.xml" />
+    <Content Include="data\default_monsters\giant-lizard.jpg" />
+    <Content Include="data\default_monsters\giant-octopus.creature.xml" />
+    <Content Include="data\default_monsters\giant-octopus.jpg" />
+    <Content Include="data\default_monsters\giant-owl.creature.xml" />
+    <Content Include="data\default_monsters\giant-owl.jpg" />
+    <Content Include="data\default_monsters\giant-poisonous-snake.creature.xml" />
+    <Content Include="data\default_monsters\giant-poisonous-snake.jpg" />
+    <Content Include="data\default_monsters\giant-rat.creature.xml" />
+    <Content Include="data\default_monsters\giant-rat.jpg" />
+    <Content Include="data\default_monsters\giant-scorpion.creature.xml" />
+    <Content Include="data\default_monsters\giant-scorpion.jpg" />
+    <Content Include="data\default_monsters\giant-sea-horse.creature.xml" />
+    <Content Include="data\default_monsters\giant-sea-horse.jpg" />
+    <Content Include="data\default_monsters\giant-shark.creature.xml" />
+    <Content Include="data\default_monsters\giant-shark.jpg" />
+    <Content Include="data\default_monsters\giant-spider.creature.xml" />
+    <Content Include="data\default_monsters\giant-spider.jpg" />
+    <Content Include="data\default_monsters\giant-toad.creature.xml" />
+    <Content Include="data\default_monsters\giant-toad.jpg" />
+    <Content Include="data\default_monsters\giant-vulture.creature.xml" />
+    <Content Include="data\default_monsters\giant-vulture.jpg" />
+    <Content Include="data\default_monsters\giant-wasp.creature.xml" />
+    <Content Include="data\default_monsters\giant-wasp.jpg" />
+    <Content Include="data\default_monsters\giant-weasel.creature.xml" />
+    <Content Include="data\default_monsters\giant-weasel.jpg" />
+    <Content Include="data\default_monsters\giant-wolf-spider.creature.xml" />
+    <Content Include="data\default_monsters\giant-wolf-spider.jpg" />
+    <Content Include="data\default_monsters\gibbering-mouther.creature.xml" />
+    <Content Include="data\default_monsters\gibbering-mouther.jpg" />
+    <Content Include="data\default_monsters\glabrezu.creature.xml" />
+    <Content Include="data\default_monsters\glabrezu.jpg" />
+    <Content Include="data\default_monsters\gladiator.creature.xml" />
+    <Content Include="data\default_monsters\gladiator.jpg" />
+    <Content Include="data\default_monsters\gnoll-pack-lord.creature.xml" />
+    <Content Include="data\default_monsters\gnoll-pack-lord.jpg" />
+    <Content Include="data\default_monsters\gnoll.creature.xml" />
+    <Content Include="data\default_monsters\gnoll.jpg" />
+    <Content Include="data\default_monsters\goat.creature.xml" />
+    <Content Include="data\default_monsters\goat.jpg" />
+    <Content Include="data\default_monsters\goblin.creature.xml" />
+    <Content Include="data\default_monsters\goblin.jpg" />
+    <Content Include="data\default_monsters\gold-dragon-wyrmling.creature.xml" />
+    <Content Include="data\default_monsters\gold-dragon-wyrmling.jpg" />
+    <Content Include="data\default_monsters\gorgon.creature.xml" />
+    <Content Include="data\default_monsters\gorgon.jpg" />
+    <Content Include="data\default_monsters\gray-ooze.creature.xml" />
+    <Content Include="data\default_monsters\gray-ooze.jpg" />
+    <Content Include="data\default_monsters\green-dragon-wyrmling.creature.xml" />
+    <Content Include="data\default_monsters\green-dragon-wyrmling.jpg" />
+    <Content Include="data\default_monsters\green-hag.creature.xml" />
+    <Content Include="data\default_monsters\green-hag.jpg" />
+    <Content Include="data\default_monsters\grell.creature.xml" />
+    <Content Include="data\default_monsters\grell.jpg" />
+    <Content Include="data\default_monsters\grick.creature.xml" />
+    <Content Include="data\default_monsters\grick.jpg" />
+    <Content Include="data\default_monsters\griffon.creature.xml" />
+    <Content Include="data\default_monsters\griffon.jpg" />
+    <Content Include="data\default_monsters\grimlock.creature.xml" />
+    <Content Include="data\default_monsters\grimlock.jpg" />
+    <Content Include="data\default_monsters\guard.creature.xml" />
+    <Content Include="data\default_monsters\guard.jpg" />
+    <Content Include="data\default_monsters\guardian-naga.creature.xml" />
+    <Content Include="data\default_monsters\guardian-naga.jpg" />
+    <Content Include="data\default_monsters\gynosphinx.creature.xml" />
+    <Content Include="data\default_monsters\gynosphinx.jpg" />
+    <Content Include="data\default_monsters\half-ogre.creature.xml" />
+    <Content Include="data\default_monsters\half-ogre.jpg" />
+    <Content Include="data\default_monsters\half-red-dragon-veteran.creature.xml" />
+    <Content Include="data\default_monsters\half-red-dragon-veteran.jpg" />
+    <Content Include="data\default_monsters\harpy.creature.xml" />
+    <Content Include="data\default_monsters\harpy.jpg" />
+    <Content Include="data\default_monsters\hawk.creature.xml" />
+    <Content Include="data\default_monsters\hawk.jpg" />
+    <Content Include="data\default_monsters\hell-hound.creature.xml" />
+    <Content Include="data\default_monsters\hell-hound.jpg" />
+    <Content Include="data\default_monsters\helmed-horror.creature.xml" />
+    <Content Include="data\default_monsters\helmed-horror.jpg" />
+    <Content Include="data\default_monsters\hezrou.creature.xml" />
+    <Content Include="data\default_monsters\hezrou.jpg" />
+    <Content Include="data\default_monsters\hill-giant.creature.xml" />
+    <Content Include="data\default_monsters\hill-giant.jpg" />
+    <Content Include="data\default_monsters\hippogriff.creature.xml" />
+    <Content Include="data\default_monsters\hippogriff.jpg" />
+    <Content Include="data\default_monsters\hobgoblin-captain.creature.xml" />
+    <Content Include="data\default_monsters\hobgoblin-captain.jpg" />
+    <Content Include="data\default_monsters\hobgoblin-iron-shadow.creature.xml" />
+    <Content Include="data\default_monsters\hobgoblin-iron-shadow.jpg" />
+    <Content Include="data\default_monsters\hobgoblin.creature.xml" />
+    <Content Include="data\default_monsters\hobgoblin.jpg" />
+    <Content Include="data\default_monsters\homunculus.creature.xml" />
+    <Content Include="data\default_monsters\homunculus.jpg" />
+    <Content Include="data\default_monsters\hook-horror.creature.xml" />
+    <Content Include="data\default_monsters\hook-horror.jpg" />
+    <Content Include="data\default_monsters\horned-devil.creature.xml" />
+    <Content Include="data\default_monsters\horned-devil.jpg" />
+    <Content Include="data\default_monsters\hunter-shark.creature.xml" />
+    <Content Include="data\default_monsters\hunter-shark.jpg" />
+    <Content Include="data\default_monsters\hydra.creature.xml" />
+    <Content Include="data\default_monsters\hydra.jpg" />
+    <Content Include="data\default_monsters\hyena.creature.xml" />
+    <Content Include="data\default_monsters\hyena.jpg" />
+    <Content Include="data\default_monsters\ice-devil.creature.xml" />
+    <Content Include="data\default_monsters\ice-devil.jpg" />
+    <Content Include="data\default_monsters\ice-mephit.creature.xml" />
+    <Content Include="data\default_monsters\ice-mephit.jpg" />
+    <Content Include="data\default_monsters\imp.creature.xml" />
+    <Content Include="data\default_monsters\imp.jpg" />
+    <Content Include="data\default_monsters\invisible-stalker.creature.xml" />
+    <Content Include="data\default_monsters\invisible-stalker.jpg" />
+    <Content Include="data\default_monsters\iron-golem.creature.xml" />
+    <Content Include="data\default_monsters\iron-golem.jpg" />
+    <Content Include="data\default_monsters\jackal.creature.xml" />
+    <Content Include="data\default_monsters\jackal.jpg" />
+    <Content Include="data\default_monsters\jackalwere.creature.xml" />
+    <Content Include="data\default_monsters\jackalwere.jpg" />
+    <Content Include="data\default_monsters\kenku.creature.xml" />
+    <Content Include="data\default_monsters\kenku.jpg" />
+    <Content Include="data\default_monsters\killer-whale.creature.xml" />
+    <Content Include="data\default_monsters\killer-whale.jpg" />
+    <Content Include="data\default_monsters\knight.creature.xml" />
+    <Content Include="data\default_monsters\knight.jpg" />
+    <Content Include="data\default_monsters\kobold-inventor.creature.xml" />
+    <Content Include="data\default_monsters\kobold-inventor.jpg" />
+    <Content Include="data\default_monsters\kobold.creature.xml" />
+    <Content Include="data\default_monsters\kobold.jpg" />
+    <Content Include="data\default_monsters\kraken.creature.xml" />
+    <Content Include="data\default_monsters\kraken.jpg" />
+    <Content Include="data\default_monsters\kuo-toa-archpriest.creature.xml" />
+    <Content Include="data\default_monsters\kuo-toa-archpriest.jpg" />
+    <Content Include="data\default_monsters\kuo-toa-whip.creature.xml" />
+    <Content Include="data\default_monsters\kuo-toa-whip.jpg" />
+    <Content Include="data\default_monsters\kuo-toa.creature.xml" />
+    <Content Include="data\default_monsters\kuo-toa.jpg" />
+    <Content Include="data\default_monsters\lamia.creature.xml" />
+    <Content Include="data\default_monsters\lamia.jpg" />
+    <Content Include="data\default_monsters\lemure.creature.xml" />
+    <Content Include="data\default_monsters\lemure.jpg" />
+    <Content Include="data\default_monsters\lich.creature.xml" />
+    <Content Include="data\default_monsters\lich.jpg" />
+    <Content Include="data\default_monsters\lion.creature.xml" />
+    <Content Include="data\default_monsters\lion.jpg" />
+    <Content Include="data\default_monsters\lizard-king-queen.creature.xml" />
+    <Content Include="data\default_monsters\lizard-king-queen.jpg" />
+    <Content Include="data\default_monsters\lizard.creature.xml" />
+    <Content Include="data\default_monsters\lizard.jpg" />
+    <Content Include="data\default_monsters\lizardfolk-shaman.creature.xml" />
+    <Content Include="data\default_monsters\lizardfolk-shaman.jpg" />
+    <Content Include="data\default_monsters\lizardfolk.creature.xml" />
+    <Content Include="data\default_monsters\lizardfolk.jpg" />
+    <Content Include="data\default_monsters\mage.creature.xml" />
+    <Content Include="data\default_monsters\mage.jpg" />
+    <Content Include="data\default_monsters\magma-mephit.creature.xml" />
+    <Content Include="data\default_monsters\magma-mephit.jpg" />
+    <Content Include="data\default_monsters\magmin.creature.xml" />
+    <Content Include="data\default_monsters\magmin.jpg" />
+    <Content Include="data\default_monsters\mammoth.creature.xml" />
+    <Content Include="data\default_monsters\mammoth.jpg" />
+    <Content Include="data\default_monsters\manticore.creature.xml" />
+    <Content Include="data\default_monsters\manticore.jpg" />
+    <Content Include="data\default_monsters\marilith.creature.xml" />
+    <Content Include="data\default_monsters\marilith.jpg" />
+    <Content Include="data\default_monsters\mastiff.creature.xml" />
+    <Content Include="data\default_monsters\mastiff.jpg" />
+    <Content Include="data\default_monsters\medusa.creature.xml" />
+    <Content Include="data\default_monsters\medusa.jpg" />
+    <Content Include="data\default_monsters\merfolk.creature.xml" />
+    <Content Include="data\default_monsters\merfolk.jpg" />
+    <Content Include="data\default_monsters\merrow.creature.xml" />
+    <Content Include="data\default_monsters\merrow.jpg" />
+    <Content Include="data\default_monsters\mezzoloth.creature.xml" />
+    <Content Include="data\default_monsters\mezzoloth.jpg" />
+    <Content Include="data\default_monsters\mimic.creature.xml" />
+    <Content Include="data\default_monsters\mimic.jpg" />
+    <Content Include="data\default_monsters\mindwitness.creature.xml" />
+    <Content Include="data\default_monsters\mindwitness.jpg" />
+    <Content Include="data\default_monsters\minotaur-skeleton.creature.xml" />
+    <Content Include="data\default_monsters\minotaur-skeleton.jpg" />
+    <Content Include="data\default_monsters\minotaur.creature.xml" />
+    <Content Include="data\default_monsters\minotaur.jpg" />
+    <Content Include="data\default_monsters\mud-mephit.creature.xml" />
+    <Content Include="data\default_monsters\mud-mephit.jpg" />
+    <Content Include="data\default_monsters\mule.creature.xml" />
+    <Content Include="data\default_monsters\mule.jpg" />
+    <Content Include="data\default_monsters\mummy-lord.creature.xml" />
+    <Content Include="data\default_monsters\mummy-lord.jpg" />
+    <Content Include="data\default_monsters\mummy.creature.xml" />
+    <Content Include="data\default_monsters\mummy.jpg" />
+    <Content Include="data\default_monsters\nalfeshnee.creature.xml" />
+    <Content Include="data\default_monsters\nalfeshnee.jpg" />
+    <Content Include="data\default_monsters\night-hag.creature.xml" />
+    <Content Include="data\default_monsters\night-hag.jpg" />
+    <Content Include="data\default_monsters\nightmare.creature.xml" />
+    <Content Include="data\default_monsters\nightmare.jpg" />
+    <Content Include="data\default_monsters\nilbog.creature.xml" />
+    <Content Include="data\default_monsters\nilbog.jpg" />
+    <Content Include="data\default_monsters\noble.creature.xml" />
+    <Content Include="data\default_monsters\noble.jpg" />
+    <Content Include="data\default_monsters\nothic.creature.xml" />
+    <Content Include="data\default_monsters\nothic.jpg" />
+    <Content Include="data\default_monsters\nycaloth.creature.xml" />
+    <Content Include="data\default_monsters\nycaloth.jpg" />
+    <Content Include="data\default_monsters\ochre-jelly.creature.xml" />
+    <Content Include="data\default_monsters\ochre-jelly.jpg" />
+    <Content Include="data\default_monsters\octopus.creature.xml" />
+    <Content Include="data\default_monsters\octopus.jpg" />
+    <Content Include="data\default_monsters\ogre-zombie.creature.xml" />
+    <Content Include="data\default_monsters\ogre-zombie.jpg" />
+    <Content Include="data\default_monsters\ogre.creature.xml" />
+    <Content Include="data\default_monsters\ogre.jpg" />
+    <Content Include="data\default_monsters\oni.creature.xml" />
+    <Content Include="data\default_monsters\oni.jpg" />
+    <Content Include="data\default_monsters\orc-eye-of-gruumsh.creature.xml" />
+    <Content Include="data\default_monsters\orc-eye-of-gruumsh.jpg" />
+    <Content Include="data\default_monsters\orc.creature.xml" />
+    <Content Include="data\default_monsters\orc.jpg" />
+    <Content Include="data\default_monsters\orog.creature.xml" />
+    <Content Include="data\default_monsters\orog.jpg" />
+    <Content Include="data\default_monsters\otyugh.creature.xml" />
+    <Content Include="data\default_monsters\otyugh.jpg" />
+    <Content Include="data\default_monsters\owl.creature.xml" />
+    <Content Include="data\default_monsters\owl.jpg" />
+    <Content Include="data\default_monsters\owlbear.creature.xml" />
+    <Content Include="data\default_monsters\owlbear.jpg" />
+    <Content Include="data\default_monsters\panther.creature.xml" />
+    <Content Include="data\default_monsters\panther.jpg" />
+    <Content Include="data\default_monsters\pegasus.creature.xml" />
+    <Content Include="data\default_monsters\pegasus.jpg" />
+    <Content Include="data\default_monsters\peryton.creature.xml" />
+    <Content Include="data\default_monsters\peryton.jpg" />
+    <Content Include="data\default_monsters\phase-spider.creature.xml" />
+    <Content Include="data\default_monsters\phase-spider.jpg" />
+    <Content Include="data\default_monsters\piercer.creature.xml" />
+    <Content Include="data\default_monsters\piercer.jpg" />
+    <Content Include="data\default_monsters\pit-fiend.creature.xml" />
+    <Content Include="data\default_monsters\pit-fiend.jpg" />
+    <Content Include="data\default_monsters\planetar.creature.xml" />
+    <Content Include="data\default_monsters\planetar.jpg" />
+    <Content Include="data\default_monsters\plesiosaurus.creature.xml" />
+    <Content Include="data\default_monsters\plesiosaurus.jpg" />
+    <Content Include="data\default_monsters\poisonous-snake.creature.xml" />
+    <Content Include="data\default_monsters\poisonous-snake.jpg" />
+    <Content Include="data\default_monsters\polar-bear.creature.xml" />
+    <Content Include="data\default_monsters\polar-bear.jpg" />
+    <Content Include="data\default_monsters\pony.creature.xml" />
+    <Content Include="data\default_monsters\pony.jpg" />
+    <Content Include="data\default_monsters\priest.creature.xml" />
+    <Content Include="data\default_monsters\priest.jpg" />
+    <Content Include="data\default_monsters\pseudodragon.creature.xml" />
+    <Content Include="data\default_monsters\pseudodragon.jpg" />
+    <Content Include="data\default_monsters\pteranodon.creature.xml" />
+    <Content Include="data\default_monsters\pteranodon.jpg" />
+    <Content Include="data\default_monsters\purple-worm.creature.xml" />
+    <Content Include="data\default_monsters\purple-worm.jpg" />
+    <Content Include="data\default_monsters\quasit.creature.xml" />
+    <Content Include="data\default_monsters\quasit.jpg" />
+    <Content Include="data\default_monsters\quetzalcoatlus.creature.xml" />
+    <Content Include="data\default_monsters\quetzalcoatlus.jpg" />
+    <Content Include="data\default_monsters\quipper.creature.xml" />
+    <Content Include="data\default_monsters\quipper.jpg" />
+    <Content Include="data\default_monsters\rakshasa.creature.xml" />
+    <Content Include="data\default_monsters\rakshasa.jpg" />
+    <Content Include="data\default_monsters\rat.creature.xml" />
+    <Content Include="data\default_monsters\rat.jpg" />
+    <Content Include="data\default_monsters\raven.creature.xml" />
+    <Content Include="data\default_monsters\raven.jpg" />
+    <Content Include="data\default_monsters\red-dragon-wyrmling.creature.xml" />
+    <Content Include="data\default_monsters\red-dragon-wyrmling.jpg" />
+    <Content Include="data\default_monsters\reef-shark.creature.xml" />
+    <Content Include="data\default_monsters\reef-shark.jpg" />
+    <Content Include="data\default_monsters\remorhaz.creature.xml" />
+    <Content Include="data\default_monsters\remorhaz.jpg" />
+    <Content Include="data\default_monsters\revenant.creature.xml" />
+    <Content Include="data\default_monsters\revenant.jpg" />
+    <Content Include="data\default_monsters\rhinoceros.creature.xml" />
+    <Content Include="data\default_monsters\rhinoceros.jpg" />
+    <Content Include="data\default_monsters\riding-horse.creature.xml" />
+    <Content Include="data\default_monsters\riding-horse.jpg" />
+    <Content Include="data\default_monsters\roc.creature.xml" />
+    <Content Include="data\default_monsters\roc.jpg" />
+    <Content Include="data\default_monsters\roper.creature.xml" />
+    <Content Include="data\default_monsters\roper.jpg" />
+    <Content Include="data\default_monsters\rug-of-smothering.creature.xml" />
+    <Content Include="data\default_monsters\rug-of-smothering.jpg" />
+    <Content Include="data\default_monsters\rust-monster.creature.xml" />
+    <Content Include="data\default_monsters\rust-monster.jpg" />
+    <Content Include="data\default_monsters\saber-toothed-tiger.creature.xml" />
+    <Content Include="data\default_monsters\saber-toothed-tiger.jpg" />
+    <Content Include="data\default_monsters\sahuagin.creature.xml" />
+    <Content Include="data\default_monsters\sahuagin.jpg" />
+    <Content Include="data\default_monsters\salamander.creature.xml" />
+    <Content Include="data\default_monsters\salamander.jpg" />
+    <Content Include="data\default_monsters\satyr.creature.xml" />
+    <Content Include="data\default_monsters\satyr.jpg" />
+    <Content Include="data\default_monsters\scorpion.creature.xml" />
+    <Content Include="data\default_monsters\scorpion.jpg" />
+    <Content Include="data\default_monsters\scout.creature.xml" />
+    <Content Include="data\default_monsters\scout.jpg" />
+    <Content Include="data\default_monsters\sea-hag.creature.xml" />
+    <Content Include="data\default_monsters\sea-hag.jpg" />
+    <Content Include="data\default_monsters\sea-horse.creature.xml" />
+    <Content Include="data\default_monsters\sea-horse.jpg" />
+    <Content Include="data\default_monsters\shadow-demon.creature.xml" />
+    <Content Include="data\default_monsters\shadow-demon.jpg" />
+    <Content Include="data\default_monsters\shadow.creature.xml" />
+    <Content Include="data\default_monsters\shadow.jpg" />
+    <Content Include="data\default_monsters\shambling-mound.creature.xml" />
+    <Content Include="data\default_monsters\shambling-mound.jpg" />
+    <Content Include="data\default_monsters\shield-guardian.creature.xml" />
+    <Content Include="data\default_monsters\shield-guardian.jpg" />
+    <Content Include="data\default_monsters\shrieker.creature.xml" />
+    <Content Include="data\default_monsters\shrieker.jpg" />
+    <Content Include="data\default_monsters\silver-dragon-wyrmling.creature.xml" />
+    <Content Include="data\default_monsters\silver-dragon-wyrmling.jpg" />
+    <Content Include="data\default_monsters\skeleton.creature.xml" />
+    <Content Include="data\default_monsters\skeleton.jpg" />
+    <Content Include="data\default_monsters\slithering-tracker.creature.xml" />
+    <Content Include="data\default_monsters\slithering-tracker.jpg" />
+    <Content Include="data\default_monsters\smoke-mephit.creature.xml" />
+    <Content Include="data\default_monsters\smoke-mephit.jpg" />
+    <Content Include="data\default_monsters\solar.creature.xml" />
+    <Content Include="data\default_monsters\solar.jpg" />
+    <Content Include="data\default_monsters\spectator.creature.xml" />
+    <Content Include="data\default_monsters\spectator.jpg" />
+    <Content Include="data\default_monsters\specter.creature.xml" />
+    <Content Include="data\default_monsters\specter.jpg" />
+    <Content Include="data\default_monsters\spider.creature.xml" />
+    <Content Include="data\default_monsters\spider.jpg" />
+    <Content Include="data\default_monsters\spirit-naga.creature.xml" />
+    <Content Include="data\default_monsters\spirit-naga.jpg" />
+    <Content Include="data\default_monsters\sprite.creature.xml" />
+    <Content Include="data\default_monsters\sprite.jpg" />
+    <Content Include="data\default_monsters\spy.creature.xml" />
+    <Content Include="data\default_monsters\spy.jpg" />
+    <Content Include="data\default_monsters\steam-mephit.creature.xml" />
+    <Content Include="data\default_monsters\steam-mephit.jpg" />
+    <Content Include="data\default_monsters\stirge.creature.xml" />
+    <Content Include="data\default_monsters\stirge.jpg" />
+    <Content Include="data\default_monsters\stone-giant-dreamwalker.creature.xml" />
+    <Content Include="data\default_monsters\stone-giant-dreamwalker.jpg" />
+    <Content Include="data\default_monsters\stone-giant.creature.xml" />
+    <Content Include="data\default_monsters\stone-giant.jpg" />
+    <Content Include="data\default_monsters\stone-golem.creature.xml" />
+    <Content Include="data\default_monsters\stone-golem.jpg" />
+    <Content Include="data\default_monsters\storm-giant.creature.xml" />
+    <Content Include="data\default_monsters\storm-giant.jpg" />
+    <Content Include="data\default_monsters\succubus.creature.xml" />
+    <Content Include="data\default_monsters\succubus.jpg" />
+    <Content Include="data\default_monsters\swarm-of-bats.creature.xml" />
+    <Content Include="data\default_monsters\swarm-of-bats.jpg" />
+    <Content Include="data\default_monsters\swarm-of-insects.creature.xml" />
+    <Content Include="data\default_monsters\swarm-of-insects.jpg" />
+    <Content Include="data\default_monsters\swarm-of-poisonous-snakes.creature.xml" />
+    <Content Include="data\default_monsters\swarm-of-poisonous-snakes.jpg" />
+    <Content Include="data\default_monsters\swarm-of-quippers.creature.xml" />
+    <Content Include="data\default_monsters\swarm-of-quippers.jpg" />
+    <Content Include="data\default_monsters\swarm-of-rats.creature.xml" />
+    <Content Include="data\default_monsters\swarm-of-rats.jpg" />
+    <Content Include="data\default_monsters\swarm-of-ravens.creature.xml" />
+    <Content Include="data\default_monsters\swarm-of-ravens.jpg" />
+    <Content Include="data\default_monsters\swarm-of-rot-grubs.creature.xml" />
+    <Content Include="data\default_monsters\swarm-of-rot-grubs.jpg" />
+    <Content Include="data\default_monsters\tanarukk.creature.xml" />
+    <Content Include="data\default_monsters\tanarukk.jpg" />
+    <Content Include="data\default_monsters\tarrasque.creature.xml" />
+    <Content Include="data\default_monsters\tarrasque.jpg" />
+    <Content Include="data\default_monsters\thug.creature.xml" />
+    <Content Include="data\default_monsters\thug.jpg" />
+    <Content Include="data\default_monsters\tiger.creature.xml" />
+    <Content Include="data\default_monsters\tiger.jpg" />
+    <Content Include="data\default_monsters\treant.creature.xml" />
+    <Content Include="data\default_monsters\treant.jpg" />
+    <Content Include="data\default_monsters\tribal-warrior.creature.xml" />
+    <Content Include="data\default_monsters\tribal-warrior.jpg" />
+    <Content Include="data\default_monsters\triceratops.creature.xml" />
+    <Content Include="data\default_monsters\triceratops.jpg" />
+    <Content Include="data\default_monsters\troglodyte.creature.xml" />
+    <Content Include="data\default_monsters\troglodyte.jpg" />
+    <Content Include="data\default_monsters\troll.creature.xml" />
+    <Content Include="data\default_monsters\troll.jpg" />
+    <Content Include="data\default_monsters\twig-blight.creature.xml" />
+    <Content Include="data\default_monsters\twig-blight.jpg" />
+    <Content Include="data\default_monsters\tyrannosaurus-rex.creature.xml" />
+    <Content Include="data\default_monsters\tyrannosaurus-rex.jpg" />
+    <Content Include="data\default_monsters\umber-hulk.creature.xml" />
+    <Content Include="data\default_monsters\umber-hulk.jpg" />
+    <Content Include="data\default_monsters\unicorn.creature.xml" />
+    <Content Include="data\default_monsters\unicorn.jpg" />
+    <Content Include="data\default_monsters\vampire-spawn.creature.xml" />
+    <Content Include="data\default_monsters\vampire-spawn.jpg" />
+    <Content Include="data\default_monsters\vampire.creature.xml" />
+    <Content Include="data\default_monsters\vampire.jpg" />
+    <Content Include="data\default_monsters\veteran.creature.xml" />
+    <Content Include="data\default_monsters\veteran.jpg" />
+    <Content Include="data\default_monsters\violet-fungus.creature.xml" />
+    <Content Include="data\default_monsters\violet-fungus.jpg" />
+    <Content Include="data\default_monsters\vrock.creature.xml" />
+    <Content Include="data\default_monsters\vrock.jpg" />
+    <Content Include="data\default_monsters\vulture.creature.xml" />
+    <Content Include="data\default_monsters\vulture.jpg" />
+    <Content Include="data\default_monsters\warhorse-skeleton.creature.xml" />
+    <Content Include="data\default_monsters\warhorse-skeleton.jpg" />
+    <Content Include="data\default_monsters\warhorse.creature.xml" />
+    <Content Include="data\default_monsters\warhorse.jpg" />
+    <Content Include="data\default_monsters\water-elemental.creature.xml" />
+    <Content Include="data\default_monsters\water-elemental.jpg" />
+    <Content Include="data\default_monsters\water-weird.creature.xml" />
+    <Content Include="data\default_monsters\water-weird.jpg" />
+    <Content Include="data\default_monsters\weasel.creature.xml" />
+    <Content Include="data\default_monsters\weasel.jpg" />
+    <Content Include="data\default_monsters\werebear.creature.xml" />
+    <Content Include="data\default_monsters\werebear.jpg" />
+    <Content Include="data\default_monsters\wereboar.creature.xml" />
+    <Content Include="data\default_monsters\wereboar.jpg" />
+    <Content Include="data\default_monsters\wererat.creature.xml" />
+    <Content Include="data\default_monsters\wererat.jpg" />
+    <Content Include="data\default_monsters\weretiger.creature.xml" />
+    <Content Include="data\default_monsters\weretiger.jpg" />
+    <Content Include="data\default_monsters\werewolf.creature.xml" />
+    <Content Include="data\default_monsters\werewolf.jpg" />
+    <Content Include="data\default_monsters\white-dragon-wyrmling.creature.xml" />
+    <Content Include="data\default_monsters\white-dragon-wyrmling.jpg" />
+    <Content Include="data\default_monsters\wight.creature.xml" />
+    <Content Include="data\default_monsters\wight.jpg" />
+    <Content Include="data\default_monsters\will-o--wisp.creature.xml" />
+    <Content Include="data\default_monsters\will-o--wisp.jpg" />
+    <Content Include="data\default_monsters\winged-kobold.creature.xml" />
+    <Content Include="data\default_monsters\winged-kobold.jpg" />
+    <Content Include="data\default_monsters\winter-wolf.creature.xml" />
+    <Content Include="data\default_monsters\winter-wolf.jpg" />
+    <Content Include="data\default_monsters\wolf.creature.xml" />
+    <Content Include="data\default_monsters\wolf.jpg" />
+    <Content Include="data\default_monsters\worg.creature.xml" />
+    <Content Include="data\default_monsters\worg.jpg" />
+    <Content Include="data\default_monsters\wraith.creature.xml" />
+    <Content Include="data\default_monsters\wraith.jpg" />
+    <Content Include="data\default_monsters\wyvern.creature.xml" />
+    <Content Include="data\default_monsters\wyvern.jpg" />
+    <Content Include="data\default_monsters\xorn.creature.xml" />
+    <Content Include="data\default_monsters\xorn.jpg" />
+    <Content Include="data\default_monsters\yeti.creature.xml" />
+    <Content Include="data\default_monsters\yeti.jpg" />
+    <Content Include="data\default_monsters\young-black-dragon.creature.xml" />
+    <Content Include="data\default_monsters\young-black-dragon.jpg" />
+    <Content Include="data\default_monsters\young-blue-dragon.creature.xml" />
+    <Content Include="data\default_monsters\young-blue-dragon.jpg" />
+    <Content Include="data\default_monsters\young-brass-dragon.creature.xml" />
+    <Content Include="data\default_monsters\young-brass-dragon.jpg" />
+    <Content Include="data\default_monsters\young-bronze-dragon.creature.xml" />
+    <Content Include="data\default_monsters\young-bronze-dragon.jpg" />
+    <Content Include="data\default_monsters\young-copper-dragon.creature.xml" />
+    <Content Include="data\default_monsters\young-copper-dragon.jpg" />
+    <Content Include="data\default_monsters\young-gold-dragon.creature.xml" />
+    <Content Include="data\default_monsters\young-gold-dragon.jpg" />
+    <Content Include="data\default_monsters\young-green-dragon.creature.xml" />
+    <Content Include="data\default_monsters\young-green-dragon.jpg" />
+    <Content Include="data\default_monsters\young-red-dragon.creature.xml" />
+    <Content Include="data\default_monsters\young-red-dragon.jpg" />
+    <Content Include="data\default_monsters\young-silver-dragon.creature.xml" />
+    <Content Include="data\default_monsters\young-silver-dragon.jpg" />
+    <Content Include="data\default_monsters\young-white-dragon.creature.xml" />
+    <Content Include="data\default_monsters\young-white-dragon.jpg" />
+    <Content Include="data\default_monsters\yuan-ti-abomination.creature.xml" />
+    <Content Include="data\default_monsters\yuan-ti-abomination.jpg" />
+    <Content Include="data\default_monsters\yuan-ti-malison.creature.xml" />
+    <Content Include="data\default_monsters\yuan-ti-malison.jpg" />
+    <Content Include="data\default_monsters\yuan-ti-nightmare-speaker.creature.xml" />
+    <Content Include="data\default_monsters\yuan-ti-nightmare-speaker.jpg" />
+    <Content Include="data\default_monsters\yuan-ti-pureblood.creature.xml" />
+    <Content Include="data\default_monsters\yuan-ti-pureblood.jpg" />
+    <Content Include="data\default_monsters\zombie.creature.xml" />
+    <Content Include="data\default_monsters\zombie.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
