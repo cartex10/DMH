@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DungeonMasterHelper.exe" size="32956360">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DungeonMasterHelper.exe" size="32956872">
       <assemblyIdentity name="DungeonMasterHelper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jkrNP7IOuaCDzn/tu4x2+NGnWCVTowb8KwwgCK+6tjo=</dsig:DigestValue>
+        <dsig:DigestValue>L3SAf/UGrgvf/qBlnfHjWBl5aDx4Dwpax/C/Fa6mbnI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -61,6 +61,14 @@ namespace Dungeon_Master_Helper
             this.label1 = new System.Windows.Forms.Label();
             this.continueButt = new System.Windows.Forms.Button();
             this.buttonPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttBar = new System.Windows.Forms.SplitContainer();
+            this.editConditionsButt = new System.Windows.Forms.Button();
+            this.dcCheckButt = new System.Windows.Forms.Button();
+            this.editHealthButt = new System.Windows.Forms.Button();
+            this.openStatsButt = new System.Windows.Forms.Button();
+            this.initiativeButt = new System.Windows.Forms.Button();
+            this.deleteButt = new System.Windows.Forms.Button();
+            this.changeNameButt = new System.Windows.Forms.Button();
             this.fighterPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.fighterTable = new System.Windows.Forms.TableLayoutPanel();
             this.baseFighterTable = new System.Windows.Forms.TableLayoutPanel();
@@ -82,18 +90,14 @@ namespace Dungeon_Master_Helper
             this.initLabel = new System.Windows.Forms.Label();
             this.initNumLabel = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.editConditionsButt = new System.Windows.Forms.Button();
-            this.editHealthButt = new System.Windows.Forms.Button();
-            this.initiativeButt = new System.Windows.Forms.Button();
-            this.openStatsButt = new System.Windows.Forms.Button();
-            this.dcCheckButt = new System.Windows.Forms.Button();
-            this.changeNameButt = new System.Windows.Forms.Button();
-            this.deleteButt = new System.Windows.Forms.Button();
-            this.buttBar = new System.Windows.Forms.SplitContainer();
             this.menuStrip.SuspendLayout();
             this.mainTable.SuspendLayout();
             this.InitiativeLabelTable.SuspendLayout();
             this.buttonPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttBar)).BeginInit();
+            this.buttBar.Panel1.SuspendLayout();
+            this.buttBar.Panel2.SuspendLayout();
+            this.buttBar.SuspendLayout();
             this.fighterPanel.SuspendLayout();
             this.fighterTable.SuspendLayout();
             this.baseFighterTable.SuspendLayout();
@@ -102,10 +106,6 @@ namespace Dungeon_Master_Helper
             this.initTable.SuspendLayout();
             this.baseInitTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.initPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttBar)).BeginInit();
-            this.buttBar.Panel1.SuspendLayout();
-            this.buttBar.Panel2.SuspendLayout();
-            this.buttBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -132,43 +132,45 @@ namespace Dungeon_Master_Helper
             this.loadEncounterToolStripMenuItem,
             this.savePartyToolStripMenuItem,
             this.loadPartyToolStripMenuItem});
-            this.fileToolStripMenuItem.Enabled = false;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newEncounterToolStripMenuItem
             // 
+            this.newEncounterToolStripMenuItem.Enabled = false;
             this.newEncounterToolStripMenuItem.Name = "newEncounterToolStripMenuItem";
-            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.newEncounterToolStripMenuItem.Text = "New Encounter";
             this.newEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // saveEncounterToolStripMenuItem
             // 
             this.saveEncounterToolStripMenuItem.Name = "saveEncounterToolStripMenuItem";
-            this.saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.saveEncounterToolStripMenuItem.Text = "Save Encounter";
-            this.saveEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            this.saveEncounterToolStripMenuItem.Click += new System.EventHandler(this.saveEncounterToolStripMenuItem_Click);
             // 
             // loadEncounterToolStripMenuItem
             // 
             this.loadEncounterToolStripMenuItem.Name = "loadEncounterToolStripMenuItem";
-            this.loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loadEncounterToolStripMenuItem.Text = "Load Encounter";
-            this.loadEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            this.loadEncounterToolStripMenuItem.Click += new System.EventHandler(this.loadEncounterToolStripMenuItem_Click);
             // 
             // savePartyToolStripMenuItem
             // 
+            this.savePartyToolStripMenuItem.Enabled = false;
             this.savePartyToolStripMenuItem.Name = "savePartyToolStripMenuItem";
-            this.savePartyToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.savePartyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.savePartyToolStripMenuItem.Text = "Save Party";
             this.savePartyToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
             // loadPartyToolStripMenuItem
             // 
+            this.loadPartyToolStripMenuItem.Enabled = false;
             this.loadPartyToolStripMenuItem.Name = "loadPartyToolStripMenuItem";
-            this.loadPartyToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.loadPartyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loadPartyToolStripMenuItem.Text = "Load Party";
             this.loadPartyToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -403,6 +405,141 @@ namespace Dungeon_Master_Helper
             this.buttonPanel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.buttonPanel.Size = new System.Drawing.Size(790, 40);
             this.buttonPanel.TabIndex = 1;
+            // 
+            // buttBar
+            // 
+            this.buttBar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttBar.Location = new System.Drawing.Point(-3, 3);
+            this.buttBar.Name = "buttBar";
+            // 
+            // buttBar.Panel1
+            // 
+            this.buttBar.Panel1.Controls.Add(this.editConditionsButt);
+            this.buttBar.Panel1.Controls.Add(this.dcCheckButt);
+            this.buttBar.Panel1.Controls.Add(this.editHealthButt);
+            this.buttBar.Panel1.Controls.Add(this.openStatsButt);
+            this.buttBar.Panel1.Controls.Add(this.initiativeButt);
+            this.buttBar.Panel1.Padding = new System.Windows.Forms.Padding(1);
+            this.buttBar.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            // 
+            // buttBar.Panel2
+            // 
+            this.buttBar.Panel2.Controls.Add(this.deleteButt);
+            this.buttBar.Panel2.Controls.Add(this.changeNameButt);
+            this.buttBar.Panel2.Padding = new System.Windows.Forms.Padding(1);
+            this.buttBar.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.buttBar.Size = new System.Drawing.Size(790, 40);
+            this.buttBar.SplitterDistance = 472;
+            this.buttBar.TabIndex = 7;
+            // 
+            // editConditionsButt
+            // 
+            this.editConditionsButt.AutoSize = true;
+            this.editConditionsButt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.editConditionsButt.Enabled = false;
+            this.editConditionsButt.Image = ((System.Drawing.Image)(resources.GetObject("editConditionsButt.Image")));
+            this.editConditionsButt.Location = new System.Drawing.Point(229, 1);
+            this.editConditionsButt.Margin = new System.Windows.Forms.Padding(4);
+            this.editConditionsButt.Name = "editConditionsButt";
+            this.editConditionsButt.Size = new System.Drawing.Size(45, 38);
+            this.editConditionsButt.TabIndex = 0;
+            this.editConditionsButt.Tag = "Edit Conditions";
+            this.editConditionsButt.UseVisualStyleBackColor = true;
+            this.editConditionsButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            this.editConditionsButt.MouseHover += new System.EventHandler(this.buttHover);
+            // 
+            // dcCheckButt
+            // 
+            this.dcCheckButt.AutoSize = true;
+            this.dcCheckButt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dcCheckButt.Enabled = false;
+            this.dcCheckButt.Image = ((System.Drawing.Image)(resources.GetObject("dcCheckButt.Image")));
+            this.dcCheckButt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.dcCheckButt.Location = new System.Drawing.Point(274, 1);
+            this.dcCheckButt.Margin = new System.Windows.Forms.Padding(4);
+            this.dcCheckButt.Name = "dcCheckButt";
+            this.dcCheckButt.Size = new System.Drawing.Size(50, 38);
+            this.dcCheckButt.TabIndex = 4;
+            this.dcCheckButt.Tag = "DC Check";
+            this.dcCheckButt.UseVisualStyleBackColor = true;
+            this.dcCheckButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            this.dcCheckButt.MouseHover += new System.EventHandler(this.buttHover);
+            // 
+            // editHealthButt
+            // 
+            this.editHealthButt.AutoSize = true;
+            this.editHealthButt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.editHealthButt.Image = ((System.Drawing.Image)(resources.GetObject("editHealthButt.Image")));
+            this.editHealthButt.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.editHealthButt.Location = new System.Drawing.Point(324, 1);
+            this.editHealthButt.Margin = new System.Windows.Forms.Padding(4);
+            this.editHealthButt.Name = "editHealthButt";
+            this.editHealthButt.Size = new System.Drawing.Size(50, 38);
+            this.editHealthButt.TabIndex = 1;
+            this.editHealthButt.Tag = "Deal Damage/Heal";
+            this.editHealthButt.UseVisualStyleBackColor = true;
+            this.editHealthButt.Click += new System.EventHandler(this.editHPButt_Click);
+            this.editHealthButt.MouseHover += new System.EventHandler(this.buttHover);
+            // 
+            // openStatsButt
+            // 
+            this.openStatsButt.AutoSize = true;
+            this.openStatsButt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.openStatsButt.Image = ((System.Drawing.Image)(resources.GetObject("openStatsButt.Image")));
+            this.openStatsButt.Location = new System.Drawing.Point(374, 1);
+            this.openStatsButt.Margin = new System.Windows.Forms.Padding(4);
+            this.openStatsButt.Name = "openStatsButt";
+            this.openStatsButt.Size = new System.Drawing.Size(48, 38);
+            this.openStatsButt.TabIndex = 3;
+            this.openStatsButt.Tag = "Open Stats";
+            this.openStatsButt.UseVisualStyleBackColor = true;
+            this.openStatsButt.Click += new System.EventHandler(this.openStatsButt_Click);
+            this.openStatsButt.MouseHover += new System.EventHandler(this.buttHover);
+            // 
+            // initiativeButt
+            // 
+            this.initiativeButt.AutoSize = true;
+            this.initiativeButt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.initiativeButt.Image = ((System.Drawing.Image)(resources.GetObject("initiativeButt.Image")));
+            this.initiativeButt.Location = new System.Drawing.Point(422, 1);
+            this.initiativeButt.Margin = new System.Windows.Forms.Padding(4);
+            this.initiativeButt.Name = "initiativeButt";
+            this.initiativeButt.Size = new System.Drawing.Size(49, 38);
+            this.initiativeButt.TabIndex = 2;
+            this.initiativeButt.Tag = "Add/Remove From Initiative";
+            this.initiativeButt.UseVisualStyleBackColor = true;
+            this.initiativeButt.Click += new System.EventHandler(this.initiativeButt_Click);
+            this.initiativeButt.MouseHover += new System.EventHandler(this.buttHover);
+            // 
+            // deleteButt
+            // 
+            this.deleteButt.AutoSize = true;
+            this.deleteButt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.deleteButt.Image = ((System.Drawing.Image)(resources.GetObject("deleteButt.Image")));
+            this.deleteButt.Location = new System.Drawing.Point(53, 1);
+            this.deleteButt.Margin = new System.Windows.Forms.Padding(4);
+            this.deleteButt.Name = "deleteButt";
+            this.deleteButt.Size = new System.Drawing.Size(52, 38);
+            this.deleteButt.TabIndex = 6;
+            this.deleteButt.Tag = "Delete Creatures";
+            this.deleteButt.UseVisualStyleBackColor = true;
+            this.deleteButt.Click += new System.EventHandler(this.deleteCreature);
+            this.deleteButt.MouseHover += new System.EventHandler(this.buttHover);
+            // 
+            // changeNameButt
+            // 
+            this.changeNameButt.AutoSize = true;
+            this.changeNameButt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.changeNameButt.Image = ((System.Drawing.Image)(resources.GetObject("changeNameButt.Image")));
+            this.changeNameButt.Location = new System.Drawing.Point(1, 1);
+            this.changeNameButt.Margin = new System.Windows.Forms.Padding(4);
+            this.changeNameButt.Name = "changeNameButt";
+            this.changeNameButt.Size = new System.Drawing.Size(52, 38);
+            this.changeNameButt.TabIndex = 5;
+            this.changeNameButt.Tag = "Change Name";
+            this.changeNameButt.UseVisualStyleBackColor = true;
+            this.changeNameButt.Click += new System.EventHandler(this.ChangeName);
+            this.changeNameButt.MouseHover += new System.EventHandler(this.buttHover);
             // 
             // fighterPanel
             // 
@@ -722,141 +859,6 @@ namespace Dungeon_Master_Helper
             this.initNumLabel.Size = new System.Drawing.Size(72, 25);
             this.initNumLabel.TabIndex = 2;
             // 
-            // editConditionsButt
-            // 
-            this.editConditionsButt.AutoSize = true;
-            this.editConditionsButt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.editConditionsButt.Enabled = false;
-            this.editConditionsButt.Image = ((System.Drawing.Image)(resources.GetObject("editConditionsButt.Image")));
-            this.editConditionsButt.Location = new System.Drawing.Point(229, 1);
-            this.editConditionsButt.Margin = new System.Windows.Forms.Padding(4);
-            this.editConditionsButt.Name = "editConditionsButt";
-            this.editConditionsButt.Size = new System.Drawing.Size(45, 38);
-            this.editConditionsButt.TabIndex = 0;
-            this.editConditionsButt.Tag = "Edit Conditions";
-            this.editConditionsButt.UseVisualStyleBackColor = true;
-            this.editConditionsButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
-            this.editConditionsButt.MouseHover += new System.EventHandler(this.buttHover);
-            // 
-            // editHealthButt
-            // 
-            this.editHealthButt.AutoSize = true;
-            this.editHealthButt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.editHealthButt.Image = ((System.Drawing.Image)(resources.GetObject("editHealthButt.Image")));
-            this.editHealthButt.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.editHealthButt.Location = new System.Drawing.Point(324, 1);
-            this.editHealthButt.Margin = new System.Windows.Forms.Padding(4);
-            this.editHealthButt.Name = "editHealthButt";
-            this.editHealthButt.Size = new System.Drawing.Size(50, 38);
-            this.editHealthButt.TabIndex = 1;
-            this.editHealthButt.Tag = "Deal Damage/Heal";
-            this.editHealthButt.UseVisualStyleBackColor = true;
-            this.editHealthButt.Click += new System.EventHandler(this.editHPButt_Click);
-            this.editHealthButt.MouseHover += new System.EventHandler(this.buttHover);
-            // 
-            // initiativeButt
-            // 
-            this.initiativeButt.AutoSize = true;
-            this.initiativeButt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.initiativeButt.Image = ((System.Drawing.Image)(resources.GetObject("initiativeButt.Image")));
-            this.initiativeButt.Location = new System.Drawing.Point(422, 1);
-            this.initiativeButt.Margin = new System.Windows.Forms.Padding(4);
-            this.initiativeButt.Name = "initiativeButt";
-            this.initiativeButt.Size = new System.Drawing.Size(49, 38);
-            this.initiativeButt.TabIndex = 2;
-            this.initiativeButt.Tag = "Add/Remove From Initiative";
-            this.initiativeButt.UseVisualStyleBackColor = true;
-            this.initiativeButt.Click += new System.EventHandler(this.initiativeButt_Click);
-            this.initiativeButt.MouseHover += new System.EventHandler(this.buttHover);
-            // 
-            // openStatsButt
-            // 
-            this.openStatsButt.AutoSize = true;
-            this.openStatsButt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.openStatsButt.Image = ((System.Drawing.Image)(resources.GetObject("openStatsButt.Image")));
-            this.openStatsButt.Location = new System.Drawing.Point(374, 1);
-            this.openStatsButt.Margin = new System.Windows.Forms.Padding(4);
-            this.openStatsButt.Name = "openStatsButt";
-            this.openStatsButt.Size = new System.Drawing.Size(48, 38);
-            this.openStatsButt.TabIndex = 3;
-            this.openStatsButt.Tag = "Open Stats";
-            this.openStatsButt.UseVisualStyleBackColor = true;
-            this.openStatsButt.Click += new System.EventHandler(this.openStatsButt_Click);
-            this.openStatsButt.MouseHover += new System.EventHandler(this.buttHover);
-            // 
-            // dcCheckButt
-            // 
-            this.dcCheckButt.AutoSize = true;
-            this.dcCheckButt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dcCheckButt.Enabled = false;
-            this.dcCheckButt.Image = ((System.Drawing.Image)(resources.GetObject("dcCheckButt.Image")));
-            this.dcCheckButt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.dcCheckButt.Location = new System.Drawing.Point(274, 1);
-            this.dcCheckButt.Margin = new System.Windows.Forms.Padding(4);
-            this.dcCheckButt.Name = "dcCheckButt";
-            this.dcCheckButt.Size = new System.Drawing.Size(50, 38);
-            this.dcCheckButt.TabIndex = 4;
-            this.dcCheckButt.Tag = "DC Check";
-            this.dcCheckButt.UseVisualStyleBackColor = true;
-            this.dcCheckButt.Click += new System.EventHandler(this.ShowNotImplementedDialog);
-            this.dcCheckButt.MouseHover += new System.EventHandler(this.buttHover);
-            // 
-            // changeNameButt
-            // 
-            this.changeNameButt.AutoSize = true;
-            this.changeNameButt.Dock = System.Windows.Forms.DockStyle.Left;
-            this.changeNameButt.Image = ((System.Drawing.Image)(resources.GetObject("changeNameButt.Image")));
-            this.changeNameButt.Location = new System.Drawing.Point(1, 1);
-            this.changeNameButt.Margin = new System.Windows.Forms.Padding(4);
-            this.changeNameButt.Name = "changeNameButt";
-            this.changeNameButt.Size = new System.Drawing.Size(52, 38);
-            this.changeNameButt.TabIndex = 5;
-            this.changeNameButt.Tag = "Change Name";
-            this.changeNameButt.UseVisualStyleBackColor = true;
-            this.changeNameButt.Click += new System.EventHandler(this.ChangeName);
-            this.changeNameButt.MouseHover += new System.EventHandler(this.buttHover);
-            // 
-            // deleteButt
-            // 
-            this.deleteButt.AutoSize = true;
-            this.deleteButt.Dock = System.Windows.Forms.DockStyle.Left;
-            this.deleteButt.Image = ((System.Drawing.Image)(resources.GetObject("deleteButt.Image")));
-            this.deleteButt.Location = new System.Drawing.Point(53, 1);
-            this.deleteButt.Margin = new System.Windows.Forms.Padding(4);
-            this.deleteButt.Name = "deleteButt";
-            this.deleteButt.Size = new System.Drawing.Size(52, 38);
-            this.deleteButt.TabIndex = 6;
-            this.deleteButt.Tag = "Delete Creatures";
-            this.deleteButt.UseVisualStyleBackColor = true;
-            this.deleteButt.Click += new System.EventHandler(this.deleteCreature);
-            this.deleteButt.MouseHover += new System.EventHandler(this.buttHover);
-            // 
-            // buttBar
-            // 
-            this.buttBar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttBar.Location = new System.Drawing.Point(-3, 3);
-            this.buttBar.Name = "buttBar";
-            // 
-            // buttBar.Panel1
-            // 
-            this.buttBar.Panel1.Controls.Add(this.editConditionsButt);
-            this.buttBar.Panel1.Controls.Add(this.dcCheckButt);
-            this.buttBar.Panel1.Controls.Add(this.editHealthButt);
-            this.buttBar.Panel1.Controls.Add(this.openStatsButt);
-            this.buttBar.Panel1.Controls.Add(this.initiativeButt);
-            this.buttBar.Panel1.Padding = new System.Windows.Forms.Padding(1);
-            this.buttBar.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            // 
-            // buttBar.Panel2
-            // 
-            this.buttBar.Panel2.Controls.Add(this.deleteButt);
-            this.buttBar.Panel2.Controls.Add(this.changeNameButt);
-            this.buttBar.Panel2.Padding = new System.Windows.Forms.Padding(1);
-            this.buttBar.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.buttBar.Size = new System.Drawing.Size(790, 40);
-            this.buttBar.SplitterDistance = 472;
-            this.buttBar.TabIndex = 7;
-            // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -878,6 +880,12 @@ namespace Dungeon_Master_Helper
             this.InitiativeLabelTable.ResumeLayout(false);
             this.InitiativeLabelTable.PerformLayout();
             this.buttonPanel.ResumeLayout(false);
+            this.buttBar.Panel1.ResumeLayout(false);
+            this.buttBar.Panel1.PerformLayout();
+            this.buttBar.Panel2.ResumeLayout(false);
+            this.buttBar.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttBar)).EndInit();
+            this.buttBar.ResumeLayout(false);
             this.fighterPanel.ResumeLayout(false);
             this.fighterPanel.PerformLayout();
             this.fighterTable.ResumeLayout(false);
@@ -889,12 +897,6 @@ namespace Dungeon_Master_Helper
             this.baseInitTable.ResumeLayout(false);
             this.baseInitTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.initPicBox)).EndInit();
-            this.buttBar.Panel1.ResumeLayout(false);
-            this.buttBar.Panel1.PerformLayout();
-            this.buttBar.Panel2.ResumeLayout(false);
-            this.buttBar.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buttBar)).EndInit();
-            this.buttBar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

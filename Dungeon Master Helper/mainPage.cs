@@ -12,11 +12,8 @@ using System.Windows.Forms;
  *  code continue initiative button
  *  add empty default creature which helps quickly make an npc
  *  create tutorial?
- *  Saving/Loading encounters
- *  Rewrite removeFromInit form to be more like deleteCreature()
  *  Data binding??????????
  *  Open stats scaling
- *  Removing from encounter and initiative at the same time
  *  Rolling saving throwss automatically button 
  *  Select all npcs button
  *  Death save tracker when hp = 0
@@ -203,6 +200,58 @@ namespace Dungeon_Master_Helper
         {
             loadDefaultForm form = new loadDefaultForm(this);
             form.Show();
+        }
+
+        private void saveEncounterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(List<Fighter>));
+            System.Windows.Forms.SaveFileDialog saveFileDialog = new System.Windows.Forms.SaveFileDialog
+            {
+                DefaultExt = "xml",
+                Filter = "XML files (*.xml)|*.encounter.xml",
+                Title = "Save Creature",
+                AddExtension = true,
+                SupportMultiDottedExtensions = true
+            };
+            if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "")
+            {
+                System.IO.FileStream file = System.IO.File.Create(saveFileDialog.FileName);
+                writer.Serialize(file, fighterList);
+                file.Close();
+            }
+        }
+
+        private void loadEncounterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.OpenFileDialog openFileDialog = new System.Windows.Forms.OpenFileDialog
+            {
+                Title = "Open Creature",
+                Filter = "XML files (*.xml)|*.encounter.xml",
+                Multiselect = false
+            };
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                System.Xml.Serialization.XmlSerializer reader = new System.Xml.Serialization.XmlSerializer(typeof(List<Fighter>));
+                System.IO.StreamReader file = new System.IO.StreamReader(openFileDialog.FileName);
+                List<Fighter> loaded = new List<Fighter>();
+                loaded = (List<Fighter>)reader.Deserialize(file);
+                file.Close();
+                if(fighterList != null)
+                {
+                    MessageBox.Show("Encounter not empty, please restart app first", "ERROR");
+                    return;
+                }
+                else
+                {
+                    foreach(Fighter f in loaded)
+                    {
+                        Fighter toAdd = new Fighter();
+                        toAdd = f.Convert();
+                        toAdd.id = nextLoadedID++;
+                        addToEncounter(toAdd);
+                    }
+                }
+            }
         }
         //
         //  BUTTON FUNCTIONS
