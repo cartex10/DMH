@@ -17,10 +17,10 @@ using System.Windows.Forms;
  *  Data binding??????????
  *  Open stats scaling
  *  Removing from encounter and initiative at the same time
- *  No healing beyond max hp
  *  Rolling saving throwss automatically button 
  *  Select all npcs button
  *  Death save tracker when hp = 0
+ *  Change all finds to use selectedFighters
  */
 namespace Dungeon_Master_Helper
 {
@@ -685,8 +685,11 @@ namespace Dungeon_Master_Helper
         public void RemoveFromInitiative(Fighter toRem)
         {
             initChar--;
-            initLabelList[initChar].Text = "";
-            initNumLabelList[initChar].Text = "";
+            toRem.init_roll = -9;
+            TableLayoutPanel table = this.initTableList.Find(r => Convert.ToString(r.Tag) == Convert.ToString(toRem.id));
+            table.Controls.Clear();
+            this.initTableList.Remove(table);
+            table.Dispose();
             if (initChar == 0) { initChar = -1; }
             else { SortInitiativeTable(); }
         }

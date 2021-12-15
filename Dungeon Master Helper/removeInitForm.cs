@@ -32,11 +32,10 @@ namespace Dungeon_Master_Helper
             System.Windows.Forms.Button butt = (System.Windows.Forms.Button)sender;
             if((string)butt.Tag == "remove")
             {
-                foreach(mainPage.Fighter i in charList)
+                foreach(mainPage.Fighter i in father.selectedFighters)
                 {
-                    var fighter = father.fighterList.Find(r => Convert.ToString(r.id) == Convert.ToString(i.id));
-                    fighter.init_roll = -9;
-                    father.RemoveFromInitiative(fighter);
+                    i.init_roll = -9;
+                    father.RemoveFromInitiative(i);
                 }
             }
             this.Close();
