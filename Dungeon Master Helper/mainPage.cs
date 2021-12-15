@@ -154,7 +154,7 @@ namespace Dungeon_Master_Helper
         //
         private void newCreatureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            createCreatureForm createCreature = new createCreatureForm();
+            createCreatureForm createCreature = new createCreatureForm(this);
             createCreature.Show();
         }
 
@@ -188,7 +188,7 @@ namespace Dungeon_Master_Helper
             foreach(Fighter i in selectedFighters)
             {
                 //Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(i.Tag));
-                createCreatureForm ccf = new createCreatureForm { Text = "Edit Creature" };
+                createCreatureForm ccf = new createCreatureForm(this) { Text = "Edit Creature" };
                 ccf.LoadFighter(i);
                 ccf.Show();
             }
@@ -237,7 +237,7 @@ namespace Dungeon_Master_Helper
                 //Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(i.Tag));
                 if (temp.user_created)
                 {
-                    createCreatureForm ccf = new createCreatureForm { Text = "Edit Creature" };
+                    createCreatureForm ccf = new createCreatureForm(this) { Text = "Edit Creature" };
                     ccf.LoadFighter(temp);
                     ccf.DisableAll();
                     ccf.Show();

@@ -14,14 +14,16 @@ namespace Dungeon_Master_Helper
 {
     public partial class createCreatureForm : Form
     {
-        public createCreatureForm()
+        public createCreatureForm(mainPage inp)
         {
+            this.father = inp;
             InitializeComponent();
         }
 
         public List<int> damageStr = new List<int> {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
         public bool playable = true;
+        private mainPage father;
 
         private void CalculateStats(object sender, EventArgs e)
         {
@@ -180,12 +182,28 @@ namespace Dungeon_Master_Helper
                 System.IO.FileStream file = System.IO.File.Create(saveFileDialog.FileName);
                 writer.Serialize(file, toSave);
                 file.Close();
+                string text1 = "Load this creature?";
+                string text2 = "";
+                var res = MessageBox.Show(text1, text2, MessageBoxButtons.YesNo);
+                if(res == DialogResult.Yes)
+                {
+                    System.Xml.Serialization.XmlSerializer reader = new System.Xml.Serialization.XmlSerializer(typeof(mainPage.Creature));
+                    System.IO.StreamReader file2 = new System.IO.StreamReader(saveFileDialog.FileName);
+                    mainPage.Creature loaded = new mainPage.Creature();
+                    loaded = (mainPage.Creature)reader.Deserialize(file2);
+                    file.Close();
+                    mainPage.Fighter toAdd = new mainPage.Fighter();
+                    toAdd = loaded.Convert();
+                    toAdd.id = this.father.nextLoadedID++;
+                    this.father.addToEncounter(toAdd);
+                }
                 this.Close();
             }
         }
 
         private void EditDamageString(object sender, EventArgs e)
         {
+            // TODO??? Dont know if this is working
             System.Windows.Forms.RadioButton item = (System.Windows.Forms.RadioButton)sender;
             if (item.Checked)
             {
