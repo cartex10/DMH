@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /*
  * TODO:
- *  !!!!! Loading creatures immediately after creation
  *  code continue initiative button
- *  add empty default creture which helps quickly make an npc
+ *  add empty default creature which helps quickly make an npc
  *  create tutorial?
  *  Saving/Loading encounters
  *  Rewrite removeFromInit form to be more like deleteCreature()
