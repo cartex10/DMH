@@ -126,8 +126,31 @@ namespace Dungeon_Master_Helper
                 mainTextBox.Text = Convert.ToString(result);
                 if (toEdit != null)
                 {
-                    toEdit.Text = Convert.ToString(result);
-                    toEdit2.curr_hp = Convert.ToInt32(result);
+                    if(Convert.ToInt32(result) > toEdit2.max_hp)
+                    {
+                        string text = "This action would take this charcter's current hp above their max. Set hp to max?";
+                        var res = MessageBox.Show(text, "Warning", MessageBoxButtons.YesNo);
+                        if(res == DialogResult.Yes)
+                        {
+                            toEdit.Text = Convert.ToString(toEdit2.max_hp);
+                            toEdit2.curr_hp = toEdit2.max_hp;
+                        }
+                        else
+                        {
+                            toEdit.Text = Convert.ToString(result);
+                            toEdit2.curr_hp = Convert.ToInt32(result);
+                        }
+                    }
+                    else if(Convert.ToInt32(result) < 0)
+                    {
+                        toEdit.Text = "0";
+                        toEdit2.curr_hp = 0;
+                    }
+                    else
+                    {
+                        toEdit.Text = Convert.ToString(result);
+                        toEdit2.curr_hp = Convert.ToInt32(result);
+                    }
                     this.Close();
                 }
             }

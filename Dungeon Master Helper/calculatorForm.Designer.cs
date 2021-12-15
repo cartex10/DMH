@@ -67,7 +67,7 @@ namespace Dungeon_Master_Helper
             this.tableLayoutPanel1.Controls.Add(this.mainTextBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.04762F));
@@ -79,7 +79,7 @@ namespace Dungeon_Master_Helper
             // 
             this.mainTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F);
             this.mainTextBox.Location = new System.Drawing.Point(4, 4);
-            this.mainTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mainTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.mainTextBox.Name = "mainTextBox";
             this.mainTextBox.ReadOnly = true;
             this.mainTextBox.Size = new System.Drawing.Size(419, 92);
@@ -117,7 +117,7 @@ namespace Dungeon_Master_Helper
             this.tableLayoutPanel2.Controls.Add(this.dieRollButt, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.restartButt, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 103);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -135,7 +135,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.equalsButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.equalsButt.Location = new System.Drawing.Point(319, 332);
-            this.equalsButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.equalsButt.Margin = new System.Windows.Forms.Padding(4);
             this.equalsButt.Name = "equalsButt";
             this.equalsButt.Size = new System.Drawing.Size(97, 78);
             this.equalsButt.TabIndex = 19;
@@ -150,7 +150,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.zeroButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zeroButt.Location = new System.Drawing.Point(109, 332);
-            this.zeroButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zeroButt.Margin = new System.Windows.Forms.Padding(4);
             this.zeroButt.Name = "zeroButt";
             this.zeroButt.Size = new System.Drawing.Size(97, 78);
             this.zeroButt.TabIndex = 17;
@@ -165,7 +165,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.halveButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.halveButt.Location = new System.Drawing.Point(4, 332);
-            this.halveButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.halveButt.Margin = new System.Windows.Forms.Padding(4);
             this.halveButt.Name = "halveButt";
             this.halveButt.Size = new System.Drawing.Size(97, 78);
             this.halveButt.TabIndex = 16;
@@ -180,7 +180,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.addButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButt.Location = new System.Drawing.Point(319, 250);
-            this.addButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addButt.Margin = new System.Windows.Forms.Padding(4);
             this.addButt.Name = "addButt";
             this.addButt.Size = new System.Drawing.Size(97, 74);
             this.addButt.TabIndex = 15;
@@ -195,7 +195,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.threeButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.threeButt.Location = new System.Drawing.Point(214, 250);
-            this.threeButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.threeButt.Margin = new System.Windows.Forms.Padding(4);
             this.threeButt.Name = "threeButt";
             this.threeButt.Size = new System.Drawing.Size(97, 74);
             this.threeButt.TabIndex = 14;
@@ -210,7 +210,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.twoButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoButt.Location = new System.Drawing.Point(109, 250);
-            this.twoButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.twoButt.Margin = new System.Windows.Forms.Padding(4);
             this.twoButt.Name = "twoButt";
             this.twoButt.Size = new System.Drawing.Size(97, 74);
             this.twoButt.TabIndex = 13;
@@ -225,7 +225,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.oneButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oneButt.Location = new System.Drawing.Point(4, 250);
-            this.oneButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.oneButt.Margin = new System.Windows.Forms.Padding(4);
             this.oneButt.Name = "oneButt";
             this.oneButt.Size = new System.Drawing.Size(97, 74);
             this.oneButt.TabIndex = 12;
@@ -240,7 +240,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subtractButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtractButt.Location = new System.Drawing.Point(319, 168);
-            this.subtractButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subtractButt.Margin = new System.Windows.Forms.Padding(4);
             this.subtractButt.Name = "subtractButt";
             this.subtractButt.Size = new System.Drawing.Size(97, 74);
             this.subtractButt.TabIndex = 11;
@@ -255,7 +255,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sixButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sixButt.Location = new System.Drawing.Point(214, 168);
-            this.sixButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sixButt.Margin = new System.Windows.Forms.Padding(4);
             this.sixButt.Name = "sixButt";
             this.sixButt.Size = new System.Drawing.Size(97, 74);
             this.sixButt.TabIndex = 10;
@@ -270,7 +270,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fiveButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fiveButt.Location = new System.Drawing.Point(109, 168);
-            this.fiveButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fiveButt.Margin = new System.Windows.Forms.Padding(4);
             this.fiveButt.Name = "fiveButt";
             this.fiveButt.Size = new System.Drawing.Size(97, 74);
             this.fiveButt.TabIndex = 9;
@@ -285,7 +285,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fourButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fourButt.Location = new System.Drawing.Point(4, 168);
-            this.fourButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fourButt.Margin = new System.Windows.Forms.Padding(4);
             this.fourButt.Name = "fourButt";
             this.fourButt.Size = new System.Drawing.Size(97, 74);
             this.fourButt.TabIndex = 8;
@@ -300,7 +300,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.multiplyButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.multiplyButt.Location = new System.Drawing.Point(319, 86);
-            this.multiplyButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.multiplyButt.Margin = new System.Windows.Forms.Padding(4);
             this.multiplyButt.Name = "multiplyButt";
             this.multiplyButt.Size = new System.Drawing.Size(97, 74);
             this.multiplyButt.TabIndex = 7;
@@ -315,7 +315,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nineButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nineButt.Location = new System.Drawing.Point(214, 86);
-            this.nineButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nineButt.Margin = new System.Windows.Forms.Padding(4);
             this.nineButt.Name = "nineButt";
             this.nineButt.Size = new System.Drawing.Size(97, 74);
             this.nineButt.TabIndex = 6;
@@ -330,7 +330,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.eightButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eightButt.Location = new System.Drawing.Point(109, 86);
-            this.eightButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.eightButt.Margin = new System.Windows.Forms.Padding(4);
             this.eightButt.Name = "eightButt";
             this.eightButt.Size = new System.Drawing.Size(97, 74);
             this.eightButt.TabIndex = 5;
@@ -345,7 +345,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sevenButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sevenButt.Location = new System.Drawing.Point(4, 86);
-            this.sevenButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sevenButt.Margin = new System.Windows.Forms.Padding(4);
             this.sevenButt.Name = "sevenButt";
             this.sevenButt.Size = new System.Drawing.Size(97, 74);
             this.sevenButt.TabIndex = 4;
@@ -360,7 +360,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.divideButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.divideButt.Location = new System.Drawing.Point(319, 4);
-            this.divideButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.divideButt.Margin = new System.Windows.Forms.Padding(4);
             this.divideButt.Name = "divideButt";
             this.divideButt.Size = new System.Drawing.Size(97, 74);
             this.divideButt.TabIndex = 3;
@@ -375,7 +375,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.backspaceButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backspaceButt.Location = new System.Drawing.Point(214, 4);
-            this.backspaceButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backspaceButt.Margin = new System.Windows.Forms.Padding(4);
             this.backspaceButt.Name = "backspaceButt";
             this.backspaceButt.Size = new System.Drawing.Size(97, 74);
             this.backspaceButt.TabIndex = 2;
@@ -390,7 +390,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dieRollButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dieRollButt.Location = new System.Drawing.Point(109, 4);
-            this.dieRollButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dieRollButt.Margin = new System.Windows.Forms.Padding(4);
             this.dieRollButt.Name = "dieRollButt";
             this.dieRollButt.Size = new System.Drawing.Size(97, 74);
             this.dieRollButt.TabIndex = 1;
@@ -405,7 +405,7 @@ namespace Dungeon_Master_Helper
             | System.Windows.Forms.AnchorStyles.Right)));
             this.restartButt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restartButt.Location = new System.Drawing.Point(4, 4);
-            this.restartButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.restartButt.Margin = new System.Windows.Forms.Padding(4);
             this.restartButt.Name = "restartButt";
             this.restartButt.Size = new System.Drawing.Size(97, 74);
             this.restartButt.TabIndex = 0;
@@ -420,7 +420,7 @@ namespace Dungeon_Master_Helper
             this.ClientSize = new System.Drawing.Size(428, 521);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "calculatorForm";
             this.Text = "Calculator";
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -20,7 +20,7 @@ using System.Windows.Forms;
  *  No healing beyond max hp
  *  Rolling saving throwss automatically button 
  *  Select all npcs button
- *  
+ *  Death save tracker when hp = 0
  */
 namespace Dungeon_Master_Helper
 {
@@ -253,13 +253,12 @@ namespace Dungeon_Master_Helper
         {
             if(selectedFighters.Count == 1)
             {
-                Fighter temp = fighterList.Find(r => Convert.ToInt32(r.id) == Convert.ToInt32(selectedTables[0].Tag));
                 System.Windows.Forms.Label label = null;
                 foreach(System.Windows.Forms.Control control in selectedTables[0].Controls)
                 {
                     if(Convert.ToString(control.Tag) == "hp") { label = (System.Windows.Forms.Label)control; }
                 }
-                calculatorForm calc = new calculatorForm(temp.curr_hp, label, temp, this)
+                calculatorForm calc = new calculatorForm(selectedFighters[0].curr_hp, label, selectedFighters[0], this)
                 {
                     Name = "Edit HP"
                 };
@@ -268,6 +267,7 @@ namespace Dungeon_Master_Helper
             else
             {
                 // TODO: ADD MASS DAMAGE HERE
+                ShowNotImplementedDialog(sender, e);
             }
         }
         //
