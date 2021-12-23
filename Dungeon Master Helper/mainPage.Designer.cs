@@ -140,21 +140,21 @@ namespace Dungeon_Master_Helper
             // 
             this.newEncounterToolStripMenuItem.Enabled = false;
             this.newEncounterToolStripMenuItem.Name = "newEncounterToolStripMenuItem";
-            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newEncounterToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.newEncounterToolStripMenuItem.Text = "New Encounter";
-            this.newEncounterToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
+            this.newEncounterToolStripMenuItem.Click += new System.EventHandler(this.newEncounterToolStripMenuItem_Click);
             // 
             // saveEncounterToolStripMenuItem
             // 
             this.saveEncounterToolStripMenuItem.Name = "saveEncounterToolStripMenuItem";
-            this.saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveEncounterToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.saveEncounterToolStripMenuItem.Text = "Save Encounter";
             this.saveEncounterToolStripMenuItem.Click += new System.EventHandler(this.saveEncounterToolStripMenuItem_Click);
             // 
             // loadEncounterToolStripMenuItem
             // 
             this.loadEncounterToolStripMenuItem.Name = "loadEncounterToolStripMenuItem";
-            this.loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.loadEncounterToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.loadEncounterToolStripMenuItem.Text = "Load Encounter";
             this.loadEncounterToolStripMenuItem.Click += new System.EventHandler(this.loadEncounterToolStripMenuItem_Click);
             // 
@@ -162,7 +162,7 @@ namespace Dungeon_Master_Helper
             // 
             this.savePartyToolStripMenuItem.Enabled = false;
             this.savePartyToolStripMenuItem.Name = "savePartyToolStripMenuItem";
-            this.savePartyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.savePartyToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.savePartyToolStripMenuItem.Text = "Save Party";
             this.savePartyToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 
@@ -170,7 +170,7 @@ namespace Dungeon_Master_Helper
             // 
             this.loadPartyToolStripMenuItem.Enabled = false;
             this.loadPartyToolStripMenuItem.Name = "loadPartyToolStripMenuItem";
-            this.loadPartyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.loadPartyToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.loadPartyToolStripMenuItem.Text = "Load Party";
             this.loadPartyToolStripMenuItem.Click += new System.EventHandler(this.ShowNotImplementedDialog);
             // 

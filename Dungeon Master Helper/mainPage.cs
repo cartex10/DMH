@@ -253,6 +253,12 @@ namespace Dungeon_Master_Helper
                 }
             }
         }
+
+        private void newEncounterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //TODO
+            ShowNotImplementedDialog(sender, e);
+        }
         //
         //  BUTTON FUNCTIONS
         //
