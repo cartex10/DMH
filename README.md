@@ -2,6 +2,8 @@
 
 ### The Dungeon Master Helper is an application aiming to make running combat easier for DMs by collecting all info necessary into one interface, and storing and maintaining the information necessary for a tpk.
 
+The application helps the user create new players, add them and default monsters to the turn order, and manage their health and stats during a combat encounter in DnD.
+
 ## Purpose of the Project
 I began working on this project in order to help teach myself different parts of C#, and mainly to gain experience working with Windows Forms. The project has helped me learn the fundamentals of programming in C#, and some of its intricacies.
 
@@ -29,9 +31,11 @@ This work on this project has been paused.
 - Viewing stats without editting
 
 ## Screenshots
-![](https://github.com/cartex10/DMH/blob/main/Dungeon Master Helper/img/git/mainPage.PNG)
-![](https://github.com/cartex10/DMH/blob/main/Dungeon Master Helper/img/git/createCreature.PNG)
-![](https://github.com/cartex10/DMH/blob/main/Dungeon Master Helper/img/git/addtoinitiative.PNG)
+<img src="https://github.com/cartex10/DMH/blob/main/Dungeon Master Helper/img/git/mainPage.PNG">
+
+<img src="https://github.com/cartex10/DMH/blob/main/Dungeon Master Helper/img/git/createCreature.PNG">
+
+<img src="https://github.com/cartex10/DMH/blob/main/Dungeon Master Helper/img/git/addtoinitiative.PNG">
 
 ## Planned Features
 - Adding Pictures to saved creatures
